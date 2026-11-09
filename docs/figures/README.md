@@ -1,0 +1,1 @@
+Fig. 1 (`fig_method.pdf`, `fig_method.png`) is built from `tex/fig_method.tex` with `lualatex` (run in `tex/`); `assets/input.jpg` is a downscaled VisDrone image under the VisDrone terms of use (see `THIRD_PARTY_NOTICES.md`).

@@ -9,6 +9,8 @@ Coverage-Aware Hyper Inference) accumulates the dense outputs of all passes in a
 every image position the same total coverage, and reads objects off a peak grid fine enough to keep crowded neighbours
 apart.
 
+![SCAHI overview: zoom stack, dense detector shared across passes, border taper, scale space, fusion](docs/figures/fig_method.png)
+
 ## Quickstart
 
 **(a) Install** (exact versions used for the paper, from the lock file):

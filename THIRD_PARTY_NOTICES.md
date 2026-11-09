@@ -13,6 +13,12 @@
 The SCAHI core (`scahi/fusion/scalespace.py`, `scahi/fusion/scalespace_torch.py`, Apache-2.0) contains none of the
 above and imports only numpy, pandas, scipy, torch and torchvision.
 
+## Figure
+
+`docs/figures/assets/input.jpg` (and the photo inside `docs/figures/fig_method.{pdf,png}`) is a downscaled image of the
+VisDrone dataset; it is subject to the VisDrone terms of use (academic / non-commercial) and not covered by the licences of
+this repository. The TikZ source of the figure is AGPL-3.0-or-later.
+
 ## Dependencies (installed separately, not redistributed)
 
 | Package | Licence |

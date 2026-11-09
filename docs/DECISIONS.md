@@ -1843,3 +1843,10 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   (SHA-256 403a8421fdeaaf02a7bf2572f5d6c7a614bdc06d29887df28df3b163726e05a3), GitHub version (clean room 91/91).
 - Public repo: the cleanup is a new local commit on top of the pushed state (no history rewrite). Earlier pushed commits
   still contain the names; removing them needs a history rewrite by the authors.
+
+## 2026-11-09 16:55 – Public repository recreated by the authors (clean history)
+
+- New empty GitHub repository (clone in ~/public_repos/scahi, one GitHub-created commit). Filled with the
+  current GitHub version (415 files, tree identical to exports/github/scahi) as one local commit on top; author set
+  locally; no machine names, no Claude mention, no local paths in files or commit messages; 33 weight assets copied to
+  weights/ (ignored by git). Not pushed.
