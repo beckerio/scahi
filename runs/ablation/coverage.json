@@ -1,0 +1,292 @@
+{
+ "dota/yolov10s/b": {
+  "variant": "F1",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 3
+  },
+  "n_positions_inside": 5224913,
+  "C_min": 2.0,
+  "C_max": 10.0,
+  "C_mean": 3.4094519851335323,
+  "share_C_eq_2": 0.24236805474081577,
+  "most_frequent_C": [
+   [
+    3.0,
+    2383287
+   ],
+   [
+    5.0,
+    1284429
+   ],
+   [
+    2.0,
+    1266352
+   ],
+   [
+    7.0,
+    162978
+   ],
+   [
+    4.0,
+    118356
+   ],
+   [
+    10.0,
+    9511
+   ]
+  ],
+  "n_positions_outside_image": 1859,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "dota/yolov10s/c": {
+  "variant": "F2",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 4
+  },
+  "n_positions_inside": 5520990,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    5520990
+   ]
+  ],
+  "n_positions_outside_image": 1907,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "dota/yolov10s/e": {
+  "variant": "F2",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.0003125,
+   "tau_peak": 0.001,
+   "cell_factor": 7.0,
+   "bins_per_oct": 7
+  },
+  "n_positions_inside": 13414784,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    13414784
+   ]
+  ],
+  "n_positions_outside_image": 7671,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "dota/yolov10m/b": {
+  "variant": "F1",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 4
+  },
+  "n_positions_inside": 5646899,
+  "C_min": 2.0,
+  "C_max": 10.0,
+  "C_mean": 3.421314601164285,
+  "share_C_eq_2": 0.23716538935794673,
+  "most_frequent_C": [
+   [
+    3.0,
+    2580783
+   ],
+   [
+    5.0,
+    1412290
+   ],
+   [
+    2.0,
+    1339249
+   ],
+   [
+    7.0,
+    176059
+   ],
+   [
+    4.0,
+    130012
+   ],
+   [
+    10.0,
+    8506
+   ]
+  ],
+  "n_positions_outside_image": 4835,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "dota/yolov10m/c": {
+  "variant": "F2",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5
+  },
+  "n_positions_inside": 5930876,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    5930876
+   ]
+  ],
+  "n_positions_outside_image": 4875,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "dota/yolov10m/e": {
+  "variant": "F2",
+  "cfg": {
+   "iou_cluster": 0.5,
+   "tau_splat": 0.00125,
+   "tau_peak": 0.0001,
+   "cell_factor": 7.0,
+   "bins_per_oct": 6
+  },
+  "n_positions_inside": 12239960,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    12239960
+   ]
+  ],
+  "n_positions_outside_image": 22243,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "visdrone/yolov10s/c": {
+  "variant": "F2",
+  "cfg": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "iou_cluster": 0.5
+  },
+  "n_positions_inside": 3326808,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    3326808
+   ]
+  ],
+  "n_positions_outside_image": 1121,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "visdrone/yolov10s/e": {
+  "variant": "F2",
+  "cfg": {
+   "tau_splat": 0.00125,
+   "tau_peak": 0.001,
+   "cell_factor": 11.0,
+   "bins_per_oct": 7,
+   "iou_cluster": 0.5
+  },
+  "n_positions_inside": 10523998,
+  "C_min": 2.0,
+  "C_max": 2.0,
+  "C_mean": 2.0,
+  "share_C_eq_2": 1.0,
+  "most_frequent_C": [
+   [
+    2.0,
+    10523998
+   ]
+  ],
+  "n_positions_outside_image": 8,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ },
+ "visdrone/yolov10s/b": {
+  "variant": "F1",
+  "cfg": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "iou_cluster": 0.5
+  },
+  "n_positions_inside": 3326808,
+  "C_min": 2.0,
+  "C_max": 7.0,
+  "C_mean": 3.545549066853272,
+  "share_C_eq_2": 0.21555346746791518,
+  "most_frequent_C": [
+   [
+    3.0,
+    1476568
+   ],
+   [
+    5.0,
+    877867
+   ],
+   [
+    2.0,
+    717105
+   ],
+   [
+    7.0,
+    173680
+   ],
+   [
+    4.0,
+    81588
+   ]
+  ],
+  "n_positions_outside_image": 1121,
+  "C_outside_min_max": [
+   1.0,
+   1.0
+  ]
+ }
+}

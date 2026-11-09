@@ -1,0 +1,20 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Data locations (see docs/DECISIONS.md, 2026-10-21, for how these were identified).
+original_root: /path/to/datasets/VisDrone/VisDrone2019-DET
+official_zip_root: /path/to/datasets/VisDrone/Visdrone_2021
+toolkit_root: /path/to/datasets/VisDrone/VisDrone2018-DET-toolkit
+processed_root: null
+splits:
+  train:
+    original: VisDrone2019-DET-train
+    processed: VisDrone2019-DET-train_vehicles_persons_IGNORE_REGIONS
+    zip: VisDrone2019-DET-train.zip
+  val:
+    original: VisDrone2019-DET-val
+    processed: VisDrone2019-DET-val_vehicles_persons_IGNORE_REGIONS
+    zip: VisDrone2019-DET-val.zip
+  test-dev:
+    original: VisDrone2019-DET-test-dev
+    processed: VisDrone2019-DET-test-dev_vehicles_persons_IGNORE_REGIONS
+    zip: VisDrone2019-DET-test-dev.zip
+size_bins: [0, 8, 16, 32, 64, 128, .inf]

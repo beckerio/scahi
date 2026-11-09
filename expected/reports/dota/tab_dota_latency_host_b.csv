@@ -1,0 +1,23 @@
+detector,key,method,passes_ms,merge_ms,total_ms,host_a_passes_ms,host_a_merge_ms,host_a_total_ms
+YOLOv10s,single pass,single pass 2048,28.03,,28.03,28.70,,28.70
+YOLOv10s,box fusion,"2048 + tiles, box fusion (CPU)",137.88,37.65,175.53,137.57,45.90,183.47
+YOLOv10s,scahi cpu,"2048 + tiles, SCAHI refined grid (CPU)",137.88,163.04,300.92,137.57,158.41,295.98
+YOLOv10s,scahi gpu,"2048 + tiles, SCAHI refined grid (GPU, reference passes)",137.88,12.21,150.09,137.57,12.20,149.77
+YOLOv10s,scahi opt,"2048 + tiles, SCAHI refined grid (GPU, optimised path)",120.43,13.18,133.61,,,
+YOLOv10s,sahi,"SAHI (1024 weights, frozen)",180.34,14.29,194.63,176.31,15.31,191.61
+YOLOv10m,single pass,single pass 2048,34.73,,34.73,34.92,,34.92
+YOLOv10m,box fusion,"2048 + tiles, box fusion (CPU)",188.66,36.56,225.22,186.84,35.80,222.64
+YOLOv10m,scahi cpu,"2048 + tiles, SCAHI refined grid (CPU)",188.66,209.33,397.99,186.84,208.60,395.44
+YOLOv10m,scahi gpu,"2048 + tiles, SCAHI refined grid (GPU, reference passes)",188.66,12.87,201.53,186.84,12.75,199.59
+YOLOv10m,scahi opt,"2048 + tiles, SCAHI refined grid (GPU, optimised path)",172.23,13.81,186.04,,,
+YOLOv10m,sahi,"SAHI (1024 weights, frozen)",252.32,15.82,268.14,233.26,14.66,247.92
+YOLOv11s,single pass,single pass 2048,28.45,,28.45,28.56,,28.56
+YOLOv11s,box fusion,"2048 + tiles, box fusion (CPU)",125.94,39.35,165.28,124.56,38.11,162.67
+YOLOv11s,scahi cpu,"2048 + tiles, SCAHI refined grid (CPU)",125.94,160.96,286.89,124.56,161.01,285.57
+YOLOv11s,scahi gpu,"2048 + tiles, SCAHI refined grid (GPU, reference passes)",125.94,12.44,138.38,124.56,12.41,136.98
+YOLOv11s,scahi opt,"2048 + tiles, SCAHI refined grid (GPU, optimised path)",121.00,13.20,134.20,,,
+YOLOv12s,single pass,single pass 1024,21.71,,21.71,21.04,,21.04
+YOLOv12s,box fusion,"1024 + tiles, box fusion (CPU)",133.80,33.27,167.07,133.31,32.91,166.22
+YOLOv12s,scahi cpu,"1024 + tiles, SCAHI refined grid (CPU)",133.80,200.19,333.99,133.31,199.26,332.57
+YOLOv12s,scahi gpu,"1024 + tiles, SCAHI refined grid (GPU, reference passes)",133.80,12.72,146.52,133.31,12.69,146.01
+YOLOv12s,scahi opt,"1024 + tiles, SCAHI refined grid (GPU, optimised path)",129.57,13.32,142.89,,,

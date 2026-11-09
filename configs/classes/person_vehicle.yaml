@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Secondary 2-class setting (person / vehicle), used in the unit tests.
+name: person_vehicle
+classes: [person, vehicle]
+category_map: {1: person, 2: person, 4: vehicle, 5: vehicle, 6: vehicle, 9: vehicle}
+ignore_types:
+  ignore_all: {categories: [0, 11], score_zero: true, classes: all}
+  # Dropped object categories: ignore for `vehicle` only; ordinary negatives for `person`.
+  ignore_vehicle: {categories: [3, 7, 8, 10], score_zero: false, classes: [vehicle]}
+eval_protocols:
+  visdrone_ignore: {drop_regions: {all: [0], vehicle: [3, 7, 8, 10]}, toolkit_validated: false}
+  visdrone_strict: {drop_regions: {all: [0]}, toolkit_validated: false}

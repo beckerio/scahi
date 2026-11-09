@@ -1,0 +1,9 @@
+dataset,detector,head,n_img,mean_dAP,single_run,scahi_run,rho_share_lt16,rho_share_lt16_lo,rho_share_lt16_hi,rho_share_crowded,rho_share_crowded_lo,rho_share_crowded_hi
+VisDrone test-dev,YOLOv10s,o2o,1610,1.3281,runs/testdev/20261022_v10s_BFULL2048_full2048_none_s0,runs/ext/testdev/XG_yolov10s_mz2048_ts0.0003125_tp0.001_cf13.0_b7_o2o,0.0918,0.0438,0.1407,0.0448,-0.0048,0.0945
+VisDrone test-dev,YOLOv10m,o2m,1610,4.7435,runs/ext/testdev/E_yolov10m_full2048_o2m,runs/ext/testdev/XG_yolov10m_mz2048_ts0.0003125_tp0.001_cf13.0_b8_o2m,-0.0500,-0.1006,0.0009,-0.0491,-0.0992,-0.0016
+VisDrone test-dev,YOLOv10m,o2o,1610,0.7502,runs/ext/testdev/E_yolov10m_full2048_o2o,runs/ext/testdev/XG_yolov10m_mz2048_ts0.00125_tp0.001_cf13.0_b6_o2o,0.0841,0.0367,0.1347,0.0788,0.0295,0.1262
+VisDrone test-dev,YOLOv11s,o2m,1610,4.9696,runs/ext/testdev/E_yolo11s_full2048_o2m,runs/ext/testdev/XG_yolo11s_mz2048_ts0.0003125_tp0.001_cf11.0_b8_o2m,-0.0505,-0.1018,-0.0021,-0.0569,-0.1065,-0.0079
+VisDrone test-dev,YOLOv11m,o2m,1610,4.7298,runs/ext/testdev/E_yolo11m_full2048_o2m,runs/ext/testdev/XG_yolo11m_mz2048_ts0.00125_tp0.001_cf13.0_b7_o2m,-0.0366,-0.0881,0.0148,-0.0316,-0.0785,0.0165
+VisDrone test-dev,YOLOv12s,o2m,1610,4.9758,runs/ext/testdev/E_yolo12s_full2048_o2m,runs/ext/testdev/XG_yolo12s_mz2048_ts0.00125_tp0.001_cf13.0_b8_o2m,-0.0405,-0.0897,0.0104,-0.0120,-0.0595,0.0394
+DOTA-val,YOLOv10s,o2o / o2m,456,4.1583,A_yolov10s_2048,RG_yolov10s_2048,0.2084,0.1147,0.2995,0.0253,-0.0728,0.1242
+DOTA-val,YOLOv10m,o2o / o2m,456,3.6774,A_yolov10m_2048,RG_yolov10m_2048,0.1499,0.0551,0.2444,0.0105,-0.0892,0.1086

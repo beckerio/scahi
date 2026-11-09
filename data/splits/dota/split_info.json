@@ -1,0 +1,128 @@
+{
+ "seed": 20261030,
+ "fraction": 0.1,
+ "excluded": [
+  "P1872"
+ ],
+ "objects_per_image_quartiles": [
+  12.0,
+  40.0,
+  117.75
+ ],
+ "size_edges_median_sigma": [
+  0,
+  16,
+  32,
+  64,
+  "inf"
+ ],
+ "strata": {
+  "objq0_size-1": {
+   "n": 4,
+   "calib": 0
+  },
+  "objq0_size0": {
+   "n": 5,
+   "calib": 1
+  },
+  "objq0_size1": {
+   "n": 56,
+   "calib": 6
+  },
+  "objq0_size2": {
+   "n": 89,
+   "calib": 9
+  },
+  "objq0_size3": {
+   "n": 171,
+   "calib": 17
+  },
+  "objq1_size-1": {
+   "n": 1,
+   "calib": 0
+  },
+  "objq1_size0": {
+   "n": 5,
+   "calib": 0
+  },
+  "objq1_size1": {
+   "n": 65,
+   "calib": 6
+  },
+  "objq1_size2": {
+   "n": 151,
+   "calib": 15
+  },
+  "objq1_size3": {
+   "n": 151,
+   "calib": 15
+  },
+  "objq2_size0": {
+   "n": 8,
+   "calib": 1
+  },
+  "objq2_size1": {
+   "n": 90,
+   "calib": 9
+  },
+  "objq2_size2": {
+   "n": 173,
+   "calib": 17
+  },
+  "objq2_size3": {
+   "n": 88,
+   "calib": 9
+  },
+  "objq3_size0": {
+   "n": 11,
+   "calib": 1
+  },
+  "objq3_size1": {
+   "n": 156,
+   "calib": 16
+  },
+  "objq3_size2": {
+   "n": 137,
+   "calib": 14
+  },
+  "objq3_size3": {
+   "n": 49,
+   "calib": 5
+  }
+ },
+ "grouping": "none possible (file names carry no scene or sequence id)",
+ "train_main": {
+  "n_images": 1269,
+  "instances": 189121,
+  "difficult_pct": 46.33,
+  "objects_per_image_mean": 149.0,
+  "objects_per_image_median": 40.0,
+  "size_pct": {
+   "<8": 9.47,
+   "8-16": 22.45,
+   "16-32": 36.04,
+   "32-64": 21.91,
+   "64-128": 6.93,
+   ">128": 3.22
+  }
+ },
+ "calib": {
+  "n_images": 141,
+  "instances": 21279,
+  "difficult_pct": 36.08,
+  "objects_per_image_mean": 150.9,
+  "objects_per_image_median": 41.0,
+  "size_pct": {
+   "<8": 5.4,
+   "8-16": 25.43,
+   "16-32": 26.32,
+   "32-64": 29.79,
+   "64-128": 8.74,
+   ">128": 4.33
+  }
+ },
+ "val": {
+  "n_images": 458,
+  "role": "held-out test set, evaluated once after the freeze"
+ }
+}

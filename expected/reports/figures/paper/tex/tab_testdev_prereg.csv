@@ -1,0 +1,9 @@
+criterion,delta_val,verdict_val,delta_testdev,verdict_testdev
+a,0.9210569409010603,nicht erfüllt,1.8113089808270324,erfüllt
+b,0.41760447503150644,nicht erfüllt,-0.776799565226991,nicht erfüllt
+c,,nicht prüfbar,,nicht prüfbar
+a_R2,-2.552524274516358,nicht erfüllt,-0.9356181731011617,nicht erfüllt
+b_R2,-0.6539619849131348,nicht erfüllt,-1.5455012216838053,nicht erfüllt
+H1,-0.006346870753418443,nicht erfüllt,0.28606452630373624,nicht erfüllt
+H2,1.10223862628753,erfüllt,1.6429523659320573,erfüllt
+H3,0.587919236381687,o2m > o2o,0.5015199460055442,o2m > o2o

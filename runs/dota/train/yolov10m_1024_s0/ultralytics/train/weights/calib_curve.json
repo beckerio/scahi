@@ -1,0 +1,226 @@
+[
+  {
+    "epoch": 5,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 44.36426610667198,
+    "mAP50_o2m": 46.95101003955163,
+    "eval_s": 9.68526291847229
+  },
+  {
+    "epoch": 10,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 53.4240502851649,
+    "mAP50_o2m": 55.233812724778275,
+    "eval_s": 12.853863000869751
+  },
+  {
+    "epoch": 15,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 57.06513686445058,
+    "mAP50_o2m": 57.73852771957089,
+    "eval_s": 13.274805307388306
+  },
+  {
+    "epoch": 20,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 61.64675366435319,
+    "mAP50_o2m": 63.0165753413257,
+    "eval_s": 12.058582067489624
+  },
+  {
+    "epoch": 25,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 64.10996062653943,
+    "mAP50_o2m": 63.92840771000219,
+    "eval_s": 12.7771897315979
+  },
+  {
+    "epoch": 30,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 63.135472042162476,
+    "mAP50_o2m": 64.21710311240557,
+    "eval_s": 13.30689001083374
+  },
+  {
+    "epoch": 35,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 66.46839311051735,
+    "mAP50_o2m": 66.03661559927741,
+    "eval_s": 13.797386407852173
+  },
+  {
+    "epoch": 40,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 66.74791511925093,
+    "mAP50_o2m": 67.09538206219489,
+    "eval_s": 11.867521524429321
+  },
+  {
+    "epoch": 41,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.24798624231485,
+    "mAP50_o2m": 67.8916021783866,
+    "eval_s": 14.08470106124878
+  },
+  {
+    "epoch": 42,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 68.24147691360713,
+    "mAP50_o2m": 68.11296406073704,
+    "eval_s": 13.80977988243103
+  },
+  {
+    "epoch": 43,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.02955095736995,
+    "mAP50_o2m": 67.24336591235179,
+    "eval_s": 14.273500680923462
+  },
+  {
+    "epoch": 44,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.04528220733943,
+    "mAP50_o2m": 67.27592359075477,
+    "eval_s": 14.283645868301392
+  },
+  {
+    "epoch": 45,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.4707026457485,
+    "mAP50_o2m": 67.240884834772,
+    "eval_s": 12.494050741195679
+  },
+  {
+    "epoch": 46,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.75467785670114,
+    "mAP50_o2m": 67.6405678869183,
+    "eval_s": 13.901976585388184
+  },
+  {
+    "epoch": 47,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 66.66086320806114,
+    "mAP50_o2m": 66.1634666889943,
+    "eval_s": 13.410093069076538
+  },
+  {
+    "epoch": 48,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.63251578823287,
+    "mAP50_o2m": 67.76543498504319,
+    "eval_s": 13.150719165802002
+  },
+  {
+    "epoch": 49,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.16232998776701,
+    "mAP50_o2m": 67.41079579636502,
+    "eval_s": 12.834972143173218
+  },
+  {
+    "epoch": 50,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.85895293796835,
+    "mAP50_o2m": 67.7007370000958,
+    "eval_s": 12.841375827789307
+  },
+  {
+    "epoch": 51,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.46842163259505,
+    "mAP50_o2m": 67.72399270026364,
+    "eval_s": 11.716602087020874
+  },
+  {
+    "epoch": 52,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.37730603018173,
+    "mAP50_o2m": 67.76932666101615,
+    "eval_s": 14.447121858596802
+  },
+  {
+    "epoch": 53,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.63860005480761,
+    "mAP50_o2m": 67.37216546039062,
+    "eval_s": 14.62459135055542
+  },
+  {
+    "epoch": 54,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 66.52169559978338,
+    "mAP50_o2m": 66.60892042610172,
+    "eval_s": 14.16193175315857
+  },
+  {
+    "epoch": 55,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.37977379628744,
+    "mAP50_o2m": 67.18393283448056,
+    "eval_s": 12.746019840240479
+  },
+  {
+    "epoch": 56,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.7592050725288,
+    "mAP50_o2m": 67.30201767528679,
+    "eval_s": 13.217097759246826
+  },
+  {
+    "epoch": 57,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.6747162449678,
+    "mAP50_o2m": 68.5431241500677,
+    "eval_s": 14.096316576004028
+  },
+  {
+    "epoch": 58,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.7567626481576,
+    "mAP50_o2m": 67.25274769093407,
+    "eval_s": 12.941243171691895
+  },
+  {
+    "epoch": 59,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.41379303912633,
+    "mAP50_o2m": 67.5374768508745,
+    "eval_s": 14.231319665908813
+  },
+  {
+    "epoch": 60,
+    "source": "dota_devkit_port mAP50, no cap",
+    "selection_branch": "o2o",
+    "mAP50": 67.31083344625249,
+    "mAP50_o2m": 67.85908565239566,
+    "eval_s": 11.869492530822754
+  }
+]

@@ -1,0 +1,11 @@
+SCAHI core
+Copyright (c) 2026 Fraunhofer IOSB
+
+The files scahi/fusion/scalespace.py and scahi/fusion/scalespace_torch.py (SCAHI - Slicing with Coverage-Aware Hyper
+Inference: CPU reference and GPU implementation) are licensed under the Apache License, Version 2.0
+(LICENSES/Apache-2.0.txt). All other files of this repository are licensed under the GNU Affero General Public License
+v3.0 or later (LICENSE), unless stated otherwise in THIRD_PARTY_NOTICES.md.
+
+If you use SCAHI, please cite:
+  S. Becker, J. Bayer, D. Münch, W. Hübner. When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion
+  for Small Object Detection. arXiv:XXXX.XXXXX, 2026.

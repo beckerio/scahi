@@ -1,0 +1,71 @@
+dataset,detector,s,setting,passes,head,cell_factor,bins_per_oct,tau_splat,tau_peak,iou_cluster,code_row
+VisDrone,YOLOv10s,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolov10s_single2048_F2_o2m
+VisDrone,YOLOv10s,2048,refined grid (post hoc),whole image,o2m,9.0,6,0.00125,0.0001,0.5,XG_yolov10s_2048_o2m_B
+VisDrone,YOLOv10s,2048,refined grid (post hoc),whole image,o2o,9.0,7,0.00125,1e-05,0.5,XG_yolov10s_2048_o2o_B
+VisDrone,YOLOv10s,2048,refined grid (post hoc),whole image + tiles,o2m,11.0,7,0.00125,0.001,0.5,XG_yolov10s_2048_o2m_C
+VisDrone,YOLOv10s,2048,refined grid (post hoc),whole image + tiles,o2o,13.0,7,0.0003125,0.001,0.5,XG_yolov10s_2048_o2o_C
+VisDrone,YOLOv10s (main study),1280,pre-specified,whole image at 1920 px + tiles,o2m,5.0,5,0.005,0.001,0.5,D-1280
+VisDrone,YOLOv10s (main study),1536,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,X4
+VisDrone,YOLOv10s (main study),1536,pre-specified,whole image at 1920 px + tiles,o2m,5.0,5,0.005,0.001,0.5,D-1536
+VisDrone,YOLOv10s (main study),2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,X2
+VisDrone,YOLOv10s (main study),– (scale-norm. training),pre-specified,whole image at 1920 px + tiles,o2m,5.0,5,0.005,0.001,0.5,D-T4
+VisDrone,YOLOv10m,1280,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolov10m_single1280_F2_o2m
+VisDrone,YOLOv10m,1280,pre-specified,whole image,o2o,5.0,5,0.005,0.001,0.5,D_yolov10m_single1280_F2_o2o
+VisDrone,YOLOv10m,1280,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolov10m_mz1280_F2_o2m
+VisDrone,YOLOv10m,1280,pre-specified,whole image + tiles,o2o,5.0,5,0.005,0.001,0.5,E_yolov10m_mz1280_F2_o2o
+VisDrone,YOLOv10m,1280,refined grid (post hoc),whole image,o2m,9.0,8,0.00125,0.0001,0.5,XG_yolov10m_1280_o2m_B
+VisDrone,YOLOv10m,1280,refined grid (post hoc),whole image,o2o,9.0,7,0.00125,0.0001,0.5,XG_yolov10m_1280_o2o_B
+VisDrone,YOLOv10m,1280,refined grid (post hoc),whole image + tiles,o2m,13.0,7,0.00125,0.001,0.5,XG_yolov10m_1280_o2m_C
+VisDrone,YOLOv10m,1280,refined grid (post hoc),whole image + tiles,o2o,11.0,6,0.0003125,0.001,0.5,XG_yolov10m_1280_o2o_C
+VisDrone,YOLOv10m,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolov10m_single2048_F2_o2m
+VisDrone,YOLOv10m,2048,pre-specified,whole image,o2o,5.0,5,0.005,0.001,0.5,D_yolov10m_single2048_F2_o2o
+VisDrone,YOLOv10m,2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolov10m_mz2048_F2_o2m
+VisDrone,YOLOv10m,2048,pre-specified,whole image + tiles,o2o,5.0,5,0.005,0.001,0.5,E_yolov10m_mz2048_F2_o2o
+VisDrone,YOLOv10m,2048,refined grid (post hoc),whole image,o2m,13.0,6,0.00125,1e-05,0.5,XG_yolov10m_2048_o2m_B
+VisDrone,YOLOv10m,2048,refined grid (post hoc),whole image,o2o,9.0,7,0.00125,0.0001,0.5,XG_yolov10m_2048_o2o_B
+VisDrone,YOLOv10m,2048,refined grid (post hoc),whole image + tiles,o2m,13.0,8,0.0003125,0.001,0.5,XG_yolov10m_2048_o2m_C
+VisDrone,YOLOv10m,2048,refined grid (post hoc),whole image + tiles,o2o,13.0,6,0.00125,0.001,0.5,XG_yolov10m_2048_o2o_C
+VisDrone,YOLOv11s,1280,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo11s_single1280_F2_o2m
+VisDrone,YOLOv11s,1280,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo11s_mz1280_F2_o2m
+VisDrone,YOLOv11s,1280,refined grid (post hoc),whole image,o2m,9.0,6,0.00125,0.0001,0.5,XG_yolo11s_1280_o2m_B
+VisDrone,YOLOv11s,1280,refined grid (post hoc),whole image + tiles,o2m,11.0,7,0.00125,0.001,0.5,XG_yolo11s_1280_o2m_C
+VisDrone,YOLOv11s,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo11s_single2048_F2_o2m
+VisDrone,YOLOv11s,2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo11s_mz2048_F2_o2m
+VisDrone,YOLOv11s,2048,refined grid (post hoc),whole image,o2m,9.0,7,0.00125,0.0001,0.5,XG_yolo11s_2048_o2m_B
+VisDrone,YOLOv11s,2048,refined grid (post hoc),whole image + tiles,o2m,11.0,8,0.0003125,0.001,0.5,XG_yolo11s_2048_o2m_C
+VisDrone,YOLOv11m,1280,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo11m_single1280_F2_o2m
+VisDrone,YOLOv11m,1280,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo11m_mz1280_F2_o2m
+VisDrone,YOLOv11m,1280,refined grid (post hoc),whole image,o2m,11.0,6,0.00125,0.0001,0.5,XG_yolo11m_1280_o2m_B
+VisDrone,YOLOv11m,1280,refined grid (post hoc),whole image + tiles,o2m,11.0,6,0.005,1e-05,0.5,XG_yolo11m_1280_o2m_C
+VisDrone,YOLOv11m,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo11m_single2048_F2_o2m
+VisDrone,YOLOv11m,2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo11m_mz2048_F2_o2m
+VisDrone,YOLOv11m,2048,refined grid (post hoc),whole image,o2m,11.0,6,0.00125,0.0001,0.5,XG_yolo11m_2048_o2m_B
+VisDrone,YOLOv11m,2048,refined grid (post hoc),whole image + tiles,o2m,13.0,7,0.00125,0.001,0.5,XG_yolo11m_2048_o2m_C
+VisDrone,YOLOv12s,1280,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo12s_single1280_F2_o2m
+VisDrone,YOLOv12s,1280,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo12s_mz1280_F2_o2m
+VisDrone,YOLOv12s,1280,refined grid (post hoc),whole image,o2m,9.0,7,0.00125,0.0001,0.5,XG_yolo12s_1280_o2m_B
+VisDrone,YOLOv12s,1280,refined grid (post hoc),whole image + tiles,o2m,11.0,6,0.0003125,0.001,0.5,XG_yolo12s_1280_o2m_C
+VisDrone,YOLOv12s,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo12s_single2048_F2_o2m
+VisDrone,YOLOv12s,2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo12s_mz2048_F2_o2m
+VisDrone,YOLOv12s,2048,refined grid (post hoc),whole image,o2m,9.0,8,0.00125,0.0001,0.5,XG_yolo12s_2048_o2m_B
+VisDrone,YOLOv12s,2048,refined grid (post hoc),whole image + tiles,o2m,13.0,8,0.00125,0.001,0.5,XG_yolo12s_2048_o2m_C
+VisDrone,YOLOv12m,1280,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,D_yolo12m_single1280_F2_o2m
+VisDrone,YOLOv12m,1280,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,E_yolo12m_mz1280_F2_o2m
+VisDrone,YOLOv12m,1280,refined grid (post hoc),whole image,o2m,11.0,6,0.00125,0.0001,0.5,XG_yolo12m_1280_o2m_B
+VisDrone,YOLOv12m,1280,refined grid (post hoc),whole image + tiles,o2m,13.0,6,0.0003125,0.001,0.5,XG_yolo12m_1280_o2m_C
+DOTA v1.5,YOLOv10s,1024,pre-specified,whole image,o2m,5.0,4,0.005,0.001,0.5,B-F2_yolov10s_1024
+DOTA v1.5,YOLOv10s,1024,pre-specified,whole image + tiles,o2m,5.0,4,0.005,0.001,0.5,F2_yolov10s_1024
+DOTA v1.5,YOLOv10s,1024,refined grid (pre-specified on DOTA),whole image,o2m,7.0,6,0.0003125,0.0001,0.5,B-RG_yolov10s_1024
+DOTA v1.5,YOLOv10s,1024,refined grid (pre-specified on DOTA),whole image + tiles,o2m,7.0,8,0.0003125,0.001,0.5,RG_yolov10s_1024
+DOTA v1.5,YOLOv10s,2048,pre-specified,whole image,o2m,5.0,4,0.005,0.001,0.5,B-F2_yolov10s_2048
+DOTA v1.5,YOLOv10s,2048,pre-specified,whole image + tiles,o2m,5.0,4,0.005,0.001,0.5,F2_yolov10s_2048
+DOTA v1.5,YOLOv10s,2048,refined grid (pre-specified on DOTA),whole image,o2m,11.0,6,0.00125,0.001,0.5,B-RG_yolov10s_2048
+DOTA v1.5,YOLOv10s,2048,refined grid (pre-specified on DOTA),whole image + tiles,o2m,7.0,7,0.0003125,0.001,0.5,RG_yolov10s_2048
+DOTA v1.5,YOLOv10m,1024,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,B-F2_yolov10m_1024
+DOTA v1.5,YOLOv10m,1024,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,F2_yolov10m_1024
+DOTA v1.5,YOLOv10m,1024,refined grid (pre-specified on DOTA),whole image,o2m,9.0,7,0.00125,0.001,0.5,B-RG_yolov10m_1024
+DOTA v1.5,YOLOv10m,1024,refined grid (pre-specified on DOTA),whole image + tiles,o2m,7.0,6,0.00125,1e-05,0.5,RG_yolov10m_1024
+DOTA v1.5,YOLOv10m,2048,pre-specified,whole image,o2m,5.0,5,0.005,0.001,0.5,B-F2_yolov10m_2048
+DOTA v1.5,YOLOv10m,2048,pre-specified,whole image + tiles,o2m,5.0,5,0.005,0.001,0.5,F2_yolov10m_2048
+DOTA v1.5,YOLOv10m,2048,refined grid (pre-specified on DOTA),whole image,o2m,7.0,8,0.0003125,0.001,0.5,B-RG_yolov10m_2048
+DOTA v1.5,YOLOv10m,2048,refined grid (pre-specified on DOTA),whole image + tiles,o2m,7.0,6,0.00125,0.0001,0.5,RG_yolov10m_2048

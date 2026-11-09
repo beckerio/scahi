@@ -1,0 +1,16 @@
+\begin{tabular}{lrlrl}
+\toprule
+ & \multicolumn{2}{c}{val} & \multicolumn{2}{c}{test-dev} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Criterion & $\Delta$ [95\% CI] & verdict & $\Delta$ [95\% CI] & verdict \\
+\midrule
+(a) $\Delta$AP vs.\ $R \geq +1.0$ & +0.92 {\scriptsize[+0.52, +1.31]} & not met & +1.81 {\scriptsize[+1.52, +2.10]} & met \\
+(b) $\Delta$AP$_{\sigma<16}$ vs.\ $R \geq +2.0$ & +0.42 {\scriptsize[-0.50, +1.65]} & not met & -0.78 {\scriptsize[-1.34, -0.08]} & not met \\
+(c) $\leq 0.7\times$ cost, $|\Delta|\leq\varepsilon$ & -- & not testable & -- & not testable \\
+(a) vs.\ $R_2$ & -2.55 {\scriptsize[-2.98, -2.19]} & not met & -0.94 {\scriptsize[-1.25, -0.65]} & not met \\
+(b) vs.\ $R_2$ & -0.65 {\scriptsize[-1.63, +0.44]} & not met & -1.55 {\scriptsize[-2.32, -0.75]} & not met \\
+H1: scale-normalised $-$ loss-masked $> \varepsilon$ & -0.01 {\scriptsize[-0.39, +0.34]} & not met & +0.29 {\scriptsize[+0.06, +0.53]} & not met \\
+H2: SCAHI variant $-$ box fusion $> \varepsilon$ & +1.10 {\scriptsize[+0.84, +1.37]} & met & +1.64 {\scriptsize[+1.44, +1.84]} & met \\
+H3: o2m vs.\ o2o & +0.59 {\scriptsize[+0.44, +0.75]} & o2m $>$ o2o & +0.50 {\scriptsize[+0.38, +0.62]} & o2m $>$ o2o \\
+\bottomrule
+\end{tabular}

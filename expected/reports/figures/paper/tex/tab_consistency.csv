@@ -1,0 +1,37 @@
+id,term,AP_val,AP_testdev,rank_val,rank_testdev,rank_pool
+R1,Single pass 640,22.8610297505721,21.823487451566695,32,32,main
+R2a,Single pass 1280,33.661248199265515,30.252892757309546,26,24,main
+R2b,Single pass 1536,35.74716419470465,31.603705261469674,16,14,main
+R2,Single pass 2048 (R_2),38.47426059190758,33.47744500298995,1,2,main
+R3,SAHI fine-tuned,32.74753056204708,29.87231397694457,29,27,main
+R4,SAHI (1280 weights),31.52069696546367,28.682968881295643,31,29,main
+R,"1280 + tiles, box fusion (R)",35.00067937649016,30.73051784906176,22,22,main
+R5,"1536 + tiles, box fusion",36.67102353607245,31.82731820992916,3,10,main
+R6,"z0.64 + z2 tiles, box fusion",34.06092304394613,30.049304706876782,24,25,main
+R7,"z1/3 + z1 + z2 tiles, box fusion",32.824880211563354,28.940160684467596,28,28,main
+R-NMS,"1280 + tiles, box fusion (NMS, cached passes)",35.002180996919485,30.72277251625548,21,23,main
+R-GNMM,"1280 + tiles, box fusion (GREEDYNMM, cached passes)",32.27968893427588,27.733561741023703,30,31,main
+R-WBF,"1280 + tiles, box fusion (WBF, cached passes)",33.16203786675452,28.588881373452022,27,30,main
+T0,"ignore regions dropped, z1 + z2 tiles, box fusion",35.76416306252543,31.242840767207007,14,20,main
+T1,"ignore regions painted grey, z1 + z2 tiles, box fusion",35.75503346528326,31.442017955159784,15,17,main
+T2,"loss-masked training, z1 + z2 tiles, box fusion",35.92961698642515,31.406158203966427,11,19,main
+T3,"loss-masked + truncation ignore, z1 + z2 tiles, box fusion",35.616164212424295,31.482036792191142,18,16,main
+T4,"scale-normalised training, z1 + z2 tiles, box fusion",35.923270115671734,31.692222730270164,12,12,main
+M_ab,"Selected main-study configuration (scale-normalised training, SCAHI + validity windows)",35.92173631739122,32.54182682988879,13,5,main
+H2-F0,"scale-normalised training, z0.64 + z2 tiles, box fusion (o2m)",34.81949769110369,30.898874463956734,23,21,main
+H3-o2o,"scale-normalised training, z0.64 + z2 tiles, SCAHI + validity windows (estimated on calib) (o2o)",35.333817081009535,32.04030688388325,19,9,main
+2x2-T2-F0,"loss-masked training, z0.64 + z2 tiles, box fusion (o2m)",34.008135628806734,30.006206165346914,25,26,main
+2x2-T2-F3e,"loss-masked training, z0.64 + z2 tiles, SCAHI + validity windows (estimated on calib) (o2m)",35.32529810818097,32.225499890733175,20,8,main
+D-T4,"scale-normalised training, z1 + z2 tiles, SCAHI",36.51521362235143,33.19502814199033,4,3,main
+D-1280,"1280 weights, z1 + z2 tiles, SCAHI",36.13981573236396,32.58362924428994,5,4,main
+D-1536,"1536 weights, z1 + z2 tiles, SCAHI",37.437480024482085,33.55619221091913,2,1,main
+seed-P3T4_s1-H1,"scale-normalised training, z1 + z2 tiles, box fusion (seed 1)",36.131221386003624,31.608782934447873,7,13,main
+seed-P3T4_s1-M_ab,"selected main-study configuration (scale-normalised training, SCAHI + validity windows) (seed 1)",36.13340330058679,32.448940863769636,6,6,main
+seed-P3T2_s1-H1,"loss-masked training, z1 + z2 tiles, box fusion (seed 1)",36.043976760748166,31.438305260251237,9,18,main
+seed-P3T4_s2-H1,"scale-normalised training, z1 + z2 tiles, box fusion (seed 2)",35.72436646691275,31.518235990403344,17,15,main
+seed-P3T4_s2-M_ab,"selected main-study configuration (scale-normalised training, SCAHI + validity windows) (seed 2)",36.01220781988267,32.383790517725856,10,7,main
+seed-P3T2_s2-H1,"loss-masked training, z1 + z2 tiles, box fusion (seed 2)",36.06711543491335,31.69956666367474,8,11,main
+X1,"2048 + tiles, box fusion",38.84920090831111,33.251878776659545,2,3,exploratory
+X2,"2048 + tiles, SCAHI",39.34223814088496,34.531590813509254,1,1,exploratory
+X3,"1536 + tiles, box fusion",36.663159958775964,31.916813986006066,4,4,exploratory
+X4,"1536 + tiles, SCAHI",37.60776804232128,33.51898591412747,3,2,exploratory

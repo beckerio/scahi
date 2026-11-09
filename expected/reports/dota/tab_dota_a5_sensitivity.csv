@@ -1,0 +1,5 @@
+detector,kind,tau_splat,tau_peak,cell_factor,bins_per_oct,calib_mAP50,time_ratio,admissible
+YOLOv11s,selected,0.005,0.0001,7,6,62.3612,1.2212,True
+YOLOv11s,"higher mAP50, ratio in [1.8, 2.2]",0.00125,0.0001,7,6,62.3955,2.15559,False
+YOLOv12s,selected,0.0003125,0.001,7,6,62.8309,1.74433,True
+YOLOv12s,"higher mAP50, ratio in [1.8, 2.2]",0.00125,0.0001,7,6,62.8408,2.17175,False

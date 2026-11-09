@@ -1,0 +1,36 @@
+# Model weights (published as release assets, never in git)
+/weights/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.safetensors
+
+# Datasets, converted data and dense-head caches (only the split lists are tracked)
+/data/*
+!/data/splits/
+/cache/
+*.parquet
+*.npz
+*.npy
+
+# Outputs of reproduce runs, training and local checks
+/out/
+runs/regenerate_paper.json
+*.log
+*.zip
+
+# Machine-local configuration and tool settings
+configs/local/
+.ultralytics/
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ipynb_checkpoints/

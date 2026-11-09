@@ -1,0 +1,19 @@
+measured_on,detector,s,latency_status,method,row_id,passes_ms,merge_ms,total_ms,total_p95_ms,fusion_peak_gpu_mem_mb
+host-a,YOLOv10s,2048,final,single pass 2048,A_yolov10s_2048,28.70,,28.70,65.37,
+host-a,YOLOv10s,2048,final,"2048 + tiles, box fusion (NMS)",NMS-o2m_yolov10s_2048,137.57,45.90,183.47,552.50,
+host-a,YOLOv10s,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on CPU)",RG_yolov10s_2048,137.57,158.41,295.98,715.88,
+host-a,YOLOv10s,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on GPU)",RG_yolov10s_2048,137.57,12.20,149.77,381.73,1923.70
+host-a,YOLOv10s,2048,final,SAHI (1024 weights),SAHI_yolov10s,176.31,15.31,191.61,625.20,
+host-a,YOLOv10m,2048,final,single pass 2048,A_yolov10m_2048,34.92,,34.92,66.51,
+host-a,YOLOv10m,2048,final,"2048 + tiles, box fusion (NMS)",NMS-o2m_yolov10m_2048,186.84,35.80,222.64,569.05,
+host-a,YOLOv10m,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on CPU)",RG_yolov10m_2048,186.84,208.60,395.44,1018.99,
+host-a,YOLOv10m,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on GPU)",RG_yolov10m_2048,186.84,12.75,199.59,509.31,1823.84
+host-a,YOLOv10m,2048,final,SAHI (1024 weights),SAHI_yolov10m,233.26,14.66,247.92,768.50,
+host-a,YOLOv11s,2048,final,single pass 2048,A_yolo11s_2048,28.56,,28.56,64.96,
+host-a,YOLOv11s,2048,final,"2048 + tiles, box fusion (NMS)",NMS-o2m_yolo11s_2048,124.56,38.11,162.67,377.40,
+host-a,YOLOv11s,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on CPU)",RG_yolo11s_2048,124.56,161.01,285.57,639.06,
+host-a,YOLOv11s,2048,final,"2048 + tiles, SCAHI, refined grid (fusion on GPU)",RG_yolo11s_2048,124.56,12.41,136.98,339.33,1898.58
+host-a,YOLOv12s,1024,final,single pass 1024,A_yolo12s_1024,21.04,,21.04,56.44,
+host-a,YOLOv12s,1024,final,"1024 + tiles, box fusion (NMS)",NMS-o2m_yolo12s_1024,133.31,32.91,166.22,488.81,
+host-a,YOLOv12s,1024,final,"1024 + tiles, SCAHI, refined grid (fusion on CPU)",RG_yolo12s_1024,133.31,199.26,332.57,1339.15,
+host-a,YOLOv12s,1024,final,"1024 + tiles, SCAHI, refined grid (fusion on GPU)",RG_yolo12s_1024,133.31,12.69,146.01,390.39,1598.07

@@ -1,0 +1,223 @@
+{
+ "runs": [
+  {
+   "run": 1,
+   "started": "2026-11-09T07:57:22",
+   "host": "host-x",
+   "machine": {
+    "name": "host-b",
+    "hostname": "host-x",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "driver": "580.178.04",
+    "cuda_driver": "13.0",
+    "cuda_runtime": "13.0"
+   },
+   "gpu_fusion_parity": {
+    "X2": true,
+    "XG_yolov10s_2048_o2m_C": true,
+    "RG_yolov10s_2048": false,
+    "RG_yolov10m_2048": false
+   },
+   "rows": {
+    "R2": {
+     "meta": {
+      "id": "R2",
+      "dataset": "VisDrone val",
+      "detector": "YOLOv10s",
+      "method": "single pass 2048",
+      "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+      "kind": "single",
+      "imgsz": 2048,
+      "branch": "o2o",
+      "conf": 0.001
+     },
+     "peak_mem_mb": 304.693359375,
+     "latency_ms_mean": 11.131227547328335,
+     "latency_ms_p95": 12.602439540205523,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "E_yolov10s_full2560_o2o": {
+     "meta": {
+      "id": "E_yolov10s_full2560_o2o",
+      "dataset": "VisDrone val",
+      "detector": "YOLOv10s",
+      "method": "single pass 2560",
+      "weights": "runs/ext/train/yolov10s_2560_s0/ultralytics/train/weights/best_calib.pt",
+      "kind": "single",
+      "imgsz": 2560,
+      "branch": "o2o",
+      "conf": 0.001
+     },
+     "peak_mem_mb": 590.73876953125,
+     "latency_ms_mean": 13.65945683523501,
+     "latency_ms_p95": 14.792937204765618,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "X_v10s_train2560_infer3072_o2o": {
+     "meta": {
+      "id": "X_v10s_train2560_infer3072_o2o",
+      "kind": "single",
+      "weights": "runs/ext/train/yolov10s_2560_s0/ultralytics/train/weights/best_calib.pt",
+      "imgsz": 3072,
+      "branch": "o2o",
+      "conf": 0.001,
+      "method": "2560 weights at 3072 px"
+     },
+     "peak_mem_mb": 1088.92333984375,
+     "latency_ms_mean": 21.025494576549075,
+     "latency_ms_p95": 22.350612947775517,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "X1": {
+     "meta": {
+      "id": "X1",
+      "kind": "boxfusion",
+      "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+      "stack": "native2048",
+      "overlap": 0.3,
+      "branch": "o2o",
+      "metric": "IOS",
+      "thr": 0.8,
+      "conf": 0.01,
+      "method": "2048 + tiles, box fusion"
+     },
+     "n_images": 548,
+     "passes_ms_mean": 45.950448435948346,
+     "passes_ms_p95": 50.813186494633555,
+     "fusion_cpu_ms_mean": 4.616411982614455,
+     "fusion_cpu_ms_p95": 6.46568340016529,
+     "total_cpu_ms_mean": 50.5668604185628,
+     "total_cpu_ms_p95": 57.3770924587734,
+     "peak_mem_mb": 624.810546875,
+     "path": "frozen X1 val path (multizoom.predict_raw + multizoom.fuse, Ultralytics predictor, fused weights)",
+     "latency_ms_mean": 50.5668604185628,
+     "equal_to_frozen_dets": {
+      "n": 161144,
+      "n_frozen": 161199,
+      "images_with_other_count": 166,
+      "max_count_diff_per_image": 3
+     },
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.1,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "X2": {
+     "meta": {
+      "id": "X2",
+      "dataset": "VisDrone val",
+      "detector": "YOLOv10s",
+      "method": "2048 + tiles, SCAHI",
+      "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+      "kind": "dense",
+      "stack": "native2048",
+      "branch": "o2m",
+      "overlap": 0.3,
+      "cfg": {
+       "tau_splat": 0.005,
+       "tau_peak": 0.001,
+       "cell_factor": 5.0,
+       "bins_per_oct": 5
+      },
+      "nc": 10,
+      "split_dirs": null
+     },
+     "n_images": 548,
+     "passes_ms_mean": 75.60640204902636,
+     "passes_ms_p95": 79.32302539120428,
+     "fusion_cpu_ms_mean": 30.827547082368177,
+     "fusion_cpu_ms_p95": 63.8367073610425,
+     "total_cpu_ms_mean": 106.43394913139454,
+     "total_cpu_ms_p95": 147.94956524274312,
+     "peak_mem_mb": 1683.59375,
+     "path": "reference passes (unfused model, both heads, outputs to CPU)",
+     "fusion_gpu_ms_mean": 9.150631822499932,
+     "fusion_gpu_ms_p95": 9.836661409644876,
+     "total_gpu_ms_mean": 84.75703387152629,
+     "total_gpu_ms_p95": 89.4928982030251,
+     "latency_ms_mean": 106.43394913139454,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.0,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "XG_yolov10s_2048_o2m_C": {
+     "meta": {
+      "id": "XG_yolov10s_2048_o2m_C",
+      "dataset": "VisDrone val",
+      "detector": "YOLOv10s",
+      "method": "2048 + tiles, SCAHI, refined grid",
+      "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+      "kind": "dense",
+      "stack": "native2048",
+      "branch": "o2m",
+      "overlap": 0.3,
+      "cfg": {
+       "iou_cluster": 0.5,
+       "tau_splat": 0.00125,
+       "tau_peak": 0.001,
+       "cell_factor": 11.0,
+       "bins_per_oct": 7
+      },
+      "nc": 10,
+      "split_dirs": null
+     },
+     "n_images": 548,
+     "passes_ms_mean": 75.88107380487048,
+     "passes_ms_p95": 81.04566128458826,
+     "fusion_cpu_ms_mean": 59.3968406121521,
+     "fusion_cpu_ms_p95": 144.58637040224858,
+     "total_cpu_ms_mean": 135.27791441702257,
+     "total_cpu_ms_p95": 225.64642351790098,
+     "peak_mem_mb": 1684.09375,
+     "path": "reference passes (unfused model, both heads, outputs to CPU)",
+     "fusion_gpu_ms_mean": 9.65019718101877,
+     "fusion_gpu_ms_p95": 10.70832410478033,
+     "total_gpu_ms_mean": 85.53127098588925,
+     "total_gpu_ms_p95": 94.52706809533993,
+     "latency_ms_mean": 135.27791441702257,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.1,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    }
+   },
+   "finished": "2026-11-09T08:00:51",
+   "all_final": true
+  }
+ ],
+ "used_run": 1
+}

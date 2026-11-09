@@ -1,0 +1,7 @@
+dataset,detector,s,code_row,calib_mAP50,setting,merge,metric,match_thr,conf,overlap,passes,head,cell_factor,bins_per_oct,tau_splat,tau_peak,iou_cluster
+DOTA,YOLOv11s,1024,SAHI_yolo11s,58.67159125684842,"SAHI (calib-tuned, grid v2)",NMS,IOU,0.4,0.01,0.2,,,,,,,
+DOTA,YOLOv11s,1024,SAHI-F2_yolo11s,62.08913094864602,pre-specified,,,,,,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",single dense head,5.0,5.0,0.005,0.001,0.5
+DOTA,YOLOv11s,1024,SAHI-RG_yolo11s,62.36115177043602,refined grid,,,,,,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",single dense head,7.0,6.0,0.005,0.0001,0.5
+DOTA,YOLOv12s,1024,SAHI_yolo12s,60.315012859730885,"SAHI (calib-tuned, grid v2)",NMS,IOU,0.4,0.01,0.2,,,,,,,
+DOTA,YOLOv12s,1024,SAHI-F2_yolo12s,62.654694871966,pre-specified,,,,,,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",single dense head,5.0,4.0,0.005,0.001,0.5
+DOTA,YOLOv12s,1024,SAHI-RG_yolo12s,62.830862566652115,refined grid,,,,,,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",single dense head,7.0,6.0,0.0003125,0.001,0.5

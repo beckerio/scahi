@@ -1,0 +1,1847 @@
+{
+ "frozen": "2026-10-24",
+ "approved_by": "user (freeze approval 2026-10-24)",
+ "split": "test-dev",
+ "preregistration_commit": "d067729c",
+ "addenda": [
+  "b4340c5",
+  "c8b8aff9"
+ ],
+ "reference_R": "R",
+ "reference_R2": "R2",
+ "reference_R2_exp": "20261022_v10s_BFULL2048_full2048_none_s0",
+ "preregistration_rows": {
+  "a_b": "M_ab",
+  "c": null,
+  "H1": [
+   "T4",
+   "T2"
+  ],
+  "H2": [
+   "M_ab",
+   "H2-F0"
+  ],
+  "H3": [
+   "M_ab",
+   "H3-o2o"
+  ]
+ },
+ "exploratory_single_pass": {
+  "X1": "R2",
+  "X2": "R2",
+  "X3": "R2b",
+  "X4": "R2b"
+ },
+ "eps": 0.3,
+ "bootstrap": {
+  "resamples": 1000,
+  "seed": 0,
+  "ci": "percentile 2.5/97.5, paired over test-dev images"
+ },
+ "rows": [
+  {
+   "id": "R1",
+   "group": "reference",
+   "label": "B-FULL 640",
+   "val_exp_id": "20261022_v10s_BFULL640_full640_none_s0",
+   "val_run": "runs/p2/20261022_v10s_BFULL640_full640_none_s0",
+   "val_AP": 22.8610297505721,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8ed51ab17854daf859da62925efbc77d835640118da7bade24c3ef53f2067bf5",
+   "train_variant": "BFULL640",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "imgsz": 640,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "images": "original"
+   },
+   "kind": "bfull",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "imgsz": "fixed by design (training size)",
+    "branch o2o": "fixed by design (headline branch)",
+    "conf": "calib (conf_tuning_<sz>_o2o.json)"
+   }
+  },
+  {
+   "id": "R2a",
+   "group": "reference",
+   "label": "B-FULL 1280",
+   "val_exp_id": "20261022_v10s_BFULL1280_full1280_none_s0",
+   "val_run": "runs/p2/20261022_v10s_BFULL1280_full1280_none_s0",
+   "val_AP": 33.661248199265515,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "images": "original"
+   },
+   "kind": "bfull",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "imgsz": "fixed by design (training size)",
+    "branch o2o": "fixed by design (headline branch)",
+    "conf": "calib (conf_tuning_<sz>_o2o.json)"
+   }
+  },
+  {
+   "id": "R2b",
+   "group": "reference",
+   "label": "B-FULL 1536",
+   "val_exp_id": "20261022_v10s_BFULL1536_full1536_none_s0",
+   "val_run": "runs/p2/20261022_v10s_BFULL1536_full1536_none_s0",
+   "val_AP": 35.74716419470465,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "6574a7d87b662759c7d5281fd6dda7aacc591e3defca63636126e0c18ca98ce7",
+   "train_variant": "BFULL1536",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "imgsz": 1536,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "images": "original"
+   },
+   "kind": "bfull",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "imgsz": "fixed by design (training size)",
+    "branch o2o": "fixed by design (headline branch)",
+    "conf": "calib (conf_tuning_<sz>_o2o.json)"
+   }
+  },
+  {
+   "id": "R2",
+   "group": "reference",
+   "label": "B-FULL 2048 (R2)",
+   "val_exp_id": "20261022_v10s_BFULL2048_full2048_none_s0",
+   "val_run": "runs/p2/20261022_v10s_BFULL2048_full2048_none_s0",
+   "val_AP": 38.47426059190758,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "BFULL2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "images": "original"
+   },
+   "kind": "bfull",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "imgsz": "fixed by design (training size)",
+    "branch o2o": "fixed by design (headline branch)",
+    "conf": "calib (conf_tuning_<sz>_o2o.json)",
+    "row": "added after the Phase-2 val results (user decision 2026-10-23, addendum c8b8aff9); role R2 = strongest reference row on val at the freeze -> SELECTED ON VAL by the preregistered addendum rule"
+   }
+  },
+  {
+   "id": "R3",
+   "group": "reference",
+   "label": "B-SAHI-FT",
+   "val_exp_id": "20261022_v10s_BSAHIFT_sahi640o20_nms-ios-t2_s0",
+   "val_run": "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_nms-ios-t2_s0",
+   "val_AP": 32.74753056204708,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a0665031fba4ff70a46c2f8df85151cb43b4bad0e9c83a78763c0157a9cf6228",
+   "train_variant": "BSAHIFT",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.2,
+    "fusion": "nms-ios-t2",
+    "branch": "o2o (per slice)",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "force_postprocess_type": true,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/p2/20261022_v10s_BSAHIFT_sahi_tuning_s0/sahi_tuning2_o2o.json"
+   },
+   "kind": "sahi",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "slice 640, full-image pass": "fixed by design (SAHI defaults of the brief)",
+    "overlap, merge, metric, threshold, conf": "calib (tuning grid v2, best merge by calib AP)"
+   }
+  },
+  {
+   "id": "R4",
+   "group": "reference",
+   "label": "B-SAHI (B-FULL 1280 weights)",
+   "val_exp_id": "20261022_v10s_BFULL1280_sahi640o20_nms-ios-t2_s0",
+   "val_run": "runs/p2/20261022_v10s_BFULL1280_sahi640o20_nms-ios-t2_s0",
+   "val_AP": 31.52069696546367,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.2,
+    "fusion": "nms-ios-t2",
+    "branch": "o2o (per slice)",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "force_postprocess_type": true,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/p2/20261022_v10s_BFULL1280_sahi_tuning_s0/sahi_tuning2_o2o.json"
+   },
+   "kind": "sahi",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "slice 640, full-image pass": "fixed by design (SAHI defaults of the brief)",
+    "overlap, merge, metric, threshold, conf": "calib (tuning grid v2, best merge by calib AP)"
+   }
+  },
+  {
+   "id": "R",
+   "group": "reference",
+   "label": "R = B-MZ-native",
+   "val_exp_id": "20261023_v10s_BFULL1280_mznativeo30_nms-ios_s0",
+   "val_run": "runs/p2/20261023_v10s_BFULL1280_mznativeo30_nms-ios_s0",
+   "val_AP": 35.00067937649016,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2o (per pass)",
+    "stack": "native {B-FULL 1280 pass, 2} N=1024@z2",
+    "levels": [
+     {
+      "zoom": 0.6666666666666666,
+      "n_input": null,
+      "imgsz": 1280
+     },
+     {
+      "zoom": 2.0,
+      "n_input": 1024,
+      "imgsz": null
+     }
+    ],
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_file": "runs/p2/20261023_v10s_BFULL1280_mz_tuning_s0/bmz_tuning_native_o2o.json",
+    "best_iou_metric_on_calib": {
+     "merge": "NMS",
+     "metric": "IOU",
+     "overlap": 0.1,
+     "match_thr": 0.5,
+     "conf": 0.01,
+     "AP": 37.43567925162612,
+     "AP50": 62.40509471785829,
+     "source": "toolkit_port"
+    }
+   },
+   "kind": "bmz",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "IOS headline metric": "fixed by design (user decision 2026-10-23)",
+    "overlap, threshold, conf": "calib (72-config NMS grid)",
+    "stack native (1280 pass + z=2, N=1024)": "fixed by design (user decision 2026-10-23, before the preregistration)"
+   }
+  },
+  {
+   "id": "R5",
+   "group": "reference",
+   "label": "B-MZ-1536-native",
+   "val_exp_id": "20261023_v10s_BFULL1536_mznative1536o20_nms-ios_s0",
+   "val_run": "runs/p2/20261023_v10s_BFULL1536_mznative1536o20_nms-ios_s0",
+   "val_AP": 36.67102353607245,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "6574a7d87b662759c7d5281fd6dda7aacc591e3defca63636126e0c18ca98ce7",
+   "train_variant": "BFULL1536",
+   "inference": {
+    "zoom_stack": [
+     0.8,
+     2.0
+    ],
+    "overlap": 0.2,
+    "fusion": "nms-ios",
+    "branch": "o2o (per pass)",
+    "stack": "native1536 {B-FULL 1536 pass, 2} N=1024@z2",
+    "levels": [
+     {
+      "zoom": 0.8,
+      "n_input": null,
+      "imgsz": 1536
+     },
+     {
+      "zoom": 2.0,
+      "n_input": 1024,
+      "imgsz": null
+     }
+    ],
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_file": "runs/p2/20261023_v10s_BFULL1536_mz_tuning_s0/bmz_tuning_native1536_o2o.json",
+    "best_iou_metric_on_calib": {
+     "merge": "NMS",
+     "metric": "IOU",
+     "overlap": 0.2,
+     "match_thr": 0.4,
+     "conf": 0.01,
+     "AP": 38.89787856367594,
+     "AP50": 64.57811806748165,
+     "source": "toolkit_port"
+    }
+   },
+   "kind": "bmz",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "IOS headline metric": "fixed by design (user decision 2026-10-23)",
+    "overlap, threshold, conf": "calib (72-config NMS grid)",
+    "row": "added after the Phase-2 val results (user decision 2026-10-23, addendum c8b8aff9)"
+   }
+  },
+  {
+   "id": "R6",
+   "group": "reference",
+   "label": "B-MZ S4",
+   "val_exp_id": "20261023_v10s_BFULL1280_mzS4o30_nms-ios_s0",
+   "val_run": "runs/p2/20261023_v10s_BFULL1280_mzS4o30_nms-ios_s0",
+   "val_AP": 34.06092304394613,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2o (per pass)",
+    "stack": "S4 {0.64,2} N=1024@z2",
+    "levels": [
+     {
+      "zoom": 0.64,
+      "n_input": null,
+      "imgsz": null
+     },
+     {
+      "zoom": 2.0,
+      "n_input": 1024,
+      "imgsz": null
+     }
+    ],
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_file": "runs/p2/20261023_v10s_BFULL1280_mz_tuning_s0/bmz_tuning_S4_o2o.json",
+    "best_iou_metric_on_calib": {
+     "merge": "NMS",
+     "metric": "IOU",
+     "overlap": 0.3,
+     "match_thr": 0.4,
+     "conf": 0.01,
+     "AP": 36.645810608547514,
+     "AP50": 61.571446061616626,
+     "source": "toolkit_port"
+    }
+   },
+   "kind": "bmz",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "IOS headline metric": "fixed by design (user decision 2026-10-23)",
+    "overlap, threshold, conf": "calib (72-config NMS grid)",
+    "stack": "fixed by design (zoom planner)"
+   }
+  },
+  {
+   "id": "R7",
+   "group": "reference",
+   "label": "B-MZ S1",
+   "val_exp_id": "20261023_v10s_BFULL1280_mzS1o20_nms-ios_s0",
+   "val_run": "runs/p2/20261023_v10s_BFULL1280_mzS1o20_nms-ios_s0",
+   "val_AP": 32.824880211563354,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.3333333333333333,
+     1.0,
+     2.0
+    ],
+    "overlap": 0.2,
+    "fusion": "nms-ios",
+    "branch": "o2o (per pass)",
+    "stack": "S1 {1/3,1,2} N=640",
+    "levels": [
+     {
+      "zoom": 0.3333333333333333,
+      "n_input": null,
+      "imgsz": null
+     },
+     {
+      "zoom": 1.0,
+      "n_input": 640,
+      "imgsz": null
+     },
+     {
+      "zoom": 2.0,
+      "n_input": 640,
+      "imgsz": null
+     }
+    ],
+    "match_thr": 0.8,
+    "match_metric": "IOS",
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_file": "runs/p2/20261023_v10s_BFULL1280_mz_tuning_s0/bmz_tuning_S1_o2o.json",
+    "best_iou_metric_on_calib": {
+     "merge": "NMS",
+     "metric": "IOU",
+     "overlap": 0.2,
+     "match_thr": 0.3,
+     "conf": 0.01,
+     "AP": 35.50043143907871,
+     "AP50": 59.88015930177448,
+     "source": "toolkit_port"
+    }
+   },
+   "kind": "bmz",
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "IOS headline metric": "fixed by design (user decision 2026-10-23)",
+    "overlap, threshold, conf": "calib (72-config NMS grid)",
+    "stack": "fixed by design (zoom planner)"
+   }
+  },
+  {
+   "id": "R-NMS",
+   "group": "reference",
+   "label": "B-MZ-native F0-NMS (cache)",
+   "val_exp_id": "20261023_v10s_BFULL1280_native_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_BFULL1280_native_F0-NMS_o2o",
+   "val_AP": 35.002180996919485,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 37.74972103720847
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1280",
+    "stack": "native",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "passes": "fixed by design (= passes of R)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "fusion parameters": "calib (24-config grid)"
+   }
+  },
+  {
+   "id": "R-GNMM",
+   "group": "reference",
+   "label": "B-MZ-native F0-GREEDYNMM (cache)",
+   "val_exp_id": "20261023_v10s_BFULL1280_native_F0-GREEDYNMM_o2o",
+   "val_run": "runs/p5/20261023_v10s_BFULL1280_native_F0-GREEDYNMM_o2o",
+   "val_AP": 32.27968893427588,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-GREEDYNMM",
+    "branch": "o2o",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.1
+    },
+    "tuned_on": "calib",
+    "calib_AP": 35.32423771877874
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1280",
+    "stack": "native",
+    "branch": "o2o",
+    "variant": "F0-GREEDYNMM",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.1
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "passes": "fixed by design (= passes of R)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "fusion parameters": "calib (24-config grid)"
+   }
+  },
+  {
+   "id": "R-WBF",
+   "group": "reference",
+   "label": "B-MZ-native F0-WBF (cache)",
+   "val_exp_id": "20261023_v10s_BFULL1280_native_F0-WBF_o2o",
+   "val_run": "runs/p5/20261023_v10s_BFULL1280_native_F0-WBF_o2o",
+   "val_AP": 33.16203786675452,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-WBF",
+    "branch": "o2o",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "thr": 0.5,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 35.287964645666314
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1280",
+    "stack": "native",
+    "branch": "o2o",
+    "variant": "F0-WBF",
+    "overlap": 0.3,
+    "params": {
+     "thr": 0.5,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "passes": "fixed by design (= passes of R)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "fusion parameters": "calib (24-config grid)"
+   }
+  },
+  {
+   "id": "T0",
+   "group": "prereg",
+   "label": "T0 + F0-NMS, S5 (o2o)",
+   "val_exp_id": "20261023_v10s_P3T0_s0_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T0_s0_S5_F0-NMS_o2o",
+   "val_AP": 35.76416306252543,
+   "weights": "runs/p3/20261023_v10s_P3T0_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "25ae2271b3c8b5a998c87d0e7e30a41aeea9ba833891214d8e3b6ab2a271b3a5",
+   "train_variant": "P3T0_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 38.28728942580325
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T0_s0",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack": "calib (H1 stack = T4's best F0-NMS/o2o stack on calib)",
+    "F0-NMS, o2o": "fixed by design (PREREGISTRATION H1)",
+    "training variant": "fixed by design"
+   }
+  },
+  {
+   "id": "T1",
+   "group": "prereg",
+   "label": "T1 + F0-NMS, S5 (o2o)",
+   "val_exp_id": "20261023_v10s_P3T1_s0_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T1_s0_S5_F0-NMS_o2o",
+   "val_AP": 35.75503346528326,
+   "weights": "runs/p3/20261023_v10s_P3T1_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c89a7e881f99d833f28d3f60dcd6d5955da644e0318cf087e81c18c0db3abde4",
+   "train_variant": "P3T1_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 38.53988850998479
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T1_s0",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack": "calib (H1 stack = T4's best F0-NMS/o2o stack on calib)",
+    "F0-NMS, o2o": "fixed by design (PREREGISTRATION H1)",
+    "training variant": "fixed by design"
+   }
+  },
+  {
+   "id": "T2",
+   "group": "prereg",
+   "label": "T2 + F0-NMS, S5 (o2o)",
+   "val_exp_id": "20261023_v10s_P3T2_s0_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T2_s0_S5_F0-NMS_o2o",
+   "val_AP": 35.92961698642515,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "0948d060a4e0f03fcb00995fe2cd068f01c200e93e0db7c968c95cd7c432e112",
+   "train_variant": "P3T2_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 38.6426106652638
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T2_s0",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack": "calib (H1 stack = T4's best F0-NMS/o2o stack on calib)",
+    "F0-NMS, o2o": "fixed by design (PREREGISTRATION H1)",
+    "training variant": "fixed by design"
+   }
+  },
+  {
+   "id": "T3",
+   "group": "prereg",
+   "label": "T3 + F0-NMS, S5 (o2o)",
+   "val_exp_id": "20261023_v10s_P3T3_s0_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T3_s0_S5_F0-NMS_o2o",
+   "val_AP": 35.616164212424295,
+   "weights": "runs/p3/20261023_v10s_P3T3_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "0c7bfbc5c3726f83eb801e16a9503e041f05b0f9d5be36271e177aff2a2489cf",
+   "train_variant": "P3T3_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 38.599875736939936
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T3_s0",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack": "calib (H1 stack = T4's best F0-NMS/o2o stack on calib)",
+    "F0-NMS, o2o": "fixed by design (PREREGISTRATION H1)",
+    "training variant": "fixed by design"
+   }
+  },
+  {
+   "id": "T4",
+   "group": "prereg",
+   "label": "T4 + F0-NMS, S5 (o2o)",
+   "val_exp_id": "20261023_v10s_P3T4_s0_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s0_S5_F0-NMS_o2o",
+   "val_AP": 35.923270115671734,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "76f900bb5e087fa28c911b56d5ad3fc567787989d42fb39ac9cf6ed5ebe31941",
+   "train_variant": "P3T4_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.54882265737432
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s0",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack": "calib (H1 stack = T4's best F0-NMS/o2o stack on calib)",
+    "F0-NMS, o2o": "fixed by design (PREREGISTRATION H1)",
+    "training variant": "fixed by design"
+   }
+  },
+  {
+   "id": "M_ab",
+   "group": "prereg",
+   "label": "M_ab: T4 S4 F3e o2m",
+   "val_exp_id": "20261023_v10s_P3T4_s0_S4_F3e_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s0_S4_F3e_o2m",
+   "val_AP": 35.92173631739122,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "76f900bb5e087fa28c911b56d5ad3fc567787989d42fb39ac9cf6ed5ebe31941",
+   "train_variant": "P3T4_s0",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F3e",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.778372601820244
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s0",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F3e",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "calib: runs/p5/20261023_<model>_fusion/calibration.json"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, variant, branch": "calib (selection.select: best calib AP among T4 candidates with cost <= R)"
+   }
+  },
+  {
+   "id": "H2-F0",
+   "group": "prereg",
+   "label": "H2 comparison: T4 S4 F0-NMS o2m",
+   "val_exp_id": "20261023_v10s_P3T4_s0_S4_F0-NMS_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s0_S4_F0-NMS_o2m",
+   "val_AP": 34.81949769110369,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "76f900bb5e087fa28c911b56d5ad3fc567787989d42fb39ac9cf6ed5ebe31941",
+   "train_variant": "P3T4_s0",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 38.51956410927273
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s0",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch": "= M_ab (calib)",
+    "F0-NMS": "fixed by design (PREREGISTRATION H2)"
+   }
+  },
+  {
+   "id": "H3-o2o",
+   "group": "prereg",
+   "label": "H3 comparison: T4 S4 F3e o2o",
+   "val_exp_id": "20261023_v10s_P3T4_s0_S4_F3e_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s0_S4_F3e_o2o",
+   "val_AP": 35.333817081009535,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "76f900bb5e087fa28c911b56d5ad3fc567787989d42fb39ac9cf6ed5ebe31941",
+   "train_variant": "P3T4_s0",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F3e",
+    "branch": "o2o",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.305458592557486
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s0",
+    "stack": "S4",
+    "branch": "o2o",
+    "variant": "F3e",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "calib: runs/p5/20261023_<model>_fusion/calibration.json"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, variant": "= best F of M_ab (calib)",
+    "branch o2o": "fixed by design (PREREGISTRATION H3)"
+   }
+  },
+  {
+   "id": "2x2-T2-F0",
+   "group": "prereg",
+   "label": "2x2: T2 S4 F0-NMS o2m",
+   "val_exp_id": "20261023_v10s_P3T2_s0_S4_F0-NMS_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T2_s0_S4_F0-NMS_o2m",
+   "val_AP": 34.008135628806734,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "0948d060a4e0f03fcb00995fe2cd068f01c200e93e0db7c968c95cd7c432e112",
+   "train_variant": "P3T2_s0",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 37.014247732625385
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T2_s0",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch, variant": "= M_ab / H2 cells (calib)",
+    "weights T2": "fixed by design (2x2 table)"
+   }
+  },
+  {
+   "id": "2x2-T2-F3e",
+   "group": "prereg",
+   "label": "2x2: T2 S4 F3e o2m",
+   "val_exp_id": "20261023_v10s_P3T2_s0_S4_F3e_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T2_s0_S4_F3e_o2m",
+   "val_AP": 35.32529810818097,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "0948d060a4e0f03fcb00995fe2cd068f01c200e93e0db7c968c95cd7c432e112",
+   "train_variant": "P3T2_s0",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F3e",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.031167222189936
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T2_s0",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F3e",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "calib: runs/p5/20261023_<model>_fusion/calibration.json"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch, variant": "= M_ab / H2 cells (calib)",
+    "weights T2": "fixed by design (2x2 table)"
+   }
+  },
+  {
+   "id": "D-T4",
+   "group": "prereg",
+   "label": "best dense variant P3T4_s0",
+   "val_exp_id": "20261023_v10s_P3T4_s0_S5_F2_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s0_S5_F2_o2m",
+   "val_AP": 36.51521362235143,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "76f900bb5e087fa28c911b56d5ad3fc567787989d42fb39ac9cf6ed5ebe31941",
+   "train_variant": "P3T4_s0",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 40.633886274556204
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s0",
+    "stack": "S5",
+    "branch": "o2m",
+    "variant": "F2",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch, variant": "calib (selection.best_dense: best calib AP over all stacks/branches/dense variants)"
+   }
+  },
+  {
+   "id": "D-1280",
+   "group": "prereg",
+   "label": "best dense variant BFULL1280",
+   "val_exp_id": "20261023_v10s_BFULL1280_S5_F2_o2m",
+   "val_run": "runs/p5/20261023_v10s_BFULL1280_S5_F2_o2m",
+   "val_AP": 36.13981573236396,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "a1af4b6ed0d11f28a80254af54d34108847a57569a6a578fc93e68f7cd58aa49",
+   "train_variant": "BFULL1280",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.89602923119396
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1280",
+    "stack": "S5",
+    "branch": "o2m",
+    "variant": "F2",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch, variant": "calib (selection.best_dense: best calib AP over all stacks/branches/dense variants)"
+   }
+  },
+  {
+   "id": "D-1536",
+   "group": "prereg",
+   "label": "best dense variant BFULL1536",
+   "val_exp_id": "20261023_v10s_BFULL1536_S5_F2_o2m",
+   "val_run": "runs/p5/20261023_v10s_BFULL1536_S5_F2_o2m",
+   "val_AP": 37.437480024482085,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "6574a7d87b662759c7d5281fd6dda7aacc591e3defca63636126e0c18ca98ce7",
+   "train_variant": "BFULL1536",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.008699269746195
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1536",
+    "stack": "S5",
+    "branch": "o2m",
+    "variant": "F2",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "stack, branch, variant": "calib (selection.best_dense: best calib AP over all stacks/branches/dense variants)"
+   }
+  },
+  {
+   "id": "seed-P3T4_s1-H1",
+   "group": "seed",
+   "label": "P3T4_s1 (H1 row)",
+   "val_exp_id": "20261023_v10s_P3T4_s1_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s1_S5_F0-NMS_o2o",
+   "val_AP": 36.131221386003624,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "262db72cd4d4bdb90e6bfb5c5cf051b8b2d8c22e0f758de1de0da279bd946b61",
+   "train_variant": "P3T4_s1",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s1",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "seed-P3T4_s1-M_ab",
+   "group": "seed",
+   "label": "P3T4_s1 (M_ab row)",
+   "val_exp_id": "20261023_v10s_P3T4_s1_S4_F3e_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s1_S4_F3e_o2m",
+   "val_AP": 36.13340330058679,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "262db72cd4d4bdb90e6bfb5c5cf051b8b2d8c22e0f758de1de0da279bd946b61",
+   "train_variant": "P3T4_s1",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F3e",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s1",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F3e",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "calib: re-estimated for this seed's weights on calib (as in p6_seeds)"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "seed-P3T2_s1-H1",
+   "group": "seed",
+   "label": "P3T2_s1 (H1 row)",
+   "val_exp_id": "20261023_v10s_P3T2_s1_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T2_s1_S5_F0-NMS_o2o",
+   "val_AP": 36.043976760748166,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s1/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "099fddf2e1f950e85968fd0fde03403c80adc1c2d8c00ef5aedbd68eeaa2dab4",
+   "train_variant": "P3T2_s1",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T2_s1",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "seed-P3T4_s2-H1",
+   "group": "seed",
+   "label": "P3T4_s2 (H1 row)",
+   "val_exp_id": "20261023_v10s_P3T4_s2_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s2_S5_F0-NMS_o2o",
+   "val_AP": 35.72436646691275,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8fef04574ee13554c6e2ad367446997bbc4ced2eea1e8bd5a506a86117cc42d8",
+   "train_variant": "P3T4_s2",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s2",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "seed-P3T4_s2-M_ab",
+   "group": "seed",
+   "label": "P3T4_s2 (M_ab row)",
+   "val_exp_id": "20261023_v10s_P3T4_s2_S4_F3e_o2m",
+   "val_run": "runs/p5/20261023_v10s_P3T4_s2_S4_F3e_o2m",
+   "val_AP": 36.01220781988267,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8fef04574ee13554c6e2ad367446997bbc4ced2eea1e8bd5a506a86117cc42d8",
+   "train_variant": "P3T4_s2",
+   "inference": {
+    "zoom_stack": [
+     0.64,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F3e",
+    "branch": "o2m",
+    "stack": "S4",
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T4_s2",
+    "stack": "S4",
+    "branch": "o2m",
+    "variant": "F3e",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "calib: re-estimated for this seed's weights on calib (as in p6_seeds)"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "seed-P3T2_s2-H1",
+   "group": "seed",
+   "label": "P3T2_s2 (H1 row)",
+   "val_exp_id": "20261023_v10s_P3T2_s2_S5_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_P3T2_s2_S5_F0-NMS_o2o",
+   "val_AP": 36.06711543491335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s2/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "2042e481e86f18417cdb6f7a4383d743515a2fed19e8e5fe34bdc1f89ca6aaa0",
+   "train_variant": "P3T2_s2",
+   "inference": {
+    "zoom_stack": [
+     1.0,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "S5",
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": null
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "P3T2_s2",
+    "stack": "S5",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt) (this seed)",
+    "stack, variant, branch, fusion parameters": "seed 0's calib selection, unchanged",
+    "seed": "fixed by design (PREREGISTRATION: seeds 1, 2 secondary)"
+   }
+  },
+  {
+   "id": "X1",
+   "group": "exploratory",
+   "label": "exploratory: B-FULL 2048-Pass + z=2, F0-NMS o2o",
+   "val_exp_id": "20261023_v10s_BFULL2048_native2048_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_BFULL2048_native2048_F0-NMS_o2o",
+   "val_AP": 38.84920090831111,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "BFULL2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.17029313303605
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL2048",
+    "stack": "native2048",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "row definition (single pass as trained + z=2 tiles)": "SELECTED ON VAL (defined after the val results, user 2026-10-24)",
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "branch o2o": "calib (F0-NMS branch with the better calib AP)"
+   }
+  },
+  {
+   "id": "X2",
+   "group": "exploratory",
+   "label": "exploratory: B-FULL 2048-Pass + z=2, F2 o2m",
+   "val_exp_id": "20261023_v10s_BFULL2048_native2048_F2_o2m",
+   "val_run": "runs/p5/20261023_v10s_BFULL2048_native2048_F2_o2m",
+   "val_AP": 39.34223814088496,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "BFULL2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.25376912740301
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL2048",
+    "stack": "native2048",
+    "branch": "o2m",
+    "variant": "F2",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "row definition (single pass as trained + z=2 tiles)": "SELECTED ON VAL (defined after the val results, user 2026-10-24)",
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "branch o2m": "SELECTED ON VAL (restriction to o2m fixed after the val H3 result, user 2026-10-24)",
+    "variant F2": "calib (best calib AP among dense variants on o2m)"
+   }
+  },
+  {
+   "id": "X3",
+   "group": "exploratory",
+   "label": "exploratory: B-FULL 1536-Pass + z=2, F0-NMS o2o",
+   "val_exp_id": "20261023_v10s_BFULL1536_native1536_F0-NMS_o2o",
+   "val_run": "runs/p5/20261023_v10s_BFULL1536_native1536_F0-NMS_o2o",
+   "val_AP": 36.663159958775964,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "6574a7d87b662759c7d5281fd6dda7aacc591e3defca63636126e0c18ca98ce7",
+   "train_variant": "BFULL1536",
+   "inference": {
+    "zoom_stack": [
+     0.8,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "stack": "native1536",
+    "levels": [
+     "w1536",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.170717797685725
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1536",
+    "stack": "native1536",
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "overlap": 0.3,
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "row definition (single pass as trained + z=2 tiles)": "SELECTED ON VAL (defined after the val results, user 2026-10-24)",
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "branch o2o": "calib (F0-NMS branch with the better calib AP)"
+   }
+  },
+  {
+   "id": "X4",
+   "group": "exploratory",
+   "label": "exploratory: B-FULL 1536-Pass + z=2, F2 o2m",
+   "val_exp_id": "20261023_v10s_BFULL1536_native1536_F2_o2m",
+   "val_run": "runs/p5/20261023_v10s_BFULL1536_native1536_F2_o2m",
+   "val_AP": 37.60776804232128,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "6574a7d87b662759c7d5281fd6dda7aacc591e3defca63636126e0c18ca98ce7",
+   "train_variant": "BFULL1536",
+   "inference": {
+    "zoom_stack": [
+     0.8,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "stack": "native1536",
+    "levels": [
+     "w1536",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 40.85853854764929
+   },
+   "kind": "fusion",
+   "fusion": {
+    "model_key": "BFULL1536",
+    "stack": "native1536",
+    "branch": "o2m",
+    "variant": "F2",
+    "overlap": 0.3,
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "calib_estimates": "not used by this variant"
+   },
+   "provenance": {
+    "row definition (single pass as trained + z=2 tiles)": "SELECTED ON VAL (defined after the val results, user 2026-10-24)",
+    "weights": "weights: epoch with the best toolkit-port AP on calib (best_calib.pt)",
+    "cache": "cache overlap 0.3: calib (B-MZ-native tuning, PREREGISTRATION 2)",
+    "windows": "fusion windows a = 8 (6-14), b = 192 (192-256): calib reliability curves (user decision 2026-10-23)",
+    "fusion parameters": "calib (24-config grid)",
+    "branch o2m": "SELECTED ON VAL (restriction to o2m fixed after the val H3 result, user 2026-10-24)",
+    "variant F2": "calib (best calib AP among dense variants on o2m)"
+   }
+  }
+ ]
+}

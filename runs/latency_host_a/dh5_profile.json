@@ -1,0 +1,60 @@
+{
+ "started": "2026-11-03T14:35:43",
+ "n_images": 458,
+ "conditions": "profiling only, not a latency measurement: cores 0-1 next to the FCOS CPU tuning, GPU otherwise idle, wrappers synchronise CUDA; compare shares, not absolute values with the exclusive run",
+ "models": {
+  "yolov10s": {
+   "sahi": {
+    "n_dets": 6151.489082969432,
+    "objects -> array": 11.607481232045146,
+    "sahi: ObjectPrediction creation": 50.56846632322756,
+    "sahi: read image (PIL) + cut slices": 26.033419688048216,
+    "sahi: standard pass image conversion": 0.009782438590414985,
+    "slices_and_passes": 24.75545851528384,
+    "total": 250.2398643815889,
+    "ultralytics call (total)": 124.59695908837284,
+    "ultralytics inference": 74.00469681230022,
+    "ultralytics postprocess": 4.710689203508146,
+    "ultralytics preprocess": 41.11083605847531
+   },
+   "scahi_path": {
+    "crop + letterbox (cv2)": 5.288334769833789,
+    "decode (both heads)": 7.388388501774056,
+    "forward (fused model)": 86.99674946076783,
+    "map boxes to source": 6.74060912862294,
+    "n_dets": 9460.146288209608,
+    "read image (cv2)": 17.740202041400806,
+    "slices_and_passes": 24.75545851528384,
+    "to tensor + host->GPU": 28.49125415034639,
+    "total": 164.9512575087661
+   }
+  },
+  "yolov10m": {
+   "sahi": {
+    "n_dets": 6108.954148471616,
+    "objects -> array": 11.674955217881987,
+    "sahi: ObjectPrediction creation": 48.8242030507345,
+    "sahi: read image (PIL) + cut slices": 52.66495962561399,
+    "sahi: standard pass image conversion": 0.019399392991489427,
+    "slices_and_passes": 30.08296943231441,
+    "total": 296.67722656780205,
+    "ultralytics call (total)": 170.15033638719663,
+    "ultralytics inference": 114.71119412117054,
+    "ultralytics postprocess": 5.955502864910802,
+    "ultralytics preprocess": 43.453144197752316
+   },
+   "scahi_path": {
+    "crop + letterbox (cv2)": 6.541018663014907,
+    "decode (both heads)": 9.220000229598995,
+    "forward (fused model)": 131.14592277734158,
+    "map boxes to source": 7.297169549508106,
+    "n_dets": 11082.122270742359,
+    "read image (cv2)": 13.238727273894819,
+    "slices_and_passes": 30.08296943231441,
+    "to tensor + host->GPU": 35.112121478157775,
+    "total": 217.9303581534842
+   }
+  }
+ },
+ "finished": "2026-11-03T14:42:53"
+}

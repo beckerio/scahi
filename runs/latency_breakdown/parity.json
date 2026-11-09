@@ -1,0 +1,54 @@
+{
+ "X2": {
+  "n_mismatch": 0,
+  "max_box": 1.8953617096806283,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 217492,
+  "n_det_diff": 1,
+  "n_img_diff": 1,
+  "available": true,
+  "images": 548,
+  "passed": false
+ },
+ "XG_yolov10s_2048_o2m_C": {
+  "n_mismatch": 0,
+  "max_box": 1.9895196601282805e-12,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 249999,
+  "n_det_diff": 0,
+  "n_img_diff": 0,
+  "available": true,
+  "images": 548,
+  "passed": true
+ },
+ "RG_yolov10s_2048": {
+  "n_mismatch": 0,
+  "max_box": 5.4569682106375694e-12,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 355362,
+  "n_det_diff": 0,
+  "n_img_diff": 0,
+  "available": false,
+  "reason": "GPU out of memory on P1384: CUDA out of memory. Tried to allocate 90.13 GiB. GPU 0 has a total capacity of 31.33 GiB of which 21.49 GiB is free. Including non-PyTorch memory, this process has 8.76 GiB memory in use. Of the allocated memory 1.08 GiB is allocated by PyTorch, and 7.12 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+  "images": 458,
+  "passed": false
+ },
+ "RG_yolov10m_2048": {
+  "n_mismatch": 0,
+  "max_box": 5.4569682106375694e-12,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 608082,
+  "n_det_diff": 0,
+  "n_img_diff": 0,
+  "available": false,
+  "reason": "GPU out of memory on P1384: CUDA out of memory. Tried to allocate 104.76 GiB. GPU 0 has a total capacity of 31.33 GiB of which 21.44 GiB is free. Including non-PyTorch memory, this process has 8.69 GiB memory in use. Of the allocated memory 886.61 MiB is allocated by PyTorch, and 7.25 GiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://docs.pytorch.org/docs/stable/notes/cuda.html#optimizing-memory-usage-with-pytorch-cuda-alloc-conf)",
+  "images": 458,
+  "passed": false
+ },
+ "tolerance": 0.0001,
+ "passed": false
+}

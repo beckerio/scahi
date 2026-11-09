@@ -1,0 +1,73 @@
+{
+ "A_yolov10s_2048": {
+  "peak_mem_mb": 692.62646484375,
+  "latency_ms_mean": 28.36990842453863,
+  "latency_ms_p95": 67.34233969473279,
+  "max_dets_per_image": 200000,
+  "images_at_max_det": 0,
+  "gflops_per_image": 178.08659256565937,
+  "path": "Ultralytics predictor"
+ },
+ "RG_yolov10s_2048": {
+  "latency_ms_mean": 283.7562627121186,
+  "latency_ms_p95": 625.1701785164178,
+  "passes_ms_mean": 122.40801154858002,
+  "fusion_ms_mean": 161.34825116353858,
+  "fusion_ms_p95": 418.9298328332359,
+  "peak_mem_mb": 2043.02978515625,
+  "n_images": 458,
+  "gflops_per_image": 984.6675585587423,
+  "path": "reference pipeline (unfused model, GPU passes, CPU SCAHI)",
+  "parity_calib_3": [
+   true,
+   true,
+   true
+  ]
+ },
+ "A_yolov10m_2048": {
+  "peak_mem_mb": 907.9150390625,
+  "latency_ms_mean": 33.85586118949354,
+  "latency_ms_p95": 72.54940351995172,
+  "max_dets_per_image": 200000,
+  "images_at_max_det": 0,
+  "gflops_per_image": 475.8420353632139,
+  "path": "Ultralytics predictor"
+ },
+ "RG_yolov10m_2048": {
+  "latency_ms_mean": 385.1229912371631,
+  "latency_ms_p95": 989.9616197770187,
+  "passes_ms_mean": 173.1913272503918,
+  "fusion_ms_mean": 211.9316639867713,
+  "fusion_ms_p95": 598.3274213620413,
+  "peak_mem_mb": 3227.9296875,
+  "n_images": 458,
+  "gflops_per_image": 2672.334755898132,
+  "path": "reference pipeline (unfused model, GPU passes, CPU SCAHI)",
+  "parity_calib_3": [
+   true,
+   true,
+   true
+  ]
+ },
+ "validity": {
+  "latency_gpu_exclusive": true,
+  "latency_cpu_exclusive": true,
+  "latency_other_gpu_pids": [],
+  "latency_cpu_queue_busy": false,
+  "latency_other_cpu_load_cores": 0.34,
+  "latency_gpu_power_limit_w": 575.0,
+  "latency_gpu_power_default_w": 575.0,
+  "latency_status": "final"
+ },
+ "machine": {
+  "name": "host-b",
+  "hostname": "host-x",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "driver": "580.178.04",
+  "cuda_driver": "13.0",
+  "cuda_runtime": "13.0"
+ },
+ "gflops_method": {
+  "method": "Ultralytics get_flops on the fused model at the exact letterboxed input shape, summed over the passes of each image, mean over the images of the split"
+ }
+}

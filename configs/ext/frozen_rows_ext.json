@@ -1,0 +1,4392 @@
+{
+ "status": "APPROVED by the user 2026-10-29 20:10; frozen before any test-dev number; reporting rules fixed with the approval",
+ "reporting_rules": [
+  "Pre-registered verdicts E-H1-E-H4 are defined on val and stay as computed (runs/ext/e4/e4.json). On test-dev they are evaluated exactly the same way (same definitions, heads/branches, paired bootstrap CIs, Holm, '>= 4 of 5' with the conservative reading of untestable cases) as held-out confirmation, reported next to the val verdicts.",
+  "Every frozen row is reported, regardless of outcome. No retuning, no re-selection, no added rows after seeing test-dev numbers.",
+  "Primary protocol visdrone_ignore (toolkit port, cap 500 detections per image); plain as a secondary column.",
+  "Consistency table val vs. test-dev per row: AP, rank, and whether each verdict holds.",
+  "Size bins prominently (AP and AP50, incl. < 8 px and 8-16 px; test-dev has 13 % of its GT < 8 px).",
+  "Exploratory rows (X-grid, decomposition B, R3 compute control) in separate tables, labelled post hoc, never counted toward a verdict.",
+  "Descriptive on test-dev: crowded vs. isolated recall for A, B, C (F2) and the X-grid rows; dup / frag rates."
+ ],
+ "created": "2026-10-29T20:10",
+ "split_for_test": "VisDrone test-dev (1610 images)",
+ "not_frozen_again": "R, R2, M_ab, X2: configs/final/frozen_rows.json (test-dev done 2026-10-24)",
+ "cuts": {
+  "smoke": {
+   "2560": {
+    "model": "yolov10s",
+    "imgsz": 2560,
+    "batch": 3,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.13019840499327984,
+    "peak_mem_gb": 22.537109375
+   },
+   "3072": {
+    "model": "yolov10s",
+    "imgsz": 3072,
+    "batch": 3,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.06978705400251783,
+    "peak_mem_gb": 26.689453125
+   }
+  },
+  "train_gpu_h_smoke": {
+   "2560": 8.427910177256328,
+   "3072": 4.517405744708736
+  },
+  "train_gpu_h_pixel_scaling": {
+   "2560": 7.843749999999999,
+   "3072": 11.294999999999998
+  },
+  "train_gpu_h": {
+   "2560": 8.427910177256328,
+   "3072": 11.294999999999998
+  },
+  "fits_3072": false,
+  "forecast_before_cuts": 79.24443029247747,
+  "budget": 75.0,
+  "cut_yolo11s_seeds": true,
+  "forecast_after_cuts": 71.40443029247747,
+  "drop_yolo12m_2048": "batch 2 does not fit (worst-case smoke)",
+  "drop_3072_reason": "OOM at batch 3 in training step 1 (2026-10-29 15:48, 26.7 GB allocated); smoke peak 26.7 GB fit, training did not. Addendum 0f6fecbc: 3072 only with batch 3 without recipe change -> not run; the generic batch-2 fallback is not applied"
+ },
+ "rows": [
+  {
+   "id": "E_yolo11m_full1280_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_full1280_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_full1280_o2m",
+   "val_AP": 35.821163782570814,
+   "val_AP50": 59.1544692303528,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo11m/conf_tuning_1280_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo11m/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo11m_full2048_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_full2048_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_full2048_o2m",
+   "val_AP": 40.00218365914939,
+   "val_AP50": 64.56355447691874,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo11m/conf_tuning_2048_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo11m/conf_tuning_2048_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo11m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_mz1280_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_mz1280_F2_o2m",
+   "val_AP": 39.03530749326819,
+   "val_AP50": 64.19569744122263,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.95514545762097,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo11m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_mz1280_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_mz1280_nms-ios_o2m",
+   "val_AP": 37.04760347141633,
+   "val_AP50": 62.275211356131095,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.61432856523525,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo11m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11m_mz2048_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_mz2048_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_mz2048_F2_o2m",
+   "val_AP": 41.53513348626701,
+   "val_AP50": 66.97739449641591,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 44.031459658453215,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo11m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11m_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_mz2048_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_mz2048_nms-ios_o2m",
+   "val_AP": 39.708550572814374,
+   "val_AP50": 65.32565718905849,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.140434087851055,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo11m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11m_sahi_o2m",
+   "group": "preregistered",
+   "model": "yolo11m",
+   "val_exp_id": "E_yolo11m_sahi_o2m",
+   "val_run": "runs/ext/rows/E_yolo11m_sahi_o2m",
+   "val_AP": 33.79741213335342,
+   "val_AP50": 57.31841297242505,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2m",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolo11m/sahi_tuning/sahi_tuning2_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "sahi",
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.3,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 37.347774783211214,
+    "AP50": 61.422227736393054,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib (1280 weights)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolo11m/sahi_tuning/sahi_tuning2_o2m.json)"
+   }
+  },
+  {
+   "id": "E_yolo11s_full1280_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_full1280_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_full1280_o2m",
+   "val_AP": 32.2020324331787,
+   "val_AP50": 54.20328093218548,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo11s/conf_tuning_1280_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo11s/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo11s_full2048_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_full2048_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_full2048_o2m",
+   "val_AP": 36.79514672031272,
+   "val_AP50": 60.48951880375886,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo11s/conf_tuning_2048_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo11s/conf_tuning_2048_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo11s_mz1280_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_mz1280_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_mz1280_F2_o2m",
+   "val_AP": 35.63676331139037,
+   "val_AP50": 59.715373344413024,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.14425500146654,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo11s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11s_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_mz1280_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_mz1280_nms-ios_o2m",
+   "val_AP": 34.04996703943813,
+   "val_AP50": 58.25955688511591,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 37.158893113413825,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo11s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11s_mz2048_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_mz2048_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_mz2048_F2_o2m",
+   "val_AP": 38.655919912388576,
+   "val_AP50": 63.57583888316554,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.12081452137591,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo11s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11s_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_mz2048_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_mz2048_nms-ios_o2m",
+   "val_AP": 37.21591009686252,
+   "val_AP50": 62.18305004298742,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 40.28448957090962,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo11s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo11s_sahi_o2m",
+   "group": "preregistered",
+   "model": "yolo11s",
+   "val_exp_id": "E_yolo11s_sahi_o2m",
+   "val_run": "runs/ext/rows/E_yolo11s_sahi_o2m",
+   "val_AP": 30.25748298057115,
+   "val_AP50": 52.39109693525945,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2m",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolo11s/sahi_tuning/sahi_tuning2_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "sahi",
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.3,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 34.0823669202276,
+    "AP50": 56.92480733478536,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib (1280 weights)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolo11s/sahi_tuning/sahi_tuning2_o2m.json)"
+   }
+  },
+  {
+   "id": "E_yolo12m_full1280_o2m",
+   "group": "preregistered",
+   "model": "yolo12m",
+   "val_exp_id": "E_yolo12m_full1280_o2m",
+   "val_run": "runs/ext/rows/E_yolo12m_full1280_o2m",
+   "val_AP": 35.40620114158162,
+   "val_AP50": 58.28812494754592,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo12m/conf_tuning_1280_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo12m/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo12m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo12m",
+   "val_exp_id": "E_yolo12m_mz1280_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo12m_mz1280_F2_o2m",
+   "val_AP": 38.82194817748753,
+   "val_AP50": 63.84690253573154,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.748191407429715,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo12m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo12m",
+   "val_exp_id": "E_yolo12m_mz1280_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo12m_mz1280_nms-ios_o2m",
+   "val_AP": 36.95356626011048,
+   "val_AP50": 61.89388144239273,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.60951915721551,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo12m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12m_sahi_o2m",
+   "group": "preregistered",
+   "model": "yolo12m",
+   "val_exp_id": "E_yolo12m_sahi_o2m",
+   "val_run": "runs/ext/rows/E_yolo12m_sahi_o2m",
+   "val_AP": 33.69750754118096,
+   "val_AP50": 56.578613510224066,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2m",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolo12m/sahi_tuning/sahi_tuning2_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "sahi",
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.3,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 37.639445334338326,
+    "AP50": 61.59206161560849,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib (1280 weights)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolo12m/sahi_tuning/sahi_tuning2_o2m.json)"
+   }
+  },
+  {
+   "id": "E_yolo12s_full1280_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_full1280_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_full1280_o2m",
+   "val_AP": 32.64347040758436,
+   "val_AP50": 54.97489166002732,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo12s/conf_tuning_1280_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo12s/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo12s_full2048_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_full2048_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_full2048_o2m",
+   "val_AP": 37.93964952456118,
+   "val_AP50": 61.76118732471307,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo12s/conf_tuning_2048_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolo12s/conf_tuning_2048_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolo12s_mz1280_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_mz1280_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_mz1280_F2_o2m",
+   "val_AP": 36.66124810901573,
+   "val_AP50": 61.13304326478337,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 40.05380535968612,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo12s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12s_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_mz1280_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_mz1280_nms-ios_o2m",
+   "val_AP": 34.87162833830409,
+   "val_AP50": 59.33129899954315,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 37.85307509921037,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo12s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12s_mz2048_F2_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_mz2048_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_mz2048_F2_o2m",
+   "val_AP": 39.80046949577977,
+   "val_AP50": 64.76887266515976,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.760974529071895,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo12s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12s_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_mz2048_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_mz2048_nms-ios_o2m",
+   "val_AP": 38.35474950834121,
+   "val_AP50": 63.464772792958314,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.2405978924075,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo12s/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolo12s_sahi_o2m",
+   "group": "preregistered",
+   "model": "yolo12s",
+   "val_exp_id": "E_yolo12s_sahi_o2m",
+   "val_run": "runs/ext/rows/E_yolo12s_sahi_o2m",
+   "val_AP": 30.947903577509702,
+   "val_AP50": 53.46931479566145,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2m",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolo12s/sahi_tuning/sahi_tuning2_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "sahi",
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.3,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 35.05389091605774,
+    "AP50": 57.803053027262564,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib (1280 weights)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolo12s/sahi_tuning/sahi_tuning2_o2m.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_full1280_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_full1280_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_full1280_o2m",
+   "val_AP": 35.090072318052776,
+   "val_AP50": 57.96522571678265,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "descriptive (single pass o2m+NMS, addendum 0f6fecbc item 4)",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolov10m/conf_tuning_1280_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolov10m/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolov10m_full1280_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_full1280_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_full1280_o2o",
+   "val_AP": 36.810056539017076,
+   "val_AP50": 61.15589169954819,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolov10m/conf_tuning_1280_o2o.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolov10m/conf_tuning_1280_o2o.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolov10m_full2048_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_full2048_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_full2048_o2m",
+   "val_AP": 39.40579066158203,
+   "val_AP50": 63.819983827564336,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-2048",
+    "role": "descriptive (single pass o2m+NMS, addendum 0f6fecbc item 4)",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolov10m/conf_tuning_2048_o2m.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolov10m/conf_tuning_2048_o2m.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolov10m_full2048_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_full2048_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_full2048_o2o",
+   "val_AP": 41.0288234409521,
+   "val_AP50": 66.63048984862628,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolov10m/conf_tuning_2048_o2o.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolov10m/conf_tuning_2048_o2o.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz1280_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_mz1280_F2_o2m",
+   "val_AP": 38.65652778462774,
+   "val_AP50": 63.59981813427513,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.50486125633116,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz1280_F2_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz1280_F2_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_mz1280_F2_o2o",
+   "val_AP": 38.596980758944554,
+   "val_AP50": 64.11406624910889,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 41.13735425567615,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz1280_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_mz1280_nms-ios_o2m",
+   "val_AP": 36.74736514379845,
+   "val_AP50": 61.725324079973426,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 39.56014139691177,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz1280_nms-ios_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz1280_nms-ios_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_mz1280_nms-ios_o2o",
+   "val_AP": 37.657555863072176,
+   "val_AP50": 63.463107025284955,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [
+     0.6666666666666666,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 40.03605542752491,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz2048_F2_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz2048_F2_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_mz2048_F2_o2m",
+   "val_AP": 41.291269702352594,
+   "val_AP50": 66.93367815750547,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 43.7899256729704,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz2048_F2_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz2048_F2_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_mz2048_F2_o2o",
+   "val_AP": 41.28265512174217,
+   "val_AP50": 67.35891275823431,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "calib_AP": 43.70812663237776,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz2048_nms-ios_o2m",
+   "val_run": "runs/ext/rows/E_yolov10m_mz2048_nms-ios_o2m",
+   "val_AP": 39.74464970417337,
+   "val_AP50": 65.29594227891396,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.18636830036741,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_mz2048_nms-ios_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_mz2048_nms-ios_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_mz2048_nms-ios_o2o",
+   "val_AP": 40.823076978584915,
+   "val_AP50": 67.5391543506739,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [
+     1.0666666666666667,
+     2.0
+    ],
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "calib_AP": 42.920161937973134,
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolov10m/tuning.json)"
+   }
+  },
+  {
+   "id": "E_yolov10m_sahi_o2o",
+   "group": "preregistered",
+   "model": "yolov10m",
+   "val_exp_id": "E_yolov10m_sahi_o2o",
+   "val_run": "runs/ext/rows/E_yolov10m_sahi_o2o",
+   "val_AP": 34.18259247181733,
+   "val_AP50": 58.23949630219305,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "nms-ios",
+    "branch": "o2o",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolov10m/sahi_tuning/sahi_tuning2_o2o.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "sahi",
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.3,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 37.42402399852806,
+    "AP50": 62.075155293032154,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib (1280 weights)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolov10m/sahi_tuning/sahi_tuning2_o2o.json)"
+   }
+  },
+  {
+   "id": "E_yolov10s_full2560_o2o",
+   "group": "R3 (compute control, addendum 0f6fecbc)",
+   "model": "yolov10s",
+   "val_exp_id": "E_yolov10s_full2560_o2o",
+   "val_run": "runs/ext/rows/E_yolov10s_full2560_o2o",
+   "val_AP": 39.507274022436896,
+   "val_AP50": 64.42244667219576,
+   "weights": "runs/ext/train/yolov10s_2560_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1914077255aa75ecb45eca392d06fd70f917f5c68b4e594af82f4b5b992fc047",
+   "train_variant": "E-yolov10s-2560",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-2560",
+    "role": "hypothesis row",
+    "imgsz": 2560,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolov10s/conf_tuning_2560_o2o.json",
+    "preregistration": "e5eca5bd"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 60 (42.42)"
+   },
+   "kind": "single",
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (o2m for YOLO11/12; YOLOv10m both branches, addendum 0f6fecbc item 4)",
+    "conf": "calib (runs/ext/yolov10s/conf_tuning_2560_o2o.json, grid [0.001, 0.01, 0.05, 0.1])"
+   }
+  },
+  {
+   "id": "XG_yolov10m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b8_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b8_o2m",
+   "val_AP": 36.682052272825146,
+   "val_AP50": 61.06953347914209,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_mz1280_ts0.00125_tp0.001_cf13.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10m_mz1280_ts0.00125_tp0.001_cf13.0_b7_o2m",
+   "val_AP": 39.90706574030348,
+   "val_AP50": 65.03065450126282,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_1280_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2o",
+   "val_AP": 36.75271284693193,
+   "val_AP50": 61.67115590503825,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_1280_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10m_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2o",
+   "val_AP": 39.77589867134269,
+   "val_AP50": 65.52636687012996,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_single2048_ts0.00125_tp1e-05_cf13.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10m_single2048_ts0.00125_tp1e-05_cf13.0_b6_o2m",
+   "val_AP": 40.977196006211145,
+   "val_AP50": 66.65243634812951,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_mz2048_ts0.0003125_tp0.001_cf13.0_b8_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10m_mz2048_ts0.0003125_tp0.001_cf13.0_b8_o2m",
+   "val_AP": 42.670468588887296,
+   "val_AP50": 68.68970954577891,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_2048_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10m_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2o",
+   "val_AP": 40.970596493161885,
+   "val_AP50": 67.12302831945509,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10m_2048_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "XG_yolov10m_mz2048_ts0.00125_tp0.001_cf13.0_b6_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10m_mz2048_ts0.00125_tp0.001_cf13.0_b6_o2o",
+   "val_AP": 42.62695478663786,
+   "val_AP50": 69.07721240327696,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11s_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "XG_yolo11s_single1280_ts0.00125_tp0.0001_cf9.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11s_single1280_ts0.00125_tp0.0001_cf9.0_b6_o2m",
+   "val_AP": 33.43863427439614,
+   "val_AP50": 56.71397909565446,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11s_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "XG_yolo11s_mz1280_ts0.00125_tp0.001_cf11.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11s_mz1280_ts0.00125_tp0.001_cf11.0_b7_o2m",
+   "val_AP": 36.97595216582907,
+   "val_AP50": 61.47914510435619,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "XG_yolo11s_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11s_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2m",
+   "val_AP": 38.01946202180272,
+   "val_AP50": 62.979131681876,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "XG_yolo11s_mz2048_ts0.0003125_tp0.001_cf11.0_b8_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11s_mz2048_ts0.0003125_tp0.001_cf11.0_b8_o2m",
+   "val_AP": 40.03028236002336,
+   "val_AP50": 65.30400225792097,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 8
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12s_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "XG_yolo12s_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12s_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2m",
+   "val_AP": 33.99787407714425,
+   "val_AP50": 57.770379544600054,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12s_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "XG_yolo12s_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12s_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2m",
+   "val_AP": 37.89098292595422,
+   "val_AP50": 62.755964091080706,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "XG_yolo12s_single2048_ts0.00125_tp0.0001_cf9.0_b8_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12s_single2048_ts0.00125_tp0.0001_cf9.0_b8_o2m",
+   "val_AP": 39.40155880552904,
+   "val_AP50": 64.47318844979465,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "XG_yolo12s_mz2048_ts0.00125_tp0.001_cf13.0_b8_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12s_mz2048_ts0.00125_tp0.001_cf13.0_b8_o2m",
+   "val_AP": 41.17952104056031,
+   "val_AP50": 66.45769057871004,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "XG_yolo11m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_AP": 37.2500867007849,
+   "val_AP50": 62.040788475172526,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "XG_yolo11m_mz1280_ts0.005_tp1e-05_cf11.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11m_mz1280_ts0.005_tp1e-05_cf11.0_b6_o2m",
+   "val_AP": 40.30792417510081,
+   "val_AP50": 65.8834352030815,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 1e-05,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 1e-05,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11m_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "XG_yolo11m_single2048_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11m_single2048_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_AP": 41.36711255060295,
+   "val_AP50": 67.04314484927347,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo11m_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "XG_yolo11m_mz2048_ts0.00125_tp0.001_cf13.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo11m_mz2048_ts0.00125_tp0.001_cf13.0_b7_o2m",
+   "val_AP": 42.85746648790365,
+   "val_AP50": 68.72650421341008,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12m",
+   "val_exp_id": "XG_yolo12m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m",
+   "val_AP": 36.986800108674416,
+   "val_AP50": 61.42108568169105,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolo12m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolo12m",
+   "val_exp_id": "XG_yolo12m_mz1280_ts0.0003125_tp0.001_cf13.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolo12m_mz1280_ts0.0003125_tp0.001_cf13.0_b6_o2m",
+   "val_AP": 40.15638087646553,
+   "val_AP50": 65.50729097670498,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10s",
+   "val_exp_id": "XG_yolov10s_single2048_ts0.00125_tp0.0001_cf9.0_b6_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10s_single2048_ts0.00125_tp0.0001_cf9.0_b6_o2m",
+   "val_AP": 38.746945457872144,
+   "val_AP50": 63.84936821483428,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "E-yolov10s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": null,
+    "effective_batch": null,
+    "oom_fallback": null,
+    "selection": ""
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    }
+   },
+   "provenance": {
+    "weights": "finished study: YOLOv10s B-FULL 2048 (weights of R2 / X2; like-for-like compute control, user 2026-10-29)",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10s",
+   "val_exp_id": "XG_yolov10s_mz2048_ts0.00125_tp0.001_cf11.0_b7_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10s_mz2048_ts0.00125_tp0.001_cf11.0_b7_o2m",
+   "val_AP": 40.71666962145229,
+   "val_AP50": 66.15213815296494,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "E-yolov10s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": null,
+    "effective_batch": null,
+    "oom_fallback": null,
+    "selection": ""
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "finished study: YOLOv10s B-FULL 2048 (weights of R2 / X2; like-for-like compute control, user 2026-10-29)",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10s_2048_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10s",
+   "val_exp_id": "XG_yolov10s_single2048_ts0.00125_tp1e-05_cf9.0_b7_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10s_single2048_ts0.00125_tp1e-05_cf9.0_b7_o2o",
+   "val_AP": 38.55628549910447,
+   "val_AP50": 63.939394411219645,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "E-yolov10s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": null,
+    "effective_batch": null,
+    "oom_fallback": null,
+    "selection": ""
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "finished study: YOLOv10s B-FULL 2048 (weights of R2 / X2; like-for-like compute control, user 2026-10-29)",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "XG_yolov10s_2048_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "model": "yolov10s",
+   "val_exp_id": "XG_yolov10s_mz2048_ts0.0003125_tp0.001_cf13.0_b7_o2o",
+   "val_run": "runs/ext/gridext/XG_yolov10s_mz2048_ts0.0003125_tp0.001_cf13.0_b7_o2o",
+   "val_AP": 40.56515298516582,
+   "val_AP50": 66.17120922842673,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "E-yolov10s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": null,
+    "effective_batch": null,
+    "oom_fallback": null,
+    "selection": ""
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "provenance": {
+    "weights": "finished study: YOLOv10s B-FULL 2048 (weights of R2 / X2; like-for-like compute control, user 2026-10-29)",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY, post hoc: widened F2 grid (defined after val results were known), selection = max calib AP with fusion time <= 2x F2 (configs/ext/xgrid_frozen.json)"
+   }
+  },
+  {
+   "id": "D_yolo11m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "D_yolo11m_single1280_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo11m_single1280_F2_o2m",
+   "val_AP": 35.98925525643389,
+   "val_AP50": 59.976570331198324,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "f013044ab5aed043b6f728b4e654a1407cbeb7e11665ee7e3c7e3b10da244a64",
+   "train_variant": "E-yolo11m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "box_source": "mean",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (38.23)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo11m/tuning.json 1280/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo11m_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo11m",
+   "val_exp_id": "D_yolo11m_single2048_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo11m_single2048_F2_o2m",
+   "val_AP": 40.14756569711527,
+   "val_AP50": 65.23064223545012,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "cdf5d6a361ea6e15122257cda9647819ee38cfe709aae1a265292cbf65cd0d1a",
+   "train_variant": "E-yolo11m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "box_source": "mean",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 2048/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 50 (42.35)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo11m/tuning.json 2048/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo11s_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "D_yolo11s_single1280_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo11s_single1280_F2_o2m",
+   "val_AP": 32.35540745619385,
+   "val_AP50": 54.85512047407903,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "bd1af243de86c23e538ab4a1018e51d925fb51ba6a519adf245ab66043aba1f8",
+   "train_variant": "E-yolo11s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.15)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo11s/tuning.json 1280/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo11s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo11s",
+   "val_exp_id": "D_yolo11s_single2048_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo11s_single2048_F2_o2m",
+   "val_AP": 36.83568794777521,
+   "val_AP50": 61.129089050928314,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "c01e7081e5df41d2fb821694f8fd2ec9400be38c70772787e1b4d9baac1a0ef6",
+   "train_variant": "E-yolo11s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 2048/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (39.98)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo11s/tuning.json 2048/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo12m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo12m",
+   "val_exp_id": "D_yolo12m_single1280_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo12m_single1280_F2_o2m",
+   "val_AP": 35.81639385238986,
+   "val_AP50": 59.49544316318453,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "29eb98492cb4842add406a908e0f8d88f52a9cdcde68e96d98e82ee706cec201",
+   "train_variant": "E-yolo12m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "box_source": "mean",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 6,
+    "effective_batch": 66,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 65 (38.27)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo12m/tuning.json 1280/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo12s_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "D_yolo12s_single1280_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo12s_single1280_F2_o2m",
+   "val_AP": 32.87797340581631,
+   "val_AP50": 55.83646919850151,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "8b4fe76fc139bc1bbf78363b66aa596a9db1a3cf9a80bdb0e7ef4fb6b9aee9e2",
+   "train_variant": "E-yolo12s-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "box_source": "mean",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 55 (35.84)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo12s/tuning.json 1280/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolo12s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolo12s",
+   "val_exp_id": "D_yolo12s_single2048_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolo12s_single2048_F2_o2m",
+   "val_AP": 38.199226439382386,
+   "val_AP50": 62.671216503652914,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "9c857978143394384533251e4f78a6f0f5ca26aad6acfd5fc0d439fb9cfec0fa",
+   "train_variant": "E-yolo12s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "box_source": "mean",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 2048/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 2,
+    "effective_batch": 64,
+    "oom_fallback": true,
+    "selection": "toolkit_port AP on calib (o2m), best epoch 60 (40.56)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo12s/tuning.json 2048/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolov10m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "D_yolov10m_single1280_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolov10m_single1280_F2_o2m",
+   "val_AP": 35.529068468777176,
+   "val_AP50": 59.203127824275384,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolov10m/tuning.json 1280/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolov10m_single1280_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "D_yolov10m_single1280_F2_o2o",
+   "val_run": "runs/ext/decomp/D_yolov10m_single1280_F2_o2o",
+   "val_AP": 35.660115045438936,
+   "val_AP50": 59.98952105100784,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "5ef9ef8289f3b84e50a06d12be93f1803826fc9a11fe29c86c6f837356c377d5",
+   "train_variant": "E-yolov10m-1280",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "D-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 1280/o2o/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 55 (38.88)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolov10m/tuning.json 1280/o2o/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolov10m_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "D_yolov10m_single2048_F2_o2m",
+   "val_run": "runs/ext/decomp/D_yolov10m_single2048_F2_o2m",
+   "val_AP": 39.66050345177666,
+   "val_AP50": 64.69169960760041,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 2048/o2m/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolov10m/tuning.json 2048/o2m/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolov10m_single2048_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolov10m",
+   "val_exp_id": "D_yolov10m_single2048_F2_o2o",
+   "val_run": "runs/ext/decomp/D_yolov10m_single2048_F2_o2o",
+   "val_AP": 39.68953718818246,
+   "val_AP50": 65.32728049359865,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "1762405e48d77a684df08532175ba0005ad61300ec6ed041a4d6cda2c612af54",
+   "train_variant": "E-yolov10m-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "D-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "params_from": "tuning 2048/o2o/F2 (calib, row C)",
+    "tuned_on": "calib"
+   },
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 50 (43.32)"
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2); epoch = max toolkit-port AP on calib",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolov10m/tuning.json 2048/o2o/F2); no new selection"
+   }
+  },
+  {
+   "id": "D_yolov10s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "model": "yolov10s",
+   "val_exp_id": "D_yolov10s_single2048_F2_o2m",
+   "val_run": "runs/ext/gridext/XG_yolov10s_single2048_ts0.005_tp0.001_cf5.0_b5_o2m",
+   "val_AP": 37.585652441659796,
+   "val_AP50": 61.843454493741916,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "ab725a24c6922a0887964a731faa54d53870214dc870091a23c39cf577652cf5",
+   "train_variant": "E-yolov10s-2048",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "training": {
+    "batch": null,
+    "effective_batch": null,
+    "oom_fallback": null,
+    "selection": ""
+   },
+   "kind": "cache",
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "finished study: YOLOv10s B-FULL 2048 (weights of R2 / X2)",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY, post hoc row; F2 parameters = the calib-tuned parameters of the corresponding row C (X2 of the finished study); no new selection"
+   }
+  }
+ ],
+ "replay_gate": "77/77 replayed rows exact (max |\u0394AP| = 0.0e+00); 0 of 77 rows not replayed yet"
+}

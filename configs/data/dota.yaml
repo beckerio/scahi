@@ -1,0 +1,6 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# DOTA v1.5 data root (Phase D, docs/DOTA_BRIEF.md). Unpacked from the files under /path/to/datasets/DOTA/
+# (DOTAv1.5.zip -> DOTAv1.5/, DOTA-v1.5_<split>_hbb.zip -> hbb/<split>/, DOTA-v1.5_<split>.zip -> obb/<split>/).
+# Same path on host-b and host-a; a machine may override it with data.dota_root in configs/local/<host>.yaml.
+dota_root: /path/to/datasets/DOTA/unpacked
+size_bins: [0, 8, 16, 32, 64, 128, .inf]

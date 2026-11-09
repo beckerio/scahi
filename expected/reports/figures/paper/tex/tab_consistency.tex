@@ -1,0 +1,43 @@
+\begin{tabular}{lrrrrr}
+\toprule
+Row & AP val & AP test-dev & $\Delta$ & rank val & rank test-dev \\
+\midrule
+Single pass 640 & 22.86 & 21.82 & -1.04 & 32 & 32 \\
+Single pass 1280 & 33.66 & 30.25 & -3.41 & 26 & 24 \\
+Single pass 1536 & 35.75 & 31.60 & -4.14 & 16 & 14 \\
+Single pass 2048 ($R_2$) & 38.47 & 33.48 & -5.00 & 1 & 2 \\
+SAHI fine-tuned & 32.75 & 29.87 & -2.88 & 29 & 27 \\
+SAHI (1280 weights) & 31.52 & 28.68 & -2.84 & 31 & 29 \\
+1280 + tiles, box fusion ($R$) & 35.00 & 30.73 & -4.27 & 22 & 22 \\
+1536 + tiles, box fusion & 36.67 & 31.83 & -4.84 & 3 & 10 \\
+z0.64 + z2 tiles, box fusion & 34.06 & 30.05 & -4.01 & 24 & 25 \\
+z1/3 + z1 + z2 tiles, box fusion & 32.82 & 28.94 & -3.88 & 28 & 28 \\
+1280 + tiles, box fusion (NMS, cached passes) & 35.00 & 30.72 & -4.28 & 21 & 23 \\
+1280 + tiles, box fusion (GREEDYNMM, cached passes) & 32.28 & 27.73 & -4.55 & 30 & 31 \\
+1280 + tiles, box fusion (WBF, cached passes) & 33.16 & 28.59 & -4.57 & 27 & 30 \\
+ignore regions dropped, z1 + z2 tiles, box fusion & 35.76 & 31.24 & -4.52 & 14 & 20 \\
+ignore regions painted grey, z1 + z2 tiles, box fusion & 35.76 & 31.44 & -4.31 & 15 & 17 \\
+loss-masked training, z1 + z2 tiles, box fusion & 35.93 & 31.41 & -4.52 & 11 & 19 \\
+loss-masked + truncation ignore, z1 + z2 tiles, box fusion & 35.62 & 31.48 & -4.13 & 18 & 16 \\
+scale-normalised training, z1 + z2 tiles, box fusion & 35.92 & 31.69 & -4.23 & 12 & 12 \\
+Selected main-study configuration (scale-normalised training, SCAHI + validity windows) & 35.92 & 32.54 & -3.38 & 13 & 5 \\
+scale-normalised training, z0.64 + z2 tiles, box fusion (o2m) & 34.82 & 30.90 & -3.92 & 23 & 21 \\
+scale-normalised training, z0.64 + z2 tiles, SCAHI + validity windows (estimated on calib) (o2o) & 35.33 & 32.04 & -3.29 & 19 & 9 \\
+loss-masked training, z0.64 + z2 tiles, box fusion (o2m) & 34.01 & 30.01 & -4.00 & 25 & 26 \\
+loss-masked training, z0.64 + z2 tiles, SCAHI + validity windows (estimated on calib) (o2m) & 35.33 & 32.23 & -3.10 & 20 & 8 \\
+scale-normalised training, z1 + z2 tiles, SCAHI & 36.52 & 33.20 & -3.32 & 4 & 3 \\
+1280 weights, z1 + z2 tiles, SCAHI & 36.14 & 32.58 & -3.56 & 5 & 4 \\
+1536 weights, z1 + z2 tiles, SCAHI & 37.44 & 33.56 & -3.88 & 2 & 1 \\
+scale-normalised training, z1 + z2 tiles, box fusion (seed 1) & 36.13 & 31.61 & -4.52 & 7 & 13 \\
+selected main-study configuration (scale-normalised training, SCAHI + validity windows) (seed 1) & 36.13 & 32.45 & -3.68 & 6 & 6 \\
+loss-masked training, z1 + z2 tiles, box fusion (seed 1) & 36.04 & 31.44 & -4.61 & 9 & 18 \\
+scale-normalised training, z1 + z2 tiles, box fusion (seed 2) & 35.72 & 31.52 & -4.21 & 17 & 15 \\
+selected main-study configuration (scale-normalised training, SCAHI + validity windows) (seed 2) & 36.01 & 32.38 & -3.63 & 10 & 7 \\
+loss-masked training, z1 + z2 tiles, box fusion (seed 2) & 36.07 & 31.70 & -4.37 & 8 & 11 \\
+\midrule
+2048 + tiles, box fusion & 38.85 & 33.25 & -5.60 & 2 & 3 \\
+2048 + tiles, SCAHI & 39.34 & 34.53 & -4.81 & 1 & 1 \\
+1536 + tiles, box fusion & 36.66 & 31.92 & -4.75 & 4 & 4 \\
+1536 + tiles, SCAHI & 37.61 & 33.52 & -4.09 & 3 & 2 \\
+\bottomrule
+\end{tabular}

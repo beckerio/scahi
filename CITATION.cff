@@ -1,0 +1,40 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "SCAHI: code for 'When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion for Small Object Detection'"
+type: software
+license: AGPL-3.0-only
+authors:
+  - family-names: Becker
+    given-names: Stefan
+    affiliation: "Fraunhofer IOSB, Ettlingen, Germany; Fraunhofer Center for Machine Learning"
+    orcid: "https://orcid.org/0000-0001-7367-2519"
+  - family-names: Bayer
+    given-names: Jens
+    affiliation: "Fraunhofer IOSB, Ettlingen, Germany; Fraunhofer Center for Machine Learning"
+    orcid: "https://orcid.org/0000-0002-2806-6920"
+  - family-names: Münch
+    given-names: David
+    affiliation: "Fraunhofer IOSB, Ettlingen, Germany; Fraunhofer Center for Machine Learning"
+    orcid: "https://orcid.org/0000-0002-8577-5256"
+  - family-names: Hübner
+    given-names: Wolfgang
+    affiliation: "Fraunhofer IOSB, Ettlingen, Germany; Fraunhofer Center for Machine Learning"
+    orcid: "https://orcid.org/0000-0001-5634-6324"
+preferred-citation:
+  type: article
+  title: "When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion for Small Object Detection"
+  authors:
+    - family-names: Becker
+      given-names: Stefan
+      orcid: "https://orcid.org/0000-0001-7367-2519"
+    - family-names: Bayer
+      given-names: Jens
+      orcid: "https://orcid.org/0000-0002-2806-6920"
+    - family-names: Münch
+      given-names: David
+      orcid: "https://orcid.org/0000-0002-8577-5256"
+    - family-names: Hübner
+      given-names: Wolfgang
+      orcid: "https://orcid.org/0000-0001-5634-6324"
+  year: 2026
+  journal: "arXiv preprint arXiv:XXXX.XXXXX"

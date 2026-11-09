@@ -1,0 +1,63 @@
+dataset,covariate,detector,bin,x,mean_dAP,ci_lo,ci_hi,n_img
+VisDrone test-dev,share_lt16,YOLOv10s,"[0, 0.1)",0.0500,0.9315,0.5155,1.3457,623
+VisDrone test-dev,share_lt16,YOLOv10s,"[0.1, 0.25)",0.1750,1.4645,0.9904,1.9497,276
+VisDrone test-dev,share_lt16,YOLOv10s,"[0.25, 0.5)",0.3750,1.6505,1.3090,2.0042,343
+VisDrone test-dev,share_lt16,YOLOv10s,"[0.5, 0.75)",0.6250,1.5170,1.1499,1.8968,255
+VisDrone test-dev,share_lt16,YOLOv10s,"[0.75, 1]",0.8750,1.7764,1.1336,2.4696,113
+VisDrone test-dev,share_lt16,YOLOv10m (o2m),"[0, 0.1)",0.0500,5.3477,4.7139,5.9755,623
+VisDrone test-dev,share_lt16,YOLOv10m (o2m),"[0.1, 0.25)",0.1750,4.9066,4.2834,5.5434,276
+VisDrone test-dev,share_lt16,YOLOv10m (o2m),"[0.25, 0.5)",0.3750,4.4204,3.8665,5.0126,343
+VisDrone test-dev,share_lt16,YOLOv10m (o2m),"[0.5, 0.75)",0.6250,3.8999,3.3348,4.4584,255
+VisDrone test-dev,share_lt16,YOLOv10m (o2m),"[0.75, 1]",0.8750,3.8978,2.8938,4.9898,113
+VisDrone test-dev,share_lt16,YOLOv10m (o2o),"[0, 0.1)",0.0500,0.5304,0.1204,0.9273,623
+VisDrone test-dev,share_lt16,YOLOv10m (o2o),"[0.1, 0.25)",0.1750,0.5357,0.0318,1.0084,276
+VisDrone test-dev,share_lt16,YOLOv10m (o2o),"[0.25, 0.5)",0.3750,0.8867,0.5046,1.2734,343
+VisDrone test-dev,share_lt16,YOLOv10m (o2o),"[0.5, 0.75)",0.6250,1.0252,0.6792,1.3639,255
+VisDrone test-dev,share_lt16,YOLOv10m (o2o),"[0.75, 1]",0.8750,1.4508,0.8548,2.0777,113
+VisDrone test-dev,share_lt16,YOLOv11s,"[0, 0.1)",0.0500,5.5560,4.9362,6.1680,623
+VisDrone test-dev,share_lt16,YOLOv11s,"[0.1, 0.25)",0.1750,5.5350,4.9128,6.2988,276
+VisDrone test-dev,share_lt16,YOLOv11s,"[0.25, 0.5)",0.3750,4.4593,3.9407,4.9677,343
+VisDrone test-dev,share_lt16,YOLOv11s,"[0.5, 0.75)",0.6250,4.3203,3.6660,5.0044,255
+VisDrone test-dev,share_lt16,YOLOv11s,"[0.75, 1]",0.8750,3.3702,2.6136,4.2040,113
+VisDrone test-dev,share_lt16,YOLOv11m,"[0, 0.1)",0.0500,5.4607,4.8835,6.1071,623
+VisDrone test-dev,share_lt16,YOLOv11m,"[0.1, 0.25)",0.1750,4.3514,3.7107,5.0047,276
+VisDrone test-dev,share_lt16,YOLOv11m,"[0.25, 0.5)",0.3750,4.3470,3.8296,4.8639,343
+VisDrone test-dev,share_lt16,YOLOv11m,"[0.5, 0.75)",0.6250,4.1529,3.5913,4.7070,255
+VisDrone test-dev,share_lt16,YOLOv11m,"[0.75, 1]",0.8750,4.0885,3.2316,5.0053,113
+VisDrone test-dev,share_lt16,YOLOv12s,"[0, 0.1)",0.0500,5.4062,4.8523,5.9911,623
+VisDrone test-dev,share_lt16,YOLOv12s,"[0.1, 0.25)",0.1750,5.3662,4.6196,6.1279,276
+VisDrone test-dev,share_lt16,YOLOv12s,"[0.25, 0.5)",0.3750,4.3900,3.8734,4.9106,343
+VisDrone test-dev,share_lt16,YOLOv12s,"[0.5, 0.75)",0.6250,4.5844,3.9481,5.2565,255
+VisDrone test-dev,share_lt16,YOLOv12s,"[0.75, 1]",0.8750,4.3105,3.3562,5.3928,113
+VisDrone test-dev,share_crowded,YOLOv10s,"[0, 0.1)",0.0500,1.3339,1.1056,1.5540,1459
+VisDrone test-dev,share_crowded,YOLOv10s,"[0.1, 0.25)",0.1750,1.4505,0.5619,2.3089,133
+VisDrone test-dev,share_crowded,YOLOv10s,"[0.25, 0.5)",0.3750,0.2429,-1.9745,2.4160,15
+VisDrone test-dev,share_crowded,YOLOv10m (o2m),"[0, 0.1)",0.0500,4.8134,4.4864,5.1414,1459
+VisDrone test-dev,share_crowded,YOLOv10m (o2m),"[0.1, 0.25)",0.1750,4.4406,3.3471,5.7155,133
+VisDrone test-dev,share_crowded,YOLOv10m (o2m),"[0.25, 0.5)",0.3750,2.6584,1.0202,4.6736,15
+VisDrone test-dev,share_crowded,YOLOv10m (o2o),"[0, 0.1)",0.0500,0.7067,0.4907,0.9161,1459
+VisDrone test-dev,share_crowded,YOLOv10m (o2o),"[0.1, 0.25)",0.1750,1.2968,0.6759,1.9395,133
+VisDrone test-dev,share_crowded,YOLOv10m (o2o),"[0.25, 0.5)",0.3750,0.6875,-0.6109,2.0567,15
+VisDrone test-dev,share_crowded,YOLOv11s,"[0, 0.1)",0.0500,5.0388,4.7169,5.3530,1459
+VisDrone test-dev,share_crowded,YOLOv11s,"[0.1, 0.25)",0.1750,4.5640,3.4804,5.7994,133
+VisDrone test-dev,share_crowded,YOLOv11s,"[0.25, 0.5)",0.3750,3.3530,0.5164,6.8267,15
+VisDrone test-dev,share_crowded,YOLOv11m,"[0, 0.1)",0.0500,4.7874,4.4644,5.1079,1459
+VisDrone test-dev,share_crowded,YOLOv11m,"[0.1, 0.25)",0.1750,4.5601,3.6373,5.6016,133
+VisDrone test-dev,share_crowded,YOLOv11m,"[0.25, 0.5)",0.3750,2.6453,0.2718,5.7143,15
+VisDrone test-dev,share_crowded,YOLOv12s,"[0, 0.1)",0.0500,5.0689,4.7577,5.3914,1459
+VisDrone test-dev,share_crowded,YOLOv12s,"[0.1, 0.25)",0.1750,4.3860,3.5146,5.2629,133
+VisDrone test-dev,share_crowded,YOLOv12s,"[0.25, 0.5)",0.3750,2.5577,0.6344,4.7691,15
+DOTA-val,share_lt16,YOLOv10s,"[0, 0.1)",0.0500,3.6677,2.4900,4.9188,401
+DOTA-val,share_lt16,YOLOv10s,"[0.1, 0.25)",0.1750,8.4544,4.1972,13.1426,32
+DOTA-val,share_lt16,YOLOv10s,"[0.25, 0.5)",0.3750,6.7473,2.2702,11.8708,12
+DOTA-val,share_lt16,YOLOv10m,"[0, 0.1)",0.0500,3.5298,2.5932,4.4997,401
+DOTA-val,share_lt16,YOLOv10m,"[0.1, 0.25)",0.1750,4.1941,0.1322,8.1114,32
+DOTA-val,share_lt16,YOLOv10m,"[0.25, 0.5)",0.3750,7.1661,2.0356,12.4877,12
+DOTA-val,share_crowded,YOLOv10s,"[0, 0.1)",0.0500,4.6268,3.3967,5.9477,394
+DOTA-val,share_crowded,YOLOv10s,"[0.1, 0.25)",0.1750,3.7500,0.6161,7.6759,34
+DOTA-val,share_crowded,YOLOv10s,"[0.25, 0.5)",0.3750,0.1624,-6.2298,5.1285,16
+DOTA-val,share_crowded,YOLOv10s,"[0.5, 0.75)",0.6250,-6.3281,-9.9095,-2.8201,10
+DOTA-val,share_crowded,YOLOv10m,"[0, 0.1)",0.0500,3.9424,2.9495,4.9432,394
+DOTA-val,share_crowded,YOLOv10m,"[0.1, 0.25)",0.1750,2.8933,-0.0739,6.6181,34
+DOTA-val,share_crowded,YOLOv10m,"[0.25, 0.5)",0.3750,2.5815,-0.9963,6.4798,16
+DOTA-val,share_crowded,YOLOv10m,"[0.5, 0.75)",0.6250,-0.4641,-3.3542,2.8377,10

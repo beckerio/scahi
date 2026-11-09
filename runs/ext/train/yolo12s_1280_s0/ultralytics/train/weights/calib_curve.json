@@ -1,0 +1,290 @@
+[
+  {
+    "epoch": 5,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 27.765910880358316,
+    "AP50": 46.5360096454725
+  },
+  {
+    "epoch": 10,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 30.83411202911878,
+    "AP50": 51.56739359027846
+  },
+  {
+    "epoch": 15,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 32.09610276238349,
+    "AP50": 53.19928403859539
+  },
+  {
+    "epoch": 20,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 33.16310783083667,
+    "AP50": 54.508523825266415
+  },
+  {
+    "epoch": 25,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 33.546380466025,
+    "AP50": 55.20615967450709
+  },
+  {
+    "epoch": 30,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.57669500155878,
+    "AP50": 57.06660545999532
+  },
+  {
+    "epoch": 35,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.932889754058095,
+    "AP50": 57.45046717171463
+  },
+  {
+    "epoch": 40,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.251773409430434,
+    "AP50": 57.53921936472922
+  },
+  {
+    "epoch": 45,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.393800158787485,
+    "AP50": 57.87981686972164
+  },
+  {
+    "epoch": 50,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.5940331171546,
+    "AP50": 57.93766481842985
+  },
+  {
+    "epoch": 55,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.84361598870356,
+    "AP50": 58.27867316283915
+  },
+  {
+    "epoch": 60,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.385445382042114,
+    "AP50": 57.63395961569884
+  },
+  {
+    "epoch": 65,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.78175903171425,
+    "AP50": 58.26603421544321
+  },
+  {
+    "epoch": 70,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.52268002121425,
+    "AP50": 57.843548089384086
+  },
+  {
+    "epoch": 75,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.41599085443809,
+    "AP50": 57.62479074765399
+  },
+  {
+    "epoch": 80,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.37073349627544,
+    "AP50": 57.57987803787186
+  },
+  {
+    "epoch": 81,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.30418711544946,
+    "AP50": 57.51330191384458
+  },
+  {
+    "epoch": 82,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.38009475962962,
+    "AP50": 57.57785244372806
+  },
+  {
+    "epoch": 83,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.31082450731554,
+    "AP50": 57.44921041203929
+  },
+  {
+    "epoch": 84,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.411161885582025,
+    "AP50": 57.473176479767695
+  },
+  {
+    "epoch": 85,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.443816529794354,
+    "AP50": 57.582790835823204
+  },
+  {
+    "epoch": 86,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.41738887768072,
+    "AP50": 57.507649345850645
+  },
+  {
+    "epoch": 87,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.30789878069336,
+    "AP50": 57.37353296917663
+  },
+  {
+    "epoch": 88,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.30636905756989,
+    "AP50": 57.34698589938331
+  },
+  {
+    "epoch": 89,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.114753318595405,
+    "AP50": 57.14255690465228
+  },
+  {
+    "epoch": 90,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.1760818889942,
+    "AP50": 57.185294607604646
+  },
+  {
+    "epoch": 91,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 35.02734154738701,
+    "AP50": 57.0422533625061
+  },
+  {
+    "epoch": 92,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.93866807547218,
+    "AP50": 56.886010578359446
+  },
+  {
+    "epoch": 93,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.90686640073052,
+    "AP50": 56.80374368207388
+  },
+  {
+    "epoch": 94,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.862972314191715,
+    "AP50": 56.73567719109255
+  },
+  {
+    "epoch": 95,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.86185405776586,
+    "AP50": 56.71740063132897
+  },
+  {
+    "epoch": 96,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.77910952014431,
+    "AP50": 56.62075365110814
+  },
+  {
+    "epoch": 97,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.74636879591541,
+    "AP50": 56.609727815366895
+  },
+  {
+    "epoch": 98,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.74456192149118,
+    "AP50": 56.570784242329374
+  },
+  {
+    "epoch": 99,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.65136233059535,
+    "AP50": 56.506153817418976
+  },
+  {
+    "epoch": 100,
+    "source": "toolkit_port",
+    "selection_branch": "o2m",
+    "gpu_power_limit_w": 575.0,
+    "AP": 34.586965695751864,
+    "AP50": 56.415621901529896
+  }
+]

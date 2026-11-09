@@ -1,0 +1,348 @@
+{
+ "label": "exploratory, post hoc (train/inference resolution crossing; VisDrone val only, no test-dev)",
+ "rows": [
+  {
+   "weights": "R2-2048",
+   "train_size": 2048,
+   "infer_size": 2048,
+   "exp_id": "X_v10s_train2048_infer2048_o2o",
+   "AP": 38.47426059190758,
+   "AP50": 62.870162333070354,
+   "AP_by_size": {
+    "<8": 12.425206684608229,
+    "8-16": 21.57553335140722,
+    "16-32": 36.14791966692499,
+    "32-64": 48.077933879062925,
+    "64-128": 57.93430063497834,
+    ">128": 59.469047037200525,
+    "<16": 19.54088937284401
+   },
+   "AP50_by_size": {
+    "<8": 30.881490981508485,
+    "8-16": 44.90096648633706,
+    "16-32": 59.67593061394154,
+    "32-64": 70.0683423370704,
+    "64-128": 74.5481496018799,
+    ">128": 69.58670104197392,
+    "<16": 41.68521285209055
+   },
+   "peak_mem_mb": 304.193359375,
+   "latency_ms_mean": 11.034332169474775,
+   "latency_status": "informational",
+   "gflops_per_img": 127.50903705599998,
+   "matches_frozen_row": true,
+   "latency_e2_ms_mean": 9.747969123121031,
+   "latency_e2_ms_p95": 10.61882564681582,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 1,
+   "gflops_unified_per_img": 127.50903705599998
+  },
+  {
+   "weights": "R2-2048",
+   "train_size": 2048,
+   "infer_size": 2560,
+   "exp_id": "X_v10s_train2048_infer2560_o2o",
+   "AP": 38.84364487409239,
+   "AP50": 63.69054466031724,
+   "AP_by_size": {
+    "<8": 12.340683899396103,
+    "8-16": 22.68623362643546,
+    "16-32": 36.65633969374051,
+    "32-64": 47.75505345956659,
+    "64-128": 55.12427039667881,
+    ">128": 46.55308070053104,
+    "<16": 20.50227489272883
+   },
+   "AP50_by_size": {
+    "<8": 31.997482239530626,
+    "8-16": 46.92830411614713,
+    "16-32": 60.9711714016002,
+    "32-64": 70.04746444738068,
+    "64-128": 70.98053874094795,
+    ">128": 59.77867793772613,
+    "<16": 43.607562825795256
+   },
+   "peak_mem_mb": 562.4033203125,
+   "latency_ms_mean": 13.914897390721999,
+   "latency_status": "informational",
+   "gflops_per_img": 202.81605119999998,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 13.851001036687359,
+   "latency_e2_ms_p95": 14.790773336426353,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 1,
+   "gflops_unified_per_img": 202.81605119999998
+  },
+  {
+   "weights": "R2-2048",
+   "train_size": 2048,
+   "infer_size": 3072,
+   "exp_id": "X_v10s_train2048_infer3072_o2o",
+   "AP": 38.07918528941897,
+   "AP50": 62.61570231035464,
+   "AP_by_size": {
+    "<8": 12.989897975960929,
+    "8-16": 22.994535377727896,
+    "16-32": 36.371984434148565,
+    "32-64": 46.15067733221066,
+    "64-128": 51.66800026510655,
+    ">128": 40.822777424653324,
+    "<16": 20.767381696093235
+   },
+   "AP50_by_size": {
+    "<8": 32.53252578203347,
+    "8-16": 47.34237536043269,
+    "16-32": 60.185247150136476,
+    "32-64": 68.09481130933158,
+    "64-128": 67.63263800641472,
+    ">128": 50.245520374845434,
+    "<16": 43.80130829749482
+   },
+   "peak_mem_mb": 1033.31494140625,
+   "latency_ms_mean": 19.324205733366636,
+   "latency_status": "informational",
+   "gflops_per_img": 298.361511936,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 18.969793777541515,
+   "latency_e2_ms_p95": 20.922275463817638,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 2,
+   "gflops_unified_per_img": 298.361511936
+  },
+  {
+   "weights": "R2-2048",
+   "train_size": 2048,
+   "infer_size": 3584,
+   "exp_id": "X_v10s_train2048_infer3584_o2o",
+   "AP": 36.90729463953971,
+   "AP50": 61.03656124122539,
+   "AP_by_size": {
+    "<8": 12.742665980852822,
+    "8-16": 22.907056432451316,
+    "16-32": 35.79214833546418,
+    "32-64": 44.52308803567538,
+    "64-128": 47.41979492180624,
+    ">128": 33.43162866889456,
+    "<16": 20.64494851226966
+   },
+   "AP50_by_size": {
+    "<8": 32.893485829693134,
+    "8-16": 46.8497281832289,
+    "16-32": 59.058080340430166,
+    "32-64": 66.0343275755616,
+    "64-128": 63.164084644507845,
+    ">128": 44.712242238145386,
+    "<16": 43.42530805470128
+   },
+   "peak_mem_mb": 1788.48388671875,
+   "latency_ms_mean": 31.009986827232414,
+   "latency_status": "informational",
+   "gflops_per_img": 416.2475519999999,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 30.58289043253957,
+   "latency_e2_ms_p95": 32.845795815228485,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 1,
+   "gflops_unified_per_img": 416.2475519999999
+  },
+  {
+   "weights": "R3-2560",
+   "train_size": 2560,
+   "infer_size": 2048,
+   "exp_id": "X_v10s_train2560_infer2048_o2o",
+   "AP": 38.44138363726022,
+   "AP50": 63.03974414866069,
+   "AP_by_size": {
+    "<8": 12.109007436431057,
+    "8-16": 21.421427260067617,
+    "16-32": 35.83739552087942,
+    "32-64": 48.250508036325144,
+    "64-128": 58.88752348830823,
+    ">128": 61.16596618912248,
+    "<16": 19.27754127756369
+   },
+   "AP50_by_size": {
+    "<8": 32.64144949986127,
+    "8-16": 45.76786671441833,
+    "16-32": 60.04285907785661,
+    "32-64": 70.54895296466007,
+    "64-128": 74.89055737659424,
+    ">128": 73.49763649825533,
+    "<16": 42.385416733770526
+   },
+   "peak_mem_mb": 304.693359375,
+   "latency_ms_mean": 10.147775604727807,
+   "latency_status": "informational",
+   "gflops_per_img": 127.50903705599998,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 9.790812171638747,
+   "latency_e2_ms_p95": 10.720009834039955,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 1,
+   "gflops_unified_per_img": 127.50903705599998
+  },
+  {
+   "weights": "R3-2560",
+   "train_size": 2560,
+   "infer_size": 2560,
+   "exp_id": "X_v10s_train2560_infer2560_o2o",
+   "AP": 39.507274022436896,
+   "AP50": 64.42244667219576,
+   "AP_by_size": {
+    "<8": 12.343473778585144,
+    "8-16": 23.27583950363147,
+    "16-32": 37.54448794566022,
+    "32-64": 48.7597064881526,
+    "64-128": 58.34639941657835,
+    ">128": 56.431852947160934,
+    "<16": 20.933406678179395
+   },
+   "AP50_by_size": {
+    "<8": 33.10921292271692,
+    "8-16": 48.5944076890323,
+    "16-32": 62.05752959334825,
+    "32-64": 70.86063171898917,
+    "64-128": 75.12107803121172,
+    ">128": 74.8027374974162,
+    "<16": 44.93805608487722
+   },
+   "peak_mem_mb": 562.4033203125,
+   "latency_ms_mean": 14.542265872285789,
+   "latency_status": "informational",
+   "gflops_per_img": 202.81605119999998,
+   "matches_frozen_row": true,
+   "latency_e2_ms_mean": 13.956060146264576,
+   "latency_e2_ms_p95": 14.870145276654512,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 2,
+   "gflops_unified_per_img": 202.81605119999998
+  },
+  {
+   "weights": "R3-2560",
+   "train_size": 2560,
+   "infer_size": 3072,
+   "exp_id": "X_v10s_train2560_infer3072_o2o",
+   "AP": 39.64210183631628,
+   "AP50": 64.80895284092898,
+   "AP_by_size": {
+    "<8": 14.70100552017801,
+    "8-16": 24.689821430082777,
+    "16-32": 37.93847150248805,
+    "32-64": 48.68802412513192,
+    "64-128": 53.677547178556786,
+    ">128": 49.135180503985865,
+    "<16": 22.335989772137037
+   },
+   "AP50_by_size": {
+    "<8": 38.50575411095502,
+    "8-16": 50.271678075348106,
+    "16-32": 62.72937908884801,
+    "32-64": 71.14458616756342,
+    "64-128": 70.6334412215533,
+    ">128": 68.43235389622528,
+    "<16": 46.911183908317206
+   },
+   "peak_mem_mb": 1033.31494140625,
+   "latency_ms_mean": 19.51950784801526,
+   "latency_status": "informational",
+   "gflops_per_img": 298.361511936,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 19.055991449387385,
+   "latency_e2_ms_p95": 20.52238226751797,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 1,
+   "gflops_unified_per_img": 298.361511936
+  },
+  {
+   "weights": "R3-2560",
+   "train_size": 2560,
+   "infer_size": 3584,
+   "exp_id": "X_v10s_train2560_infer3584_o2o",
+   "AP": 39.33890090115534,
+   "AP50": 64.50245635401285,
+   "AP_by_size": {
+    "<8": 14.551650821235263,
+    "8-16": 24.55947723008702,
+    "16-32": 38.072863577509885,
+    "32-64": 48.130857216163854,
+    "64-128": 51.66521369535509,
+    ">128": 41.44191602121837,
+    "<16": 22.222690498019062
+   },
+   "AP50_by_size": {
+    "<8": 37.66506110645302,
+    "8-16": 49.94342663988791,
+    "16-32": 62.89406243532344,
+    "32-64": 70.32845669454304,
+    "64-128": 69.36826433262398,
+    ">128": 61.32949774513208,
+    "<16": 46.64572228846428
+   },
+   "peak_mem_mb": 1788.48388671875,
+   "latency_ms_mean": 31.96206602334201,
+   "latency_status": "informational",
+   "gflops_per_img": 416.2475519999999,
+   "matches_frozen_row": null,
+   "latency_e2_ms_mean": 30.615262799479073,
+   "latency_e2_ms_p95": 32.38229784474242,
+   "latency_e2_status": "final",
+   "latency_e2_attempts": 2,
+   "gflops_unified_per_img": 416.2475519999999
+  }
+ ],
+ "training_memory": {
+  "recipe_batch3": {
+   "2560": {
+    "model": "yolov10s",
+    "imgsz": 2560,
+    "batch": 3,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.13019840499327984,
+    "peak_mem_gb": 22.537109375
+   },
+   "3072": {
+    "model": "yolov10s",
+    "imgsz": 3072,
+    "batch": 3,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.06978705400251783,
+    "peak_mem_gb": 26.689453125
+   }
+  },
+  "batch2": {
+   "3072@b2": {
+    "model": "yolov10s",
+    "imgsz": 3072,
+    "batch": 2,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.1346118689980358,
+    "peak_mem_gb": 25.349609375
+   },
+   "3584@b2": {
+    "model": "yolov10s",
+    "imgsz": 3584,
+    "batch": 2,
+    "status": "ok",
+    "iters": 120,
+    "s_per_iter": 0.10334185999818146,
+    "peak_mem_gb": 26.712890625
+   }
+  }
+ },
+ "latency_e2": {
+  "source": "runs/ext/e2/latency_crossing.json",
+  "started": "2026-10-30T20:48:48",
+  "host_class": "same machine as E2",
+  "procedure": "scahi.ext_latency (exclusive GPU and CPU, default power limit, smoke first, <= 3 attempts), Ultralytics predictor, batch 1, end-to-end, val 548 images",
+  "all_final": true,
+  "anchors_ms_this_run": {
+   "R2": 9.872631228275692,
+   "E_yolov10s_full2560_o2o": 14.18654290170249
+  },
+  "note": "latency_ms_mean / latency_status = first measurement during the inference run (informational)"
+ },
+ "gflops_unified_method": "Ultralytics get_flops on the fused model (YOLOv10: one head) at the exact letterboxed input shape of every pass, summed over the passes of an image incl. tiles, mean over the val images (scripts/gflops_unified.py)"
+}

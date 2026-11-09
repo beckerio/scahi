@@ -1,0 +1,12 @@
+{
+  "init": "torchvision fcos_resnet50_fpn COCO_V1 (new 16-class output layer)",
+  "epochs": 60,
+  "imgsz": 1024,
+  "batch": 8,
+  "accumulation": 1,
+  "effective_batch": 8,
+  "lr": 0.005,
+  "seed": 0,
+  "selection": "devkit mAP50 on calib (no cap), best epoch 35 (42.90)",
+  "weights": "runs/dota/train/fcos_1024_s0/weights/best_calib.pt"
+}

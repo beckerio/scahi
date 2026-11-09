@@ -1,0 +1,1408 @@
+{
+ "label": "exploratory, post hoc (DOTA-val)",
+ "split": "val",
+ "limit": 200000,
+ "no_limit": 10000000,
+ "rows": {
+  "A_fcos_1024": {
+   "kind": "capped output",
+   "n_dets": 62091900,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 24,
+   "mAP50_limited": 42.63844886855207,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 42.63844886855207,
+   "delta": 0.0,
+   "wall_s": 59.88827586174011,
+   "images": {
+    "P0161": {
+     "dets_limited": 200000,
+     "dets_unlimited": 202696
+    },
+    "P1179": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200413
+    },
+    "P1230": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200324
+    },
+    "P1315": {
+     "dets_limited": 200000,
+     "dets_unlimited": 204179
+    },
+    "P1342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 214117
+    },
+    "P1356": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200858
+    },
+    "P1370": {
+     "dets_limited": 200000,
+     "dets_unlimited": 208480
+    },
+    "P1371": {
+     "dets_limited": 200000,
+     "dets_unlimited": 211522
+    },
+    "P1373": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205509
+    },
+    "P1380": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203281
+    },
+    "P1384": {
+     "dets_limited": 200000,
+     "dets_unlimited": 211138
+    },
+    "P1432": {
+     "dets_limited": 200000,
+     "dets_unlimited": 213824
+    },
+    "P1471": {
+     "dets_limited": 200000,
+     "dets_unlimited": 210066
+    },
+    "P1518": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201885
+    },
+    "P1547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 214002
+    },
+    "P1566": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200897
+    },
+    "P1604": {
+     "dets_limited": 200000,
+     "dets_unlimited": 206585
+    },
+    "P1643": {
+     "dets_limited": 200000,
+     "dets_unlimited": 202988
+    },
+    "P1647": {
+     "dets_limited": 200000,
+     "dets_unlimited": 207328
+    },
+    "P1751": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205215
+    },
+    "P1752": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201795
+    },
+    "P2541": {
+     "dets_limited": 200000,
+     "dets_unlimited": 202051
+    },
+    "P2754": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219538
+    },
+    "P2766": {
+     "dets_limited": 200000,
+     "dets_unlimited": 215449
+    }
+   }
+  },
+  "NMS-o2m_fcos_1024": {
+   "kind": "box fusion (merged output not capped)",
+   "n_dets": 184639671,
+   "max_dets_per_image": 3495205,
+   "images_at_image_limit": 182,
+   "mAP50_limited": 52.56438170987177,
+   "eval_mAP50_equal": true,
+   "passes_at_pass_limit": 47,
+   "images_with_pass_at_limit": 30,
+   "dets_on_those_images": 48631510,
+   "mAP50_unlimited": 52.56438170987177,
+   "delta": 0.0,
+   "wall_s": 13362.971737623215,
+   "images": {
+    "P0161": {
+     "dets_limited": 614031,
+     "dets_unlimited": 614065
+    },
+    "P1179": {
+     "dets_limited": 1486374,
+     "dets_unlimited": 1486374
+    },
+    "P1230": {
+     "dets_limited": 2673592,
+     "dets_unlimited": 2673616
+    },
+    "P1315": {
+     "dets_limited": 1772493,
+     "dets_unlimited": 1772494
+    },
+    "P1342": {
+     "dets_limited": 2364061,
+     "dets_unlimited": 2364201
+    },
+    "P1356": {
+     "dets_limited": 1347576,
+     "dets_unlimited": 1347577
+    },
+    "P1370": {
+     "dets_limited": 1830785,
+     "dets_unlimited": 1830942
+    },
+    "P1371": {
+     "dets_limited": 2307952,
+     "dets_unlimited": 2308013
+    },
+    "P1373": {
+     "dets_limited": 1921491,
+     "dets_unlimited": 1921555
+    },
+    "P1380": {
+     "dets_limited": 979280,
+     "dets_unlimited": 979280
+    },
+    "P1384": {
+     "dets_limited": 3495205,
+     "dets_unlimited": 3495285
+    },
+    "P1432": {
+     "dets_limited": 1240785,
+     "dets_unlimited": 1241701
+    },
+    "P1471": {
+     "dets_limited": 908005,
+     "dets_unlimited": 908179
+    },
+    "P1518": {
+     "dets_limited": 1909419,
+     "dets_unlimited": 1909421
+    },
+    "P1547": {
+     "dets_limited": 2060696,
+     "dets_unlimited": 2061018
+    },
+    "P1566": {
+     "dets_limited": 1733150,
+     "dets_unlimited": 1733157
+    },
+    "P1604": {
+     "dets_limited": 1836382,
+     "dets_unlimited": 1836434
+    },
+    "P1643": {
+     "dets_limited": 1939652,
+     "dets_unlimited": 1939659
+    },
+    "P1647": {
+     "dets_limited": 1864286,
+     "dets_unlimited": 1864367
+    },
+    "P1750": {
+     "dets_limited": 433637,
+     "dets_unlimited": 433648
+    },
+    "P1751": {
+     "dets_limited": 2201191,
+     "dets_unlimited": 2201301
+    },
+    "P1752": {
+     "dets_limited": 1697970,
+     "dets_unlimited": 1697970
+    },
+    "P2488": {
+     "dets_limited": 792659,
+     "dets_unlimited": 797721
+    },
+    "P2539": {
+     "dets_limited": 679482,
+     "dets_unlimited": 680991
+    },
+    "P2541": {
+     "dets_limited": 1162124,
+     "dets_unlimited": 1169246
+    },
+    "P2542": {
+     "dets_limited": 959040,
+     "dets_unlimited": 960204
+    },
+    "P2714": {
+     "dets_limited": 1525695,
+     "dets_unlimited": 1525699
+    },
+    "P2721": {
+     "dets_limited": 1319504,
+     "dets_unlimited": 1319504
+    },
+    "P2754": {
+     "dets_limited": 1632689,
+     "dets_unlimited": 1633023
+    },
+    "P2766": {
+     "dets_limited": 1942304,
+     "dets_unlimited": 1942311
+    }
+   }
+  },
+  "F2_fcos_1024": {
+   "kind": "capped output",
+   "n_dets": 26422818,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 8,
+   "mAP50_limited": 52.96428682034537,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 50.806358360731764,
+   "delta": -2.1579284596136077,
+   "wall_s": 79.8314688205719,
+   "images": {
+    "P1315": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1772494
+    },
+    "P1342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2364201
+    },
+    "P1371": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2308013
+    },
+    "P1373": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1921555
+    },
+    "P1547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2061018
+    },
+    "P1570": {
+     "dets_limited": 200000,
+     "dets_unlimited": 208260
+    },
+    "P1604": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1836434
+    },
+    "P1751": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2201301
+    }
+   }
+  },
+  "RG_fcos_1024": {
+   "kind": "capped output",
+   "n_dets": 26422818,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 8,
+   "mAP50_limited": 52.96428682034537,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 50.806358360731764,
+   "delta": -2.1579284596136077,
+   "wall_s": 52.78941559791565,
+   "images": {
+    "P1315": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1772494
+    },
+    "P1342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2364201
+    },
+    "P1371": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2308013
+    },
+    "P1373": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1921555
+    },
+    "P1547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2061018
+    },
+    "P1570": {
+     "dets_limited": 200000,
+     "dets_unlimited": 208260
+    },
+    "P1604": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1836434
+    },
+    "P1751": {
+     "dets_limited": 200000,
+     "dets_unlimited": 2201301
+    }
+   }
+  },
+  "B-F2_fcos_1024": {
+   "kind": "capped output",
+   "n_dets": 7245750,
+   "max_dets_per_image": 41826,
+   "images_at_image_limit": 0,
+   "mAP50_limited": 41.89018237000374,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 41.89018237000374,
+   "delta": 0.0
+  },
+  "B-RG_fcos_1024": {
+   "kind": "capped output",
+   "n_dets": 10462803,
+   "max_dets_per_image": 46626,
+   "images_at_image_limit": 0,
+   "mAP50_limited": 42.45105055737442,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 42.45105055737442,
+   "delta": 0.0
+  },
+  "A_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 73423717,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 76,
+   "mAP50_limited": 55.014769766568904,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 55.014769629923734,
+   "delta": -1.366451698459059e-07,
+   "wall_s": 111.11797881126404,
+   "images": {
+    "P0161": {
+     "dets_limited": 200000,
+     "dets_unlimited": 229822
+    },
+    "P0683": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200569
+    },
+    "P1179": {
+     "dets_limited": 200000,
+     "dets_unlimited": 239976
+    },
+    "P1210": {
+     "dets_limited": 200000,
+     "dets_unlimited": 215054
+    },
+    "P1212": {
+     "dets_limited": 200000,
+     "dets_unlimited": 223763
+    },
+    "P1213": {
+     "dets_limited": 200000,
+     "dets_unlimited": 216026
+    },
+    "P1230": {
+     "dets_limited": 200000,
+     "dets_unlimited": 228904
+    },
+    "P1240": {
+     "dets_limited": 200000,
+     "dets_unlimited": 212752
+    },
+    "P1242": {
+     "dets_limited": 200000,
+     "dets_unlimited": 206930
+    },
+    "P1257": {
+     "dets_limited": 200000,
+     "dets_unlimited": 223500
+    },
+    "P1315": {
+     "dets_limited": 200000,
+     "dets_unlimited": 216760
+    },
+    "P1342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 244947
+    },
+    "P1356": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209706
+    },
+    "P1370": {
+     "dets_limited": 200000,
+     "dets_unlimited": 234629
+    },
+    "P1371": {
+     "dets_limited": 200000,
+     "dets_unlimited": 239251
+    },
+    "P1373": {
+     "dets_limited": 200000,
+     "dets_unlimited": 222006
+    },
+    "P1376": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201910
+    },
+    "P1380": {
+     "dets_limited": 200000,
+     "dets_unlimited": 232979
+    },
+    "P1384": {
+     "dets_limited": 200000,
+     "dets_unlimited": 277092
+    },
+    "P1410": {
+     "dets_limited": 200000,
+     "dets_unlimited": 238075
+    },
+    "P1432": {
+     "dets_limited": 200000,
+     "dets_unlimited": 255929
+    },
+    "P1471": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226743
+    },
+    "P1518": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226698
+    },
+    "P1542": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201570
+    },
+    "P1547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 233636
+    },
+    "P1566": {
+     "dets_limited": 200000,
+     "dets_unlimited": 212249
+    },
+    "P1570": {
+     "dets_limited": 200000,
+     "dets_unlimited": 221652
+    },
+    "P1573": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203455
+    },
+    "P1586": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200613
+    },
+    "P1596": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205195
+    },
+    "P1598": {
+     "dets_limited": 200000,
+     "dets_unlimited": 216731
+    },
+    "P1604": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226843
+    },
+    "P1643": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219172
+    },
+    "P1647": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226686
+    },
+    "P1650": {
+     "dets_limited": 200000,
+     "dets_unlimited": 218017
+    },
+    "P1651": {
+     "dets_limited": 200000,
+     "dets_unlimited": 210837
+    },
+    "P1666": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203895
+    },
+    "P1700": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203042
+    },
+    "P1713": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200125
+    },
+    "P1732": {
+     "dets_limited": 200000,
+     "dets_unlimited": 212690
+    },
+    "P1738": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205569
+    },
+    "P1751": {
+     "dets_limited": 200000,
+     "dets_unlimited": 239266
+    },
+    "P1752": {
+     "dets_limited": 200000,
+     "dets_unlimited": 223371
+    },
+    "P1770": {
+     "dets_limited": 200000,
+     "dets_unlimited": 204755
+    },
+    "P1786": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209449
+    },
+    "P1809": {
+     "dets_limited": 200000,
+     "dets_unlimited": 224885
+    },
+    "P2286": {
+     "dets_limited": 200000,
+     "dets_unlimited": 212699
+    },
+    "P2331": {
+     "dets_limited": 200000,
+     "dets_unlimited": 214602
+    },
+    "P2337": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205930
+    },
+    "P2342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 208803
+    },
+    "P2363": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201301
+    },
+    "P2378": {
+     "dets_limited": 200000,
+     "dets_unlimited": 211063
+    },
+    "P2394": {
+     "dets_limited": 200000,
+     "dets_unlimited": 224432
+    },
+    "P2404": {
+     "dets_limited": 200000,
+     "dets_unlimited": 231962
+    },
+    "P2408": {
+     "dets_limited": 200000,
+     "dets_unlimited": 221117
+    },
+    "P2413": {
+     "dets_limited": 200000,
+     "dets_unlimited": 223347
+    },
+    "P2455": {
+     "dets_limited": 200000,
+     "dets_unlimited": 213111
+    },
+    "P2488": {
+     "dets_limited": 200000,
+     "dets_unlimited": 218064
+    },
+    "P2502": {
+     "dets_limited": 200000,
+     "dets_unlimited": 207986
+    },
+    "P2539": {
+     "dets_limited": 200000,
+     "dets_unlimited": 233280
+    },
+    "P2541": {
+     "dets_limited": 200000,
+     "dets_unlimited": 221042
+    },
+    "P2542": {
+     "dets_limited": 200000,
+     "dets_unlimited": 215660
+    },
+    "P2645": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205640
+    },
+    "P2689": {
+     "dets_limited": 200000,
+     "dets_unlimited": 217906
+    },
+    "P2695": {
+     "dets_limited": 200000,
+     "dets_unlimited": 217961
+    },
+    "P2714": {
+     "dets_limited": 200000,
+     "dets_unlimited": 236659
+    },
+    "P2718": {
+     "dets_limited": 200000,
+     "dets_unlimited": 224969
+    },
+    "P2721": {
+     "dets_limited": 200000,
+     "dets_unlimited": 228135
+    },
+    "P2722": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219566
+    },
+    "P2724": {
+     "dets_limited": 200000,
+     "dets_unlimited": 221816
+    },
+    "P2733": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201135
+    },
+    "P2745": {
+     "dets_limited": 200000,
+     "dets_unlimited": 236704
+    },
+    "P2754": {
+     "dets_limited": 200000,
+     "dets_unlimited": 261792
+    },
+    "P2758": {
+     "dets_limited": 200000,
+     "dets_unlimited": 206424
+    },
+    "P2766": {
+     "dets_limited": 200000,
+     "dets_unlimited": 253545
+    },
+    "P2802": {
+     "dets_limited": 200000,
+     "dets_unlimited": 229474
+    }
+   }
+  },
+  "X_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 76449308,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 82,
+   "mAP50_limited": 58.12259667620516,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 58.12259667174202,
+   "delta": -4.463139191557275e-09,
+   "wall_s": 130.02024102210999,
+   "images": {
+    "P0019": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209048
+    },
+    "P0161": {
+     "dets_limited": 200000,
+     "dets_unlimited": 232332
+    },
+    "P1179": {
+     "dets_limited": 200000,
+     "dets_unlimited": 245890
+    },
+    "P1184": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200165
+    },
+    "P1210": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226873
+    },
+    "P1212": {
+     "dets_limited": 200000,
+     "dets_unlimited": 238536
+    },
+    "P1213": {
+     "dets_limited": 200000,
+     "dets_unlimited": 220422
+    },
+    "P1230": {
+     "dets_limited": 200000,
+     "dets_unlimited": 237403
+    },
+    "P1240": {
+     "dets_limited": 200000,
+     "dets_unlimited": 216078
+    },
+    "P1242": {
+     "dets_limited": 200000,
+     "dets_unlimited": 210127
+    },
+    "P1257": {
+     "dets_limited": 200000,
+     "dets_unlimited": 225146
+    },
+    "P1315": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219225
+    },
+    "P1342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 251455
+    },
+    "P1356": {
+     "dets_limited": 200000,
+     "dets_unlimited": 218680
+    },
+    "P1370": {
+     "dets_limited": 200000,
+     "dets_unlimited": 237629
+    },
+    "P1371": {
+     "dets_limited": 200000,
+     "dets_unlimited": 245398
+    },
+    "P1373": {
+     "dets_limited": 200000,
+     "dets_unlimited": 225416
+    },
+    "P1376": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201997
+    },
+    "P1380": {
+     "dets_limited": 200000,
+     "dets_unlimited": 236443
+    },
+    "P1384": {
+     "dets_limited": 200000,
+     "dets_unlimited": 296984
+    },
+    "P1410": {
+     "dets_limited": 200000,
+     "dets_unlimited": 240879
+    },
+    "P1432": {
+     "dets_limited": 200000,
+     "dets_unlimited": 257446
+    },
+    "P1471": {
+     "dets_limited": 200000,
+     "dets_unlimited": 223353
+    },
+    "P1474": {
+     "dets_limited": 200000,
+     "dets_unlimited": 218088
+    },
+    "P1518": {
+     "dets_limited": 200000,
+     "dets_unlimited": 231859
+    },
+    "P1542": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201971
+    },
+    "P1547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 239243
+    },
+    "P1566": {
+     "dets_limited": 200000,
+     "dets_unlimited": 214835
+    },
+    "P1570": {
+     "dets_limited": 200000,
+     "dets_unlimited": 227324
+    },
+    "P1573": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209914
+    },
+    "P1586": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205782
+    },
+    "P1596": {
+     "dets_limited": 200000,
+     "dets_unlimited": 210406
+    },
+    "P1598": {
+     "dets_limited": 200000,
+     "dets_unlimited": 213678
+    },
+    "P1604": {
+     "dets_limited": 200000,
+     "dets_unlimited": 230857
+    },
+    "P1643": {
+     "dets_limited": 200000,
+     "dets_unlimited": 222536
+    },
+    "P1647": {
+     "dets_limited": 200000,
+     "dets_unlimited": 230562
+    },
+    "P1650": {
+     "dets_limited": 200000,
+     "dets_unlimited": 222039
+    },
+    "P1651": {
+     "dets_limited": 200000,
+     "dets_unlimited": 215715
+    },
+    "P1666": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209753
+    },
+    "P1700": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205963
+    },
+    "P1713": {
+     "dets_limited": 200000,
+     "dets_unlimited": 205177
+    },
+    "P1732": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219292
+    },
+    "P1738": {
+     "dets_limited": 200000,
+     "dets_unlimited": 209861
+    },
+    "P1742": {
+     "dets_limited": 200000,
+     "dets_unlimited": 206144
+    },
+    "P1749": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200728
+    },
+    "P1751": {
+     "dets_limited": 200000,
+     "dets_unlimited": 245265
+    },
+    "P1752": {
+     "dets_limited": 200000,
+     "dets_unlimited": 225781
+    },
+    "P1770": {
+     "dets_limited": 200000,
+     "dets_unlimited": 210082
+    },
+    "P1786": {
+     "dets_limited": 200000,
+     "dets_unlimited": 202218
+    },
+    "P1809": {
+     "dets_limited": 200000,
+     "dets_unlimited": 231003
+    },
+    "P2271": {
+     "dets_limited": 200000,
+     "dets_unlimited": 227809
+    },
+    "P2286": {
+     "dets_limited": 200000,
+     "dets_unlimited": 214861
+    },
+    "P2331": {
+     "dets_limited": 200000,
+     "dets_unlimited": 237094
+    },
+    "P2337": {
+     "dets_limited": 200000,
+     "dets_unlimited": 202053
+    },
+    "P2342": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203854
+    },
+    "P2378": {
+     "dets_limited": 200000,
+     "dets_unlimited": 207533
+    },
+    "P2394": {
+     "dets_limited": 200000,
+     "dets_unlimited": 222011
+    },
+    "P2404": {
+     "dets_limited": 200000,
+     "dets_unlimited": 232534
+    },
+    "P2408": {
+     "dets_limited": 200000,
+     "dets_unlimited": 226100
+    },
+    "P2413": {
+     "dets_limited": 200000,
+     "dets_unlimited": 229046
+    },
+    "P2455": {
+     "dets_limited": 200000,
+     "dets_unlimited": 211203
+    },
+    "P2488": {
+     "dets_limited": 200000,
+     "dets_unlimited": 234275
+    },
+    "P2502": {
+     "dets_limited": 200000,
+     "dets_unlimited": 218449
+    },
+    "P2539": {
+     "dets_limited": 200000,
+     "dets_unlimited": 234043
+    },
+    "P2541": {
+     "dets_limited": 200000,
+     "dets_unlimited": 224809
+    },
+    "P2542": {
+     "dets_limited": 200000,
+     "dets_unlimited": 219306
+    },
+    "P2547": {
+     "dets_limited": 200000,
+     "dets_unlimited": 203359
+    },
+    "P2645": {
+     "dets_limited": 200000,
+     "dets_unlimited": 211728
+    },
+    "P2689": {
+     "dets_limited": 200000,
+     "dets_unlimited": 247885
+    },
+    "P2695": {
+     "dets_limited": 200000,
+     "dets_unlimited": 236503
+    },
+    "P2701": {
+     "dets_limited": 200000,
+     "dets_unlimited": 201098
+    },
+    "P2714": {
+     "dets_limited": 200000,
+     "dets_unlimited": 268811
+    },
+    "P2718": {
+     "dets_limited": 200000,
+     "dets_unlimited": 250913
+    },
+    "P2721": {
+     "dets_limited": 200000,
+     "dets_unlimited": 257647
+    },
+    "P2722": {
+     "dets_limited": 200000,
+     "dets_unlimited": 234217
+    },
+    "P2724": {
+     "dets_limited": 200000,
+     "dets_unlimited": 250570
+    },
+    "P2745": {
+     "dets_limited": 200000,
+     "dets_unlimited": 245706
+    },
+    "P2754": {
+     "dets_limited": 200000,
+     "dets_unlimited": 264952
+    },
+    "P2758": {
+     "dets_limited": 200000,
+     "dets_unlimited": 229577
+    },
+    "P2766": {
+     "dets_limited": 200000,
+     "dets_unlimited": 261010
+    },
+    "P2789": {
+     "dets_limited": 200000,
+     "dets_unlimited": 200514
+    },
+    "P2802": {
+     "dets_limited": 200000,
+     "dets_unlimited": 229463
+    }
+   }
+  },
+  "NMS-o2m_fcos_2048": {
+   "kind": "box fusion (merged output not capped)",
+   "n_dets": 110254959,
+   "max_dets_per_image": 3407292,
+   "images_at_image_limit": 159,
+   "mAP50_limited": 60.49398730280209,
+   "eval_mAP50_equal": true,
+   "passes_at_pass_limit": 85,
+   "images_with_pass_at_limit": 78,
+   "dets_on_those_images": 61732099,
+   "mAP50_unlimited": 58.964225790627566,
+   "delta": -1.5297615121745238,
+   "wall_s": 6105.423166513443,
+   "images": {
+    "P0161": {
+     "dets_limited": 592887,
+     "dets_unlimited": 614065
+    },
+    "P0683": {
+     "dets_limited": 110609,
+     "dets_unlimited": 110612
+    },
+    "P1179": {
+     "dets_limited": 1547259,
+     "dets_unlimited": 1486374
+    },
+    "P1210": {
+     "dets_limited": 461092,
+     "dets_unlimited": 461031
+    },
+    "P1212": {
+     "dets_limited": 419678,
+     "dets_unlimited": 419629
+    },
+    "P1213": {
+     "dets_limited": 460736,
+     "dets_unlimited": 460808
+    },
+    "P1230": {
+     "dets_limited": 1395365,
+     "dets_unlimited": 2673616
+    },
+    "P1240": {
+     "dets_limited": 913924,
+     "dets_unlimited": 913913
+    },
+    "P1242": {
+     "dets_limited": 658174,
+     "dets_unlimited": 658107
+    },
+    "P1257": {
+     "dets_limited": 978874,
+     "dets_unlimited": 978840
+    },
+    "P1315": {
+     "dets_limited": 833257,
+     "dets_unlimited": 1772494
+    },
+    "P1342": {
+     "dets_limited": 1292284,
+     "dets_unlimited": 2364201
+    },
+    "P1356": {
+     "dets_limited": 713392,
+     "dets_unlimited": 1347577
+    },
+    "P1370": {
+     "dets_limited": 803618,
+     "dets_unlimited": 1830942
+    },
+    "P1371": {
+     "dets_limited": 876851,
+     "dets_unlimited": 2308013
+    },
+    "P1373": {
+     "dets_limited": 1024580,
+     "dets_unlimited": 1921555
+    },
+    "P1376": {
+     "dets_limited": 586189,
+     "dets_unlimited": 586189
+    },
+    "P1380": {
+     "dets_limited": 1004377,
+     "dets_unlimited": 979280
+    },
+    "P1384": {
+     "dets_limited": 3407292,
+     "dets_unlimited": 3495285
+    },
+    "P1410": {
+     "dets_limited": 1668467,
+     "dets_unlimited": 1668372
+    },
+    "P1432": {
+     "dets_limited": 1109104,
+     "dets_unlimited": 1241701
+    },
+    "P1471": {
+     "dets_limited": 785155,
+     "dets_unlimited": 908179
+    },
+    "P1518": {
+     "dets_limited": 667347,
+     "dets_unlimited": 1909421
+    },
+    "P1542": {
+     "dets_limited": 605302,
+     "dets_unlimited": 605303
+    },
+    "P1547": {
+     "dets_limited": 869902,
+     "dets_unlimited": 2061018
+    },
+    "P1566": {
+     "dets_limited": 656641,
+     "dets_unlimited": 1733157
+    },
+    "P1570": {
+     "dets_limited": 820955,
+     "dets_unlimited": 208260
+    },
+    "P1573": {
+     "dets_limited": 735134,
+     "dets_unlimited": 735193
+    },
+    "P1586": {
+     "dets_limited": 528196,
+     "dets_unlimited": 528197
+    },
+    "P1596": {
+     "dets_limited": 644314,
+     "dets_unlimited": 644340
+    },
+    "P1598": {
+     "dets_limited": 656161,
+     "dets_unlimited": 656304
+    },
+    "P1604": {
+     "dets_limited": 740669,
+     "dets_unlimited": 1836434
+    },
+    "P1643": {
+     "dets_limited": 599014,
+     "dets_unlimited": 1939659
+    },
+    "P1647": {
+     "dets_limited": 851682,
+     "dets_unlimited": 1864367
+    },
+    "P1650": {
+     "dets_limited": 591605,
+     "dets_unlimited": 591633
+    },
+    "P1651": {
+     "dets_limited": 605301,
+     "dets_unlimited": 605323
+    },
+    "P1666": {
+     "dets_limited": 520490,
+     "dets_unlimited": 520492
+    },
+    "P1700": {
+     "dets_limited": 458839,
+     "dets_unlimited": 458840
+    },
+    "P1713": {
+     "dets_limited": 475640,
+     "dets_unlimited": 475640
+    },
+    "P1732": {
+     "dets_limited": 494250,
+     "dets_unlimited": 494267
+    },
+    "P1738": {
+     "dets_limited": 597148,
+     "dets_unlimited": 597157
+    },
+    "P1751": {
+     "dets_limited": 896117,
+     "dets_unlimited": 2201301
+    },
+    "P1752": {
+     "dets_limited": 658989,
+     "dets_unlimited": 1697970
+    },
+    "P1770": {
+     "dets_limited": 702132,
+     "dets_unlimited": 702152
+    },
+    "P1786": {
+     "dets_limited": 527445,
+     "dets_unlimited": 527472
+    },
+    "P1809": {
+     "dets_limited": 1306695,
+     "dets_unlimited": 1306591
+    },
+    "P2271": {
+     "dets_limited": 984778,
+     "dets_unlimited": 984778
+    },
+    "P2286": {
+     "dets_limited": 461741,
+     "dets_unlimited": 461739
+    },
+    "P2331": {
+     "dets_limited": 801641,
+     "dets_unlimited": 801675
+    },
+    "P2337": {
+     "dets_limited": 174647,
+     "dets_unlimited": 174665
+    },
+    "P2342": {
+     "dets_limited": 330009,
+     "dets_unlimited": 330080
+    },
+    "P2351": {
+     "dets_limited": 130039,
+     "dets_unlimited": 130039
+    },
+    "P2363": {
+     "dets_limited": 195687,
+     "dets_unlimited": 195690
+    },
+    "P2378": {
+     "dets_limited": 358011,
+     "dets_unlimited": 358052
+    },
+    "P2394": {
+     "dets_limited": 346551,
+     "dets_unlimited": 346539
+    },
+    "P2404": {
+     "dets_limited": 964214,
+     "dets_unlimited": 964247
+    },
+    "P2408": {
+     "dets_limited": 451993,
+     "dets_unlimited": 451965
+    },
+    "P2413": {
+     "dets_limited": 379930,
+     "dets_unlimited": 380006
+    },
+    "P2455": {
+     "dets_limited": 364791,
+     "dets_unlimited": 364824
+    },
+    "P2488": {
+     "dets_limited": 634961,
+     "dets_unlimited": 797721
+    },
+    "P2502": {
+     "dets_limited": 508232,
+     "dets_unlimited": 508244
+    },
+    "P2539": {
+     "dets_limited": 383338,
+     "dets_unlimited": 680991
+    },
+    "P2541": {
+     "dets_limited": 891381,
+     "dets_unlimited": 1169246
+    },
+    "P2542": {
+     "dets_limited": 602894,
+     "dets_unlimited": 960204
+    },
+    "P2645": {
+     "dets_limited": 805796,
+     "dets_unlimited": 805805
+    },
+    "P2689": {
+     "dets_limited": 1205805,
+     "dets_unlimited": 1205779
+    },
+    "P2695": {
+     "dets_limited": 736392,
+     "dets_unlimited": 736390
+    },
+    "P2714": {
+     "dets_limited": 1424002,
+     "dets_unlimited": 1525699
+    },
+    "P2718": {
+     "dets_limited": 1215656,
+     "dets_unlimited": 1215592
+    },
+    "P2721": {
+     "dets_limited": 1282743,
+     "dets_unlimited": 1319504
+    },
+    "P2722": {
+     "dets_limited": 906031,
+     "dets_unlimited": 906032
+    },
+    "P2724": {
+     "dets_limited": 1104579,
+     "dets_unlimited": 1104569
+    },
+    "P2733": {
+     "dets_limited": 340548,
+     "dets_unlimited": 340548
+    },
+    "P2745": {
+     "dets_limited": 639967,
+     "dets_unlimited": 639441
+    },
+    "P2754": {
+     "dets_limited": 1417823,
+     "dets_unlimited": 1633023
+    },
+    "P2758": {
+     "dets_limited": 1111161,
+     "dets_unlimited": 1111179
+    },
+    "P2766": {
+     "dets_limited": 1663714,
+     "dets_unlimited": 1942311
+    },
+    "P2802": {
+     "dets_limited": 1059912,
+     "dets_unlimited": 1059751
+    }
+   }
+  },
+  "F2_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 15944039,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 1,
+   "mAP50_limited": 60.58847250045986,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 59.10418910919668,
+   "delta": -1.484283391263176,
+   "wall_s": 40.738470792770386,
+   "images": {
+    "P1179": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1486374
+    }
+   }
+  },
+  "RG_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 15944039,
+   "max_dets_per_image": 200000,
+   "images_at_image_limit": 1,
+   "mAP50_limited": 60.58847250045986,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 59.10418910919668,
+   "delta": -1.484283391263176,
+   "wall_s": 40.70438575744629,
+   "images": {
+    "P1179": {
+     "dets_limited": 200000,
+     "dets_unlimited": 1486374
+    }
+   }
+  },
+  "B-F2_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 12786699,
+   "max_dets_per_image": 115809,
+   "images_at_image_limit": 0,
+   "mAP50_limited": 54.04429020827257,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 54.04429020827257,
+   "delta": 0.0
+  },
+  "B-RG_fcos_2048": {
+   "kind": "capped output",
+   "n_dets": 12786699,
+   "max_dets_per_image": 115809,
+   "images_at_image_limit": 0,
+   "mAP50_limited": 54.04429020827257,
+   "eval_mAP50_equal": true,
+   "mAP50_unlimited": 54.04429020827257,
+   "delta": 0.0
+  }
+ },
+ "nolimit_dense_identical": {
+  "n": 216,
+  "all": true,
+  "differs": []
+ }
+}

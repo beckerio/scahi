@@ -1,0 +1,9 @@
+{
+ "run": "2026-11-01T19:07:03 - 2026-11-01T19:23:05, started by the user from a plain terminal (scripts/run_latency_host_a.sh), VS Code closed",
+ "compute_processes_on_gpu": "none at any exclusivity check (start and end of every row and every 100 images; latency_other_gpu_pids = [] for all rows)",
+ "graphics_processes_type_G": "gnome-shell (PID 3197, since 14:59:08), Xwayland (PID 5016, since 14:59:26), Firefox (PID 56595, since 19:03:56) and Nautilus (PID 57007, since 19:04:23); Firefox and Nautilus were still running after the run (process start times), i.e. present during the whole run, graphics only",
+ "vs_code_gpu_process": "PID 57941 started 19:28:31, after the end of the run",
+ "foreign_cpu_load_max_cores": 0.98,
+ "power_limit_w": 575.0,
+ "source": "per-row exclusivity fields in runs/latency_host_a/dota_latency.json; nvidia-smi + ps start times read at 19:3x after the run (full nvidia-smi lists at start/end were not saved by this run; saved by scripts/run_latency_host_a.sh from now on)"
+}

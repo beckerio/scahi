@@ -1,0 +1,228 @@
+{
+ "started": "2026-11-03T11:47:32",
+ "host": "host-x",
+ "machine": {
+  "name": "host-a",
+  "hostname": "host-x",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "driver": "595.99.02",
+  "cuda_driver": "13.2",
+  "cuda_runtime": "13.0"
+ },
+ "rows": {
+  "yolov10s_sahi": {
+   "model": "yolov10s",
+   "kind": "sahi",
+   "rows": {
+    "SAHI": "SAHI_yolov10s",
+    "SAHI-F2": "SAHI-F2_yolov10s",
+    "SAHI-RG": "SAHI-RG_yolov10s"
+   },
+   "passes_ms": {
+    "mean": 180.09391829924806,
+    "p95": 590.5794624530243
+   },
+   "merge_ms": {
+    "mean": 17.041533161310568,
+    "p95": 91.12723101425216
+   },
+   "total_ms": {
+    "mean": 197.13545146055864,
+    "p95": 661.6181023971873
+   },
+   "n_images": 458,
+   "merge": "NMS (IOS 0.7, conf 0.01), overlap 0.1",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.73,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10s_sahi_scahi": {
+   "model": "yolov10s",
+   "kind": "sahi_scahi",
+   "rows": {
+    "SAHI": "SAHI_yolov10s",
+    "SAHI-F2": "SAHI-F2_yolov10s",
+    "SAHI-RG": "SAHI-RG_yolov10s"
+   },
+   "passes_ms": {
+    "mean": 145.1447150963191,
+    "p95": 414.81429355335393
+   },
+   "n_images": 458,
+   "parity_live_vs_cache_calib_3x2": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "path": "SAHI-layout passes live (fused model of SAHI's predictor path, batch 1, outputs to CPU)",
+   "SAHI-F2": {
+    "row": "SAHI-F2_yolov10s",
+    "scahi_cpu_ms": {
+     "mean": 100.49088608671039,
+     "p95": 418.49338470201445
+    },
+    "scahi_gpu_ms": {
+     "mean": 12.628737412528826,
+     "p95": 25.299543913570233
+    },
+    "total_scahi_cpu_ms": {
+     "mean": 245.63560118302948,
+     "p95": 767.3987151458274
+    },
+    "total_scahi_gpu_ms": {
+     "mean": 157.7734525088479,
+     "p95": 441.05239631317085
+    },
+    "scahi_gpu_peak_mem_mb_max": 1477.59765625,
+    "scahi_gpu_peak_mem_mb_median": 92.91455078125
+   },
+   "SAHI-RG": {
+    "row": "SAHI-RG_yolov10s",
+    "scahi_cpu_ms": {
+     "mean": 189.77836827796074,
+     "p95": 892.71087925008
+    },
+    "scahi_gpu_ms": {
+     "mean": 12.704892447546193,
+     "p95": 26.188527207705185
+    },
+    "total_scahi_cpu_ms": {
+     "mean": 334.9230833742798,
+     "p95": 1181.4221202264878
+    },
+    "total_scahi_gpu_ms": {
+     "mean": 157.8496075438653,
+     "p95": 438.0522431587447
+    },
+    "scahi_gpu_peak_mem_mb_max": 1479.95703125,
+    "scahi_gpu_peak_mem_mb_median": 94.5400390625
+   },
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.63,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10m_sahi": {
+   "model": "yolov10m",
+   "kind": "sahi",
+   "rows": {
+    "SAHI": "SAHI_yolov10m",
+    "SAHI-F2": "SAHI-F2_yolov10m",
+    "SAHI-RG": "SAHI-RG_yolov10m"
+   },
+   "passes_ms": {
+    "mean": 232.6832794159596,
+    "p95": 736.2532138387904
+   },
+   "merge_ms": {
+    "mean": 16.159841299016847,
+    "p95": 88.21041029586922
+   },
+   "total_ms": {
+    "mean": 248.84312071497644,
+    "p95": 760.6441091527812
+   },
+   "n_images": 458,
+   "merge": "NMS (IOS 0.7, conf 0.01), overlap 0.2",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.39,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10m_sahi_scahi": {
+   "model": "yolov10m",
+   "kind": "sahi_scahi",
+   "rows": {
+    "SAHI": "SAHI_yolov10m",
+    "SAHI-F2": "SAHI-F2_yolov10m",
+    "SAHI-RG": "SAHI-RG_yolov10m"
+   },
+   "passes_ms": {
+    "mean": 199.52841380840587,
+    "p95": 565.4760021381662
+   },
+   "n_images": 458,
+   "parity_live_vs_cache_calib_3x2": [
+    true,
+    true,
+    true,
+    true,
+    true,
+    true
+   ],
+   "path": "SAHI-layout passes live (fused model of SAHI's predictor path, batch 1, outputs to CPU)",
+   "SAHI-F2": {
+    "row": "SAHI-F2_yolov10m",
+    "scahi_cpu_ms": {
+     "mean": 155.70224288389173,
+     "p95": 704.6688007685581
+    },
+    "scahi_gpu_ms": {
+     "mean": 13.724097556294263,
+     "p95": 28.53588370053329
+    },
+    "total_scahi_cpu_ms": {
+     "mean": 355.2306566922976,
+     "p95": 1175.0424955040205
+    },
+    "total_scahi_gpu_ms": {
+     "mean": 213.25251136470015,
+     "p95": 587.1715960442087
+    },
+    "scahi_gpu_peak_mem_mb_max": 1492.7822265625,
+    "scahi_gpu_peak_mem_mb_median": 155.6943359375
+   },
+   "SAHI-RG": {
+    "row": "SAHI-RG_yolov10m",
+    "scahi_cpu_ms": {
+     "mean": 282.80451887966626,
+     "p95": 1283.0167359585157
+    },
+    "scahi_gpu_ms": {
+     "mean": 13.606019426004018,
+     "p95": 27.985182499105573
+    },
+    "total_scahi_cpu_ms": {
+     "mean": 482.33293268807216,
+     "p95": 1748.1412404231362
+    },
+    "total_scahi_gpu_ms": {
+     "mean": 213.1344332344099,
+     "p95": 589.2688526495473
+    },
+    "scahi_gpu_peak_mem_mb_max": 1802.48046875,
+    "scahi_gpu_peak_mem_mb_median": 165.233154296875
+   },
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.39,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  }
+ },
+ "finished": "2026-11-03T11:59:43",
+ "all_final": true
+}

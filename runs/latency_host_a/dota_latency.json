@@ -1,0 +1,392 @@
+{
+ "started": "2026-11-01T19:07:03",
+ "host": "host-x",
+ "machine": {
+  "name": "host-a",
+  "hostname": "host-x",
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "driver": "595.99.02",
+  "cuda_driver": "13.2",
+  "cuda_runtime": "13.0"
+ },
+ "rows": {
+  "yolov10s_single": {
+   "model": "yolov10s",
+   "s": 2048,
+   "kind": "single",
+   "rows": {
+    "A": "A_yolov10s_2048",
+    "SAHI": "SAHI_yolov10s",
+    "NMS": "NMS-o2m_yolov10s_2048",
+    "RG": "RG_yolov10s_2048"
+   },
+   "total_ms": {
+    "mean": 28.70318055240967,
+    "p95": 65.37033624990724
+   },
+   "n_images": 458,
+   "peak_mem_mb_predictor": 714.99365234375,
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.54,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10s_tiles": {
+   "model": "yolov10s",
+   "s": 2048,
+   "kind": "tiles",
+   "rows": {
+    "A": "A_yolov10s_2048",
+    "SAHI": "SAHI_yolov10s",
+    "NMS": "NMS-o2m_yolov10s_2048",
+    "RG": "RG_yolov10s_2048"
+   },
+   "passes_ms": {
+    "mean": 137.5730035414519,
+    "p95": 360.83936035083747
+   },
+   "box_fusion_ms": {
+    "mean": 45.89683839521054,
+    "p95": 143.4992040494761
+   },
+   "scahi_cpu_ms": {
+    "mean": 158.41038251312065,
+    "p95": 480.64315595083764
+   },
+   "scahi_gpu_ms": {
+    "mean": 12.199644901739587,
+    "p95": 20.080715948824945
+   },
+   "total_box_fusion_ms": {
+    "mean": 183.46984193666245,
+    "p95": 552.50330200015
+   },
+   "total_scahi_cpu_ms": {
+    "mean": 295.9833860545725,
+    "p95": 715.8806802998694
+   },
+   "total_scahi_gpu_ms": {
+    "mean": 149.77264844319149,
+    "p95": 381.7316429505808
+   },
+   "scahi_gpu_peak_mem_mb_max": 1923.70458984375,
+   "scahi_gpu_peak_mem_mb_median": 107.73095703125,
+   "n_images": 458,
+   "path": "reference passes (unfused model, both heads, outputs to CPU)",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.98,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10s_sahi": {
+   "model": "yolov10s",
+   "s": 2048,
+   "kind": "sahi",
+   "rows": {
+    "A": "A_yolov10s_2048",
+    "SAHI": "SAHI_yolov10s",
+    "NMS": "NMS-o2m_yolov10s_2048",
+    "RG": "RG_yolov10s_2048"
+   },
+   "passes_ms": {
+    "mean": 176.3084772358775,
+    "p95": 561.9352452997191
+   },
+   "merge_ms": {
+    "mean": 15.306309495592684,
+    "p95": 88.2702319997406
+   },
+   "total_ms": {
+    "mean": 191.6147867314702,
+    "p95": 625.2025103002777
+   },
+   "n_images": 458,
+   "merge": "NMS (IOS 0.7, conf 0.01), overlap 0.1",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.05,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10m_single": {
+   "model": "yolov10m",
+   "s": 2048,
+   "kind": "single",
+   "rows": {
+    "A": "A_yolov10m_2048",
+    "SAHI": "SAHI_yolov10m",
+    "NMS": "NMS-o2m_yolov10m_2048",
+    "RG": "RG_yolov10m_2048"
+   },
+   "total_ms": {
+    "mean": 34.916154718378465,
+    "p95": 66.51317705045581
+   },
+   "n_images": 458,
+   "peak_mem_mb_predictor": 907.9150390625,
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.0,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10m_tiles": {
+   "model": "yolov10m",
+   "s": 2048,
+   "kind": "tiles",
+   "rows": {
+    "A": "A_yolov10m_2048",
+    "SAHI": "SAHI_yolov10m",
+    "NMS": "NMS-o2m_yolov10m_2048",
+    "RG": "RG_yolov10m_2048"
+   },
+   "passes_ms": {
+    "mean": 186.84118614630168,
+    "p95": 489.54437844922705
+   },
+   "box_fusion_ms": {
+    "mean": 35.79538891269362,
+    "p95": 105.11979379980369
+   },
+   "scahi_cpu_ms": {
+    "mean": 208.59926577513085,
+    "p95": 595.8667781003847
+   },
+   "scahi_gpu_ms": {
+    "mean": 12.749293192169858,
+    "p95": 21.753240750877012
+   },
+   "total_box_fusion_ms": {
+    "mean": 222.6365750589953,
+    "p95": 569.0488904488118
+   },
+   "total_scahi_cpu_ms": {
+    "mean": 395.44045192143255,
+    "p95": 1018.99099355123
+   },
+   "total_scahi_gpu_ms": {
+    "mean": 199.59047933847154,
+    "p95": 509.3083184002351
+   },
+   "scahi_gpu_peak_mem_mb_max": 1823.84375,
+   "scahi_gpu_peak_mem_mb_median": 156.0185546875,
+   "n_images": 458,
+   "path": "reference passes (unfused model, both heads, outputs to CPU)",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.39,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolov10m_sahi": {
+   "model": "yolov10m",
+   "s": 2048,
+   "kind": "sahi",
+   "rows": {
+    "A": "A_yolov10m_2048",
+    "SAHI": "SAHI_yolov10m",
+    "NMS": "NMS-o2m_yolov10m_2048",
+    "RG": "RG_yolov10m_2048"
+   },
+   "passes_ms": {
+    "mean": 233.25990643663485,
+    "p95": 734.8882624993165
+   },
+   "merge_ms": {
+    "mean": 14.664637460706162,
+    "p95": 69.37215070120145
+   },
+   "total_ms": {
+    "mean": 247.924543897341,
+    "p95": 768.5041548488697
+   },
+   "n_images": 458,
+   "merge": "NMS (IOS 0.7, conf 0.01), overlap 0.2",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.1,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolo11s_single": {
+   "model": "yolo11s",
+   "s": 2048,
+   "kind": "single",
+   "rows": {
+    "A": "A_yolo11s_2048",
+    "NMS": "NMS-o2m_yolo11s_2048",
+    "RG": "RG_yolo11s_2048"
+   },
+   "total_ms": {
+    "mean": 28.56125883405645,
+    "p95": 64.96320569995075
+   },
+   "n_images": 458,
+   "peak_mem_mb_predictor": 792.36572265625,
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.05,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolo11s_tiles": {
+   "model": "yolo11s",
+   "s": 2048,
+   "kind": "tiles",
+   "rows": {
+    "A": "A_yolo11s_2048",
+    "NMS": "NMS-o2m_yolo11s_2048",
+    "RG": "RG_yolo11s_2048"
+   },
+   "passes_ms": {
+    "mean": 124.5635181069912,
+    "p95": 324.357849249827
+   },
+   "box_fusion_ms": {
+    "mean": 38.10745225322987,
+    "p95": 96.1579515494122
+   },
+   "scahi_cpu_ms": {
+    "mean": 161.0058677860486,
+    "p95": 437.32082890000936
+   },
+   "scahi_gpu_ms": {
+    "mean": 12.412340194325273,
+    "p95": 20.329070049319853
+   },
+   "total_box_fusion_ms": {
+    "mean": 162.67097036022108,
+    "p95": 377.4044232997762
+   },
+   "total_scahi_cpu_ms": {
+    "mean": 285.56938589303985,
+    "p95": 639.0603578995962
+   },
+   "total_scahi_gpu_ms": {
+    "mean": 136.97585830131646,
+    "p95": 339.3327857501386
+   },
+   "scahi_gpu_peak_mem_mb_max": 1898.58154296875,
+   "scahi_gpu_peak_mem_mb_median": 164.046142578125,
+   "n_images": 458,
+   "path": "reference passes (unfused model, both heads, outputs to CPU)",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.0,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolo12s_single": {
+   "model": "yolo12s",
+   "s": 1024,
+   "kind": "single",
+   "rows": {
+    "A": "A_yolo12s_1024",
+    "NMS": "NMS-o2m_yolo12s_1024",
+    "RG": "RG_yolo12s_1024"
+   },
+   "total_ms": {
+    "mean": 21.035142766416012,
+    "p95": 56.44231129972466
+   },
+   "n_images": 458,
+   "peak_mem_mb_predictor": 239.5625,
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.19,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  },
+  "yolo12s_tiles": {
+   "model": "yolo12s",
+   "s": 1024,
+   "kind": "tiles",
+   "rows": {
+    "A": "A_yolo12s_1024",
+    "NMS": "NMS-o2m_yolo12s_1024",
+    "RG": "RG_yolo12s_1024"
+   },
+   "passes_ms": {
+    "mean": 133.31223192574816,
+    "p95": 368.9716259495071
+   },
+   "box_fusion_ms": {
+    "mean": 32.90558901095035,
+    "p95": 119.06624744960928
+   },
+   "scahi_cpu_ms": {
+    "mean": 199.2608647313787,
+    "p95": 1025.0967375003697
+   },
+   "scahi_gpu_ms": {
+    "mean": 12.693098196504208,
+    "p95": 23.7269890493735
+   },
+   "total_box_fusion_ms": {
+    "mean": 166.21782093669853,
+    "p95": 488.81088240077565
+   },
+   "total_scahi_cpu_ms": {
+    "mean": 332.5730966571269,
+    "p95": 1339.1502039997235
+   },
+   "total_scahi_gpu_ms": {
+    "mean": 146.0053301222524,
+    "p95": 390.3885804997116
+   },
+   "scahi_gpu_peak_mem_mb_max": 1598.0732421875,
+   "scahi_gpu_peak_mem_mb_median": 91.07958984375,
+   "n_images": 458,
+   "path": "reference passes (unfused model, both heads, outputs to CPU)",
+   "latency_gpu_exclusive": true,
+   "latency_cpu_exclusive": true,
+   "latency_other_gpu_pids": [],
+   "latency_cpu_queue_busy": false,
+   "latency_other_cpu_load_cores": 0.05,
+   "latency_gpu_power_limit_w": 575.0,
+   "latency_gpu_power_default_w": 575.0,
+   "latency_status": "final",
+   "latency_attempts": 1
+  }
+ },
+ "finished": "2026-11-01T19:23:05",
+ "all_final": true
+}

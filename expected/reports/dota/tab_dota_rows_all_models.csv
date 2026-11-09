@@ -1,0 +1,65 @@
+detector,size,method,row_id,mAP50,mAP50_cap4000,mAP50_all_objects,AP,source
+YOLOv10s,1024,single pass,A_yolov10s_1024,55.7969,55.7573,50.5944,36.1423,original freeze
+YOLOv10s,1024,tiles + box fusion (o2o head),NMS-o2o_yolov10s_1024,63.1846,63.1535,60.3861,41.2306,original freeze
+YOLOv10s,1024,tiles + box fusion,NMS-o2m_yolov10s_1024,64.8580,64.6269,61.5259,43.4969,original freeze
+YOLOv10s,1024,tiles + SCAHI,F2_yolov10s_1024,66.1653,66.0242,62.6541,44.7513,original freeze
+YOLOv10s,1024,"tiles + SCAHI, refined grid",RG_yolov10s_1024,66.1701,65.9029,62.7089,45.6288,original freeze
+YOLOv10s,1024,"SCAHI, single pass (no tiles)",B-F2_yolov10s_1024,56.2915,56.3022,50.9413,36.4408,original freeze
+YOLOv10s,1024,"SCAHI, single pass (no tiles), refined grid",B-RG_yolov10s_1024,57.2228,57.1756,51.8790,37.3123,original freeze
+YOLOv10s,1024,SAHI,SAHI_yolov10s,59.2029,59.1131,56.3092,37.4571,original freeze
+YOLOv10s,2048,single pass,A_yolov10s_2048,65.4969,65.2720,60.7146,44.6475,original freeze
+YOLOv10s,2048,"single pass of the 2048 weights, inference size selected on calib (2048 / 2560 / 3072; 2048 chosen)",X_yolov10s_2048,65.4969,65.2720,60.7146,44.6475,original freeze
+YOLOv10s,2048,tiles + box fusion (o2o head),NMS-o2o_yolov10s_2048,68.2940,68.3269,64.4264,46.8543,original freeze
+YOLOv10s,2048,tiles + box fusion,NMS-o2m_yolov10s_2048,68.4588,68.4933,64.5617,47.4073,original freeze
+YOLOv10s,2048,tiles + SCAHI,F2_yolov10s_2048,70.6384,70.6470,66.6937,49.1472,original freeze
+YOLOv10s,2048,"tiles + SCAHI, refined grid",RG_yolov10s_2048,70.9963,71.0576,67.0305,50.1252,original freeze
+YOLOv10s,2048,"SCAHI, single pass (no tiles)",B-F2_yolov10s_2048,66.5823,66.1297,61.1759,44.8671,original freeze
+YOLOv10s,2048,"SCAHI, single pass (no tiles), refined grid",B-RG_yolov10s_2048,67.2726,66.9590,62.0357,45.9445,original freeze
+YOLOv10m,1024,single pass,A_yolov10m_1024,58.4357,58.4245,52.8226,38.3725,original freeze
+YOLOv10m,1024,tiles + box fusion (o2o head),NMS-o2o_yolov10m_1024,63.9726,63.8211,61.1675,43.0880,original freeze
+YOLOv10m,1024,tiles + box fusion,NMS-o2m_yolov10m_1024,64.5709,64.4776,61.3672,43.8654,original freeze
+YOLOv10m,1024,tiles + SCAHI,F2_yolov10m_1024,66.6855,66.5377,63.2066,46.3254,original freeze
+YOLOv10m,1024,"tiles + SCAHI, refined grid",RG_yolov10m_1024,67.3419,67.0804,63.8827,47.0177,original freeze
+YOLOv10m,1024,"SCAHI, single pass (no tiles)",B-F2_yolov10m_1024,58.6073,58.6084,52.9795,38.7364,original freeze
+YOLOv10m,1024,"SCAHI, single pass (no tiles), refined grid",B-RG_yolov10m_1024,59.2896,59.2631,53.6016,39.4952,original freeze
+YOLOv10m,1024,SAHI,SAHI_yolov10m,60.9640,60.8736,58.0353,39.7814,original freeze
+YOLOv10m,2048,single pass,A_yolov10m_2048,67.3913,66.9864,63.0563,46.1320,original freeze
+YOLOv10m,2048,"single pass of the 2048 weights, inference size selected on calib (2048 / 2560 / 3072; 2048 chosen)",X_yolov10m_2048,67.3913,66.9864,63.0563,46.1320,original freeze
+YOLOv10m,2048,tiles + box fusion (o2o head),NMS-o2o_yolov10m_2048,68.7055,68.5434,65.6294,47.7351,original freeze
+YOLOv10m,2048,tiles + box fusion,NMS-o2m_yolov10m_2048,68.1322,68.0757,64.6127,47.8457,original freeze
+YOLOv10m,2048,tiles + SCAHI,F2_yolov10m_2048,71.3244,71.0833,67.6429,50.5663,original freeze
+YOLOv10m,2048,"tiles + SCAHI, refined grid",RG_yolov10m_2048,71.7327,71.4392,68.0982,51.3007,original freeze
+YOLOv10m,2048,"SCAHI, single pass (no tiles)",B-F2_yolov10m_2048,67.6699,67.2016,62.8022,46.4769,original freeze
+YOLOv10m,2048,"SCAHI, single pass (no tiles), refined grid",B-RG_yolov10m_2048,68.4159,68.0210,63.5180,47.2993,original freeze
+YOLOv11s,1024,single pass,A_yolo11s_1024,56.1618,56.1619,50.9123,36.2968,addendum 2
+YOLOv11s,1024,tiles + box fusion,NMS-o2m_yolo11s_1024,62.1392,61.9249,59.2418,41.0637,addendum 2
+YOLOv11s,1024,tiles + SCAHI,F2_yolo11s_1024,65.2024,65.0740,61.5584,43.8512,addendum 2
+YOLOv11s,1024,"tiles + SCAHI, refined grid",RG_yolo11s_1024,65.2614,65.0944,61.6715,44.6132,addendum 2
+YOLOv11s,1024,"SCAHI, single pass (no tiles)",B-F2_yolo11s_1024,55.6774,55.6352,50.5403,35.7562,addendum 2
+YOLOv11s,1024,"SCAHI, single pass (no tiles), refined grid",B-RG_yolo11s_1024,56.4746,56.4554,51.3387,36.4507,addendum 2
+YOLOv11s,2048,single pass,A_yolo11s_2048,65.1871,64.9799,60.2804,44.6918,addendum 2
+YOLOv11s,2048,"single pass of the 2048 weights, inference size selected on calib (2048 / 2560 / 3072; 2048 chosen)",X_yolo11s_2048,65.1871,64.9799,60.2804,44.6918,addendum 2
+YOLOv11s,2048,tiles + box fusion,NMS-o2m_yolo11s_2048,66.6814,66.4924,62.9125,45.9272,addendum 2
+YOLOv11s,2048,tiles + SCAHI,F2_yolo11s_2048,69.1449,68.9688,65.3760,48.4236,addendum 2
+YOLOv11s,2048,"tiles + SCAHI, refined grid",RG_yolo11s_2048,69.8052,69.6556,66.0111,49.3642,addendum 2
+YOLOv11s,2048,"SCAHI, single pass (no tiles)",B-F2_yolo11s_2048,64.9163,64.7061,59.7390,44.0228,addendum 2
+YOLOv11s,2048,"SCAHI, single pass (no tiles), refined grid",B-RG_yolo11s_2048,65.4484,65.2448,60.6238,44.9395,addendum 2
+YOLOv12s,1024,single pass,A_yolo12s_1024,56.3553,56.3555,51.2678,36.6183,addendum 2
+YOLOv12s,1024,tiles + box fusion,NMS-o2m_yolo12s_1024,62.8766,62.7920,59.7523,42.1698,addendum 2
+YOLOv12s,1024,tiles + SCAHI,F2_yolo12s_1024,65.1785,65.0737,61.8017,44.1607,addendum 2
+YOLOv12s,1024,"tiles + SCAHI, refined grid",RG_yolo12s_1024,65.9705,65.8758,62.6535,45.3078,addendum 2
+YOLOv12s,1024,"SCAHI, single pass (no tiles)",B-F2_yolo12s_1024,55.7789,55.6934,50.4990,35.9166,addendum 2
+YOLOv12s,1024,"SCAHI, single pass (no tiles), refined grid",B-RG_yolo12s_1024,56.7395,56.6943,51.7014,36.9457,addendum 2
+FCOS,1024,single pass,A_fcos_1024,42.6384,42.6273,38.5995,23.9676,addendum 3
+FCOS,1024,tiles + box fusion,NMS-o2m_fcos_1024,52.5644,52.5572,48.6993,31.4530,addendum 3
+FCOS,1024,tiles + SCAHI,F2_fcos_1024,52.9643,52.9354,48.9426,31.9935,addendum 3
+FCOS,1024,"tiles + SCAHI, refined grid",RG_fcos_1024,52.9643,52.9354,48.9426,31.9935,addendum 3
+FCOS,1024,"SCAHI, single pass (no tiles)",B-F2_fcos_1024,41.8902,41.8855,37.8080,22.9685,addendum 3
+FCOS,1024,"SCAHI, single pass (no tiles), refined grid",B-RG_fcos_1024,42.4511,42.4408,38.4896,23.7373,addendum 3
+FCOS,2048,single pass,A_fcos_2048,55.0148,54.9692,49.5796,33.9077,addendum 3
+FCOS,2048,"single pass of the 2048 weights, inference size selected on calib (2048 / 2560 / 3072; 2560 chosen)",X_fcos_2048,58.1226,58.1180,52.6691,36.0048,addendum 3
+FCOS,2048,tiles + box fusion,NMS-o2m_fcos_2048,60.4940,60.4488,56.2119,37.4980,addendum 3
+FCOS,2048,tiles + SCAHI,F2_fcos_2048,60.5885,60.5453,55.7884,37.5493,addendum 3
+FCOS,2048,"tiles + SCAHI, refined grid",RG_fcos_2048,60.5885,60.5453,55.7884,37.5493,addendum 3
+FCOS,2048,"SCAHI, single pass (no tiles)",B-F2_fcos_2048,54.0443,54.0391,48.4996,32.2089,addendum 3
+FCOS,2048,"SCAHI, single pass (no tiles), refined grid",B-RG_fcos_2048,54.0443,54.0391,48.4996,32.2089,addendum 3

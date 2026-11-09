@@ -1,0 +1,5 @@
+dataset,detector,s,setting,passes,head,cell_factor,bins_per_oct,tau_splat,tau_peak,iou_cluster,calib_mAP50,code_row
+DOTA,YOLOv10s,1024,pre-specified,"SAHI passes (640 px slices, overlap 0.1, + standard pass)",o2m,5.0,4,0.005,0.01,0.5,63.05890063123608,SAHI-F2_yolov10s
+DOTA,YOLOv10s,1024,refined grid,"SAHI passes (640 px slices, overlap 0.1, + standard pass)",o2m,7.0,6,0.005,0.0001,0.5,64.3411438960066,SAHI-RG_yolov10s
+DOTA,YOLOv10m,1024,pre-specified,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",o2m,5.0,5,0.005,0.001,0.5,66.18465445357448,SAHI-F2_yolov10m
+DOTA,YOLOv10m,1024,refined grid,"SAHI passes (640 px slices, overlap 0.2, + standard pass)",o2m,11.0,6,0.0003125,0.001,0.5,66.91570350666358,SAHI-RG_yolov10m

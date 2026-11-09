@@ -1,0 +1,10 @@
+{
+  "init": "coco:yolo12s.pt",
+  "epochs": 60,
+  "imgsz": 1024,
+  "batch": 8,
+  "seed": 0,
+  "oom_fallback": false,
+  "selection": "devkit mAP50 on calib (o2m, no cap), best epoch 44 (65.02)",
+  "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt"
+}

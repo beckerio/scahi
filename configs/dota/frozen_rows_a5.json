@@ -1,0 +1,179 @@
+{
+ "approved": true,
+ "generated": "2026-11-04T13:31",
+ "code_commit": "1b53fba74f6b",
+ "addendum": 5,
+ "pipeline_limit": 200000,
+ "calib_selection_limit": 200000,
+ "sahi_limit": "none (as the SAHI tuning)",
+ "rows": [
+  {
+   "model": "yolo11s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "031e495cb9217fe17692807ff405594e0a5e2235ea26643daf916d63b2df76e4",
+   "id": "SAHI_yolo11s",
+   "row": "SAHI",
+   "kind": "a5_sahi",
+   "branch": "o2m",
+   "cfg": {
+    "merge": "NMS",
+    "metric": "IOU",
+    "match_thr": 0.4,
+    "conf": 0.01,
+    "overlap": 0.2
+   },
+   "calib_mAP50": 58.67159125684842,
+   "calib_mAP50_cap4000": 58.583629747983956,
+   "calib_images_at_limit": 0,
+   "source": "runs/dota/fusion/yolo11s_1024/sahi_tuning.json [selected]"
+  },
+  {
+   "model": "yolo11s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "031e495cb9217fe17692807ff405594e0a5e2235ea26643daf916d63b2df76e4",
+   "id": "SAHI-F2_yolo11s",
+   "row": "SAHI-F2",
+   "kind": "dh5",
+   "branch": "o2m",
+   "variant": "F2",
+   "overlap": 0.2,
+   "levels": [
+    "s640f",
+    "w640f"
+   ],
+   "cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5
+   },
+   "calib_mAP50": 62.08913094864602,
+   "calib_mAP50_cap4000": 61.945364620167,
+   "calib_images_at_limit": 0,
+   "source": "runs/dota/fusion/yolo11s_1024/a5/tuning.json [F2]"
+  },
+  {
+   "model": "yolo11s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "031e495cb9217fe17692807ff405594e0a5e2235ea26643daf916d63b2df76e4",
+   "id": "SAHI-RG_yolo11s",
+   "row": "SAHI-RG",
+   "kind": "dh5",
+   "branch": "o2m",
+   "variant": "F2",
+   "overlap": 0.2,
+   "levels": [
+    "s640f",
+    "w640f"
+   ],
+   "cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.005,
+    "tau_peak": 0.0001,
+    "cell_factor": 7.0,
+    "bins_per_oct": 6
+   },
+   "calib_mAP50": 62.36115177043602,
+   "calib_mAP50_cap4000": 62.172443637952654,
+   "calib_images_at_limit": 0,
+   "time_ratio_vs_ref": 1.2212015777537122,
+   "reference_cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5
+   },
+   "source": "runs/dota/fusion/yolo11s_1024/a5/tuning.json [RG]"
+  },
+  {
+   "model": "yolo12s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "e76d111eb867fdde0c902e0d5abec95994c2a3a87aadf670142e9d41ea19ccf5",
+   "id": "SAHI_yolo12s",
+   "row": "SAHI",
+   "kind": "a5_sahi",
+   "branch": "o2m",
+   "cfg": {
+    "merge": "NMS",
+    "metric": "IOU",
+    "match_thr": 0.4,
+    "conf": 0.01,
+    "overlap": 0.2
+   },
+   "calib_mAP50": 60.315012859730885,
+   "calib_mAP50_cap4000": 60.32264398710985,
+   "calib_images_at_limit": 0,
+   "source": "runs/dota/fusion/yolo12s_1024/sahi_tuning.json [selected]"
+  },
+  {
+   "model": "yolo12s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "e76d111eb867fdde0c902e0d5abec95994c2a3a87aadf670142e9d41ea19ccf5",
+   "id": "SAHI-F2_yolo12s",
+   "row": "SAHI-F2",
+   "kind": "dh5",
+   "branch": "o2m",
+   "variant": "F2",
+   "overlap": 0.2,
+   "levels": [
+    "s640f",
+    "w640f"
+   ],
+   "cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4
+   },
+   "calib_mAP50": 62.654694871966,
+   "calib_mAP50_cap4000": 62.62759772196795,
+   "calib_images_at_limit": 0,
+   "source": "runs/dota/fusion/yolo12s_1024/a5/tuning.json [F2]"
+  },
+  {
+   "model": "yolo12s",
+   "s": 1024,
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "e76d111eb867fdde0c902e0d5abec95994c2a3a87aadf670142e9d41ea19ccf5",
+   "id": "SAHI-RG_yolo12s",
+   "row": "SAHI-RG",
+   "kind": "dh5",
+   "branch": "o2m",
+   "variant": "F2",
+   "overlap": 0.2,
+   "levels": [
+    "s640f",
+    "w640f"
+   ],
+   "cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.0003125,
+    "tau_peak": 0.001,
+    "cell_factor": 7.0,
+    "bins_per_oct": 6
+   },
+   "calib_mAP50": 62.830862566652115,
+   "calib_mAP50_cap4000": 62.79610205429389,
+   "calib_images_at_limit": 0,
+   "time_ratio_vs_ref": 1.7443290745186082,
+   "reference_cfg": {
+    "iou_cluster": 0.5,
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4
+   },
+   "source": "runs/dota/fusion/yolo12s_1024/a5/tuning.json [RG]"
+  }
+ ],
+ "approved_at": "2026-11-04T14:01",
+ "approval": "user 2026-11-04: 6 rows as in FREEZE_PROPOSAL_DOTA_A5.md (d8c3bc1)"
+}

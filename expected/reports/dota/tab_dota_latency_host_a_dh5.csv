@@ -1,0 +1,11 @@
+measured_on,detector,latency_status,method,row_id,passes_ms,merge_ms,total_ms,total_p95_ms,fusion_peak_gpu_mem_mb
+host-a,YOLOv10s,final,SAHI (frozen),SAHI_yolov10s,180.09,17.04,197.14,661.62,
+host-a,YOLOv10s,final,"SAHI passes + SCAHI, SAHI-F2 (fusion on CPU)",SAHI-F2_yolov10s,145.14,100.49,245.64,767.40,
+host-a,YOLOv10s,final,"SAHI passes + SCAHI, SAHI-F2 (fusion on GPU)",SAHI-F2_yolov10s,145.14,12.63,157.77,441.05,1477.60
+host-a,YOLOv10s,final,"SAHI passes + SCAHI, SAHI-RG (fusion on CPU)",SAHI-RG_yolov10s,145.14,189.78,334.92,1181.42,
+host-a,YOLOv10s,final,"SAHI passes + SCAHI, SAHI-RG (fusion on GPU)",SAHI-RG_yolov10s,145.14,12.70,157.85,438.05,1479.96
+host-a,YOLOv10m,final,SAHI (frozen),SAHI_yolov10m,232.68,16.16,248.84,760.64,
+host-a,YOLOv10m,final,"SAHI passes + SCAHI, SAHI-F2 (fusion on CPU)",SAHI-F2_yolov10m,199.53,155.70,355.23,1175.04,
+host-a,YOLOv10m,final,"SAHI passes + SCAHI, SAHI-F2 (fusion on GPU)",SAHI-F2_yolov10m,199.53,13.72,213.25,587.17,1492.78
+host-a,YOLOv10m,final,"SAHI passes + SCAHI, SAHI-RG (fusion on CPU)",SAHI-RG_yolov10m,199.53,282.80,482.33,1748.14,
+host-a,YOLOv10m,final,"SAHI passes + SCAHI, SAHI-RG (fusion on GPU)",SAHI-RG_yolov10m,199.53,13.61,213.13,589.27,1802.48

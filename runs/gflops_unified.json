@@ -1,0 +1,3458 @@
+{
+ "method": "Ultralytics get_flops on the fused model (YOLOv10: one head) at the exact letterboxed input shape of every pass, summed over the passes of an image incl. tiles, mean over the val images (scripts/gflops_unified.py)",
+ "n_errors": 0,
+ "n_rows": 491,
+ "r2_check": {
+  "fused_640_scaled_to_1920x1080": 124.139962368,
+  "fused_exact_shape_1920x1080": 127.509037056,
+  "old_method_unfused_640_scaled_to_1920x1080": 143.577612288,
+  "stored_in_metrics_json": 143.577612288,
+  "unfused_exact_shape_1920x1080": 146.946686976,
+  "val_input_shapes": [
+   [
+    1152,
+    2048
+   ]
+  ]
+ },
+ "rows": {
+  "runs/ext/clusterdiag/X_yolo11s_mz1280_F2c0.5_ts0.00125_tp0.001_cf7.0_b6_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolo11s_mz2048_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolo11s_single1280_F2c0.8_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolo11s_single2048_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_mz1280_F2c0.6_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_mz1280_F2c0.6_ts0.00125_tp0.0001_cf7.0_b6_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_mz2048_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_mz2048_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_single1280_F2c0.6_ts0.00125_tp0.0001_cf7.0_b6_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_single1280_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_single2048_F2c0.6_ts0.00125_tp0.0001_cf7.0_b6_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/clusterdiag/X_yolov10m_single2048_F2c0.7_ts0.00125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_mz1280_F2top_o2m": {
+   "gflops_per_img": 1514.2316508496347,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_mz2048_F2top_o2m": {
+   "gflops_per_img": 1751.8330506576347,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_single1280_F2_o2m": {
+   "gflops_per_img": 156.31521279999998,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_single1280_F2top_o2m": {
+   "gflops_per_img": 156.31521279999998,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_single2048_F2_o2m": {
+   "gflops_per_img": 393.916612608,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11m_single2048_F2top_o2m": {
+   "gflops_per_img": 393.916612608,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_mz1280_F2top_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_mz2048_F2top_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single1280_F2_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single1280_F2top_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single1280_F2tuned_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single2048_F2_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single2048_F2top_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo11s_single2048_F2tuned_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12m_mz1280_F2top_o2m": {
+   "gflops_per_img": 1680.2428024712406,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12m_single1280_F2_o2m": {
+   "gflops_per_img": 171.76862208,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12m_single1280_F2top_o2m": {
+   "gflops_per_img": 171.76862208,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_mz1280_F2top_o2m": {
+   "gflops_per_img": 583.6195079474453,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_mz2048_F2top_o2m": {
+   "gflops_per_img": 711.8880079154452,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_single1280_F2_o2m": {
+   "gflops_per_img": 59.21856000000001,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_single1280_F2top_o2m": {
+   "gflops_per_img": 59.21856000000001,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_single2048_F2_o2m": {
+   "gflops_per_img": 187.487059968,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolo12s_single2048_F2top_o2m": {
+   "gflops_per_img": 187.487059968,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_mz1280_F2top_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_mz1280_F2top_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_mz2048_F2top_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_mz2048_F2top_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2top_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2top_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2tuned_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single1280_F2tuned_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2top_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2top_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2tuned_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/decomp/D_yolov10m_single2048_F2tuned_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11m_mz1280_ts0.005_tp1e-05_cf11.0_b6_o2m": {
+   "gflops_per_img": 1514.2316508496347,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11m_mz2048_ts0.00125_tp0.001_cf13.0_b7_o2m": {
+   "gflops_per_img": 1751.8330506576347,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m": {
+   "gflops_per_img": 156.31521279999998,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11m_single2048_ts0.00125_tp0.0001_cf11.0_b6_o2m": {
+   "gflops_per_img": 393.916612608,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_mz1280_ts0.00125_tp0.001_cf11.0_b7_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_mz1280_ts0.005_tp0.001_cf5.0_b5_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_mz2048_ts0.0003125_tp0.0001_cf7.0_b6_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_mz2048_ts0.0003125_tp0.001_cf11.0_b8_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_single1280_ts0.00125_tp0.0001_cf9.0_b6_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo11s_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12m_mz1280_ts0.0003125_tp0.001_cf13.0_b6_o2m": {
+   "gflops_per_img": 1680.2428024712406,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12m_single1280_ts0.00125_tp0.0001_cf11.0_b6_o2m": {
+   "gflops_per_img": 171.76862208,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12s_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2m": {
+   "gflops_per_img": 583.6195079474453,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12s_mz2048_ts0.00125_tp0.001_cf13.0_b8_o2m": {
+   "gflops_per_img": 711.8880079154452,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12s_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2m": {
+   "gflops_per_img": 59.21856000000001,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolo12s_single2048_ts0.00125_tp0.0001_cf9.0_b8_o2m": {
+   "gflops_per_img": 187.487059968,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz1280_ts0.0003125_tp0.001_cf11.0_b6_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz1280_ts0.00125_tp0.001_cf13.0_b7_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz1280_ts0.005_tp0.001_cf5.0_b5_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz1280_ts0.005_tp0.001_cf5.0_b5_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz2048_ts0.0003125_tp0.001_cf13.0_b8_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz2048_ts0.00125_tp0.0001_cf7.0_b7_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz2048_ts0.00125_tp0.001_cf13.0_b6_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_mz2048_ts0.005_tp0.001_cf5.0_b5_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b7_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_single1280_ts0.00125_tp0.0001_cf9.0_b8_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_single2048_ts0.00125_tp0.0001_cf9.0_b7_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10m_single2048_ts0.00125_tp1e-05_cf13.0_b6_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_mz2048_ts0.0003125_tp0.001_cf13.0_b7_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_mz2048_ts0.00125_tp0.001_cf11.0_b7_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_mz2048_ts0.005_tp0.001_cf5.0_b5_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_mz2048_ts0.005_tp0.001_cf5.0_b5_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_single2048_ts0.00125_tp0.0001_cf9.0_b6_o2m": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_single2048_ts0.00125_tp1e-05_cf9.0_b7_o2o": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_single2048_ts0.005_tp0.001_cf5.0_b5_o2m": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/gridext/XG_yolov10s_single2048_ts0.005_tp0.001_cf5.0_b5_o2o": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "cache",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_full1280_o2m": {
+   "gflops_per_img": 156.31521279999998,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_full2048_o2m": {
+   "gflops_per_img": 393.916612608,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_mz1280_F2_o2m": {
+   "gflops_per_img": 1514.2316508496347,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_mz1280_nms-ios_o2m": {
+   "gflops_per_img": 1514.2316508496347,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_mz2048_F2_o2m": {
+   "gflops_per_img": 1751.8330506576347,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_mz2048_nms-ios_o2m": {
+   "gflops_per_img": 1751.8330506576347,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11m_sahi_o2m": {
+   "gflops_per_img": 392.2898433868614,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_full1280_o2m": {
+   "gflops_per_img": 49.6776448,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_full2048_o2m": {
+   "gflops_per_img": 126.85905100800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_mz1280_F2_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_mz1280_nms-ios_o2m": {
+   "gflops_per_img": 481.66458095182486,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_mz2048_F2_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_mz2048_nms-ios_o2m": {
+   "gflops_per_img": 558.8459871598249,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo11s_sahi_o2m": {
+   "gflops_per_img": 124.02072198540145,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12m_full1280_o2m": {
+   "gflops_per_img": 171.76862208,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12m_mz1280_F2_o2m": {
+   "gflops_per_img": 1680.2428024712406,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12m_mz1280_nms-ios_o2m": {
+   "gflops_per_img": 1680.2428024712406,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12m_sahi_o2m": {
+   "gflops_per_img": 406.6854938534308,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_full1280_o2m": {
+   "gflops_per_img": 59.21856000000001,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_full2048_o2m": {
+   "gflops_per_img": 187.487059968,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_mz1280_F2_o2m": {
+   "gflops_per_img": 583.6195079474453,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_mz1280_nms-ios_o2m": {
+   "gflops_per_img": 583.6195079474453,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_mz2048_F2_o2m": {
+   "gflops_per_img": 711.8880079154452,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_mz2048_nms-ios_o2m": {
+   "gflops_per_img": 711.8880079154452,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolo12s_sahi_o2m": {
+   "gflops_per_img": 133.71602648759122,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_full1280_o2m": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_full1280_o2o": {
+   "gflops_per_img": 136.13768448,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_full2048_o2m": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_full2048_o2o": {
+   "gflops_per_img": 343.6911820800001,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz1280_F2_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz1280_F2_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz1280_nms-ios_o2m": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz1280_nms-ios_o2o": {
+   "gflops_per_img": 1318.9332511953285,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz2048_F2_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz2048_F2_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz2048_nms-ios_o2m": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_mz2048_nms-ios_o2o": {
+   "gflops_per_img": 1526.4867487953284,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10m_sahi_o2o": {
+   "gflops_per_img": 341.4098238972264,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/ext/rows/E_yolov10s_full2560_o2o": {
+   "gflops_per_img": 202.81605119999998,
+   "input_mp_per_img": 3.6864,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/ext/train/yolov10s_2560_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280PV_full1280_nms_s0": {
+   "gflops_per_img": 49.89762048,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1280PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280PV_full1280_none_s0": {
+   "gflops_per_img": 49.89762048,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1280PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_full1280_nms_s0": {
+   "gflops_per_img": 49.93718783999999,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_full1280_none_s0": {
+   "gflops_per_img": 49.93718783999999,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o20_nms-ios-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o20_nms-ios-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o20_wbf-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o30_greedynmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o30_greedynmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o30_nmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o30_nmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1280_sahi640o30_wbf-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1536_full1536_nms_s0": {
+   "gflops_per_img": 70.72054272,
+   "input_mp_per_img": 1.327104,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL1536_full1536_none_s0": {
+   "gflops_per_img": 70.72054272,
+   "input_mp_per_img": 1.327104,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL2048_full2048_nms_s0": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL2048_full2048_none_s0": {
+   "gflops_per_img": 127.50903705599998,
+   "input_mp_per_img": 2.359296,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_full640_nms_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_full640_none_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_full640tno_nms_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_full640tno_none_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_sahi640o10_greedynmm_s0": {
+   "gflops_per_img": 124.57411684905111,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_sahi640o10_sahidefault_s0": {
+   "gflops_per_img": 124.57411684905111,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640PV_sahi640o30_nms_s0": {
+   "gflops_per_img": 124.57411684905111,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640PV_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640TNO_full640_nms_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640TNO_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640TNO_full640_none_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640TNO_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640TNO_full640tno_nms_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640TNO_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640TNO_full640tno_none_s0": {
+   "gflops_per_img": 12.891432960000001,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640TNO_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full1280_nms_s0": {
+   "gflops_per_img": 49.93718783999999,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full1280_none_s0": {
+   "gflops_per_img": 49.93718783999999,
+   "input_mp_per_img": 0.94208,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full1536_nms_s0": {
+   "gflops_per_img": 70.72054272,
+   "input_mp_per_img": 1.327104,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full1536_none_s0": {
+   "gflops_per_img": 70.72054272,
+   "input_mp_per_img": 1.327104,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_nms_s0": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_nms_s1": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s1/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_nms_s2": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s2/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_none_s0": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_none_s1": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s1/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_full640_none_s2": {
+   "gflops_per_img": 12.90175488,
+   "input_mp_per_img": 0.24576,
+   "kind": "single",
+   "passes_per_img": 1.0,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s2/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o10_greedynmm_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o10_sahidefault_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_greedynmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_nmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_nms-ios-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_wbf-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_wbf-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o20_wbf_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o30_greedynmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o30_nmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o30_nms-ios-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BFULL640_sahi640o30_nms_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BFULL640_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o10_greedynmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o10_greedynmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o10_nmm-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_greedynmm_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_nms-ios-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_nms_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_sahidefault_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_wbf-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o20_wbf-iou-t2_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o30_nmm-iou-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261022_v10s_BSAHIFT_sahi640o30_nms-ios-t2-o2m_s0": {
+   "gflops_per_img": 124.67365682452558,
+   "input_mp_per_img": 2.369999416058394,
+   "kind": "sahi",
+   "passes_per_img": 6.186131386861314,
+   "weights": "runs/p2/20261022_v10s_BSAHIFT_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mzS1o20_nms-ios_s0": {
+   "gflops_per_img": 468.0617175254891,
+   "input_mp_per_img": 8.896190598540146,
+   "kind": "multizoom",
+   "passes_per_img": 22.463503649635037,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mzS1o30_nms-ios-o2m_s0": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "multizoom",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mzS4o30_nms-ios-o2m_s0": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mzS4o30_nms-ios_s0": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mznativeo30_nms-ios-o2m_s0": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1280_mznativeo30_nms-ios_s0": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1536_mznative1536o20_nms-ios_s0": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p2/20261023_v10s_BFULL1536_mznative1536o30_nms-ios-o2m_s0": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "multizoom",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-NMS_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-NMS_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-WBF_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F0-WBF_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F1_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F1_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F2_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F2_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F3_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F3_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F3e_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F3e_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F4_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F4_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F5_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S1_F5_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-NMS_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-NMS_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-WBF_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F0-WBF_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F1_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F1_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F2_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F2_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F3_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F3_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F3e_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F3e_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F4_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F4_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F5_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S2_F5_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-NMS_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-NMS_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-WBF_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F0-WBF_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F1_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F1_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F2_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F2_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F3_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F3_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F3e_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F3e_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F4_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F4_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F5_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S4_F5_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-NMS_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-WBF_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F0-WBF_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F1_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F1_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F2_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F2_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F3_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F3_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F3e_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F3e_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F4_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F4_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F5_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_S5_F5_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-NMS_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-NMS_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-WBF_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F0-WBF_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F1_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F1_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F2_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F2_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F3_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F3_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F3e_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F3e_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F4_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F4_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F5_o2m": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1280_native_F5_o2o": {
+   "gflops_per_img": 484.17772525313876,
+   "input_mp_per_img": 9.12212087591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-NMS_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-WBF_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F0-WBF_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F1_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F1_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F2_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F2_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F3_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F3_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F3e_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F3e_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F4_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F4_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F5_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_S5_F5_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-NMS_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-NMS_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-WBF_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F0-WBF_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F1_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F1_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F2_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F2_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F3_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F3_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F3e_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F3e_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F4_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F4_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F5_o2m": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL1536_native1536_F5_o2o": {
+   "gflops_per_img": 504.9610801331387,
+   "input_mp_per_img": 9.50714487591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-NMS_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-NMS_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-WBF_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F0-WBF_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F1_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F1_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F2_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F2_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F3_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F3_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F3e_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F3e_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F4_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F4_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F5_o2m": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_BFULL2048_native2048_F5_o2o": {
+   "gflops_per_img": 561.7495744691387,
+   "input_mp_per_img": 10.53933687591241,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T0_s0_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T0_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T1_s0_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T1_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-NMS_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-NMS_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-WBF_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F0-WBF_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F1_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F1_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F2_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F2_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F3_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F3_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F3e_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F3e_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F4_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F4_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F5_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S1_F5_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-NMS_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-NMS_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-WBF_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F0-WBF_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F1_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F1_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F2_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F2_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F3_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F3_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F3e_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F3e_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F4_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F4_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F5_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S2_F5_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-NMS_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-NMS_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-WBF_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F0-WBF_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F1_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F1_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F2_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F2_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F3_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F3_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F3e_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F3e_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F4_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F4_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F5_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S4_F5_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-NMS_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-WBF_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F0-WBF_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F1_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F1_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F2_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F2_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F3_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F3_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F3e_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F3e_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F4_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F4_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F5_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s0_S5_F5_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s1_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s1/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T2_s2_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s2/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T3_s0_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T3_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-NMS_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-NMS_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-WBF_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F0-WBF_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F1_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F1_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F2_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F2_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F3_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F3_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F3e_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F3e_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F4_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F4_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F5_o2m": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S1_F5_o2o": {
+   "gflops_per_img": 477.77588352840877,
+   "input_mp_per_img": 9.080809576642336,
+   "kind": "cache",
+   "passes_per_img": 22.914233576642335,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-NMS_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-NMS_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-WBF_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F0-WBF_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F1_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F1_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F2_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F2_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F3_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F3_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F3e_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F3e_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F4_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F4_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F5_o2m": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S2_F5_o2o": {
+   "gflops_per_img": 551.4910778291387,
+   "input_mp_per_img": 10.409019795620438,
+   "kind": "cache",
+   "passes_per_img": 13.987226277372264,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-NMS_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-NMS_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-WBF_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F0-WBF_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F1_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F1_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F2_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F2_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F3_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F3_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F3e_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F3e_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F4_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F4_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F5_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S4_F5_o2o": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-GREEDYNMM_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-GREEDYNMM_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-NMS_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-WBF_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F0-WBF_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F1_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F1_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F2_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F2_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F3_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F3_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F3e_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F3e_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F4_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F4_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F5_o2m": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s0_S5_F5_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s1_S4_F3e_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s1_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s2_S4_F3e_o2m": {
+   "gflops_per_img": 456.6864799771094,
+   "input_mp_per_img": 8.60632011678832,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt"
+  },
+  "runs/p5/20261023_v10s_P3T4_s2_S5_F0-NMS_o2o": {
+   "gflops_per_img": 487.75622645956196,
+   "input_mp_per_img": 9.187354160583942,
+   "kind": "cache",
+   "passes_per_img": 8.80109489051095,
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt"
+  }
+ },
+ "split": "val"
+}

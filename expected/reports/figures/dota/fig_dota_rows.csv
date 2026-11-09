@@ -1,0 +1,49 @@
+s,model,method,mAP50
+1024,yolov10s,single pass,55.79691968375564
+1024,yolov10s,tiles + box fusion (o2o),63.184648156726574
+1024,yolov10s,tiles + box fusion (o2m),64.85795381011424
+1024,yolov10s,tiles + SCAHI,66.16529626920386
+1024,yolov10s,"tiles + SCAHI (refined grid, pre-specified on DOTA)",66.17008878625164
+1024,yolov10s,"SCAHI, whole image only",56.29154724718598
+1024,yolov10s,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",57.22283276837572
+1024,yolov10s,SAHI (1024 weights),59.20292973965435
+1024,yolov10m,single pass,58.435709004094335
+1024,yolov10m,tiles + box fusion (o2o),63.97255295559017
+1024,yolov10m,tiles + box fusion (o2m),64.57090340584844
+1024,yolov10m,tiles + SCAHI,66.68547214190224
+1024,yolov10m,"tiles + SCAHI (refined grid, pre-specified on DOTA)",67.34191880082949
+1024,yolov10m,"SCAHI, whole image only",58.60729505178037
+1024,yolov10m,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",59.28963388605798
+1024,yolov10m,SAHI (1024 weights),60.96400659761804
+1024,yolo11s,single pass,56.161848236497924
+1024,yolo11s,tiles + box fusion (o2m),62.13919110882395
+1024,yolo11s,tiles + SCAHI,65.20242158059078
+1024,yolo11s,"tiles + SCAHI (refined grid, pre-specified on DOTA)",65.26143184223795
+1024,yolo11s,"SCAHI, whole image only",55.67738927305522
+1024,yolo11s,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",56.47455205724275
+1024,yolo12s,single pass,56.35533166521975
+1024,yolo12s,tiles + box fusion (o2m),62.876599068283156
+1024,yolo12s,tiles + SCAHI,65.17854090457878
+1024,yolo12s,"tiles + SCAHI (refined grid, pre-specified on DOTA)",65.9704552143527
+1024,yolo12s,"SCAHI, whole image only",55.77889510325863
+1024,yolo12s,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",56.739495122935125
+2048,yolov10s,single pass,65.49685087183401
+2048,yolov10s,tiles + box fusion (o2o),68.2939857892244
+2048,yolov10s,tiles + box fusion (o2m),68.45877954310325
+2048,yolov10s,tiles + SCAHI,70.63835573097327
+2048,yolov10s,"tiles + SCAHI (refined grid, pre-specified on DOTA)",70.99626562455495
+2048,yolov10s,"SCAHI, whole image only",66.58233663749134
+2048,yolov10s,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",67.2726041022911
+2048,yolov10m,single pass,67.39130175455337
+2048,yolov10m,tiles + box fusion (o2o),68.70554370113182
+2048,yolov10m,tiles + box fusion (o2m),68.13217342175362
+2048,yolov10m,tiles + SCAHI,71.32436128001096
+2048,yolov10m,"tiles + SCAHI (refined grid, pre-specified on DOTA)",71.73269108817315
+2048,yolov10m,"SCAHI, whole image only",67.66986431139044
+2048,yolov10m,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",68.41589035395556
+2048,yolo11s,single pass,65.18714112306232
+2048,yolo11s,tiles + box fusion (o2m),66.68139041474967
+2048,yolo11s,tiles + SCAHI,69.14491403326522
+2048,yolo11s,"tiles + SCAHI (refined grid, pre-specified on DOTA)",69.80516554721686
+2048,yolo11s,"SCAHI, whole image only",64.91632809229716
+2048,yolo11s,"SCAHI, whole image only (refined grid, pre-specified on DOTA)",65.44844219612067

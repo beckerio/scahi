@@ -1,0 +1,13 @@
+dataset,detector,method,row_id,passes_ms,fusion_cpu_ms,fusion_gpu_ms,total_cpu_fusion_ms,total_gpu_fusion_ms,total_p95_ms,latency_status,attempts,run
+VisDrone val,YOLOv10s,single pass 2048,R2,10.31,,,10.31,10.31,11.12,final,2,main
+VisDrone val,YOLOv10s,single pass 2560,E_yolov10s_full2560_o2o,14.39,,,14.39,14.39,15.52,final,1,main
+VisDrone val,YOLOv10s,tiles + SCAHI (pre-specified),X2,75.60,30.84,9.36,106.44,84.96,148.65,final,1,main
+VisDrone val,YOLOv10s,"tiles + SCAHI, refined grid",XG_yolov10s_2048_o2m_C,76.60,60.12,10.18,136.72,86.78,228.04,final,1,main
+DOTA-val,YOLOv10s,single pass 2048,A_yolov10s_2048,29.71,,,29.71,29.71,66.70,final,1,main
+DOTA-val,YOLOv10s,"tiles + SCAHI, refined grid",RG_yolov10s_2048,140.07,166.32,,306.39,,723.64,final,2,main
+DOTA-val,YOLOv10m,single pass 2048,A_yolov10m_2048,35.32,,,35.32,35.32,72.74,final,2,main
+DOTA-val,YOLOv10m,"tiles + SCAHI, refined grid",RG_yolov10m_2048,192.09,215.64,,407.73,,1065.39,final,1,main
+DOTA-val,YOLOv11s,single pass 2048,A_yolo11s_2048,26.42,,,26.42,26.42,68.51,final,1,supplementary
+DOTA-val,YOLOv11s,"tiles + SCAHI, refined grid (2048)",RG_yolo11s_2048,123.51,162.77,,286.28,,650.34,final,1,supplementary
+DOTA-val,YOLOv12s,single pass 1024,A_yolo12s_1024,22.20,,,22.20,22.20,61.28,final,1,supplementary
+DOTA-val,YOLOv12s,"tiles + SCAHI, refined grid (1024)",RG_yolo12s_1024,137.83,202.67,,340.50,,1362.08,final,1,supplementary

@@ -1,0 +1,6 @@
+dota_evaluation_task2.py: unchanged copy of the official DOTA_devkit HBB evaluation (task 2), used only as the
+reference to validate scahi/dota/evaluate.py (scripts/dota/d_eval_validate.py).
+Source: https://raw.githubusercontent.com/CAPTAIN-WHU/DOTA_devkit/master/dota_evaluation_task2.py
+Repository commit (master, 2019-07-05): 99388551054be9a6dabb01c8bb2a7eb562d57b4f
+Fetched 2026-10-30; SHA-256 893a103309ae922c848c1712b8df2bddffa5a883ea0b4c626a6aaf5e95f849e2
+Licence: file header "Licensed under The MIT License"; the repository has no LICENSE file.

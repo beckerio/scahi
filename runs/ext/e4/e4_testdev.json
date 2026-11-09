@@ -1,0 +1,482 @@
+{
+ "mode": "final",
+ "split": "test-dev",
+ "time": "2026-10-29T21:44:36",
+ "epsilon": {
+  "eps": 0.3,
+  "sigma_seed": null,
+  "rule": "0.30 (YOLO11s extra seeds not run)"
+ },
+ "models": [
+  "yolov10m",
+  "yolo11s",
+  "yolo12s",
+  "yolo11m",
+  "yolo12m"
+ ],
+ "hypotheses": {
+  "E-H1": {
+   "per_model": {
+    "yolov10m": {
+     "a": 35.26725538353649,
+     "b": 32.21550907379669,
+     "delta": 3.051746309739798,
+     "ci95": [
+      2.749707402478112,
+      3.3700441110241726
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11s": {
+     "a": 31.36166554184792,
+     "b": 29.531954175449297,
+     "delta": 1.829711366398623,
+     "ci95": [
+      1.5178937553317449,
+      2.1652010780687974
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12s": {
+     "a": 32.2754183898054,
+     "b": 30.24838463591631,
+     "delta": 2.027033753889093,
+     "ci95": [
+      1.7097038825256599,
+      2.33280783865095
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11m": {
+     "a": 33.51807084482134,
+     "b": 31.620471810999497,
+     "delta": 1.897599033821841,
+     "ci95": [
+      1.618402010725923,
+      2.2006478875457995
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12m": {
+     "a": "E_yolo12m_full2048_o2m",
+     "b": "E_yolo12m_mz1280_nms-ios_o2m",
+     "status": "nicht erf\u00fcllt",
+     "untestable": "nicht testbar: yolo12m 2048 gestrichen (batch 2 does not fit (worst-case smoke))",
+     "p_one_sided": null,
+     "holm": {
+      "p": 1.0,
+      "p_holm": 1.0,
+      "reject": false
+     }
+    }
+   },
+   "count": {
+    "n_met": 4,
+    "n_not_met": 1,
+    "n_unclear": 0,
+    "n_pending": 0,
+    "verdict": "gilt familien\u00fcbergreifend"
+   },
+   "pooled": {
+    "n_models": 4,
+    "models": [
+     "yolo11m",
+     "yolo11s",
+     "yolo12s",
+     "yolov10m"
+    ],
+    "delta": 2.2015226159623387,
+    "ci95": [
+     2.0058416321458545,
+     2.417088498917395
+    ],
+    "descriptive_only": true
+   }
+  },
+  "E-H2 s=1280": {
+   "per_model": {
+    "yolov10m": {
+     "a": 33.754661994447076,
+     "b": 31.4024369475894,
+     "delta": 2.3522250468576757,
+     "ci95": [
+      2.1564960594408515,
+      2.5343567619866674
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11s": {
+     "a": 31.841240005763904,
+     "b": 29.531954175449297,
+     "delta": 2.3092858303146073,
+     "ci95": [
+      2.1351971159704406,
+      2.4889819010053214
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12s": {
+     "a": 32.61803683915773,
+     "b": 30.24838463591631,
+     "delta": 2.3696522032414222,
+     "ci95": [
+      2.200141882254992,
+      2.561717679343148
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11m": {
+     "a": 33.9708180246615,
+     "b": 31.620471810999497,
+     "delta": 2.350346213662,
+     "ci95": [
+      2.176790141459665,
+      2.540366646143066
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12m": {
+     "a": 33.75253383557691,
+     "b": 31.479730007503566,
+     "delta": 2.2728038280733465,
+     "ci95": [
+      2.069595673847632,
+      2.423182624268546
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    }
+   },
+   "count": {
+    "n_met": 5,
+    "n_not_met": 0,
+    "n_unclear": 0,
+    "n_pending": 0,
+    "verdict": "gilt familien\u00fcbergreifend"
+   },
+   "pooled": {
+    "n_models": 5,
+    "models": [
+     "yolo11m",
+     "yolo11s",
+     "yolo12m",
+     "yolo12s",
+     "yolov10m"
+    ],
+    "delta": 2.3308626244298103,
+    "ci95": [
+     2.202197150339933,
+     2.460792595063575
+    ],
+    "descriptive_only": true
+   }
+  },
+  "E-H2 s=2048": {
+   "per_model": {
+    "yolov10m": {
+     "a": 35.78172399161249,
+     "b": 33.61839607308285,
+     "delta": 2.163327918529639,
+     "ci95": [
+      2.0103395195227414,
+      2.3270853540498226
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11s": {
+     "a": 33.935161131179974,
+     "b": 31.82761818474539,
+     "delta": 2.1075429464345845,
+     "ci95": [
+      1.9592515328846383,
+      2.2587647893972984
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12s": {
+     "a": 34.78496312149301,
+     "b": 32.86538844320228,
+     "delta": 1.9195746782907293,
+     "ci95": [
+      1.7581433911010294,
+      2.0984778678145632
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11m": {
+     "a": 35.80986294853617,
+     "b": 33.48907712939165,
+     "delta": 2.3207858191445183,
+     "ci95": [
+      2.140681620442084,
+      2.5070450138130127
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12m": {
+     "a": "E_yolo12m_mz2048_F2_o2m",
+     "b": "E_yolo12m_mz2048_nms-ios_o2m",
+     "status": "nicht erf\u00fcllt",
+     "untestable": "nicht testbar: yolo12m 2048 gestrichen (batch 2 does not fit (worst-case smoke))",
+     "p_one_sided": null,
+     "holm": {
+      "p": 1.0,
+      "p_holm": 1.0,
+      "reject": false
+     }
+    }
+   },
+   "count": {
+    "n_met": 4,
+    "n_not_met": 1,
+    "n_unclear": 0,
+    "n_pending": 0,
+    "verdict": "gilt familien\u00fcbergreifend"
+   },
+   "pooled": {
+    "n_models": 4,
+    "models": [
+     "yolo11m",
+     "yolo11s",
+     "yolo12s",
+     "yolov10m"
+    ],
+    "delta": 2.1278078405998677,
+    "ci95": [
+     2.0015546755789653,
+     2.2580050065533595
+    ],
+    "descriptive_only": true
+   }
+  },
+  "E-H3": {
+   "per_model": {
+    "yolov10m": {
+     "a": 35.78172399161249,
+     "b": 35.26725538353649,
+     "delta": 0.514468608076001,
+     "ci95": [
+      0.35322626734685886,
+      0.6528021553388276
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.006993006993006993,
+     "holm": {
+      "p": 0.006993006993006993,
+      "p_holm": 0.013986013986013986,
+      "reject": true
+     }
+    },
+    "yolo11s": {
+     "a": 33.935161131179974,
+     "b": 31.36166554184792,
+     "delta": 2.5734955893320546,
+     "ci95": [
+      2.3874948033737784,
+      2.750797278217362
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12s": {
+     "a": 34.78496312149301,
+     "b": 32.2754183898054,
+     "delta": 2.5095447316876047,
+     "ci95": [
+      2.333439128478414,
+      2.70962037769296
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo11m": {
+     "a": 35.80986294853617,
+     "b": 33.51807084482134,
+     "delta": 2.291792103714833,
+     "ci95": [
+      2.1089745362397396,
+      2.496918071149615
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.004995004995004995,
+      "reject": true
+     }
+    },
+    "yolo12m": {
+     "a": "E_yolo12m_mz2048_F2_o2m",
+     "b": "E_yolo12m_full2048_o2m",
+     "status": "nicht erf\u00fcllt",
+     "untestable": "nicht testbar: yolo12m 2048 gestrichen (batch 2 does not fit (worst-case smoke))",
+     "p_one_sided": null,
+     "holm": {
+      "p": 1.0,
+      "p_holm": 1.0,
+      "reject": false
+     }
+    }
+   },
+   "count": {
+    "n_met": 4,
+    "n_not_met": 1,
+    "n_unclear": 0,
+    "n_pending": 0,
+    "verdict": "gilt familien\u00fcbergreifend"
+   },
+   "pooled": {
+    "n_models": 4,
+    "models": [
+     "yolo11m",
+     "yolo11s",
+     "yolo12s",
+     "yolov10m"
+    ],
+    "delta": 1.9723252582026234,
+    "ci95": [
+     1.8414030722695218,
+     2.105900890740985
+    ],
+    "descriptive_only": true
+   }
+  },
+  "E-H4": {
+   "per_model": {
+    "yolov10m": {
+     "a": 35.78172399161249,
+     "b": 35.54770083569725,
+     "delta": 0.2340231559152386,
+     "ci95": [
+      0.14068410987634988,
+      0.3149504527320051
+     ],
+     "n_boot": 1000,
+     "seed": 0
+    }
+   },
+   "note": "direction and CI only, no threshold (YOLOv10m)"
+  }
+ }
+}

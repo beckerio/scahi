@@ -1,0 +1,17 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scahi"
+version = "1.0.0"
+description = "SCAHI: scale-space fusion of dense detector outputs for small-object detection"
+requires-python = ">=3.11"
+license = {file = "LICENSE"}
+
+[tool.setuptools.packages.find]
+include = ["scahi*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

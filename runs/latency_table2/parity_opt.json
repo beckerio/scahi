@@ -1,0 +1,24 @@
+{
+ "X2": {
+  "n_mismatch": 0,
+  "max_box": 1.866601730085108,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 217492,
+  "n_det_diff": 4,
+  "n_img_diff": 2,
+  "images": 548,
+  "passed": false
+ },
+ "XG_yolov10s_2048_o2m_C": {
+  "n_mismatch": 0,
+  "max_box": 1.9248399967228806,
+  "max_score": 3.3306690738754696e-16,
+  "class_mismatch": 0,
+  "n_dets": 249999,
+  "n_det_diff": 2,
+  "n_img_diff": 1,
+  "images": 548,
+  "passed": false
+ }
+}

@@ -1,0 +1,7 @@
+row_id,method,path,passes_ms,merge_cpu_ms,merge_gpu_ms,total_ms,total_gpu_merge_ms,total_p95_ms,gflops_per_img,val_AP,val_AP50,testdev_AP,testdev_AP50,latency_status
+R2,single pass 2048,"Ultralytics predictor (fused model, one-to-one head), end to end",9.60,,,9.60,,10.31,127.51,38.47,62.87,33.48,,final
+E_yolov10s_full2560_o2o,single pass 2560,"Ultralytics predictor (fused model, one-to-one head), end to end",13.63,,,13.63,,14.69,202.82,39.51,64.42,33.98,,final
+X_v10s_train2560_infer3072_o2o,2560 weights at 3072 px,"Ultralytics predictor (fused model, one-to-one head), end to end",21.02,,,21.02,,22.09,298.36,39.64,64.81,,,final
+X1,"2048 + tiles, box fusion","frozen X1 path: Ultralytics predictor (fused model, one-to-one head) per pass, NMS (IOS) on the CPU",46.05,4.76,,50.82,,,561.75,38.85,64.73,33.25,56.65,final
+X2,"2048 + tiles, SCAHI","optimised: unfused model, one-to-many head only, decoding + SCAHI on the GPU",67.08,,10.20,77.28,,80.88,561.75,39.34,64.19,34.53,,final
+XG_yolov10s_2048_o2m_C,"2048 + tiles, SCAHI, refined grid","optimised: unfused model, one-to-many head only, decoding + SCAHI on the GPU",66.94,,10.33,77.28,,81.05,561.75,40.72,66.15,35.28,,final

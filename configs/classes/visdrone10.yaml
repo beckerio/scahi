@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+# Primary benchmark setting: the 10 evaluated VisDrone2019-DET categories (toolkit-conformant).
+name: visdrone10
+# Training class ids are the list positions.
+classes: [pedestrian, people, bicycle, car, van, truck, tricycle, awning-tricycle, bus, motor]
+# Original VisDrone category -> class name.
+category_map: {1: pedestrian, 2: people, 3: bicycle, 4: car, 5: van, 6: truck, 7: tricycle,
+               8: awning-tricycle, 9: bus, 10: motor}
+# Ignore types, in YOLO-id order (first type gets id nc, next nc+1, ...). `classes` is the
+# channel mask: the classes for which the box suppresses negative loss contributions.
+ignore_types:
+  ignore_all: {categories: [0, 11], score_zero: true, classes: all}
+# Evaluation protocols (besides `plain`). `drop_regions` maps target classes ("all" or a class
+# name) to original categories whose boxes act as ignore regions with the toolkit area rule.
+eval_protocols:
+  visdrone_ignore: {drop_regions: {all: [0]}, toolkit_validated: true}

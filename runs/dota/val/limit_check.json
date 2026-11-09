@@ -1,0 +1,17 @@
+{
+ "label": "exploratory, post hoc",
+ "limit": 200000,
+ "rows": {
+  "RG_yolov10m_2048": {
+   "images": {
+    "P1384": {
+     "dets_limited": 200000,
+     "dets_unlimited": 215568
+    }
+   },
+   "mAP50_limited": 71.73269108817315,
+   "mAP50_unlimited": 71.73269108817315,
+   "delta": 0.0
+  }
+ }
+}
