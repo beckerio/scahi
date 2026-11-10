@@ -129,6 +129,8 @@ per detector in `docs/ALGORITHM.md`.
 
 ## Citation
 
+[![Paper](https://img.shields.io/badge/Paper-arXiv%3A2611.12657-b31b1b.svg)](https://arxiv.org/abs/2611.12657)
+
 If you use this code in academic work, please consider citing the following paper:
 
 ```bibtex
