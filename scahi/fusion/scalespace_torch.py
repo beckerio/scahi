@@ -4,7 +4,7 @@
 # SCAHI - Slicing with Coverage-Aware Hyper Inference.
 # If you use SCAHI, please cite:
 #   S. Becker, J. Bayer, D. Münch, W. Hübner. When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion
-#   for Small Object Detection. arXiv:XXXX.XXXXX, 2026.
+#   for Small Object Detection. arXiv:2611.12657, 2026.
 """Dense scale-space fusion F2 on the GPU (torch, float64) - extension study E2 ("fair latency").
 
 Same algorithm and arithmetic as :func:`scahi.fusion.scalespace.fuse_image` for variant F2 (the CPU version stays the

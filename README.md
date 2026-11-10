@@ -132,13 +132,14 @@ per detector in `docs/ALGORITHM.md`.
 If you use this code in academic work, please consider citing the following paper:
 
 ```bibtex
-@misc{becker2026sliced,
+@misc{becker2026doesslicedinferencepay,
   title         = {When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion for Small Object Detection},
-  author        = {Becker, Stefan and Bayer, Jens and M{\"u}nch, David and H{\"u}bner, Wolfgang},
+  author        = {Stefan Becker and Jens Bayer and David M{\"u}nch and Wolfgang H{\"u}bner},
   year          = {2026},
-  eprint        = {XXXX.XXXXX},
+  eprint        = {2611.12657},
   archivePrefix = {arXiv},
-  primaryClass  = {cs.CV}
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2611.12657}
 }
 ```
 

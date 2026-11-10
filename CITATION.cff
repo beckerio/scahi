@@ -2,7 +2,9 @@ cff-version: 1.2.0
 message: "If you use this code, please cite the paper below."
 title: "SCAHI: code for 'When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion for Small Object Detection'"
 type: software
-license: AGPL-3.0-only
+license:
+  - AGPL-3.0-or-later
+  - Apache-2.0
 authors:
   - family-names: Becker
     given-names: Stefan
@@ -37,4 +39,9 @@ preferred-citation:
       given-names: Wolfgang
       orcid: "https://orcid.org/0000-0001-5634-6324"
   year: 2026
-  journal: "arXiv preprint arXiv:XXXX.XXXXX"
+  journal: "arXiv preprint arXiv:2611.12657"
+  url: "https://arxiv.org/abs/2611.12657"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.12657"
+      description: "arXiv identifier"
