@@ -1,0 +1,6504 @@
+{
+ "runs": [
+  {
+   "started": "2026-11-13T09:21:03",
+   "host": "host-x",
+   "machine": {
+    "name": "host-b",
+    "hostname": "host-x",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "driver": "580.178.04",
+    "cuda_driver": "13.0",
+    "cuda_runtime": "13.0"
+   },
+   "rows": {
+    "yolov10s_single": {
+     "model": "yolov10s",
+     "kind": "single",
+     "total_ms": {
+      "mean": 25.397245166771413,
+      "p95": 49.265757796820246
+     },
+     "n_images": 449,
+     "peak_mem_mb_predictor": 692.62646484375,
+     "peak_mem_mb_row": 692.62646484375,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "yolov10s_tiles_opt": {
+     "model": "yolov10s",
+     "kind": "tiles_opt",
+     "passes_ms": {
+      "mean": 114.61867177420771,
+      "p95": 305.44659320730716
+     },
+     "scahi_gpu_ms": {
+      "mean": 12.445672246537281,
+      "p95": 18.16317359916866
+     },
+     "total_ms": {
+      "mean": 127.06434402074498,
+      "p95": 322.3459393833764
+     },
+     "n_images": 449,
+     "path": "optimised (unfused model, one-to-many head only, decoding + SCAHI on the GPU)",
+     "peak_mem_mb_row": 1968.73974609375,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "yolov10s_mz": {
+     "model": "yolov10s",
+     "kind": "mz",
+     "native_pass_ms": {
+      "mean": 64.03670402400337,
+      "p95": 219.90368439583014
+     },
+     "pass_2048_ms": {
+      "mean": 22.63128241710261,
+      "p95": 29.850316618103534
+     },
+     "scahi_gpu_ms": {
+      "mean": 11.442048897378703,
+      "p95": 16.84951578499748
+     },
+     "total_ms": {
+      "mean": 98.11003533848468,
+      "p95": 256.97416779585075
+     },
+     "peak_mem_mb": {
+      "median": 670.3759765625,
+      "max": 28295.9228515625
+     },
+     "n_images": 449,
+     "path": "optimised (unfused model, one-to-many head only, decoding + SCAHI on the GPU)",
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.0,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "yolo11s_single": {
+     "model": "yolo11s",
+     "kind": "single",
+     "total_ms": {
+      "mean": 24.738893074035232,
+      "p95": 57.466486224438945
+     },
+     "n_images": 450,
+     "peak_mem_mb_predictor": 760.521484375,
+     "peak_mem_mb_row": 760.521484375,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.0,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "yolo11s_tiles_opt": {
+     "model": "yolo11s",
+     "kind": "tiles_opt",
+     "passes_ms": {
+      "mean": 115.00556842423975,
+      "p95": 305.1184877869673
+     },
+     "scahi_gpu_ms": {
+      "mean": 12.693995253519258,
+      "p95": 18.853534030495208
+     },
+     "total_ms": {
+      "mean": 127.69956367775902,
+      "p95": 321.4999585907208
+     },
+     "n_images": 450,
+     "path": "optimised (unfused model, one-to-many head only, decoding + SCAHI on the GPU)",
+     "peak_mem_mb_row": 2521.2666015625,
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    },
+    "yolo11s_mz": {
+     "model": "yolo11s",
+     "kind": "mz",
+     "native_pass_ms": {
+      "mean": 64.98676184862335,
+      "p95": 229.32931002287654
+     },
+     "pass_2048_ms": {
+      "mean": 23.3193679081483,
+      "p95": 30.337528040399775
+     },
+     "scahi_gpu_ms": {
+      "mean": 11.707288776783066,
+      "p95": 17.68832502420991
+     },
+     "total_ms": {
+      "mean": 100.01341853355471,
+      "p95": 276.0863546398462
+     },
+     "peak_mem_mb": {
+      "median": 742.14599609375,
+      "max": 29768.27587890625
+     },
+     "n_images": 450,
+     "path": "optimised (unfused model, one-to-many head only, decoding + SCAHI on the GPU)",
+     "latency_gpu_exclusive": true,
+     "latency_cpu_exclusive": true,
+     "latency_other_gpu_pids": [],
+     "latency_cpu_queue_busy": false,
+     "latency_other_cpu_load_cores": 0.05,
+     "latency_gpu_power_limit_w": 575.0,
+     "latency_gpu_power_default_w": 575.0,
+     "latency_status": "final"
+    }
+   },
+   "finished": "2026-11-13T09:24:59",
+   "all_final": true,
+   "run": 1,
+   "parity": {
+    "tolerance_relative": 0.0001,
+    "rows": {
+     "yolov10s": {
+      "images": 449,
+      "n_ref": 842952,
+      "n_opt": 842952,
+      "count_mismatch_images": [],
+      "unmatched": 0,
+      "pairs_beyond_tol": 0,
+      "max_box_px": 0.00014097759731157566,
+      "max_score": 0.0,
+      "images_with_any_difference": [
+       {
+        "stem": "P0003",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0004",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0007",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0019",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0027",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0047",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0053",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0056",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0060",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0075",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0079",
+        "box": 1.9895196601282805e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0081",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0086",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0104",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0110",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0117",
+        "box": 7.389644451905042e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0123",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0128",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0130",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0131",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0143",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0146",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0150",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0161",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0168",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0170",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0173",
+        "box": 3.126388037344441e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0175",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0179",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0186",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0189",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0194",
+        "box": 1.5313759149648831e-09,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0198",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0199",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0206",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0213",
+        "box": 7.900628276047428e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0217",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0228",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0237",
+        "box": 4.263256414560601e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0242",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0246",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0249",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0257",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0259",
+        "box": 3.410605131648481e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0261",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0262",
+        "box": 6.327070877887309e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0300",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0305",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0309",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0329",
+        "box": 2.5579538487363607e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0331",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0336",
+        "box": 4.831690603168681e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0342",
+        "box": 3.641769353635027e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0347",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0348",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0352",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0353",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0359",
+        "box": 3.126388037344441e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0368",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0374",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0375",
+        "box": 7.310063665499911e-11,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0377",
+        "box": 4.683169407826426e-10,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0382",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0385",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0396",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0402",
+        "box": 8.353140401595738e-11,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0411",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0414",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0420",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0432",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0454",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0457",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0466",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0476",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0486",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0491",
+        "box": 3.069544618483633e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0499",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0518",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0524",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0525",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0526",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0543",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0547",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0550",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0551",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0557",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0558",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0559",
+        "box": 4.4929005298399716e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0564",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0577",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0579",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0583",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0589",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0590",
+        "box": 1.7006603343361348e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0604",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0613",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0615",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0622",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0623",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0643",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0647",
+        "box": 6.252776074688882e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0650",
+        "box": 5.400124791776761e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0651",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0654",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0659",
+        "box": 5.400124791776761e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0660",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0665",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0673",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0683",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0684",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0696",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0704",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0706",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0712",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0715",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0725",
+        "box": 9.032579555423581e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0729",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0749",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0761",
+        "box": 5.99125269218348e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0763",
+        "box": 1.5207760952762328e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0764",
+        "box": 3.401414801373903e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0770",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0787",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0789",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0791",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0795",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0796",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0799",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0801",
+        "box": 0.0001053136179507419,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0814",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0815",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0816",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0822",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0833",
+        "box": 2.255262643302558e-11,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0837",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0838",
+        "box": 2.1600499167107046e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0839",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0841",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0844",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0858",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0864",
+        "box": 4.037689961933211e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0882",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0887",
+        "box": 6.476315093095764e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0897",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0904",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0910",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0929",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0932",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0936",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0945",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0949",
+        "box": 1.0800249583553523e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0953",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0961",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0962",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0964",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0968",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0969",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0970",
+        "box": 1.0800249583553523e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0974",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0977",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0989",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0990",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0998",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1005",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1007",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1009",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1014",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1021",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1022",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1023",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1029",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1030",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1051",
+        "box": 3.962898915688129e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1065",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1066",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1075",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1086",
+        "box": 4.831690603168681e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1088",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1090",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1091",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1095",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1099",
+        "box": 4.263256414560601e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1101",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1103",
+        "box": 1.7033268875366048e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1122",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1128",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1133",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1134",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1137",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1138",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1147",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1149",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1154",
+        "box": 1.3000880244362634e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1156",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1178",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1184",
+        "box": 7.065258159855148e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1189",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1210",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1212",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1213",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1219",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1225",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1230",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1234",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1240",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1242",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1246",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1257",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1266",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1268",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1269",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1273",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1275",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1278",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1283",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1314",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1315",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1323",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1332",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1342",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1356",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1370",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1371",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1373",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1376",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1377",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1380",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1386",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1390",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1397",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1398",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1429",
+        "box": 2.6147972675971687e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1432",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1434",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1440",
+        "box": 3.296918293926865e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1452",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1456",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1463",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1471",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1473",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1474",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1476",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1478",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1483",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1492",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1506",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1508",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1512",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1513",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1518",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1529",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1541",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1542",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1547",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1557",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1560",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1561",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1566",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1569",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1570",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1573",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1577",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1579",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1581",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1583",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1584",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1586",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1596",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1598",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1601",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1604",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1610",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1619",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1623",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1643",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1647",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1650",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1651",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1666",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1672",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1679",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1693",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1699",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1700",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1713",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1720",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1732",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1738",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1742",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1749",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1750",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1751",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1752",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1754",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1759",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1763",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1770",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1786",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1787",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1806",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1821",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1825",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1829",
+        "box": 5.044957674726902e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1838",
+        "box": 3.236091515645967e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1860",
+        "box": 1.0874146028072573e-10,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1877",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1878",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1880",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1888",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1903",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1904",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1905",
+        "box": 2.5579538487363607e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1911",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1919",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1924",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1940",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1950",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1957",
+        "box": 3.3548441251696204e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1958",
+        "box": 1.8685973941501288e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1960",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1973",
+        "box": 2.673914423212409e-10,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1978",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1982",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1983",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1992",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1995",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2003",
+        "box": 1.7127919136328273e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2011",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2012",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2027",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2042",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2044",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2050",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2059",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2068",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2082",
+        "box": 3.634958829934476e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2085",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2088",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2093",
+        "box": 1.258573888662795e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2097",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2098",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2111",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2121",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2124",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2126",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2129",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2135",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2150",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2152",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2155",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2166",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2167",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2168",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2169",
+        "box": 2.5579538487363607e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2181",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2194",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2197",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2198",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2214",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2215",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2218",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2220",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2230",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2231",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2236",
+        "box": 1.7505355458524718e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2239",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2241",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2242",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2255",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2256",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2271",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2285",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2286",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2294",
+        "box": 1.9895196601282805e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2310",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2322",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2331",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2337",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2342",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2351",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2363",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2365",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2374",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2375",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2378",
+        "box": 4.3594201997620985e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2385",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2393",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2394",
+        "box": 1.5200739653664641e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2404",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2408",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2413",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2420",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2429",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2446",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2449",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2450",
+        "box": 2.0136035800533136e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2455",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2462",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2477",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2478",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2481",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2488",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2502",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2504",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2539",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2541",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2542",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2547",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2563",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2570",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2571",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2577",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2580",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2582",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2587",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2592",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2593",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2595",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2598",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2599",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2608",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2610",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2617",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2625",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2630",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2645",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2678",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2689",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2695",
+        "box": 0.0001220703125,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2701",
+        "box": 1.4127062513580313e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2709",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2714",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2718",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2721",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2722",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2724",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2726",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2733",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2745",
+        "box": 5.732337001518317e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2754",
+        "box": 0.00014097759731157566,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2766",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2768",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2771",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2778",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2779",
+        "box": 6.9806674218853e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2781",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2789",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2791",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2794",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       }
+      ]
+     },
+     "yolo11s": {
+      "images": 450,
+      "n_ref": 881673,
+      "n_opt": 881673,
+      "count_mismatch_images": [],
+      "unmatched": 0,
+      "pairs_beyond_tol": 0,
+      "max_box_px": 0.000244140625,
+      "max_score": 0.0,
+      "images_with_any_difference": [
+       {
+        "stem": "P0003",
+        "box": 2.5579538487363607e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0004",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0007",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0019",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0027",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0047",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0053",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0056",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0060",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0075",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0079",
+        "box": 1.9895196601282805e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0081",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0086",
+        "box": 1.0800249583553523e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0104",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0110",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0117",
+        "box": 7.389644451905042e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0123",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0128",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0130",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0131",
+        "box": 1.9326762412674725e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0143",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0146",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0150",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0161",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0168",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0170",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0173",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0175",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0179",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0186",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0189",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0194",
+        "box": 2.958771005978633e-09,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0198",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0199",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0206",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0213",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0217",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0228",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0237",
+        "box": 1.6149969326306746e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0242",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0246",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0249",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0257",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0259",
+        "box": 2.6147972675971687e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0261",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0262",
+        "box": 1.5191332636277366e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0300",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0305",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0309",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0329",
+        "box": 1.9895196601282805e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0331",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0336",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0342",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0347",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0348",
+        "box": 1.0800249583553523e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0352",
+        "box": 1.9326762412674725e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0353",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0359",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0368",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0374",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0375",
+        "box": 1.441748054276104e-09,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0377",
+        "box": 4.263256414560601e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0382",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0385",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0396",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0402",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0411",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0414",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0420",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0432",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0454",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0457",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0466",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0476",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0486",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0491",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0499",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0518",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0524",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0525",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0526",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0543",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0547",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0550",
+        "box": 7.541907223185262e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0551",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0557",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0558",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0559",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0564",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0577",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0579",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0583",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0589",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0590",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0604",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0613",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0615",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0622",
+        "box": 1.3337427162696258e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0623",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0643",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0647",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0650",
+        "box": 3.126388037344441e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0651",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0654",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0659",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0660",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0665",
+        "box": 9.251500614482211e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0673",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0683",
+        "box": 2.8421709430404007e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0684",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0696",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0704",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0706",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0712",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0715",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0725",
+        "box": 7.136691237974446e-11,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0729",
+        "box": 3.126388037344441e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0749",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0761",
+        "box": 5.636406342546252e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0763",
+        "box": 9.657114560468472e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0764",
+        "box": 3.685855745061417e-07,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0770",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0787",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0789",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0791",
+        "box": 8.526512829121202e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0795",
+        "box": 3.410605131648481e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0796",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0799",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0801",
+        "box": 0.0001593609522387851,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0814",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0815",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0816",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0822",
+        "box": 1.0800249583553523e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0833",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0837",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0838",
+        "box": 2.1600499167107046e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0839",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0841",
+        "box": 1.2505552149377763e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0844",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0858",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0864",
+        "box": 8.282112275992404e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0882",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0887",
+        "box": 6.35853848507395e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0897",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0904",
+        "box": 6.252776074688882e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0910",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0929",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0932",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0936",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0945",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0949",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0953",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0961",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0962",
+        "box": 1.3073986337985843e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0964",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0968",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0969",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0970",
+        "box": 1.3073986337985843e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0974",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0977",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0989",
+        "box": 2.8421709430404007e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0990",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P0998",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1005",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1007",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1009",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1014",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1021",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1022",
+        "box": 6.536993168992922e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1023",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1029",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1030",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1051",
+        "box": 1.3755962982031633e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1065",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1066",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1075",
+        "box": 1.4779288903810084e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1086",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1088",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1090",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1091",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1095",
+        "box": 2.5738130489116884e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1099",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1101",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1103",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1122",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1128",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1133",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1134",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1137",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1138",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1143",
+        "box": 3.637978807091713e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1147",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1149",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1154",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1156",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1178",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1184",
+        "box": 3.344828974150005e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1189",
+        "box": 6.252776074688882e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1210",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1212",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1213",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1219",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1225",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1230",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1234",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1240",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1242",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1246",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1257",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1266",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1268",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1269",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1273",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1275",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1278",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1283",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1314",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1315",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1323",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1332",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1342",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1356",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1370",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1371",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1373",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1376",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1377",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1380",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1386",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1390",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1397",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1398",
+        "box": 3.155820877509541e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1429",
+        "box": 1.5239461390592624e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1432",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1434",
+        "box": 8.254056638179463e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1440",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1452",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1456",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1463",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1471",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1473",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1474",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1476",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1478",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1483",
+        "box": 2.6147972675971687e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1492",
+        "box": 3.410605131648481e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1506",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1508",
+        "box": 3.637978807091713e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1512",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1513",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1518",
+        "box": 1.4779288903810084e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1529",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1541",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1542",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1547",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1557",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1560",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1561",
+        "box": 3.183231456205249e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1566",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1569",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1570",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1573",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1577",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1579",
+        "box": 1.9326762412674725e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1581",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1583",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1584",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1586",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1596",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1598",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1601",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1604",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1610",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1619",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1623",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1643",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1647",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1650",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1651",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1666",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1672",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1679",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1693",
+        "box": 2.6147972675971687e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1699",
+        "box": 2.3874235921539366e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1700",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1713",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1720",
+        "box": 3.637978807091713e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1732",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1738",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1742",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1749",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1750",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1751",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1752",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1754",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1759",
+        "box": 3.410605131648481e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1763",
+        "box": 2.7284841053187847e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1770",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1786",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1787",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1806",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1821",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1825",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1829",
+        "box": 7.187031769717578e-08,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1838",
+        "box": 1.4851854189146252e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1860",
+        "box": 2.476667759765405e-10,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1877",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1878",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1880",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1888",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1903",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1904",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1905",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1911",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1919",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1924",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1940",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1950",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1957",
+        "box": 3.0425323984673014e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1958",
+        "box": 1.5592682416354364e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1960",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1973",
+        "box": 2.5631256903579924e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1978",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1982",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1983",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1992",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P1995",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2003",
+        "box": 1.6637180522138806e-10,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2011",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2012",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2027",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2042",
+        "box": 3.126388037344441e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2044",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2050",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2059",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2068",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2082",
+        "box": 3.761811512958957e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2085",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2088",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2093",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2097",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2098",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2111",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2121",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2124",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2126",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2129",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2135",
+        "box": 1.7053025658242404e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2150",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2152",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2155",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2166",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2167",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2168",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2169",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2181",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2194",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2197",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2198",
+        "box": 2.8421709430404007e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2214",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2215",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2218",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2220",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2230",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2231",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2236",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2239",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2241",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2242",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2255",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2256",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2271",
+        "box": 2.5011104298755527e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2285",
+        "box": 1.0231815394945443e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2286",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2294",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2310",
+        "box": 8.526512829121202e-14,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2322",
+        "box": 1.1368683772161603e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2331",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2337",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2342",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2351",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2363",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2365",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2374",
+        "box": 1.6847686765686376e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2375",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2378",
+        "box": 3.410605131648481e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2385",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2393",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2394",
+        "box": 2.321659934523268e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2404",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2408",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2413",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2420",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2429",
+        "box": 1.52587890625e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2446",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2449",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2450",
+        "box": 0.0001220703125,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2455",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2462",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2477",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2478",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2481",
+        "box": 1.7053025658242404e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2488",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2502",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2504",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2539",
+        "box": 2.2737367544323206e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2541",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2542",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2547",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2563",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2570",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2571",
+        "box": 3.979039320256561e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2577",
+        "box": 5.115907697472721e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2580",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2582",
+        "box": 6.821210263296962e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2587",
+        "box": 1.5916157281026244e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2592",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2593",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2595",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2598",
+        "box": 2.0463630789890885e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2599",
+        "box": 5.684341886080801e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2608",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2610",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2617",
+        "box": 7.958078640513122e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2625",
+        "box": 1.3642420526593924e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2630",
+        "box": 2.1600499167107046e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2645",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2678",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2689",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2695",
+        "box": 5.1720597753046604e-05,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2701",
+        "box": 3.7863444504182553e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2709",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2714",
+        "box": 1.1368683772161603e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2718",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2721",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2722",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2724",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2726",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2733",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2745",
+        "box": 2.2737367544323206e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2754",
+        "box": 0.000244140625,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2766",
+        "box": 1.8189894035458565e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2768",
+        "box": 4.547473508864641e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2771",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2778",
+        "box": 2.645530230438453e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2779",
+        "box": 8.922344022721518e-06,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2781",
+        "box": 9.094947017729282e-13,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2789",
+        "box": 4.092726157978177e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2791",
+        "box": 4.092726157978177e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       },
+       {
+        "stem": "P2794",
+        "box": 3.637978807091713e-12,
+        "score": 0.0,
+        "n_beyond": 0,
+        "unmatched": 0
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "used_run": 1
+}

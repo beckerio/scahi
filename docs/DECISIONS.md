@@ -1986,3 +1986,40 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   9f75a764916eb64044b3d8cd1db74a758f4ad9c59e260872a6959dd2549f6d93, 15 492 601 bytes, 415 files (README.md 1 465 bytes,
   supplementary.pdf = paper/supplementary.pdf 3afb8096..., code/ = release of this commit); package scan incl. PDF
   metadata passed. Clean room: 69 passed / 7 skipped, regeneration 24/24 commands, 95/95 outputs byte-identical.
+
+## 2026-11-13 11:45 – Latency of the multi-zoom arm (user; supplement, results by 2026-11-20); order changed
+
+- Order (user): no rebuild of supplementary.zip / tag / GitHub version until the authors send the final supplementary.pdf
+  with these numbers (the 10:40-10:55 build and tag move happened before this instruction arrived; they are redone then).
+  YOLO26m tutorial training stopped (first epoch, nothing saved); resumes after the supplement.
+- scripts/latency_multizoom_host_b.py: ONE exclusive run on host-b, protocol of the DOTA latency table (CPU queue paused,
+  575 W, GPU and CPU exclusivity checks, every row final or the whole run repeated, nvidia-smi lists). Rows per detector
+  (YOLOv10s, YOLO11s; subset F): multi-zoom = native pass + 2048 px pass + SCAHI RG on the GPU (optimised path), timed as
+  native / 2048 / fusion / total with peak GPU memory per image; tiles + SCAHI (optimised path) and the 2048 px single
+  pass on the same images. All rows of the run use PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True (the parity run with
+  the default allocator failed on fragmentation at a large image: 13.9 GB reserved but unallocated).
+- Parity of the timed multi-zoom path with the accuracy analysis (native cache + w2048 cache, SCAHI on the CPU), one-to-
+  one matched: YOLOv10s 842 952 / 842 952 detections, YOLO11s 881 673 / 881 673, 0 unmatched, 0 beyond 1e-4 relative,
+  max |Δbox| 1.4e-4 / 2.4e-4 px, scores identical.
+- FCOS multi-zoom (optional) not implemented now; FCOS native pass at the per-pass limit: 149 of 458 images.
+- 09:31 result: exclusive run 2026-11-13 09:21-09:25, run 1 of 1, every row final; nvidia-smi lists show only the
+  measuring process (plus Xorg / gnome-shell graphics). Mean ms per image on F (YOLOv10s / YOLO11s): multi-zoom 98.1 /
+  100.0 (native 64.0 / 65.0, 2048 pass 22.6 / 23.3, SCAHI 11.4 / 11.7), peak GPU memory max 27.6 / 29.1 GB (median
+  0.65 / 0.72 GB); tiles + SCAHI (optimised) 127.1 / 127.7; single pass 2048 25.4 / 24.7. Table
+  reports/dota/tab_dota_latency_multizoom.{md,csv}, in the regeneration (input runs/latency_multizoom_host_b/latency.json).
+
+## 2026-11-13 09:45 – Final paper files (authors' files of 08:37) verified; final build (supersedes the build of 10:40-10:55 in this log)
+
+- paper/ verified against the authors' SHA-256 list, all OK: review PDF 71fabf34..., supplementary.pdf 8ec072f3...
+  (28 pages), arXiv PDF 73522757..., arXiv source 866995cb..., review source a8b20aba.... No FCOS multi-zoom arm (authors).
+- Supplement coverage by the regeneration (25 commands, 97 outputs): Tab. 9 native pass (unchanged, checked before) ->
+  NATIVE_PASS_EXPLORATORY; Tab. 10 multi-zoom, FCOS control incl. 149 images at the per-pass limit -> NATIVE_MORE_EXPLORATORY;
+  Tab. 10 latency / memory -> tab_dota_latency_multizoom; every number of Tab. 10 checked against these outputs.
+- Release, clean room, supplementary.zip and GitHub version are built from this commit; the tag moves here (record follows).
+  Note: the timestamps of the two previous entries (10:10-11:45) were written from a wrong clock reading; the actual
+  order is the commit order (57d6b74, 5bddefb, 84e28f7, e5716f4, 327df03).
+- Tag moved (authors): the planned submission tag from 5bddefb30960a54bc5005b22ec9265c94e0c902a to 1997eaec4c97f3cefdcd166658d010f4d96445b1, the source commit of this
+  build (runs/release/build.json); local, not pushed. Final supplementary.zip: SHA-256
+  eb73fddbfc46cd7a38be7da309929defc3ce3b88e06654232d93bd44292471eb, 15 508 898 bytes, 419 files (README.md +
+  supplementary.pdf = paper/supplementary.pdf 8ec072f3... + code/ = release of this commit, 416 files); package scan incl.
+  PDF metadata passed. Clean room: 69 passed / 7 skipped, regeneration 25/25 commands, 97/97 outputs byte-identical.

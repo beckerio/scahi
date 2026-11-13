@@ -50,6 +50,7 @@ COMMANDS = [
     ["scripts/latency_dota_host_b.py", "report"],
     ["scripts/dota_native_pass.py", "report"],  # exploratory post-hoc analysis (supplement Tab. s-native)
     ["scripts/dota_native_more.py", "report"],  # exploratory post-hoc analyses (supplement Tab. s-multizoom)
+    ["scripts/latency_multizoom_host_b.py", "report"],  # latency of the multi-zoom arm (supplement)
     ["scripts/scahi_algorithm_doc.py"],
 ]
 OUTPUTS = """
@@ -74,6 +75,8 @@ reports/dota/NATIVE_MORE_EXPLORATORY.md
 reports/dota/NATIVE_PASS_EXPLORATORY.md
 reports/dota/native_more_exploratory.json
 reports/dota/native_pass_exploratory.json
+reports/dota/tab_dota_latency_multizoom.csv
+reports/dota/tab_dota_latency_multizoom.md
 reports/dota/tab_dota_a5_contrasts.csv
 reports/dota/tab_dota_a5_parameters.csv
 reports/dota/tab_dota_a5_rows.csv
