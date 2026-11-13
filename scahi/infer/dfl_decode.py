@@ -34,7 +34,12 @@ def dfl_moments(box_logits: torch.Tensor, reg_max: int) -> tuple[torch.Tensor, t
 
 def decode(box_logits: torch.Tensor, score_logits: torch.Tensor, anchors: torch.Tensor, strides: torch.Tensor,
            reg_max: int) -> Decoded:
-    mean, var = dfl_moments(box_logits, reg_max)
+    if reg_max == 1:
+        # direct box encoding (YOLO26, addendum 2026-11-13 of docs/PREREGISTRATION_EXT.md): the box head outputs the four
+        # side distances in grid units (Ultralytics: dfl = Identity); no distribution -> std 0. reg_max > 1 unchanged.
+        mean, var = box_logits, torch.zeros_like(box_logits)
+    else:
+        mean, var = dfl_moments(box_logits, reg_max)
     s = strides.view(1, 1, -1)
     ltrb = mean * s  # [B, 4, A]
     ax, ay = anchors[:, 0] * strides, anchors[:, 1] * strides

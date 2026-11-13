@@ -59,8 +59,9 @@ class CalibSelector:
     def __init__(
         self, setting: str, imgsz: int, epochs: int, image_root: Path | None = None,
         predict_fn: Callable[[Path, pd.DataFrame], pd.DataFrame] | None = None,
-        schedule: Callable[[int, int], bool] = eval_schedule, selection_branch: str = "o2o",
+        schedule: Callable[[int, int], bool] = eval_schedule, selection_branch: str = "o2o", keep_epochs: bool = False,
     ) -> None:
+        self.keep_epochs = keep_epochs  # copy last.pt of every evaluated epoch to calib_epoch<NNN>.pt (YOLO26m)
         self.cs = load_class_setting(setting)
         self.coco = calib_subset(setting)
         self.images = image_table(self.coco, image_root)
@@ -96,6 +97,8 @@ class CalibSelector:
         ap = entry["AP"]
         best = max((c["AP"] for c in curve), default=-1.0)
         curve.append(entry)
+        if self.keep_epochs:
+            shutil.copy(trainer.last, wdir / f"calib_epoch{epoch1:03d}.pt")
         if ap > best:
             shutil.copy(trainer.last, wdir / "best_calib.pt")
         curve_p.write_text(json.dumps(curve, indent=2))

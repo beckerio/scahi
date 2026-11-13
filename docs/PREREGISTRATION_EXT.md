@@ -143,3 +143,42 @@ Bootstrap über Bilder mit denselben Resamples für alle Modelle (pro Resample M
   7. Was bis zur Deadline auf host-b (So 01.11. 12:00) nicht fertig wird, läuft nach dem Wechsel auf host-a weiter
      (gleiche Regeln; zuerst das Replay-Gate).
   8. Die Darstellung von YOLO12 im Paper (Haupttext oder Anhang) ist **nicht** festgelegt und wird nach E4 entschieden.
+
+- **2026-11-13 – Ergänzung: YOLO26m als sechster Detektor der Erweiterung (Nutzerentscheid; eingetragen bevor irgendein
+  YOLO26m-Ergebnis auf VisDrone-val oder test-dev existiert).** Bis zu diesem Eintrag existieren für YOLO26m nur zwei
+  abgebrochene Tutorial-Trainings mit anderem Rezept (1280 px, Epoche 7 bzw. 4; Ultralytics-Validierung auf calib bzw.
+  keine), ohne jede Auswertung auf val oder test-dev; sie werden verworfen und gehen in nichts ein.
+  1. **Modell:** YOLO26m, ultralytics 8.4.183 (gepinnt), COCO-Gewichte `yolo26m.pt` (Release v8.4.0, SHA-256
+     401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7, in `runs/ext/heads.json` nachgetragen). Kopf wie
+     YOLOv10: zwei Zweige, o2m und o2o; Standardausgabe = o2o (NMS-frei, Top-k). Box-Kodierung `reg_max = 1`: der Boxkopf
+     gibt die vier Seitenabstände direkt aus (keine DFL-Verteilung). Die eigene Dekodierung erhält dafür einen direkten
+     Pfad (nur für `reg_max = 1`; Standardabweichung 0, von F2 nicht genutzt); für alle anderen Modelle bleibt sie
+     unverändert und bitidentisch (geprüft über Regeneration und Replay-Gate).
+  2. **Einordnung:** YOLO26m wird nach den Regeln für Zwei-Zweig-Modelle behandelt, d. h. **genau wie YOLOv10m**:
+     E-1280 / E-2048 und Modellauswahl über o2o (o2m-Kurve mitprotokolliert); E-SAHI auf den 1280-Gewichten (o2o);
+     E-MZ-NMS-*s* in beiden Zweigen; E-MZ-DENSE-*s* mit o2m (Hauptzeile) und zusätzlich o2o; deskriptiv „Einzelpass o2m +
+     NMS“ bei 1280 und 2048; die Refined-Grid-Zeilen (X-Grid B = Runde-1-Raster, C = 108-Varianten-Raster, Zeitgrenze
+     ≤ 2× F2, Auswahl max. calib-AP) und die Ganzbild-Zeilen wie bei den fünf Modellen, mit derselben Einstufung wie dort.
+  3. **Rezept unverändert** (Abschnitt 1 und Ergänzung 0f6fecbc): COCO-Init, 100 Epochen, Batch 8 (1280) bzw. 3 (2048),
+     Seed 0, AMP, Ultralytics-Standardaugmentierung und -Loss, `optimizer=auto`, Trainingsliste `train_main`, gleicher
+     Code (`scahi.ext.e_train` / `scahi.train.full.train_full`). Argumentvergleich mit YOLO11m 1280/2048 in
+     `docs/DECISIONS.md` (2026-11-13): nur Modell und Ausgabepfade verschieden. Modellauswahl: Toolkit-Port-AP
+     (`visdrone_ignore`) auf calib an denselben Epochen (alle 5 Epochen bis 80, dann jede der Epochen 81–100;
+     36 Auswertungen), o2o; die Ultralytics-Fitness wird nicht verwendet. Zusätzlich wird der Checkpoint jeder
+     ausgewerteten Epoche aufbewahrt (Kopie nach dem Speichern, keine Änderung am Training). OOM-Regel unverändert:
+     einmalige Reduktion 8 → 6 bzw. 3 → 2, Batch ≥ 2.
+  4. **Fragen und Urteile:** E-H1, E-H2 (je s) und E-H3 (= Q1–Q3) unverändert, ε = 0,30, gepaarter Bootstrap über
+     val-Bilder (1000, Seed 0), **Urteil je Detektor** für YOLO26m; E-H4 deskriptiv wie bei YOLOv10m. Die Urteile der fünf
+     Modelle, das Kriterium „≥ 4 von 5“ und der gepoolte Effekt bleiben unverändert; YOLO26m wird getrennt berichtet und
+     zählt in keinem Familienkriterium. Holm-Anhang: für YOLO26m allein (Familie aus einem Modell, also unadjustiert),
+     getrennt ausgewiesen.
+  5. **Gates:** G-E1 (eigene Dekodierung gegen Ultralytics, beide Zweige, Koordinaten ≤ 4 ulp mit TF32 aus und
+     |ΔAP| ≤ 0,01 auf calib), G-E3 je Größe; G-E2 gilt nur für s-Modelle und entfällt. Fällt G-E1, entstehen keine
+     dichten Zeilen.
+  6. **Nicht prüfbare Fälle:** Passt bei 2048 auch Batch 2 nicht, scheitert ein Lauf endgültig oder fällt ein Gate, fehlen
+     die betroffenen Zeilen; jede Hypothese, die eine fehlende Zeile braucht, ist für YOLO26m „nicht prüfbar“ und zählt
+     als **„nicht erfüllt“** (Regel der Ergänzung 2026-10-27, Punkt 4). Die übrigen Hypothesen werden normal entschieden.
+  7. **Ablauf:** Caches, calib-Tuning (Einzelpass-conf, NMS-IOS-Raster, F2-24er-Raster, Refined Grid mit Zeitgrenze,
+     SAHI-Raster v2) wie in der Erweiterung; Freeze mit Gewichts-Checksummen und Herkunft jeder Wahl; Replay-Gate; danach
+     genau **eine** Auswertung auf val und genau **eine** auf test-dev, Berichtsregeln wie im Freeze der Erweiterung
+     (val-Urteil maßgeblich, test-dev nicht bestätigend daneben). Alles in `docs/DECISIONS.md`.
