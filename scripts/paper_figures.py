@@ -804,9 +804,9 @@ def _interim_title(ax, title: str) -> None:
 
 
 EXT_HYPS = (("E-H1", "Q1: single pass 2048 −\n1280 + tiles, box fusion"),
-            ("E-H2 s=1280", "Q2: SCAHI − box fusion,\nsame passes, s = 1280"),
-            ("E-H2 s=2048", "Q2: SCAHI − box fusion,\nsame passes, s = 2048"),
-            ("E-H3", "Q3: SCAHI (tiles) −\nsingle pass, s = 2048"),
+            ("E-H2 s=1280", "Q2: SCAHI − box fusion,\nsame passes, N = 1280"),
+            ("E-H2 s=2048", "Q2: SCAHI − box fusion,\nsame passes, N = 2048"),
+            ("E-H3", "Q3: SCAHI (tiles) −\nsingle pass, N = 2048"),
             ("E-H4", "YOLOv10 head\n(o2m vs. o2o), YOLOv10m"))
 EXT_MODELS = ("yolov10m", "yolo11s", "yolo12s", "yolo11m", "yolo12m")
 
@@ -890,7 +890,7 @@ def fig_ext_forest() -> None:
 
 
 def fig_ext_waterfall() -> None:
-    """Decomposition per model and s (main branch), val and test-dev: A (single pass) -> + F2 alone -> + tiles = C (F2)
+    """Decomposition per model and N (main branch), val and test-dev: A (single pass) -> + F2 alone -> + tiles = C (F2)
     -> + X-grid = C (X-grid, o2m). Steps with the paired CIs of runs/ext/testdev_explore.json (TESTDEV_EXT.md §6;
     val identical to runs/ext/decomp.json and grid_ext.json). Exploratory, post hoc."""
     f = "runs/ext/testdev_explore.json"
@@ -946,7 +946,7 @@ def fig_ext_waterfall() -> None:
             ax.set_ylim(lo, max(vals) + 1.4)
             ax.grid(axis="x", visible=False)
             ax.tick_params(labelsize=5.6)
-            ax.set_title(f"{MODEL_LABEL[m]} s = {sz} · {sp}", fontsize=6.2,
+            ax.set_title(f"{MODEL_LABEL[m]} N = {sz} · {sp}", fontsize=6.2,
                          color=INK if sp == "val" else BLUE_D)
             if j == 0:
                 ax.set_ylabel(f"{sp} AP [%]", fontsize=6.0)
@@ -959,14 +959,14 @@ def fig_ext_waterfall() -> None:
     fig.suptitle(st if _ext_complete() else "INTERIM - " + st, fontsize=7.0, x=0.01, ha="left",
                  color=INK if _ext_complete() else ORANGE)
     fig.text(0.0, -0.01, "Error bars: paired-bootstrap 95 % CI of each step. YOLOv10m: the single pass uses the o2o "
-             "head. YOLOv12m: s = 1280 only.", fontsize=5.4, color=MUTED)
+             "head. YOLOv12m: N = 1280 only.", fontsize=5.4, color=MUTED)
     save(fig, "fig_ext_waterfall", OUT_EXT)
     save_csv(rows, "fig_ext_waterfall", OUT_EXT)
 
 
 def fig_ext_recall() -> None:
     """Recall@0.5 of crowded vs. isolated GT (main branch): A, B, C and, where available, X-grid (row C); one row of
-    panels per size (s = 2048: four models, YOLO12m 2048 dropped; s = 1280: all five models)."""
+    panels per size (N = 2048: four models, YOLO12m 2048 dropped; N = 1280: all five models)."""
     sizes = [(sz, f) for sz, f in ((2048, "runs/ext/overmerge.json"), (1280, "runs/ext/overmerge_s1280.json"))
              if (REPO / f).exists()]
     if not sizes:
@@ -1002,12 +1002,12 @@ def fig_ext_recall() -> None:
             ax.set_xticks(range(len(tags)), [MODEL_LABEL[m] for m, _ in tags], fontsize=6.2)
             ax.set_ylim(50 if grp == "crowd" else 75, 100)
             ax.grid(axis="x", visible=False)
-            _interim_title(ax, f"s = {sz}: {lbl}")
+            _interim_title(ax, f"N = {sz}: {lbl}")
             ax.set_ylabel("recall@0.5 [%]", fontsize=6.2)
     h, lb = axes[0, 0].get_legend_handles_labels()
     fig.legend(h, lb, fontsize=5.8, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=2)
     fig.text(0.0, -0.26 / len(sizes), "val, all detections (≤ 500 per image, as in the evaluation); YOLOv12m only at "
-             "s = 1280 (2048 dropped); exploratory, post hoc", fontsize=5.6, color=MUTED)
+             "N = 1280 (2048 dropped); exploratory, post hoc", fontsize=5.6, color=MUTED)
     save(fig, "fig_ext_recall", OUT_EXT)
     save_csv(rows, "fig_ext_recall", OUT_EXT)
 

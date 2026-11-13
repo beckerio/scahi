@@ -60,7 +60,7 @@ def save(fig, name: str, rows: list[dict]) -> None:
 
 def hypotheses(R: dict) -> None:
     """Forest plot: Δ mAP50 with 95 % CI per hypothesis and model; lines at 0 and ε. Not testable (YOLO12s without
-    2048 weights: Q1, Q2 at 2048) marked as such; YOLO12s Q3 is measured on its 1024 pass (S_max)."""
+    2048 weights: Q1, Q2 at 2048) marked as such; YOLO12s Q3 is measured on its 1024 pass (largest trainable N)."""
     hs = list(R["hypotheses"])
     fig, ax = plt.subplots(figsize=(FULL_W * 0.66, 0.78 * len(hs) + 0.7))
     rows = []
@@ -80,7 +80,7 @@ def hypotheses(R: dict) -> None:
             ax.errorbar(c["delta"], y, xerr=[[c["delta"] - c["ci95"][0]], [c["ci95"][1] - c["delta"]]], fmt=MARK[m],
                         color=COL[m], ms=3.6, lw=1.1, capsize=0, label=None if m in labelled else NAME[m], zorder=3)
             labelled.add(m)
-            note = "1024 pass (S_max)" if m == "yolo12s" and h == "D-H3" else ""
+            note = "1024 pass (largest trainable N)" if m == "yolo12s" and h == "D-H3" else ""
             if note:
                 ax.text(c["ci95"][1], y, f"  {note}", color=INK2, fontsize=5.6, va="center")
             rows.append({"question": QUESTION[h][0], "contrast": QUESTION[h][1].replace("\n", " "), "model": m,
@@ -99,7 +99,7 @@ def hypotheses(R: dict) -> None:
 
 
 def rows_plot(R: dict) -> None:
-    """mAP50 of every frozen row; panels s = 1024 / 2048, models as coloured points (shape per model). Rows that do not
+    """mAP50 of every frozen row; panels N = 1024 / 2048, models as coloured points (shape per model). Rows that do not
     exist for a model (single-head models: no o2o box fusion, no SAHI; YOLO12s: no 2048 weights) are left out."""
     fig, axs = plt.subplots(1, 2, figsize=(FULL_W, 2.35), sharey=True)
     rows = []

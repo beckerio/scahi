@@ -14,4 +14,4 @@ Q2,"SCAHI (refined grid, pre-specified on DOTA) vs. box fusion, same passes, 204
 Q3,"SCAHI (refined grid, pre-specified on DOTA; tiles) vs. single pass, 2048",yolov10s,5.499414752720938,3.5461902464019364,7.76801452937342,
 Q3,"SCAHI (refined grid, pre-specified on DOTA; tiles) vs. single pass, 2048",yolov10m,4.341389333619787,3.0185381302353136,6.193704884421693,
 Q3,"SCAHI (refined grid, pre-specified on DOTA; tiles) vs. single pass, 2048",yolo11s,4.618024424154541,2.7566813362021754,6.6192088515806695,
-Q3,"SCAHI (refined grid, pre-specified on DOTA; tiles) vs. single pass, 2048",yolo12s,9.615123549132946,7.103541860996347,12.220220580036907,1024 pass (S_max)
+Q3,"SCAHI (refined grid, pre-specified on DOTA; tiles) vs. single pass, 2048",yolo12s,9.615123549132946,7.103541860996347,12.220220580036907,1024 pass (largest trainable N)

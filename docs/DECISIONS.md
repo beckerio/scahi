@@ -1850,3 +1850,55 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   current GitHub version (415 files, tree identical to exports/github/scahi) as one local commit on top; author set
   locally; no machine names, no Claude mention, no local paths in files or commit messages; 33 weight assets copied to
   weights/ (ignored by git). Not pushed.
+
+## 2026-11-13 06:22 – Exploratory post-hoc analysis "native whole-image single pass on DOTA" (user; framing before any number)
+
+- Status: exploratory, post hoc (defined after the DOTA-val verdicts are known). No preregistered verdict, frozen row or
+  frozen setting changes; the authors decide whether and how it is reported; no claim in the paper may contradict the
+  result. Nothing enters paper tables without the authors' decision. Only number known when this is written: the memory
+  check of 2026-11-13 (scripts/dota_native_memory.py: which DOTA-val images fit into 32 GB; no detection was evaluated).
+- Detectors: YOLOv10s and YOLO11s, the frozen 2048 weights (the weights of the tile passes of the dota2048 stack).
+- Native pass N_z1: whole image at z = 1, no tiling, no fusion. The image is padded bottom/right with the letterbox grey
+  (114) to multiples of 32 and given to the Ultralytics predictor at exactly that input shape (gain 1, no resize); boxes
+  are clipped to the image. Head, post-processing, thresholds and limits as the frozen single-pass row A_2048 of the
+  model (YOLOv10s: o2o head, no NMS; YOLO11s: its o2m head + Ultralytics NMS IoU 0.7; conf = the frozen A_2048 conf
+  0.001; pipeline limit 200 000), float32, batch 1, ``scahi.dota.train.predict`` settings. One equivalence fix: the
+  NMS class offset ``max_wh`` is raised from 7680 to 2^15 (as NMS_KW of the DOTA pipeline), since native coordinates
+  exceed 7680 px (with the default, boxes of different classes would interact); at 2048 px input (A_2048) both values
+  give identical results.
+- Subset F (per model): DOTA-val images on which the native pass runs without out-of-memory on the RTX 5090 (32 GB,
+  fp32, batch 1, nothing else on the GPU). Failing images are listed.
+- Comparisons on DOTA-val, devkit mAP50 without cap (primary of this analysis), AP@[.5:.95], recall@0.5 crowded /
+  isolated GT (definitions of the DOTA evaluation, ``scahi.dota.final.evaluate_row``), paired image bootstrap (1000,
+  seed 0, percentile 95 % CI) over the images of the respective set; descriptive only, no Holm, no epsilon verdict:
+  (i) on F: N_z1 vs. A_2048, vs. tiles + box fusion (NMS-o2m_2048, the D-H2b comparator; YOLOv10s also NMS-o2o_2048),
+      vs. tiles + SCAHI (RG_2048); all rows restricted to F (frozen DOTA-val detections, unchanged);
+  (ii) on all 458 images: hybrid H = N_z1 on F, RG_2048 on the rest, vs. RG_2048 and vs. A_2048.
+- Reported: |F| (images, objects incl. / excl. difficult), runtime (predictor call incl. pre/post-processing, CUDA
+  synchronised) and peak GPU memory per image, every image on which the native pass fails.
+- Code: scripts/dota_native_pass.py; outputs runs/dota/native_pass/.
+- 06:50 addendum (user, before any accuracy number; only the N_z1 detections and the fit list exist): additionally per
+  size bin on sigma = sqrt(w h) of the GT (bins of the DOTA evaluation <8, 8-16, 16-32, 32-64, 64-128, then split
+  128-256 and >256, plus the union >128): AP50, AP@[.5:.95] and recall@0.5 per bin with paired bootstrap CIs, for
+  N_z1 vs. RG_2048 (and A_2048, NMS-o2m_2048) on F and H vs. RG_2048 / A_2048 on all images; where N_z1 and tiles +
+  SCAHI differ is reported per bin, including the largest objects. Fit result of the native pass: YOLOv10s 449 / 458,
+  YOLO11s 450 / 458 images (fused predictor; the unfused memory check had 446 / 449).
+- Hold (user): no rebuild of supplementary.zip, release and GitHub version until the final supplement PDF arrives.
+- 07:20 result (descriptive; report reports/dota/NATIVE_PASS_EXPLORATORY.md, data reports/dota/native_pass_exploratory.json):
+  F = 449 (YOLOv10s) / 450 (YOLO11s) of 458 images, ~84.6 % of the objects. On F, N_z1 is below RG_2048 (mAP50
+  -5.85 [-8.22, -4.54] / -4.11 [-5.25, -2.43]) and not above A_2048; the hybrid on all images is below RG_2048 (-5.62 /
+  -4.02) and on the level of A_2048. The deficit vs. RG_2048 is largest for the largest objects (>256 px: AP50 -10.0 /
+  -10.8). Check: A_2048 re-evaluated on all images equals the frozen evaluation exactly (points and bootstrap vectors).
+  Nothing changed in frozen rows, verdicts or paper tables.
+
+## 2026-11-13 07:35 – Native-pass analysis in the release regeneration; final paper files (authors)
+
+- The exploratory native-pass analysis is in the supplement (Tab. s-native); it is now part of the release regeneration
+  and byte comparison: input runs/dota/native_pass/report.json (point values and bootstrap CIs, computed by
+  ``scripts/dota_native_pass.py analyse`` in the research repo; npz bootstrap vectors are not shipped, as for every other
+  DOTA result), command ``scripts/dota_native_pass.py report`` -> reports/dota/NATIVE_PASS_EXPLORATORY.md and
+  reports/dota/native_pass_exploratory.json (still marked exploratory, post hoc). Object counts no longer read from the
+  labels in report mode (runs/dota/native_pass/object_counts.json). Outputs byte-identical to the committed report;
+  regeneration 23 commands, 93 outputs.
+- Final paper files in paper/ (authors' files of 2026-11-13 05:48), SHA-256: arXiv PDF 6e03ffe4..., arXiv source
+  87b32148..., review PDF f1cbd0ce..., review source 22b4653a..., supplementary.pdf e2ff2841... (27 pages). No reference list was supplied with the request; hashes reported to the authors for comparison.
