@@ -1902,3 +1902,87 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   regeneration 23 commands, 93 outputs.
 - Final paper files in paper/ (authors' files of 2026-11-13 05:48), SHA-256: arXiv PDF 6e03ffe4..., arXiv source
   87b32148..., review PDF f1cbd0ce..., review source 22b4653a..., supplementary.pdf e2ff2841... (27 pages). No reference list was supplied with the request; hashes reported to the authors for comparison.
+
+## 2026-11-13 08:05 – Submission tag (C.6, authors)
+
+- Annotated local tag the planned submission tag on 6d687732ebb67e3e052483ab9976bb6708227d3b, the source commit recorded by
+  the release build (runs/release/build.json) from which the final supplementary.zip was produced; not pushed.
+- supplementary.zip: SHA-256 a5d276e02b0c804f0dd5e79fec9d64e10bab479dca4bd23ac306f867bcc9f3c3, 15 426 594 bytes,
+  411 files; supplementary.pdf inside = paper/supplementary.pdf (SHA-256 e2ff2841...).
+- From here on: the YOLO26m tutorial (feasibility report first). Paper code paths, frozen configurations, the tagged
+  state and supplementary.zip stay untouched; regeneration and clean-room test must pass after every tutorial commit.
+
+## 2026-11-13 08:40 – Two more exploratory post-hoc analyses for the supplement (user; framing before any number)
+
+- Status as the native-pass analysis (2026-11-13 06:22): exploratory, post hoc, descriptive; no verdict, frozen row or
+  setting changes; the authors decide on reporting; nothing enters paper tables without their decision. Priority (user):
+  both before the YOLO26m tutorial; results to the authors by 2026-11-20.
+- Same images and evaluation as the native-pass analysis: DOTA-val, devkit mAP50 without cap, AP@[.5:.95], size bins
+  (incl. 128-256, >256, >128), recall@0.5 crowded / isolated, paired image bootstrap (1000, seed 0) over the subset.
+- (1) Multi-zoom without tiles, YOLOv10s and YOLO11s, subset F of the detector (images on which N_z1 fits, unchanged
+  from the native-pass analysis): two whole-image passes of the frozen 2048 weights, native (z = 1, exact: padding only)
+  and the 2048 px pass (the frozen val cache of the w2048 level), o2m head, dense outputs as in the pipeline caches.
+  MZ-RG: SCAHI F2 with the refined-grid parameters of RG_2048 of the same detector (no taper: both passes cover the
+  whole image; C = number of covering levels = 2), pipeline limit 200 000. MZ-NMS: box fusion on the same two passes
+  with the NMS-o2m_2048 setting. Compared with RG_2048 (tiles + SCAHI) and A_2048 on F (plus N_z1 and MZ-NMS).
+  Native dense caches are computed with the o2m head only (``forward_raw_branch``, bit-identical to the pipeline's
+  forward; parity check on an image whose sides are multiples of 32) and written outside the frozen cache tree
+  (runs/dota/native_more/cache).
+- (2) FCOS control (fully convolutional, no attention blocks): frozen 2048 weights as a native whole-image pass
+  (torchvision transform with long side = native long side, scale 1), own score sqrt(p * centerness), limits and conf as
+  A_fcos_2048 (limit 200 000, conf 0.01). Subset F_fcos = images on which it runs without OOM (fp32, batch 1, GPU alone).
+  Compared with A_fcos_2048 and RG_fcos_2048 (plus NMS-o2m_fcos_2048) on F_fcos.
+- Reported per detector: images and share of OBJECTS (all and non-difficult) covered by the subset.
+- Code: scripts/dota_native_more.py; outputs runs/dota/native_more/.
+
+## 2026-11-13 08:40 – YOLO26m tutorial specification (user; starts after both supplement analyses are reported)
+
+- Feasibility (reported 2026-11-13): pinned Ultralytics 8.4.183 contains YOLO26; two branches (o2m / o2o) as YOLOv10;
+  reg_max = 1 (ltrb distances, no DFL) -> adapter decode in tutorials/ with std 0 (prototype bit-identical to the
+  Ultralytics outputs of both branches on yolo26n).
+- Train YOLO26m (COCO weights, Ultralytics defaults, 100 epochs) at 1280 AND 2048 px (core of the tutorial: value of a
+  higher training resolution).
+- VisDrone val only (no test-dev): single pass 1280 and 2048; SAHI; tiles + box fusion; tiles + SCAHI (pre-specified
+  setting, and refined grid with parameters transferred from YOLOv11m 2048: cell_factor 13, 7 bins per octave,
+  tau_splat 0.00125, tau_peak 0.001 - stated as transferred, not tuned); SAHI passes + SCAHI.
+- README: how to tune the SCAHI parameters on one's own calibration split with the repo scripts.
+- Evaluation with the ignore regions of the original annotations (Ultralytics' VisDrone.yaml conversion drops them);
+  results labelled as a single, non-pre-registered tutorial run; adapter with parity test; implemented in tutorials/
+  (shipped via the GitHub build); paper code, frozen configs, the tag and supplementary.zip unchanged; regeneration and
+  clean-room test pass after every tutorial commit.
+- 07:40 note (no accuracy number exists yet): native dense caches parity-checked bit-identical to the pipeline's
+  whole-image forward (both detectors). YOLO11s P1143 (5838x5338, in F) ran out of memory in the cache forward (unfused
+  o2m path; the fused predictor of N_z1 fitted); recomputed with PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+  (allocator setting only, same computation; 29.0 GB) so that MZ covers the unchanged subset F. FCOS native pass: all
+  458 images fit (F_fcos = all of DOTA-val); the pipeline limit of 200 000 detections per pass is reached on large
+  images (count reported), as specified ("same limits as its single pass").
+- 09:50 result (descriptive; reports/dota/NATIVE_MORE_EXPLORATORY.md, data reports/dota/native_more_exploratory.json):
+  (1) MZ-RG (native + 2048 pass, SCAHI) equals tiles + SCAHI on F: mAP50 -0.01 [-1.07, +0.54] (YOLOv10s), +0.00
+  [-0.80, +0.75] (YOLO11s); vs. A_2048 +3.70 / +3.16; vs. MZ-NMS +0.85 / +1.16; no size bin with a clear difference to
+  RG (128-256 px YOLOv10s -0.81 [-2.60, -0.01]). (2) FCOS native pass fits on all 458 images; vs. A_fcos_2048 +1.62
+  [-1.31, +4.98], vs. RG_fcos_2048 -3.95 [-5.79, -2.10]; >256 px vs. A -12.3. FCOS native reaches the pipeline limit
+  on 149 images (A_fcos_2048: 76). size_metrics refactor of scripts/dota_native_pass.py reproduces the stored size bins
+  exactly (NaN-aware). Nothing changed in frozen rows, verdicts or paper tables.
+
+## 2026-11-13 10:10 – Multi-zoom / FCOS-native analysis in the release regeneration (authors)
+
+- Its numbers are in the supplement (Tab. s-multizoom): command ``scripts/dota_native_more.py report`` (input
+  runs/dota/native_more/report.json; point values and bootstrap CIs) -> reports/dota/NATIVE_MORE_EXPLORATORY.md and
+  reports/dota/native_more_exploratory.json (marked exploratory, post hoc); regeneration 24 commands, 95 outputs.
+- paper/ at this time: unchanged since 2026-11-13 05:48 (same SHA-256 as recorded at 07:35); supplementary.pdf
+  (27 pages) has no Tab. s-multizoom yet. supplementary.zip and the tag move wait for the new supplementary.pdf.
+
+## 2026-11-13 10:40 – Final paper files verified (authors' list); final build
+
+- paper/ (authors' files of 2026-11-13 08:02) verified against the authors' SHA-256 list, all OK: review PDF 5b302cfc...,
+  supplementary.pdf 3afb8096... (28 pages), arXiv PDF 959c6001..., arXiv source 3ffa2e66..., review source f05de6cb....
+- Supplement Tab. 9 (native single pass) and Tab. 10 (multi-zoom / FCOS control) checked number by number against
+  reports/dota/NATIVE_PASS_EXPLORATORY.md and NATIVE_MORE_EXPLORATORY.md (both in the regeneration since 57d6b74);
+  Fig. 1 in the arXiv source byte-identical to reports/figures/paper/tex/fig_method.pdf (d7deed81...).
+- Release, clean room, supplementary.zip (README + this supplementary.pdf + code/) and the GitHub version are built from
+  this commit; the tag the planned submission tag moves here (record follows).
+- 10:55 tag moved (authors): the planned submission tag from 6d687732ebb67e3e052483ab9976bb6708227d3b (supplement of 07:35) to 5bddefb30960a54bc5005b22ec9265c94e0c902a, the
+  source commit of the final build (runs/release/build.json); local, not pushed. Final supplementary.zip: SHA-256
+  9f75a764916eb64044b3d8cd1db74a758f4ad9c59e260872a6959dd2549f6d93, 15 492 601 bytes, 415 files (README.md 1 465 bytes,
+  supplementary.pdf = paper/supplementary.pdf 3afb8096..., code/ = release of this commit); package scan incl. PDF
+  metadata passed. Clean room: 69 passed / 7 skipped, regeneration 24/24 commands, 95/95 outputs byte-identical.

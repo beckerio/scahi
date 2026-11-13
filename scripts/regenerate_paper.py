@@ -49,6 +49,7 @@ COMMANDS = [
     ["scripts/latency_table2.py", "report"],
     ["scripts/latency_dota_host_b.py", "report"],
     ["scripts/dota_native_pass.py", "report"],  # exploratory post-hoc analysis (supplement Tab. s-native)
+    ["scripts/dota_native_more.py", "report"],  # exploratory post-hoc analyses (supplement Tab. s-multizoom)
     ["scripts/scahi_algorithm_doc.py"],
 ]
 OUTPUTS = """
@@ -69,7 +70,9 @@ reports/dota/tab_fcos_diag_per_image.csv
 reports/dota/tab_fcos_diag_recall.csv
 reports/dota/tab_fcos_diag_redundancy.csv
 reports/dota/tab_dota_a5.md
+reports/dota/NATIVE_MORE_EXPLORATORY.md
 reports/dota/NATIVE_PASS_EXPLORATORY.md
+reports/dota/native_more_exploratory.json
 reports/dota/native_pass_exploratory.json
 reports/dota/tab_dota_a5_contrasts.csv
 reports/dota/tab_dota_a5_parameters.csv

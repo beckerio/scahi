@@ -198,23 +198,13 @@ SIZE_SETS = {"fine": (0, 8, 16, 32, 64, 128, 256, np.inf), "gt128": (0, 128, np.
 SIZE_NAMES = {"fine": ("<8", "8-16", "16-32", "32-64", "64-128", "128-256", ">256"), "gt128": ("<=128", ">128")}
 
 
-def _size_job(job: tuple[str, str, str]) -> str:
+def size_metrics(d: pd.DataFrame, stems: list[str]) -> tuple[dict, dict]:
     """Per size bin (sigma = sqrt(w h) of the GT; bins as the DOTA evaluation, 128+ split): AP50, AP@[.5:.95], recall@0.5
-    with bootstrap vectors (same resample weights as the row evaluation of the set)."""
-    import torch
-
+    with bootstrap vectors (resample weights of ``stems``, as the row evaluation of the set)."""
     from scahi.dota import boot_vec as BV
     from scahi.dota import evaluate as EV
-    from scahi.dota import pipeline as P
     from scahi.eval.bootstrap import resample_weights
 
-    torch.set_num_threads(1)
-    m, name, st = job
-    f = OUT / "sizes" / f"{name}_{m}_{st}.json"
-    if f.exists():
-        return f.stem
-    stems = _subset(m) if st == "F" else P.split_stems("val")
-    d = _dets(m, name)
     d = d[d.image.isin(set(stems))].reset_index(drop=True)
     W = resample_weights(len(stems))
     gt = EV.gt_arrays("val", stems)
@@ -240,6 +230,21 @@ def _size_job(job: tuple[str, str, str]) -> str:
                         "n_gt": int(npos.sum())}
             vec[f"{lbl}|AP50"], vec[f"{lbl}|AP"], vec[f"{lbl}|R50"] = ap50, ap, rec
         del c
+    return pts, vec
+
+
+def _size_job(job: tuple[str, str, str]) -> str:
+    import torch
+
+    from scahi.dota import pipeline as P
+
+    torch.set_num_threads(1)
+    m, name, st = job
+    f = OUT / "sizes" / f"{name}_{m}_{st}.json"
+    if f.exists():
+        return f.stem
+    stems = _subset(m) if st == "F" else P.split_stems("val")
+    pts, vec = size_metrics(_dets(m, name), stems)
     np.savez(OUT / "sizes" / f"{f.stem}_boot.npz", **vec)
     f.write_text(json.dumps({"n_images": len(stems), "bins": pts}, indent=1))
     return f.stem
