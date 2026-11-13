@@ -1,13 +1,19 @@
 # When Does Sliced Inference Pay Off? Resolution, Tiling and Dense Fusion for Small Object Detection
 
 Sliced inference such as SAHI is the standard remedy for small objects in high-resolution imagery, but its gains are
-usually measured against low-resolution baselines. The paper treats scale as the explicit variable and compares six
-YOLO detectors on VisDrone and five detectors on DOTA (including FCOS) under pre-specified hypotheses, calibration-only
-tuning and a single evaluation on held-out test data. Much of the benefit attributed to slicing turns out to be a
-resolution effect, but tiles carry complementary information that box fusion wastes. **SCAHI** (Slicing with
-Coverage-Aware Hyper Inference) accumulates the dense outputs of all passes in a scale space, with weights that give
-every image position the same total coverage, and reads objects off a peak grid fine enough to keep crowded neighbours
-apart.
+usually measured against low-resolution baselines. We revisit sliced inference with scale as the explicit variable and
+ask when tiling actually pays off. We compare seven dense detectors, six YOLO models of three generations and FCOS, on
+VisDrone and DOTA, under pre-specified hypotheses, calibration-only tuning and a single evaluation on held-out test
+data. Two findings emerge. First, much of the benefit attributed to slicing is a resolution effect: on VisDrone, a
+single pass trained at a higher resolution outperforms tiling with box fusion (merging decoded boxes) for every detector
+that could be trained at that resolution, and at equal compute a higher resolution helps more than a larger model.
+Second, tiles carry complementary information that box fusion wastes. We introduce **SCAHI** (Slicing with
+Coverage-Aware Hyper Inference), which accumulates the dense outputs of all passes with weights that give every image
+position the same total coverage, and reads objects off a peak grid fine enough to keep crowded neighbours apart. On
+identical passes, SCAHI outperforms box fusion for every YOLO detector on both datasets and matches it for FCOS. On
+DOTA, whose images far exceed the resolution a single pass can be trained at, tiles with SCAHI beat the best single pass
+for every detector, by 4.3 to 5.6 mAP50 at 2048 px, and replacing only SAHI's merge step by SCAHI adds 2.3 to 4.0
+mAP50. An ablation attributes the gain to the border weighting and the resolution of the peak grid.
 
 ![SCAHI overview: zoom stack, dense detector shared across passes, border taper, scale space, fusion](docs/figures/fig_method.png)
 
