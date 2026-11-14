@@ -56,7 +56,11 @@ python tutorials/yolo26m_visdrone/frozen.py predict --row XG_yolo26m_2048_o2m_C 
 `prepare_data.py` downloads the original VisDrone2019-DET train and val zips and converts them with the repository's
 converter, keeping the ignored regions that the toolkit evaluation needs (Ultralytics' `VisDrone.yaml` drops them). For
 test-dev, download the official data and run `python -m scahi.reproduce convert` (see `REPRODUCE.md`); the tutorial
-uses those canonical files whenever they exist.
+uses those canonical files whenever they exist. The cached-mode assets contain model outputs only (dense pass outputs
+and detections, no images or annotations); the ground truth always comes from your own VisDrone download. The released
+weights and cached outputs were derived from VisDrone and are subject to its terms of use
+([VisDrone dataset](https://github.com/VisDrone/VisDrone-Dataset); for the DOTA weights of the main study, the
+[DOTA dataset](https://captain-whu.github.io/DOTA/)).
 
 **Splits.** Training on `train_main` (5 877 images, 178 sequences); model selection and every tuning step on `calib`
 (594 images, 30 whole video sequences of VisDrone train, `data/splits/calib.txt`: the draw of 5 000 whose object-size

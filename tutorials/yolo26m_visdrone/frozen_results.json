@@ -5,12 +5,16 @@
   "1280": {
    "frozen_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
    "asset": "visdrone_ext_yolo26m_1280_s0.pt",
-   "asset_sha256": []
+   "asset_sha256": [
+    "a8b99e7fbfb7c54292cd63a40c693c974276b5135b8708d32a65241ceb530bbb"
+   ]
   },
   "2048": {
    "frozen_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
    "asset": "visdrone_ext_yolo26m_2048_s0.pt",
-   "asset_sha256": []
+   "asset_sha256": [
+    "ac39c55aa5799a0d8d90bf5855445f67d80cdb9302026e5f0538a9eea2976b11"
+   ]
   }
  },
  "rows": {

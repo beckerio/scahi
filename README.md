@@ -168,6 +168,9 @@ If you use this code in academic work, please consider citing the following pape
   AGPL-3.0; Ultralytics offers a commercial licence as an alternative.
 - Every source file states its licence in an SPDX header. Third-party code and dependencies: `THIRD_PARTY_NOTICES.md`.
 - **Datasets and weights**: VisDrone and DOTA are not redistributed and are subject to their own terms of use (academic /
-  non-commercial). Model weights start from Ultralytics' pre-trained weights (AGPL-3.0) or torchvision's COCO weights.
+  non-commercial). The released weights and cached model outputs were derived from VisDrone
+  ([VisDrone dataset](https://github.com/VisDrone/VisDrone-Dataset)) and, for the DOTA weights, from DOTA
+  ([DOTA dataset](https://captain-whu.github.io/DOTA/)) and are subject to these datasets' terms of use. Model weights
+  start from Ultralytics' pre-trained weights (AGPL-3.0) or torchvision's COCO weights.
 
 This note is for orientation only and is not legal advice.

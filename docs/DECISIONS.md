@@ -2366,3 +2366,26 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
 - Checks: full mode on the reference machine, val, 25/25 rows Delta = 0. Cached mode in an isolated copy of the public
   files with the unpacked assets, `python -I`, no GPU visible: val 25/25 and test-dev 25/25 exact. The tutorial scripts
   put their own directory on sys.path (they failed under `python -I` before).
+
+## 2026-11-14 – Before publishing the tutorial assets: content check, dataset terms, YOLO26m weight assets (authors)
+
+- Cached-mode assets yolo26m_visdrone_cached_{val,test-dev}.tar: every member read. Members are only
+  cache_ualigned/<weights id>/<pass>/<split>/<image>.npz (val 4 x 548, test-dev 4 x 1 610) and
+  yolo26m_stored/<split>/<row>.parquet (5 per split). npz keys: o2m/o2o_{xyxy, probs, std, tile} (dense head outputs),
+  tiles, gains, zoom, n_input, image_wh (pass geometry and image size); parquet columns image_id, category_id, score,
+  x, y, w, h (detections). No images, no annotations. frozen.py reads the ground truth only from the user's own
+  VisDrone data (canonical files of `scahi.reproduce convert`, or prepare_data.py's conversion of the downloaded
+  original zips). Nothing removed, frozen.py unchanged, so the cached check stands (val 25/25, test-dev 25/25 exact).
+- Dataset terms: one sentence in release_github/README.md (License) and in the tutorial README (Quick start): released
+  weights and cached outputs derived from VisDrone (DOTA weights from DOTA), subject to the datasets' terms of use,
+  links https://github.com/VisDrone/VisDrone-Dataset and https://captain-whu.github.io/DOTA/.
+- YOLO26m weight assets (scripts/ext26_weight_assets.py, procedure of scripts/make_weight_assets.py applied to the two
+  frozen files only; the 33 earlier assets were not rebuilt, their SHA-256 checked unchanged):
+  visdrone_ext_yolo26m_1280_s0.pt: frozen 3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643 (= freeze
+  record), asset a8b99e7fbfb7c54292cd63a40c693c974276b5135b8708d32a65241ceb530bbb, 42.0 MB;
+  visdrone_ext_yolo26m_2048_s0.pt: frozen 3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b (= freeze
+  record), asset ac39c55aa5799a0d8d90bf5855445f67d80cdb9302026e5f0538a9eea2976b11, 42.0 MB; both 768/768 tensors
+  identical with the frozen EMA, no private strings in the metadata. Records runs/release/weight_assets.json (35 rows),
+  exports/github/RELEASE_ASSETS_WEIGHTS.md; asset SHA-256 in tutorials/yolo26m_visdrone/frozen_results.json. Replay with
+  the stripped weights (frozen.py full mode, val): E_yolo26m_full2048_o2o 41.25350 and E_yolo26m_mz1280_F2_o2m 39.03105,
+  identical to the stored values (runs/release/replay_weight_assets_ext26.json). Nothing uploaded or pushed.
