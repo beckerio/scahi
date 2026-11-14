@@ -20,6 +20,8 @@ of the pre-registration (delta > eps; with --ci-lower also the lower CI bound > 
 
 from __future__ import annotations
 
+import sys
+
 import argparse
 import itertools
 import json
@@ -28,7 +30,8 @@ from pathlib import Path
 
 import pandas as pd
 
-import common as C
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # tutorial helpers (also under python -I)
+import common as C  # noqa: E402
 
 NMS_GRID = [{"metric": "IOS", "thr": t, "conf": c} for t in (0.3, 0.4, 0.5, 0.6, 0.7, 0.8) for c in (0.01, 0.1)]
 PARAMS = ("tau_splat", "tau_peak", "cell_factor", "bins_per_oct")

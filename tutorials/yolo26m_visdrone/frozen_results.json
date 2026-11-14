@@ -139,5 +139,19 @@
    "val": 39.99099753182059,
    "test-dev": 34.664611664457794
   }
+ },
+ "cached_assets": {
+  "val": {
+   "asset": "yolo26m_visdrone_cached_val.tar",
+   "sha256": "147bad18fe715635a84900f152f936246bb94522395655c1685c0a1374067ce1",
+   "bytes": 654100480,
+   "members": 2197
+  },
+  "test-dev": {
+   "asset": "yolo26m_visdrone_cached_test-dev.tar",
+   "sha256": "db7d47f9947ff6ffaaeecb01c93e5b00679a8d5edd32ba5e491a5bc8db0aab65",
+   "bytes": 1266012160,
+   "members": 6445
+  }
  }
 }

@@ -45,9 +45,11 @@ verdict.
 ```bash
 pip install -r requirements.lock --extra-index-url https://download.pytorch.org/whl/cu130 && pip install -e .
 python tutorials/yolo26m_visdrone/prepare_data.py          # VisDrone train / val with the ignored regions (downloads)
-# frozen weights: the release assets visdrone_ext_yolo26m_1280_s0.pt and visdrone_ext_yolo26m_2048_s0.pt -> weights/
+# cached mode (no GPU): unpack the release asset yolo26m_visdrone_cached_val.tar in the repository root
 python tutorials/yolo26m_visdrone/frozen.py run --row XG_yolo26m_2048_o2m_C --split val
-# -> XG_yolo26m_2048_o2m_C: AP 42.89006 (identical)
+# -> AP 42.89006, stored 42.89006, delta +0.00000 -> PASS (exact)
+# full mode (GPU): frozen weights visdrone_ext_yolo26m_1280_s0.pt / _2048_s0.pt (release assets) -> weights/
+python tutorials/yolo26m_visdrone/frozen.py run --row XG_yolo26m_2048_o2m_C --split val --mode full
 python tutorials/yolo26m_visdrone/frozen.py predict --row XG_yolo26m_2048_o2m_C --images my_images/ --out dets.csv
 ```
 
@@ -65,11 +67,27 @@ same way.
 ## Track A: use the frozen weights and parameters
 
 ```bash
-python tutorials/yolo26m_visdrone/frozen.py rows                              # 25 configurations, stored val / test-dev AP
-python tutorials/yolo26m_visdrone/frozen.py run --row <id> --split val        # recompute one, compare with the stored AP
-python tutorials/yolo26m_visdrone/frozen.py run --row all --split test-dev    # all of them
-python tutorials/yolo26m_visdrone/frozen.py predict --row <id> --images DIR --out dets.csv
+python tutorials/yolo26m_visdrone/frozen.py rows                                          # 25 configurations
+python tutorials/yolo26m_visdrone/frozen.py run --row <id|all> --split val|test-dev [--mode cached|full]
+python tutorials/yolo26m_visdrone/frozen.py predict --row <id> --images DIR --out dets.csv  # your own images
 ```
+
+`run` recomputes frozen configurations and compares them with the stored values of the single evaluation. Two modes:
+
+| mode | what is recomputed | needs | comparison |
+|---|---|---|---|
+| `cached` (default) | from the stored outputs of the single evaluation: fusion (SCAHI / box fusion) of the stored dense head outputs of every pass and evaluation; for the single-pass and SAHI rows the evaluation of their stored detections | release asset `yolo26m_visdrone_cached_<split>.tar` (val 0.65 GB, test-dev 1.27 GB; SHA-256 in `frozen_results.json`) unpacked in the repository root; CPU only | exact: bit-identical with the versions of `requirements.lock`, on any machine |
+| `full` | everything from the images: new GPU inference with the frozen weights (passes, single passes, SAHI), then fusion and evaluation | frozen weights (SHA-256 checked), GPU | \|Δ\| ≤ 0.05 AP per configuration |
+
+Why a tolerance in `full` mode: other GPUs, drivers and CUDA / cuDNN versions change the last digits of the network
+outputs, and a detection whose score or overlap sits exactly at a threshold can flip (one such flip moved a DOTA
+configuration by 0.4 mAP50 on the calibration split, `reports/BACKMAP_CHECK.md`). 0.05 AP is the threshold of the
+box back-mapping check. On the reference environment the full mode reproduces the stored values exactly (checked on
+val: 25 of 25 configurations with Δ = 0).
+
+Reference environment of the stored values: NVIDIA GeForce RTX 5090 (32 GB), driver 580.178.04, CUDA 13.0, cuDNN 9.24,
+PyTorch 2.14.1+cu130, Ultralytics 8.4.183, Python 3.11.17, NumPy 2.4.6 (all Python versions: `requirements.lock`).
+`predict` always runs new inference (your images; no stored value to compare with).
 
 - **What is frozen** (`configs/ext/frozen_rows_ext26.json`): the weights (SHA-256 of both training sizes; the published
   assets carry the same tensors without the optimizer state), and for every configuration its parameters with their
@@ -84,9 +102,9 @@ python tutorials/yolo26m_visdrone/frozen.py predict --row <id> --images DIR --ou
   `aligned.py` use it (caches under `cache_ualigned/`). The paper's other detectors used one scale factor; the
   difference is below 0.05 AP for every configuration behind a main-paper number or a verdict
   (`reports/BACKMAP_CHECK.md`).
-- **Runtimes** (one RTX 5090, 22 CPU cores): caches of one split, both sizes, about 5 min (val) and 12 min (test-dev);
-  one SCAHI configuration from the caches 1-2 min (CPU); a single pass over val about 1 min (GPU, one image at a time);
-  SAHI over val about 3 min.
+- **Runtimes** (one RTX 5090, 22 CPU cores): cached mode 1-2 min per SCAHI configuration (CPU), seconds for a stored
+  single-pass row; full mode in addition the passes of one split, both sizes, about 5 min (val) and 12 min (test-dev), a
+  single pass over val about 1 min (GPU, one image at a time), SAHI over val about 3 min.
 - **Own images.** `predict` runs the passes in memory and writes `stem, class, score, x, y, w, h` (pixels). The VisDrone
   classes are those of the training data; for other classes, train your own detector (Track B).
 

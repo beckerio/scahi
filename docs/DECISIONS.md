@@ -2345,3 +2345,24 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   in the conference supplement (authors).
 - Weight assets of YOLO26m (visdrone_ext_yolo26m_{1280,2048}_s0.pt) are not prepared yet; the tutorial accepts the frozen
   files and, once prepared, the assets (SHA-256 listed in frozen_results.json).
+
+## 2026-11-14 – YOLO26m tutorial: frozen.py modes "cached" and "full" (authors: requested; tutorial code only)
+
+- Before: `frozen.py run` had one path. SCAHI / box-fusion rows were fused on the CPU only if dense caches of exactly
+  the frozen weights file already existed under cache_ualigned/<weights id>/ (in practice only on the machine of the
+  study), otherwise they were rebuilt by GPU inference; single-pass and SAHI rows always ran GPU inference. The
+  comparison with the stored AP was always exact, which a new GPU inference on other hardware / software cannot promise.
+- Now `run --mode cached|full` (tutorial code only; no change to scahi/ or to the paper scripts):
+  - cached (default): stored outputs of the single evaluation, release assets yolo26m_visdrone_cached_{val,test-dev}.tar
+    (scripts/ext26_tutorial_assets.py; deterministic tars of the dense outputs of every pass under cache_ualigned/ and
+    the stored detections of the single-pass / SAHI rows under yolo26m_stored/; SHA-256 and sizes in
+    runs/release/tutorial_assets.json and frozen_results.json "cached_assets"). CPU fusion and evaluation, no GPU, no
+    weights; pass = exact equality with the stored AP.
+  - full: new GPU inference from the images with the frozen weights (SHA-256 checked), caches under cache_ualigned_full/
+    (never mixed with the downloaded outputs); Delta per row, pass = |Delta| <= 0.05 AP (threshold of the back-mapping
+    check). README explains why (GPU, driver, CUDA / cuDNN change last digits, can flip single detections at a
+    threshold) and states the reference environment (RTX 5090 32 GB, driver 580.178.04, CUDA 13.0, cuDNN 9.24, PyTorch
+    2.14.1+cu130, Ultralytics 8.4.183, Python 3.11.17, NumPy 2.4.6).
+- Checks: full mode on the reference machine, val, 25/25 rows Delta = 0. Cached mode in an isolated copy of the public
+  files with the unpacked assets, `python -I`, no GPU visible: val 25/25 and test-dev 25/25 exact. The tutorial scripts
+  put their own directory on sys.path (they failed under `python -I` before).

@@ -14,8 +14,10 @@ reports/BACKMAP_CHECK.md); YOLO26m was tuned and evaluated with this convention 
 from __future__ import annotations
 
 import sys
+from pathlib import Path
 
-import common as C
+sys.path.insert(0, str(Path(__file__).resolve().parent))  # tutorial helpers (also under python -I)
+import common as C  # noqa: E402
 
 
 def main() -> None:

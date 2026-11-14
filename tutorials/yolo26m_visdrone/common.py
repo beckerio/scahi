@@ -100,17 +100,17 @@ def split_data(split: str) -> tuple[dict[str, Any], pd.DataFrame]:
 
 
 @contextlib.contextmanager
-def ultralytics_caches():
+def ultralytics_caches(root: Path = ALIGNED_ROOT):
     """Caches built and read with Ultralytics' input preparation (size rule, letterbox factor, per-axis back-mapping),
-    stored under cache_ualigned/ - the convention of the frozen YOLO26m rows."""
+    stored under ``root`` (default cache_ualigned/) - the convention of the frozen YOLO26m rows."""
     from scahi import mapcheck as MC
     from scahi.fusion import run as R
 
     saved = R.CACHE_ROOT
-    R.CACHE_ROOT = ALIGNED_ROOT
+    R.CACHE_ROOT = Path(root)
     try:
         with MC.ultralytics_prep():
-            yield ALIGNED_ROOT
+            yield Path(root)
     finally:
         R.CACHE_ROOT = saved
 
