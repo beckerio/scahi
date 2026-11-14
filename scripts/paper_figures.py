@@ -661,6 +661,8 @@ def _training_runs() -> list[dict]:
         runs.append({"model": "yolov10s", "imgsz": int(tag[5:]), "seed": int(d.name[-1]), "dir": d})
     for d in sorted((REPO / "runs/ext/train").glob("*_s*")):
         m, sz, s = d.name.rsplit("_", 2)
+        if m not in MODEL_LABEL:  # the paper's detectors only (YOLO26m is a separate, later extension)
+            continue
         runs.append({"model": m, "imgsz": int(sz), "seed": int(s[1:]), "dir": d})
     out = []
     for r in runs:

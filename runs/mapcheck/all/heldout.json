@@ -1,0 +1,363 @@
+{
+ "rule": "DECISIONS 2026-11-02 10:15: rows >= 0.05 on calib recomputed on the held-out splits with the per-axis mapping (all three Ultralytics details, 10:29), without re-tuning; original and corrected side by side; verdicts as originally computed",
+ "time": "2026-11-14 12:18:07",
+ "rows": {
+  "XG_yolov10m_1280_o2m_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08015003495702189,
+   "splits": {
+    "val": {
+     "original_stored": 36.682052272825146,
+     "frozen_recomputed": 36.682052272825146,
+     "frozen_reproduces_stored": true,
+     "corrected": 36.68205225085798,
+     "delta": -2.1967167640468688e-08,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 31.86163975744349,
+     "frozen_recomputed": 31.86163975744349,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.887302333646794,
+     "delta": 0.02566257620330248,
+     "delta_AP50": 0.01080406664338085,
+     "delta_AP_lt16": -0.02978327887366028
+    }
+   }
+  },
+  "XG_yolov10m_1280_o2o_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08727159139738205,
+   "splits": {
+    "val": {
+     "original_stored": 36.75271284693193,
+     "frozen_recomputed": 36.75271284693193,
+     "frozen_reproduces_stored": true,
+     "corrected": 36.752752407239825,
+     "delta": 3.956030789709075e-05,
+     "delta_AP50": 0.00010743670816282247,
+     "delta_AP_lt16": 6.0813272387605366e-05
+    },
+    "test-dev": {
+     "original_stored": 31.929619085128987,
+     "frozen_recomputed": 31.929619085128987,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.95621382042268,
+     "delta": 0.02659473529369194,
+     "delta_AP50": -0.010324881138451758,
+     "delta_AP_lt16": 0.02523044220787618
+    }
+   }
+  },
+  "XG_yolo11s_1280_o2m_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.07664095065965171,
+   "splits": {
+    "val": {
+     "original_stored": 33.43863427439614,
+     "frozen_recomputed": 33.43863427439614,
+     "frozen_reproduces_stored": true,
+     "corrected": 33.43863427439614,
+     "delta": 0.0,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 29.601405908535774,
+     "frozen_recomputed": 29.601405908535774,
+     "frozen_reproduces_stored": true,
+     "corrected": 29.621704172043287,
+     "delta": 0.02029826350751307,
+     "delta_AP50": -0.01767735925049152,
+     "delta_AP_lt16": -0.007696088031106996
+    }
+   }
+  },
+  "XG_yolo12s_1280_o2m_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08149770836458003,
+   "splits": {
+    "val": {
+     "original_stored": 33.99787407714425,
+     "frozen_recomputed": 33.99787407714425,
+     "frozen_reproduces_stored": true,
+     "corrected": 33.99814509749664,
+     "delta": 0.000271020352386131,
+     "delta_AP50": 1.3578634252553456e-06,
+     "delta_AP_lt16": 0.0010939895115278375
+    },
+    "test-dev": {
+     "original_stored": 30.553880130503615,
+     "frozen_recomputed": 30.553880130503615,
+     "frozen_reproduces_stored": true,
+     "corrected": 30.59154478682381,
+     "delta": 0.03766465632019589,
+     "delta_AP50": 0.005282115608579829,
+     "delta_AP_lt16": -0.0076102798652311066
+    }
+   }
+  },
+  "XG_yolo11m_1280_o2m_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.1034487115321312,
+   "splits": {
+    "val": {
+     "original_stored": 37.2500867007849,
+     "frozen_recomputed": 37.2500867007849,
+     "frozen_reproduces_stored": true,
+     "corrected": 37.25000866193313,
+     "delta": -7.803885176826952e-05,
+     "delta_AP50": -0.00019673478697512792,
+     "delta_AP_lt16": 6.386010724668267e-07
+    },
+    "test-dev": {
+     "original_stored": 32.15961211906861,
+     "frozen_recomputed": 32.15961211906861,
+     "frozen_reproduces_stored": true,
+     "corrected": 32.19203720073075,
+     "delta": 0.03242508166214009,
+     "delta_AP50": -0.0010138110846753534,
+     "delta_AP_lt16": 0.002960970630390136
+    }
+   }
+  },
+  "XG_yolo12m_1280_o2m_B": {
+   "ds": "visdrone",
+   "group": "X-grid (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.07901508296293969,
+   "splits": {
+    "val": {
+     "original_stored": 36.986800108674416,
+     "frozen_recomputed": 36.986800108674416,
+     "frozen_reproduces_stored": true,
+     "corrected": 36.986800108674416,
+     "delta": 0.0,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 31.992856663414315,
+     "frozen_recomputed": 31.992856663414315,
+     "frozen_reproduces_stored": true,
+     "corrected": 32.01885530087701,
+     "delta": 0.02599863746269193,
+     "delta_AP50": 0.00262182786949694,
+     "delta_AP_lt16": 0.009450293856625436
+    }
+   }
+  },
+  "D_yolo11m_single1280_F2_o2m": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.09813574289021432,
+   "splits": {
+    "val": {
+     "original_stored": 35.98925525643389,
+     "frozen_recomputed": 35.98925525643389,
+     "frozen_reproduces_stored": true,
+     "corrected": 35.98925525643389,
+     "delta": 0.0,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 31.531919369130943,
+     "frozen_recomputed": 31.531919369130943,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.566221601860846,
+     "delta": 0.03430223272990318,
+     "delta_AP50": 0.025527204585728214,
+     "delta_AP_lt16": -0.011106963606282605
+    }
+   }
+  },
+  "D_yolo11s_single1280_F2_o2m": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.0755115800553412,
+   "splits": {
+    "val": {
+     "original_stored": 32.35540745619385,
+     "frozen_recomputed": 32.35540745619385,
+     "frozen_reproduces_stored": true,
+     "corrected": 32.35540745619385,
+     "delta": 0.0,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 29.101174685071545,
+     "frozen_recomputed": 29.101174685071545,
+     "frozen_reproduces_stored": true,
+     "corrected": 29.12240441766183,
+     "delta": 0.021229732590285266,
+     "delta_AP50": 0.005086756234533141,
+     "delta_AP_lt16": -0.005262979899418596
+    }
+   }
+  },
+  "D_yolo12m_single1280_F2_o2m": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08587320956470279,
+   "splits": {
+    "val": {
+     "original_stored": 35.81639385238986,
+     "frozen_recomputed": 35.81639385238986,
+     "frozen_reproduces_stored": true,
+     "corrected": 35.81639385238986,
+     "delta": 0.0,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0
+    },
+    "test-dev": {
+     "original_stored": 31.357896251785284,
+     "frozen_recomputed": 31.357896251785284,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.38982826674358,
+     "delta": 0.03193201495829712,
+     "delta_AP50": 0.010854328163063087,
+     "delta_AP_lt16": 0.000613713154260509
+    }
+   }
+  },
+  "D_yolo12s_single1280_F2_o2m": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.0798256610313075,
+   "splits": {
+    "val": {
+     "original_stored": 32.87797340581631,
+     "frozen_recomputed": 32.87797340581631,
+     "frozen_reproduces_stored": true,
+     "corrected": 32.87824970097173,
+     "delta": 0.0002762951554160509,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": 0.0014449647360912365
+    },
+    "test-dev": {
+     "original_stored": 29.94773871548574,
+     "frozen_recomputed": 29.94773871548574,
+     "frozen_reproduces_stored": true,
+     "corrected": 29.985953292972635,
+     "delta": 0.03821457748689383,
+     "delta_AP50": 0.001824495601724152,
+     "delta_AP_lt16": -0.0039023462518130714
+    }
+   }
+  },
+  "D_yolov10m_single1280_F2_o2m": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08974306473834304,
+   "splits": {
+    "val": {
+     "original_stored": 35.529068468777176,
+     "frozen_recomputed": 35.529068468777176,
+     "frozen_reproduces_stored": true,
+     "corrected": 35.52954623590392,
+     "delta": 0.00047776712674618693,
+     "delta_AP50": 0.0008561511340232641,
+     "delta_AP_lt16": 0.0015586130809346344
+    },
+    "test-dev": {
+     "original_stored": 31.225593157212664,
+     "frozen_recomputed": 31.225593157212664,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.2522632294074,
+     "delta": 0.026670072194736605,
+     "delta_AP50": 0.013767045833873226,
+     "delta_AP_lt16": -0.02234364840488645
+    }
+   }
+  },
+  "D_yolov10m_single1280_F2_o2o": {
+   "ds": "visdrone",
+   "group": "decomposition B (exploratory, post hoc)",
+   "metric": "AP",
+   "calib_delta": 0.08635577372761105,
+   "splits": {
+    "val": {
+     "original_stored": 35.660115045438936,
+     "frozen_recomputed": 35.660115045438936,
+     "frozen_reproduces_stored": true,
+     "corrected": 35.65999175525815,
+     "delta": -0.00012329018078816034,
+     "delta_AP50": 0.0,
+     "delta_AP_lt16": -0.0001771429681838299
+    },
+    "test-dev": {
+     "original_stored": 31.292139465343013,
+     "frozen_recomputed": 31.292139465343013,
+     "frozen_reproduces_stored": true,
+     "corrected": 31.321855533440168,
+     "delta": 0.0297160680971551,
+     "delta_AP50": -0.014633364749620625,
+     "delta_AP_lt16": 0.01994824604707013
+    }
+   }
+  },
+  "B-RG_yolov10s_2048": {
+   "ds": "dota",
+   "group": "B-RG",
+   "metric": "mAP50",
+   "calib_delta": -0.06526350516412549,
+   "splits": {
+    "val": {
+     "original_stored": 67.2726041022911,
+     "frozen_recomputed": 67.2726041022911,
+     "frozen_reproduces_stored": true,
+     "corrected": 67.36638567058284,
+     "delta": 0.093781568291746
+    }
+   }
+  },
+  "B-RG_yolov10m_2048": {
+   "ds": "dota",
+   "group": "B-RG",
+   "metric": "mAP50",
+   "calib_delta": -0.4206887225202678,
+   "splits": {
+    "val": {
+     "original_stored": 68.41589035395556,
+     "frozen_recomputed": 68.41589035395556,
+     "frozen_reproduces_stored": true,
+     "corrected": 68.44048847641855,
+     "delta": 0.02459812246299009
+    }
+   }
+  },
+  "B-F2_yolo12s_1024": {
+   "ds": "dota",
+   "group": "B-F2",
+   "metric": "mAP50",
+   "calib_delta": 0.08126149831284124,
+   "splits": {
+    "val": {
+     "original_stored": 55.77889510325863,
+     "frozen_recomputed": 55.77889510325863,
+     "frozen_reproduces_stored": true,
+     "corrected": 55.79796223626596,
+     "delta": 0.01906713300733287
+    }
+   }
+  }
+ }
+}

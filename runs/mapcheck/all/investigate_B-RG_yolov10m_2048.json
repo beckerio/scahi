@@ -1,0 +1,266 @@
+{
+ "row": "B-RG_yolov10m_2048",
+ "cfg": {
+  "iou_cluster": 0.5,
+  "tau_splat": 0.0003125,
+  "tau_peak": 0.001,
+  "cell_factor": 7.0,
+  "bins_per_oct": 8
+ },
+ "stored_calib_mAP50": 72.8650952069654,
+ "pipeline_limit": 20000,
+ "mAP50_frozen": 72.8650952069654,
+ "mAP50_aligned": 72.44440648444514,
+ "delta": -0.4206887225202678,
+ "n_dets": {
+  "frozen": 238641,
+  "aligned": 238611
+ },
+ "per_class_AP50": {
+  "plane": {
+   "frozen": 90.64977126270625,
+   "aligned": 90.64977126270625,
+   "delta": 0.0
+  },
+  "baseball-diamond": {
+   "frozen": 80.33216783216784,
+   "aligned": 80.33216783216784,
+   "delta": 0.0
+  },
+  "bridge": {
+   "frozen": 46.75142152990246,
+   "aligned": 46.61154918527956,
+   "delta": -0.13987234462290132
+  },
+  "ground-track-field": {
+   "frozen": 61.3893653516295,
+   "aligned": 61.3893653516295,
+   "delta": 0.0
+  },
+  "small-vehicle": {
+   "frozen": 79.64381467200458,
+   "aligned": 79.60213874766728,
+   "delta": -0.04167592433729794
+  },
+  "large-vehicle": {
+   "frozen": 83.4276387322664,
+   "aligned": 83.39839464071545,
+   "delta": -0.029244091550950202
+  },
+  "ship": {
+   "frozen": 88.2079379351949,
+   "aligned": 88.20262557155833,
+   "delta": -0.005312363636576833
+  },
+  "tennis-court": {
+   "frozen": 89.1009436196602,
+   "aligned": 89.1009436196602,
+   "delta": 0.0
+  },
+  "basketball-court": {
+   "frozen": 88.85353472153302,
+   "aligned": 88.85353472153302,
+   "delta": 0.0
+  },
+  "storage-tank": {
+   "frozen": 84.35066809099891,
+   "aligned": 84.35176404146193,
+   "delta": 0.0010959504630250194
+  },
+  "soccer-ball-field": {
+   "frozen": 78.93135022895373,
+   "aligned": 78.93135022895373,
+   "delta": 0.0
+  },
+  "roundabout": {
+   "frozen": 70.48607664736699,
+   "aligned": 70.47443953895566,
+   "delta": -0.011637108411321151
+  },
+  "harbor": {
+   "frozen": 84.70052582226069,
+   "aligned": 84.6922769785631,
+   "delta": -0.008248843697586494
+  },
+  "swimming-pool": {
+   "frozen": 77.50587327266723,
+   "aligned": 77.50395637038132,
+   "delta": -0.0019169022859131246
+  },
+  "helicopter": {
+   "frozen": 60.06493506493506,
+   "aligned": 53.57142857142857,
+   "delta": -6.493506493506487
+  },
+  "container-crane": {
+   "frozen": 1.445498527198859,
+   "aligned": 1.4447970884603263,
+   "delta": -0.0007014387385326781
+  }
+ },
+ "per_class_delta_sum_over_n": -0.4206887225202839,
+ "per_image_swap": {
+  "n_images": 141,
+  "n_changed": 127,
+  "sum_of_swaps": -0.4197217325309026,
+  "top": [
+   {
+    "image": "P1131",
+    "delta": -0.4058441558441501,
+    "n_dets_frozen": 231,
+    "n_dets_aligned": 234
+   },
+   {
+    "image": "P1322",
+    "delta": -0.008484524414058114,
+    "n_dets_frozen": 3081,
+    "n_dets_aligned": 3069
+   },
+   {
+    "image": "P1453",
+    "delta": -0.004598592118497891,
+    "n_dets_frozen": 996,
+    "n_dets_aligned": 1032
+   },
+   {
+    "image": "P0786",
+    "delta": 0.0008121228862734142,
+    "n_dets_frozen": 3324,
+    "n_dets_aligned": 3294
+   },
+   {
+    "image": "P2672",
+    "delta": -0.0007688514410801872,
+    "n_dets_frozen": 20000,
+    "n_dets_aligned": 20000
+   },
+   {
+    "image": "P0162",
+    "delta": -0.0007598224299556477,
+    "n_dets_frozen": 309,
+    "n_dets_aligned": 312
+   },
+   {
+    "image": "P1418",
+    "delta": 0.000599962167214585,
+    "n_dets_frozen": 2811,
+    "n_dets_aligned": 2781
+   },
+   {
+    "image": "P1791",
+    "delta": 0.0004135412489461032,
+    "n_dets_frozen": 3762,
+    "n_dets_aligned": 3780
+   },
+   {
+    "image": "P2427",
+    "delta": -0.00031326789213892425,
+    "n_dets_frozen": 20000,
+    "n_dets_aligned": 20000
+   },
+   {
+    "image": "P1640",
+    "delta": -0.0003122995145616869,
+    "n_dets_frozen": 831,
+    "n_dets_aligned": 840
+   },
+   {
+    "image": "P1388",
+    "delta": -0.0002388372639074987,
+    "n_dets_frozen": 19997,
+    "n_dets_aligned": 19997
+   },
+   {
+    "image": "P2205",
+    "delta": 0.0002232598474876113,
+    "n_dets_frozen": 6708,
+    "n_dets_aligned": 6648
+   },
+   {
+    "image": "P1369",
+    "delta": -0.00012975835507234024,
+    "n_dets_frozen": 2850,
+    "n_dets_aligned": 2850
+   },
+   {
+    "image": "P0349",
+    "delta": -0.00011072861443039983,
+    "n_dets_frozen": 507,
+    "n_dets_aligned": 510
+   },
+   {
+    "image": "P2669",
+    "delta": -0.00011072861443039983,
+    "n_dets_frozen": 576,
+    "n_dets_aligned": 573
+   }
+  ],
+  "n_abs_ge_0.05": 1
+ },
+ "limit": {
+  "images_at_limit_frozen": 2,
+  "images_at_limit_aligned": 2,
+  "at_limit_images": [
+   "P2427",
+   "P2672"
+  ],
+  "mAP50_frozen_limit1e7": 72.8650952069654,
+  "mAP50_aligned_limit1e7": 72.44440648444514,
+  "delta_limit1e7": -0.4206887225202678,
+  "delta_without_at_limit_images": -0.4177761685381256
+ },
+ "largest_class": {
+  "class": "helicopter",
+  "frozen": {
+   "AP50": 60.06493506493506,
+   "max_recall": 1.0,
+   "precision_at_11_points": {
+    "0.0": 1.0,
+    "0.1": 1.0,
+    "0.2": 1.0,
+    "0.3": 0.6666666666666666,
+    "0.4": 0.6666666666666666,
+    "0.5": 0.6666666666666666,
+    "0.6": 0.42857142857142855,
+    "0.7": 0.42857142857142855,
+    "0.8": 0.25,
+    "0.9": 0.25,
+    "1.0": 0.25
+   },
+   "n_dets_class": 2319,
+   "n_tied_scores": 5
+  },
+  "aligned": {
+   "AP50": 53.57142857142857,
+   "max_recall": 1.0,
+   "precision_at_11_points": {
+    "0.0": 1.0,
+    "0.1": 1.0,
+    "0.2": 1.0,
+    "0.3": 0.42857142857142855,
+    "0.4": 0.42857142857142855,
+    "0.5": 0.42857142857142855,
+    "0.6": 0.42857142857142855,
+    "0.7": 0.42857142857142855,
+    "0.8": 0.25,
+    "0.9": 0.25,
+    "1.0": 0.25
+   },
+   "n_dets_class": 2313,
+   "n_tied_scores": 7
+  },
+  "point_deltas": {
+   "0.0": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0,
+   "0.3": -0.23809523809523808,
+   "0.4": -0.23809523809523808,
+   "0.5": -0.23809523809523808,
+   "0.6": 0.0,
+   "0.7": 0.0,
+   "0.8": 0.0,
+   "0.9": 0.0,
+   "1.0": 0.0
+  }
+ }
+}

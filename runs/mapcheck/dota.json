@@ -1,0 +1,80 @@
+{
+ "rows": [
+  {
+   "id": "RG_yolov10s_2048",
+   "metric": "mAP50",
+   "stored_calib": 76.01729180866599,
+   "frozen": {
+    "mAP50": 76.01729180866599,
+    "n_dets": 269777,
+    "images_at_limit": 2,
+    "wall_s": 24.641122341156006
+   },
+   "aligned": {
+    "mAP50": 76.01582794283334,
+    "n_dets": 269993,
+    "images_at_limit": 2,
+    "wall_s": 23.852415800094604
+   },
+   "frozen_reproduces_stored": true,
+   "delta": -0.0014638658326475706
+  },
+  {
+   "id": "NMS-o2m_yolov10s_2048",
+   "metric": "mAP50",
+   "stored_calib": 73.57091778154032,
+   "frozen": {
+    "mAP50": 73.57091778154032,
+    "n_dets": 86997,
+    "images_at_limit": 0,
+    "wall_s": 6.685415506362915
+   },
+   "aligned": {
+    "mAP50": 73.57208133252358,
+    "n_dets": 87005,
+    "images_at_limit": 0,
+    "wall_s": 6.044703722000122
+   },
+   "frozen_reproduces_stored": true,
+   "delta": 0.001163550983264372
+  },
+  {
+   "id": "NMS-o2o_yolov10s_2048",
+   "metric": "mAP50",
+   "stored_calib": 73.38835832133879,
+   "frozen": {
+    "mAP50": 73.38835832133879,
+    "n_dets": 84557,
+    "images_at_limit": 0,
+    "wall_s": 3.506488084793091
+   },
+   "aligned": {
+    "mAP50": 73.38710185395875,
+    "n_dets": 84489,
+    "images_at_limit": 0,
+    "wall_s": 3.510979413986206
+   },
+   "frozen_reproduces_stored": true,
+   "delta": -0.0012564673800312676
+  }
+ ],
+ "rule_rows": [
+  "RG_yolov10s_2048",
+  "NMS-o2m_yolov10s_2048",
+  "NMS-o2o_yolov10s_2048"
+ ],
+ "dataset": "dota",
+ "split": "calib",
+ "rule_threshold": 0.05,
+ "cache_state": {
+  "model": "unfused (load_unfused), as the frozen caches",
+  "batch": 16,
+  "tf32": "torch default, as the frozen caches",
+  "size_rule": "Ultralytics LetterBox auto: round, then pad each side to a multiple of 32",
+  "letterbox_gain": "r = min(L / h, L / w)",
+  "back_mapping": "scale_boxes per axis (float32)"
+ },
+ "time": "2026-11-03 11:26:48",
+ "max_abs_delta": 0.0014638658326475706,
+ "below_rule": true
+}

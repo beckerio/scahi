@@ -1,0 +1,80 @@
+{
+ "rows": [
+  {
+   "id": "XG_yolov10s_2048_o2m_C",
+   "metric": "AP",
+   "stored_calib": 43.458842102623436,
+   "stored_source": "calib AP of the X-grid selection (configs/ext/xgrid_frozen.json)",
+   "frozen": {
+    "AP": 43.458842102623436,
+    "AP50": 69.24597139603371,
+    "AP_lt16": 19.433903878017514,
+    "AP50_lt16": 41.68813821316385,
+    "n_dets": 262645,
+    "wall_s": 100.35480523109436
+   },
+   "aligned": {
+    "AP": 43.45741062746459,
+    "AP50": 69.2434922637439,
+    "AP_lt16": 19.45066895527356,
+    "AP50_lt16": 41.67637880494289,
+    "n_dets": 262668,
+    "wall_s": 99.7764003276825
+   },
+   "frozen_reproduces_stored": true,
+   "delta": -0.0014314751588457852,
+   "delta_secondary": {
+    "AP50": -0.0024791322898067847,
+    "AP_lt16": 0.016765077256046368,
+    "AP50_lt16": -0.011759408220960665
+   }
+  },
+  {
+   "id": "X1",
+   "metric": "AP",
+   "stored_calib": 41.17029313303605,
+   "stored_source": "inference.calib_AP (configs/final)",
+   "frozen": {
+    "AP": 41.17029313303605,
+    "AP50": 67.42348009195841,
+    "AP_lt16": 18.949385627847796,
+    "AP50_lt16": 41.280003349135136,
+    "n_dets": 134127,
+    "wall_s": 53.48304462432861
+   },
+   "aligned": {
+    "AP": 41.15714684786667,
+    "AP50": 67.4219392139122,
+    "AP_lt16": 18.954255715957782,
+    "AP50_lt16": 41.268155727972214,
+    "n_dets": 134128,
+    "wall_s": 54.582022190093994
+   },
+   "frozen_reproduces_stored": true,
+   "delta": -0.013146285169376881,
+   "delta_secondary": {
+    "AP50": -0.0015408780462138338,
+    "AP_lt16": 0.00487008810998546,
+    "AP50_lt16": -0.011847621162921484
+   }
+  }
+ ],
+ "rule_rows": [
+  "XG_yolov10s_2048_o2m_C",
+  "X1"
+ ],
+ "dataset": "visdrone",
+ "split": "calib",
+ "rule_threshold": 0.05,
+ "cache_state": {
+  "model": "unfused (load_unfused), as the frozen caches",
+  "batch": 16,
+  "tf32": "torch default, as the frozen caches",
+  "size_rule": "Ultralytics LetterBox auto: round, then pad each side to a multiple of 32",
+  "letterbox_gain": "r = min(L / h, L / w)",
+  "back_mapping": "scale_boxes per axis (float32)"
+ },
+ "time": "2026-11-03 11:33:59",
+ "max_abs_delta": 0.013146285169376881,
+ "below_rule": true
+}

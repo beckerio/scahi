@@ -86,6 +86,45 @@ def ultralytics_prep():
         cm.level_passes, cm.letterbox, cm.input_to_source = orig
 
 
+_ORIG: dict = {}
+DETAILS = ("size_rule", "letterbox_gain", "back_mapping")
+
+
+def _lp_gain(level, W: int, H: int, overlap: float) -> list:
+    """Frozen pass shapes, but register r = L / max(h, w) so that ``letterbox_ultralytics`` resizes with it."""
+    from scahi.infer import cache_mz as cm
+
+    _R.clear()
+    out = _ORIG["level_passes"](level, W, H, overlap)
+    for (x1, y1, x2, y2), sh in out:
+        L = level.n_input if level.n_input is not None else (level.imgsz or cm._pad32(level.zoom * max(W, H)))
+        _R[(y2 - y1, x2 - x1, tuple(sh))] = L / max(y2 - y1, x2 - x1)
+    return out
+
+
+@contextlib.contextmanager
+def one_detail(detail: str):
+    """One of the three details aligned to Ultralytics, the other two as the frozen caches (per-detail report of the
+    10:29 rule): size_rule, letterbox_gain or back_mapping."""
+    from scahi.dota.sahi_scahi import to_source_ultralytics
+    from scahi.infer import cache_mz as cm
+
+    _ORIG.update(level_passes=cm.level_passes, letterbox=cm.letterbox, input_to_source=cm.input_to_source)
+    if detail == "size_rule":
+        cm.level_passes = level_passes_ultralytics  # rounded-then-padded shapes; frozen letterbox and mapping
+    elif detail == "letterbox_gain":
+        cm.level_passes, cm.letterbox = _lp_gain, letterbox_ultralytics
+    elif detail == "back_mapping":
+        cm.input_to_source = to_source_ultralytics
+    else:
+        raise ValueError(detail)
+    try:
+        yield
+    finally:
+        cm.level_passes, cm.letterbox, cm.input_to_source = (_ORIG[k] for k in ("level_passes", "letterbox",
+                                                                                 "input_to_source"))
+
+
 def _jobs(ds: str):
     """(weights, images of calib, level keys, overlap) of the checked rows."""
     if ds == "dota":

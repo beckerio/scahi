@@ -1,0 +1,38 @@
+{
+ "XG_yolov10m_1280_o2m_B": {
+  "frozen": {
+   "serial": 38.8691022314815,
+   "parallel": 38.8691022314815,
+   "identical": true
+  },
+  "aligned": {
+   "serial": 38.94925226643852,
+   "parallel": 38.94925226643852,
+   "identical": true
+  }
+ },
+ "M_ab": {
+  "frozen": {
+   "serial": 39.778372601820244,
+   "parallel": 39.778372601820244,
+   "identical": true
+  },
+  "aligned": {
+   "serial": 39.79520607830725,
+   "parallel": 39.79520607830725,
+   "identical": true
+  }
+ },
+ "B-RG_yolov10m_2048": {
+  "frozen": {
+   "serial": 72.8650952069654,
+   "parallel": 72.8650952069654,
+   "identical": true
+  },
+  "aligned": {
+   "serial": 72.44440648444514,
+   "parallel": 72.44440648444514,
+   "identical": true
+  }
+ }
+}

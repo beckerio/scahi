@@ -2087,3 +2087,188 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   the stale runs/queue/DEADLINE (2026-11-01T09:00, left over from the machine change of 2026-11-01). The file was renamed
   to DEADLINE.expired_20261101; both partial runs (epoch 1 only, no calib evaluation) were deleted and training restarted
   fresh (10:24); log again AdamW(lr=0.000714); epoch 2 passed.
+
+## 2026-11-13 – YOLO26m: OOM rule for the 2048 run (authors), training finished, training.json amended
+
+- **Rule (authors, received 2026-11-13 ~21:40):** if the 2048 px YOLO26m run stops with an out-of-memory error, it is
+  resumed from its last checkpoint (`last.pt`, same batch 3, fresh process with the expandable-segments allocator, as
+  for YOLO12m 1280 on 2026-10-28) instead of the addendum's restart from COCO init with batch 2; the interruption is
+  recorded as a deviation with its epoch. Checkpoint selection on calib is unaffected as long as the selected epoch's
+  checkpoint is the saved one (`calib_epoch<NNN>.pt`, byte-compared with `best_calib.pt`).
+- **Not applied:** the rule arrived after the run had ended. e_train_yolo26m_2048 completed all 100 epochs in one
+  process (10:24 start after 1280, last epoch 21:21) without an abort, resume, batch change or OOM fallback
+  (`training.json`: batch 3, accumulate 21, effective 63, oom_fallback false). The log holds 42 CUDA caching-allocator
+  warnings ("allocation failed with OOM … retrying"), caught by PyTorch and retried, as observed for YOLOv10m 2048 on
+  2026-10-26; no step failed, results.csv and calib_curve.json are complete (36 calib evaluations).
+- Selection (toolkit-port AP on calib, o2o): 1280 best epoch 45 (39.83); 2048 best epoch 45 (43.71; then 55 43.69,
+  40 43.68; epoch 100 41.69). best_calib.pt is byte-identical with calib_epoch045.pt for both sizes.
+  SHA-256 best_calib.pt: 1280 3c3806de…, 2048 3b707104….
+- **training.json amended by hand** (both sizes): `"addendum": "0f6fecbc"` -> `"7c01b5d"`. Both runs started before the
+  code fix efc4d80 and wrote the stale constant; nothing else changed. SHA-256 before the edit: 1280 f767320a…,
+  2048 21d6ccd3….
+
+## 2026-11-13 – YOLO26m: why the G-E1 calib AP differs from the checkpoint-selection AP (authors' question)
+
+- Values (o2o, toolkit-port AP visdrone_ignore on calib, same weights: best_calib.pt = calib_epoch045.pt):
+  selection (calib_curve.json, epoch 45) 1280 **39.8307**, 2048 **43.7069**; G-E1 AP condition (gate_GE1.json) 1280
+  **39.6990**, 2048 **43.6892**. Gap 0.132 / 0.018.
+- **Settings are the same:** conf 0.001, at most 500 detections per image (predictor max_det 500; the gate's top-k uses
+  the head's stored max_det 902, but the toolkit evaluation keeps 500 per image anyway: gate with max_det 500 gives the
+  identical AP 39.69901), same letterbox input (tensors bit-identical, max |Δ| 0), same weights, same evaluation.
+- **The code paths differ** (selection: `scahi.infer.full.predict_full` = Ultralytics predictor; gate:
+  `scahi.ext._ap_identity` = `load_unfused` + `forward_raw` + `scahi.infer.preprocess.input_to_source`). Measured one
+  factor at a time on 1280 o2o (`scripts/ext26_ge1_vs_selection.py`, `scripts/ext26_ge1_backtransform.py`;
+  runs/ext/yolo26m/ge1_vs_selection.json, ge1_backtransform.json):
+
+  | Factor (gate -> predictor) | 1280 Δ AP | 2048 Δ AP |
+  |---|---|---|
+  | box back-mapping: one nominal gain, unclipped (`input_to_source`) -> per-axis effective gain round(h·g)/h, clipped (`ops.scale_boxes`) | **+0.1116** (of which clipping alone +0.0102) | +0.0083 |
+  | TF32 (gate off, predictor cuDNN default on) | −0.002 | – |
+  | fused Conv+BN (predictor) vs. unfused (gate) | 0.000 | – |
+  | predictor batch 16 (mixed shapes: padded batch) vs. batch 1 | +0.0209 | residual +0.0095 (not split further) |
+
+  Own per-axis back-mapping reproduces `scale_boxes` to ≤ 7·10⁻⁵ px and the AP to 3·10⁻⁴. The deciding factor is the
+  single-gain back-mapping: only the 788 × 1400 calib images (180 of 594) are affected, whose resized height is rounded
+  (1280: 720.46 -> 720 rows, effective y-gain 0.91371 vs. 0.91429, up to 0.50 px at the far edge; 2048: up to 0.18 px).
+- **Known deviation, decided before:** the same single-gain back-mapping was found on 2026-11-02 (entry 10:15, root cause
+  2) and checked by the authors' rule (entries 2026-11-02 10:29, 2026-11-03 11:35 / 11:39): |Δ| < 0.05 for every checked
+  row (VisDrone rows at 2048 only: XG −0.0014, X1 −0.0132) -> no correction, documented in the supplement as a known small
+  difference. The selection is unaffected (it uses the predictor); G-E1 compares own vs. Ultralytics decoding through the
+  same `input_to_source`, so it is blind to the mapping by design (entry 2026-11-02 10:15).
+- **New observation (for the authors' decision; nothing changed):** for a whole-image pass at **1280** the effect is
+  larger than in the 2048 rows checked on 2026-11-03: −0.11 AP on calib for YOLO26m's single pass through the cache path.
+  Rows whose dense part rests on the 1280 whole-image cache level (all models: refined grid row B at 1280 = whole-image
+  pass + SCAHI; the whole-image level inside the 1280 tile stacks) carry this deviation; the single-pass rows (E-1280 /
+  E-2048) and SAHI rows use the predictor and do not. YOLO26m keeps the frozen cache path of the five models (addendum
+  7c01b5d: identical procedure) unless the authors decide otherwise.
+
+## 2026-11-14 00:15 – YOLO26m: calib tuning complete, freeze proposal and calib replay gate (awaiting the authors' approval)
+
+- Calib steps (scripts/ext26_calib.py, 1b68d72; nothing on val or test-dev, caches for calib only): G-E1 passed
+  (decode 0.0 px, AP own = Ultralytics for both sizes and branches); conf 0.001 for all four single passes (margin to
+  the next grid point >= 0.19 AP); SAHI grid v2 (1280, o2o): NMS / IOS, overlap 0.2, thr 0.8, conf 0.01, 37.58; G-E3
+  passed; F0-NMS best IOS 0.8 conf 0.01 and F2 best = the reference parameters (0.005, 0.001, 5, 5) in all four cases;
+  X-grid B / C: every case hit the 2x time cap in round 1 -> stopped after round 1 by the frozen rule, selection = max
+  calib AP under the cap.
+- Freeze draft configs/ext/frozen_rows_ext26.draft.json (bb1614a), 25 rows as for YOLOv10m; documentation
+  docs/FREEZE_PROPOSAL_EXT26.md.
+- Calib replay gate (val / test-dev code path scahi.ext_testdev on calib; runs/ext/yolo26m/replay_calib/):
+  cache rows 20/20 exact (|Δ| = 0) against the selection value; predictor rows 5/5 identical in two independent replays;
+  SAHI also equals its tuning value exactly; the four single passes are 0.013-0.027 AP below their conf-tuning value
+  because the tuning ran the predictor with batch 16 (mixed shapes padded per batch) and the val path runs batch 1
+  (1280 o2o replay 39.80983 = the batch-1 value of the G-E1 diagnosis, 39.80983). Choices unaffected.
+- Next: the authors check the proposal; only after their approval: val / test-dev caches, then ONE val and ONE test-dev
+  evaluation of all 25 rows.
+
+## 2026-11-14 11:10 – YOLO26m: single-pass gate (deviation) and back-mapping rule applied before the freeze (authors)
+
+- **Authors (freeze not approved):** (1) report how the single-pass rows of the five extension models were tuned and
+  gated; if YOLO26m is handled the same way, "bit-identical in two repeats AND |Δ| to the tuning value <= 0.05 AP" counts
+  as passed, otherwise document the difference as a deviation; (2) apply the back-mapping rule to YOLO26m now, on calib,
+  before the freeze (affected rows with the Ultralytics conventions, calib tuning redone); the five models stay
+  unchanged (below the threshold); (3) then the updated freeze proposal with replay gate.
+- **(1) Single-pass rows of the five models:** conf tuned on calib with the Ultralytics predictor at batch 16
+  (`scahi.ext.single_pass_rows`; the same function and grid as for YOLO26m); the val row ran batch 1
+  (`measure_latency=True`). Gate: `scripts/ext_replay_gate.py` = val replay through the test-dev path, exact equality
+  with the stored **val** AP (both batch 1; 77/77 exact, runs/ext/testdev_replay/gate_replay.json, 2026-10-29). The
+  conf-tuning value on calib was never replayed. **YOLO26m: tuning identical; gate differs (deviation):** the freeze comes
+  before any val number, so the gate runs on calib against the tuning value (batch 16) through the batch-1 path. By the
+  authors' criterion: 5/5 bit-identical in two independent replays, |Δ| = 0.0269 / 0.0209 / 0.0137 / 0.0135 (single
+  passes 1280 o2m / o2o, 2048 o2m / o2o), SAHI 0.0000 -> **passed**. Proposed in addition (as for the five models): after
+  the single val evaluation and before test-dev, the val replay gate with exact equality.
+- **(2) Rule (DECISIONS 2026-11-02 10:15, decision rule, verbatim):** "If |Δ| on calib (VisDrone: AP@[.5:.95]; DOTA:
+  mAP50) is **below 0.05 for both checked rows** of a dataset: no change; the quantified deviation is documented in the
+  supplement as a known small difference. If it is **0.05 or larger for either row**: treat as a bug fix. Recompute all
+  affected rows on the held-out sets (VisDrone val / test-dev, DOTA-val) with the per-axis mapping, **without any
+  re-tuning**, and report original and corrected values side by side. Pre-registered verdicts stay as originally
+  computed; for each, state whether it would change. **Stop and report before writing anything into the paper
+  materials.**" Addition of 10:29: all three details (size rule, letterbox gain, per-axis back-mapping) aligned at once,
+  the 0.05 rule applies to the combined effect; only if a row reaches 0.05, each detail's contribution is reported
+  separately. **Application to YOLO26m differs from the wording (authors' instruction):** the rule was written for rows
+  already frozen and evaluated (held-out recomputation without re-tuning, side by side); YOLO26m has no frozen row and no
+  held-out number, so the Ultralytics conventions are adopted on calib before the freeze, with the calib tuning redone.
+- **Measurement** (`scripts/ext26_mapping.py`, runs/ext/yolo26m/mapping/check.json): calib caches with all three details
+  aligned (`scahi.mapcheck.ultralytics_prep`, root cache_ualigned/); tile levels bit-identical to the frozen caches
+  (594/594 at both sizes), only the whole-image levels change. Each cache row of the single-gain draft (bb1614a) fused
+  with its frozen configuration from both caches (single-gain value = stored calib_AP for 20/20). Δ AP = aligned −
+  single-gain: E-MZ F2 1280 o2m / o2o +0.0178 / +0.0404, 2048 −0.0030 / −0.0166; E-MZ NMS-IOS 1280 +0.0224 / +0.0424,
+  2048 −0.0042 / +0.0003; XG C 1280 +0.0280 / +0.0366, 2048 −0.0065 / −0.0108; XG B 1280 **+0.0866 / +0.0974**, 2048
+  −0.0102 / −0.0126; D 1280 **+0.0918 / +0.0950**, 2048 −0.0119 / −0.0147 (pairs o2m / o2o). **4 rows >= 0.05**: the
+  1280 rows resting on the whole-image pass alone (XG B, D). Per detail (one at a time, the others frozen): size rule
+  0.0000, letterbox gain 0.0000, per-axis back-mapping = the full Δ in all four rows. Single-pass and SAHI rows use the
+  Ultralytics predictor (its own mapping): not affected.
+- **Applied:** all 20 cache rows of YOLO26m use the aligned caches (every cache row contains the whole-image level; one
+  pipeline per model). Calib tuning redone (`scripts/ext26_calib.py cpu --prep ultralytics`, 7 workers as before;
+  runs/ext/yolo26m/ualigned/): G-E3 passed (1280 dense 37.711 vs. NMS 38.435, 2048 41.433 vs. 42.562); F0-NMS IOS 0.8 conf
+  0.01 and F2 = reference parameters in all four cases (unchanged); X-grid: every case again stopped after round 1 at the
+  time cap; selections unchanged in 6 of 8 cases; changed: 1280 o2o B cell_factor 9 -> 11 and 2048 o2m B bins_per_oct
+  7 -> 8. Both changes come from the 2x time cap, not from the mapping: the higher-AP variant timed 2.073 / 2.007 x F2
+  (over the cap) in the first run and 1.994 / 1.989 x now (under it); the AP order is the same in both runs.
+- Single-gain tuning files kept as a record (runs/ext/yolo26m/{tuning,xgrid_calib,gate_GE3}.json); new draft
+  configs/ext/frozen_rows_ext26.draft.json (cache rows carry `cache_prep`); calib replay gate
+  (runs/ext/yolo26m/replay_calib_ualigned/): cache rows 20/20 exact against the new selection values (so the replay
+  read the aligned caches), predictor rows carried over unchanged (5/5, see (1)). For val / test-dev the caches are built
+  with `ultralytics_prep` and the cache rows read cache_ualigned/.
+- **Not measured (for the authors):** the five models stay unchanged as decided; their 0.05 check (2026-11-03) covered
+  YOLOv10s 2048 rows only. Their 1280 rows resting on the whole-image pass alone (XG B 1280, D 1280) were not measured;
+  for YOLO26m exactly these rows exceed 0.05.
+
+## 2026-11-14 – Back-mapping check of ALL previously frozen rows (authors; rule 2026-11-02 10:15 / 10:29 as worded)
+
+- **Scope (inventory runs/mapcheck/all/inventory.json, `scripts/mapcheck_all.py`):** 125 frozen rows rest on a cached
+  whole-image level: VisDrone main study 27 (fusion rows; incl. 5 F3e), VisDrone extension 60, DOTA 39 (YOLO cache rows).
+  Covered by the original check (2026-11-03): X1, XG_yolov10s_2048_o2m_C, RG / NMS-o2m / NMS-o2o_yolov10s_2048. Not
+  affected: single passes, B-MZ (R, R5-R7) and SAHI rows (Ultralytics predictor), DOTA SAHI + SCAHI (D-H5 / A5; caches
+  s640f / w640f already Ultralytics-aligned), FCOS (torchvision resize, per-axis back-mapping of its own predictor).
+- **Calib, all three details together, no re-tuning** (runs/mapcheck/all/check.json; cores 2-23, own scopes, no swap,
+  oom_score_adj 1000): the frozen-cache value reproduces the stored calib value for every row with one (F3e rows through
+  the main study's own replay path `scahi.testdev._cal` + `load_split`; calibration estimates always from the frozen
+  caches; DOTA at the calib selection limit 20 000 as stored). Aligned tile levels bit-identical for all VisDrone weights;
+  DOTA tiles differ in edge tiles. **Main-paper rows (Tab. 1-3, Fig. decomposition, text): none >= 0.05** (VisDrone
+  |Δ| <= 0.034, DOTA <= 0.044) -> no change to the main paper (authors). **15 rows >= 0.05**: VisDrone extension XG B 1280
+  (6: +0.077 to +0.103) and D 1280 (6: +0.076 to +0.098) - per detail: back-mapping alone, size rule and letterbox gain
+  0.0000; DOTA B-RG_yolov10s_2048 −0.065 (size rule −0.040, gain 0, back-mapping −0.027), B-RG_yolov10m_2048 −0.421
+  (−0.006 / 0 / −0.415), B-F2_yolo12s_1024 +0.081 (+0.003 / 0 / +0.077). Main-study F3e rows: M_ab +0.017, H3-o2o
+  +0.012, 2x2-T2-F3e +0.005, seed M_ab +0.013 / +0.016 (supplement Tab. 6, 8, Fig. 16, 17; no change).
+- **B-RG_yolov10m_2048 (−0.421; `scripts/mapcheck_brg.py`, investigate_B-RG_yolov10m_2048.json):** 97 % of the change sits
+  in one class and one image: helicopter AP50 60.06 -> 53.57 (−6.49 / 16 classes = −0.41); calib has 4 helicopter GT
+  (P1131, P1139); per-image swap: P1131 alone −0.406 of −0.420 (sum of swaps −0.4197). In P1131 the top-scoring helicopter
+  detection (0.408) has devkit IoU 0.500021 with a GT box (TP) on the frozen cache and 0.499968 (FP) after a 0.37 px
+  x-shift; the VOC07 11-point curve loses 0.238 precision at recall 0.3 / 0.4 / 0.5. Not the pipeline limit (Δ identical
+  with limit 10 000 000 and without the 2 images at the limit), no tie involved: an IoU threshold crossing in an
+  extremely sparse class.
+- **Serial cross-check** (one row per dataset, one process, no pool): XG_yolov10m_1280_o2m_B, M_ab, B-RG_yolov10m_2048:
+  frozen and aligned values bit-identical to the parallel run (runs/mapcheck/all/serial.json).
+- **Held-out recomputation of the 15 rows, without re-tuning** (`scripts/mapcheck_heldout.py`, heldout.json; the
+  frozen-cache recomputation reproduces every stored held-out value exactly; DOTA-val at the frozen pipeline limit
+  200 000): VisDrone val Δ = 0.000 for all 12 (val has no 1400 x 788 image, the only size whose 1280 gain changes);
+  test-dev +0.020 to +0.038. DOTA-val: B-RG_yolov10s_2048 67.27 -> 67.37 (+0.094), B-RG_yolov10m_2048 68.42 -> 68.44
+  (+0.025), B-F2_yolo12s_1024 55.78 -> 55.80 (+0.019). No verdict uses any of these rows (all exploratory /
+  decomposition); verdicts unchanged.
+- Supplement places: DOTA rows -> Tab. 12 ("SCAHI, single pass (no tiles)[, refined grid]") and, for YOLOv10s / m, Fig. 20;
+  VisDrone D 1280 -> Fig. 2 (top, val and test-dev) and Fig. 3 (1280, val: unchanged); XG B 1280 -> Fig. 4 (calib search;
+  points shift by the calib Δ); no held-out number of the XG B 1280 rows is printed in the supplement. Nothing in the
+  paper documents changed; decision with the authors.
+
+## 2026-11-14 12:50 – Back-mapping report with the code; final build with the new supplementary.pdf; tag moved (authors)
+
+- paper/ (authors' files of 2026-11-14) verified: supplementary.pdf dbd296ee..., arXiv PDF 72f5468b..., arXiv source
+  ebf82653..., review source 283203a0...; review PDF unchanged (71fabf34...). The supplement (Sec. 1) states that the
+  recomputed values are listed with the code.
+- `scripts/backmap_report.py report` -> reports/BACKMAP_CHECK.md (+ reports/backmap_check.json): rule, scope, change per
+  frozen configuration on calib (plain descriptions: dataset, detector, weights, passes, fusion, head, role), per-detail
+  table and held-out values (frozen vs. recomputed) of the 15 configurations >= 0.05, the B-RG_yolov10m_2048 analysis.
+  Inputs runs/mapcheck/{visdrone,dota}.json and runs/mapcheck/all/{inventory,check,heldout,serial,
+  investigate_B-RG_yolov10m_2048}.json shipped as result files; computation scripts (mapcheck_all / _heldout / _brg)
+  shipped for reference; `one_detail` moved to scahi/mapcheck.py. In the regeneration (26 commands, 99 outputs), the
+  byte comparison and the release term scan; release README points to it.
+- Research-repo regeneration had been broken since the YOLO26m training runs existed (fig_ext_calib_curves: unknown
+  model); `paper_figures._training_runs` now lists the paper's detectors only (outputs byte-identical; the release was
+  never affected: YOLO26m runs are not shipped).
+- Release from 0b90b77: 429 files, forbidden hits 0, missing imports 0; clean room 69 passed / 7 skipped, regeneration
+  26/26, 99/99 outputs byte-identical. supplementary.zip (README + supplementary.pdf dbd296ee... + code/): 15 569 058
+  bytes, 432 files, SHA-256 a7fea432ca84bbbf1dfc300c59c6b42fcdc09e5ae2ac230d1fad7e49736e00e4; package scan incl. PDF
+  passed.
+- Tag the planned submission tag moved from 1997eaec4c97f3cefdcd166658d010f4d96445b1 to
+  0b90b77cdfa5d7b790e931c3285d42d817a5ca8b (local, not pushed). GitHub version rebuilt (446 files, clean room passed),
+  committed locally in exports/github/scahi, not pushed.

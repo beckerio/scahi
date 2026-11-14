@@ -1,0 +1,2944 @@
+{
+ "not_affected": {
+  "single passes, B-MZ (R, R5-R7), SAHI (VisDrone and DOTA)": "Ultralytics predictor (scale_boxes)",
+  "DOTA SAHI + SCAHI (D-H5 / A5)": "caches s640f / w640f already built with Ultralytics' preparation",
+  "DOTA FCOS cache rows": "torchvision resize + per-axis back-mapping (scahi.fcos.dense_pass)"
+ },
+ "n_rows": 125,
+ "n_covered": 5,
+ "n_main_paper": 70,
+ "rows": [
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "R-NMS",
+   "group": "reference",
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 37.74972103720847,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 YOLOv10s '1280 + tiles, box' and dQ1 (if R-NMS, not R, is the source: both 35.00 val)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "R-GNMM",
+   "group": "reference",
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-GREEDYNMM",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.1
+    }
+   },
+   "stored_calib": 35.32423771877874,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "R-WBF",
+   "group": "reference",
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-WBF",
+    "params": {
+     "thr": 0.5,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 35.287964645666314,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "T0",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T0_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 38.28728942580325,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "T1",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T1_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 38.53988850998479,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "T2",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 38.6426106652638,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "T3",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T3_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 38.599875736939936,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "T4",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 39.54882265737432,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "M_ab",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F3e",
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 39.778372601820244,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "H2-F0",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 38.51956410927273,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "H3-o2o",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F3e",
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 39.305458592557486,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "2x2-T2-F0",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 37.014247732625385,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "2x2-T2-F3e",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F3e",
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 39.031167222189936,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "D-T4",
+   "group": "prereg",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 40.633886274556204,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "D-1280",
+   "group": "prereg",
+   "weights": "runs/p2/20261022_v10s_BFULL1280_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 39.89602923119396,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "D-1536",
+   "group": "prereg",
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 41.008699269746195,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T4_s1-H1",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T4_s1-M_ab",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s1/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F3e",
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T2_s1-H1",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s1/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T4_s2-H1",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T4_s2-M_ab",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T4_train_s2/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w0.64",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F3e",
+    "params": {
+     "tau_splat": 0.02,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "seed-P3T2_s2-H1",
+   "group": "seed",
+   "weights": "runs/p3/20261023_v10s_P3T2_train_s2/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1.0",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "X1",
+   "group": "exploratory",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 41.17029313303605,
+   "covered_by_original_check": "runs/mapcheck/visdrone.json",
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "X2",
+   "group": "exploratory",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 42.25376912740301,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 YOLOv10s '2048 + tiles, SCAHI'",
+    "Tab. 2 '2048 + tiles, SCAHI'",
+    "Fig. decomposition '+ tiles'"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "X3",
+   "group": "exploratory",
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1536",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 39.170717797685725,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "main",
+   "id": "X4",
+   "group": "exploratory",
+   "weights": "runs/p2/20261022_v10s_BFULL1536_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1536",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 40.85853854764929,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 41.95514545762097,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 39.61432856523525,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '1280 + tiles, box' and dQ1",
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11m_mz2048_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 44.031459658453215,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '2048 + tiles, SCAHI'",
+    "Fig. decomposition '+ tiles'",
+    "text Q2 / Q3"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11m_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 42.140434087851055,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11s_mz1280_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 39.14425500146654,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11s_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 37.158893113413825,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '1280 + tiles, box' and dQ1",
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11s_mz2048_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 42.12081452137591,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '2048 + tiles, SCAHI'",
+    "Fig. decomposition '+ tiles'",
+    "text Q2 / Q3"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo11s_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 40.28448957090962,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 41.748191407429715,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 39.60951915721551,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '1280 + tiles, box' and dQ1",
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12s_mz1280_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 40.05380535968612,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12s_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 37.85307509921037,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '1280 + tiles, box' and dQ1",
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12s_mz2048_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 42.760974529071895,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '2048 + tiles, SCAHI'",
+    "Fig. decomposition '+ tiles'",
+    "text Q2 / Q3"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolo12s_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 41.2405978924075,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 41.50486125633116,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz1280_F2_o2o",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 41.13735425567615,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 39.56014139691177,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz1280_nms-ios_o2o",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 40.03605542752491,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '1280 + tiles, box' and dQ1"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz2048_F2_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 43.7899256729704,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 '2048 + tiles, SCAHI'",
+    "Fig. decomposition '+ tiles'",
+    "text Q2 / Q3"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz2048_F2_o2o",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": 43.70812663237776,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 42.18636830036741,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "text Q2 (SCAHI vs. box fusion, range over detectors)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "E_yolov10m_mz2048_nms-ios_o2o",
+   "group": "preregistered",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "stored_calib": 42.920161937973134,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_1280_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_1280_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 'refined'",
+    "text (refined grid gain, tiles vs. single pass)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_2048_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10m_2048_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11s_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11s_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 8
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 'refined'",
+    "text (refined grid gain, tiles vs. single pass)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12s_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12s_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 8
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 'refined'",
+    "text (refined grid gain, tiles vs. single pass)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 1e-05,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11m_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo11m_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 1 'refined'",
+    "text (refined grid gain, tiles vs. single pass)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolo12m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10s_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 6
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10s_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": "runs/mapcheck/visdrone.json",
+   "main_paper": [
+    "Tab. 1 'refined'",
+    "text (refined grid gain, tiles vs. single pass)"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10s_2048_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 1e-05,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "XG_yolov10s_2048_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo11m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo11m_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Fig. decomposition 'single pass + SCAHI' and text"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo11s_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo11s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Fig. decomposition 'single pass + SCAHI' and text"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo12m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo12s_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolo12s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Fig. decomposition 'single pass + SCAHI' and text"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolov10m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolov10m_single1280_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolov10m_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Fig. decomposition 'single pass + SCAHI' and text"
+   ]
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolov10m_single2048_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": []
+  },
+  {
+   "ds": "visdrone",
+   "study": "ext",
+   "id": "D_yolov10s_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "weights": "runs/p2/20261022_v10s_BFULL2048_train_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "stored_calib": null,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Fig. decomposition 'single pass + SCAHI' and text"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2o_yolov10s_1024",
+   "group": "NMS-o2o",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.64972972497212,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2m_yolov10s_1024",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.88926876737116,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "F2_yolov10s_1024",
+   "group": "F2",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 69.02874983348758,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "RG_yolov10s_1024",
+   "group": "RG",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 70.10812777799428,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-F2_yolov10s_1024",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 64.4147185191089,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-RG_yolov10s_1024",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolov10s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 65.48204511527085,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2o_yolov10s_2048",
+   "group": "NMS-o2o",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 73.38835832133879,
+   "covered_by_original_check": "runs/mapcheck/dota.json",
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2m_yolov10s_2048",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 73.57091778154032,
+   "covered_by_original_check": "runs/mapcheck/dota.json",
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "F2_yolov10s_2048",
+   "group": "F2",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 75.72654703479287,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "RG_yolov10s_2048",
+   "group": "RG",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 76.01729180866599,
+   "covered_by_original_check": "runs/mapcheck/dota.json",
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-F2_yolov10s_2048",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 73.87055021677418,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-RG_yolov10s_2048",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolov10s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 74.9013541386701,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2o_yolov10m_1024",
+   "group": "NMS-o2o",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 71.34919576906537,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2m_yolov10m_1024",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 70.21994114143935,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "F2_yolov10m_1024",
+   "group": "F2",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 71.54167215990854,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "RG_yolov10m_1024",
+   "group": "RG",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 72.1764053489134,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-F2_yolov10m_1024",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.2312984995571,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-RG_yolov10m_1024",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolov10m_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.82345468333315,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2o_yolov10m_2048",
+   "group": "NMS-o2o",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 70.08258094435409,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "NMS-o2m_yolov10m_2048",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 70.31803442881593,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "F2_yolov10m_2048",
+   "group": "F2",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 72.91577196794458,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "RG_yolov10m_2048",
+   "group": "RG",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 73.24914141116643,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-F2_yolov10m_2048",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 71.69840713513841,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows.json",
+   "id": "B-RG_yolov10m_2048",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolov10m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 72.8650952069654,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "NMS-o2m_yolo11s_1024",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 65.4878135329756,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "F2_yolo11s_1024",
+   "group": "F2",
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.40491288533225,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "RG_yolo11s_1024",
+   "group": "RG",
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 69.07373986832452,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-F2_yolo11s_1024",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 64.79130929486936,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-RG_yolo11s_1024",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolo11s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 65.51744081826412,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "NMS-o2m_yolo11s_2048",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 69.84563268902741,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "F2_yolo11s_2048",
+   "group": "F2",
+   "weights": "runs/dota/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 72.90029619462703,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "RG_yolo11s_2048",
+   "group": "RG",
+   "weights": "runs/dota/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 74.01538639613607,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-F2_yolo11s_2048",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 71.77536453005136,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-RG_yolo11s_2048",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolo11s_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 72.6236970516787,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "NMS-o2m_yolo12s_1024",
+   "group": "NMS-o2m",
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 66.28963551954229,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "F2_yolo12s_1024",
+   "group": "F2",
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 67.25931007800715,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "RG_yolo12s_1024",
+   "group": "RG",
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024",
+     "t1.0n1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 68.2921633774879,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-F2_yolo12s_1024",
+   "group": "B-F2",
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 64.08593997054406,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  },
+  {
+   "ds": "dota",
+   "study": "frozen_rows_new.json",
+   "id": "B-RG_yolo12s_1024",
+   "group": "B-RG",
+   "weights": "runs/dota/train/yolo12s_1024_s0/ultralytics/train/weights/best_calib.pt",
+   "spec": {
+    "levels": [
+     "w1024"
+    ],
+    "overlap": 0.3
+   },
+   "stored_calib": 65.29002818287339,
+   "covered_by_original_check": null,
+   "main_paper": [
+    "Tab. 3 / text (DOTA)"
+   ]
+  }
+ ]
+}

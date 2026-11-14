@@ -52,10 +52,13 @@ COMMANDS = [
     ["scripts/dota_native_more.py", "report"],  # exploratory post-hoc analyses (supplement Tab. s-multizoom)
     ["scripts/latency_multizoom_host_b.py", "report"],  # latency of the multi-zoom arm (supplement)
     ["scripts/scahi_algorithm_doc.py"],
+    ["scripts/backmap_report.py", "report"],  # box back-mapping check of all frozen rows (supplement Sec. 1)
 ]
 OUTPUTS = """
 docs/SCAHI_ALGORITHM.md
 reports/ABLATION.md
+reports/BACKMAP_CHECK.md
+reports/backmap_check.json
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.csv
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.md
 reports/D_RESULTS_FCOS.md
