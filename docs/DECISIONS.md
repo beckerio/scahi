@@ -2272,3 +2272,76 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
 - Tag the planned submission tag moved from 1997eaec4c97f3cefdcd166658d010f4d96445b1 to
   0b90b77cdfa5d7b790e931c3285d42d817a5ca8b (local, not pushed). GitHub version rebuilt (446 files, clean room passed),
   committed locally in exports/github/scahi, not pushed.
+
+## 2026-11-14 13:50 – YOLO26m: single held-out evaluation of the approved freeze; verdicts (addendum 7c01b5d)
+
+- Freeze configs/ext/frozen_rows_ext26.json (approved by the authors: 5db78fa incl. the exact val replay; committed
+  085c6de). Runner `scripts/ext26_heldout.py`: rows only from the committed freeze through the extension's val / test-dev
+  path (scahi.ext_testdev.run_cache_row / run_predictor_row), cache rows on the Ultralytics-aligned caches named in the row
+  (cache_ualigned/, val and test-dev built with `scahi.mapcheck.ultralytics_prep`); outputs runs/ext/yolo26m/{val,
+  val_replay,testdev}/ (separate from the five-model rows); every run refuses to overwrite a row.
+- val once (25 rows), val replay in fresh processes: **25/25 exact** (runs/ext/yolo26m/gate_val_replay.json); then
+  test-dev once (25 rows).
+- Verdicts (`scripts/ext26_verdicts.py`, runs/ext/yolo26m/verdicts.json, reports/EXT26_RESULTS.md; eps 0.30, paired
+  bootstrap 1000 / seed 0, verdict per detector; val decides): E-H1 +3.36 [+2.91; +3.83] met (test-dev +2.72); E-H2
+  s=1280 +1.94 [+1.65; +2.21] met (+2.24); E-H2 s=2048 +1.77 [+1.54; +1.99] met (+2.52); **E-H3 +0.28 [+0.04; +0.51] not
+  met** (below eps; test-dev +0.51 [+0.36; +0.68], not confirming by the rule); E-H4 descriptive +0.11 [−0.01; +0.26].
+  Holm appendix (YOLO26m alone, unadjusted): p = 0.001 / 0.001 / 0.001 / 0.555. The five-model verdicts and family
+  criteria are unchanged; YOLO26m counts in none.
+- Rows (val / test-dev AP): single pass 2048 o2o 41.25 / 35.30; 2048 + tiles SCAHI (o2m) 41.53 / 35.82; refined grid
+  (exploratory) 42.89 / 36.59; 1280 + tiles box fusion (o2o) 37.89 / 32.58; SAHI 34.56 / 30.51; all 25 in
+  reports/EXT26_RESULTS.md. Latency not measured (optional exclusive run).
+
+## 2026-11-14 – YOLO26m verdicts: output fix confirmed (authors' question)
+
+- The second run of `scripts/ext26_verdicts.py` used exactly the stored results of the single val and test-dev evaluation:
+  it reads the stored detections (runs/ext/yolo26m/{val,testdev}/<row>/dets_<split>.parquet) and computes the paired
+  bootstrap from them; no inference, no new evaluation run, no file under runs/ext/yolo26m/{val,val_replay,testdev}/ was
+  written after 13:47 (checked: 0 files). The point AP of each compared row equals the stored metrics.json of the single
+  evaluation (8 / 8 rows on val and on test-dev).
+- Only the report formatting was wrong: `_d()` returns the two AP values under the keys "a" / "b", which overwrote the row
+  names stored under the same keys, and the Markdown line then called `.replace` on a float. Fix: row names stored as
+  "row_a" / "row_b". Verdict logic untouched.
+- Identity before / after: the pre-fix code (that one line restored, report part skipped, output to a scratch file) was
+  run again on the same stored detections and its raw verdict JSON compared with runs/ext/yolo26m/verdicts.json: no
+  difference in any number, status, p-value or Holm entry; the only change is the two added keys row_a / row_b.
+- The YOLO26m results are not added to the the conference supplement; they are for the arXiv version and the public repository
+  (integration into the paper decided separately by the authors).
+
+## 2026-11-14 – YOLO26s (addendum 7bc0ace): weights, recipe diff, code; training started (authors: optional extension)
+
+- Addendum committed before any YOLO26s training or result (7bc0ace, docs/PREREGISTRATION_EXT.md): same rows and
+  questions as YOLO26m (E-H1-E-H3, eps 0.30, verdict per detector, reported separately, no family criterion), G-E2 for
+  the s model (E-1280 within ±5 AP of YOLOv10s 1280, val 33.66; report only), cache rows with the Ultralytics
+  conventions from the start, untestable cases as before, the descriptive equal-compute comparison YOLO26s 2048 vs.
+  YOLO26m 1280 (GFLOPs and AP, val and test-dev), freeze proposal to the authors before the single val / test-dev run.
+- COCO weights weights/yolo26s.pt (Ultralytics assets v8.4.0, `attempt_download_asset`), SHA-256 646f8bc3fe0a6568...;
+  head Detect, branches o2o / o2m, reg_max 1, strides 8/16/32, 10.0 M parameters (runs/ext/heads.json).
+- Recipe diff, every training argument (get_cfg with the overrides `train_full` passes, Ultralytics 8.4.183, vs. the saved
+  args.yaml of runs/ext/train/yolo26m_{1280,2048}_s0): different only `model` (weights/yolo26m.pt -> weights/yolo26s.pt),
+  `data` / `project` (run directories; dataset.yaml from the same function), `save_dir` (filled in by the trainer) and
+  `device` ('' in the saved file vs. unset before the trainer fills it in). Identical: epochs 100, imgsz, batch 8 / 3,
+  seed 0, amp, optimizer auto (9 200 iterations -> AdamW, lr0 0.000714, as YOLO26m), nbs 64, workers 12, all augmentation
+  and loss gains.
+- Code: scahi.ext NEW_MODELS = (yolo26m, yolo26s), ADDENDUM_BY_MODEL for training.json; selection, checkpoint retention
+  and jobs as YOLO26m. Training 1280 then 2048 (own scope, GPU), in the background of the tutorial work.
+
+## 2026-11-14 – YOLO26m tutorial on the frozen results (authors: approved; public version only)
+
+- tutorials/yolo26m_visdrone/ rebuilt on the frozen paper-grade YOLO26m results: README (results and verdicts, quick
+  start, Track A "use the frozen weights and parameters", Track B "add a new detector the paper way" with the runtimes
+  of the YOLO26m run, shortcuts only in one marked "not the paper protocol" box); frozen.py (rows / run / predict: every
+  frozen row recomputed from configs/ext/frozen_rows_ext26.json with weight check, caches with Ultralytics' preparation,
+  AP compared with the stored value; own images); aligned.py (scahi.reproduce with Ultralytics' input preparation and
+  cache_ualigned/); paper_way.py (extension NMS-IOS grid, refined-grid procedure of configs/ext/xgrid_frozen.json with
+  the 2x time limit, paired bootstrap comparison with the verdict rule); frozen_results.json (stored calib / val /
+  test-dev AP, scripts/ext26_tutorial_data.py). The obsolete own adapter, its test and the Ultralytics-best.pt training
+  script were removed (decoding is in scahi.infer.dfl_decode since 45690fa; training via scahi.reproduce train).
+- Check: `frozen.py run --row XG_yolo26m_2048_o2m_C --split val` -> AP 42.89006, identical to the single evaluation.
+- Shipped only in the public version (scripts/make_github_release.py GITHUB_EXTRA: tutorial, configs/ext/
+  frozen_rows_ext26.json, tests/test_decode_reg_max1.py); the anonymised release, the tag and supplementary.zip are
+  unchanged. Release regeneration 26/26, 99/99 byte-identical, clean room passed; GitHub version 455 files, scans passed,
+  clean room passed; committed locally in exports/github/scahi and public_repos/scahi, not pushed. YOLO26m results are not
+  in the conference supplement (authors).
+- Weight assets of YOLO26m (visdrone_ext_yolo26m_{1280,2048}_s0.pt) are not prepared yet; the tutorial accepts the frozen
+  files and, once prepared, the assets (SHA-256 listed in frozen_results.json).

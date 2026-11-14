@@ -1,0 +1,1685 @@
+{
+ "status": "APPROVED - frozen; val once, exact val replay, test-dev once",
+ "created": "2026-11-14T10:55",
+ "model": "yolo26m",
+ "addendum": "7c01b5d",
+ "split_for_test": "VisDrone val (548 images) once, then VisDrone test-dev (1610 images) once, after approval",
+ "reporting_rules": [
+  "Pre-registered questions E-H1, E-H2 (per s), E-H3 as in the addendum: verdict per detector for YOLO26m, paired bootstrap over val images (1000, seed 0), eps = 0.30; Holm appendix for YOLO26m alone (one-model family = unadjusted). The five-model verdicts, '>= 4 of 5' and the pooled effect are unchanged; YOLO26m counts in no family criterion.",
+  "Test-dev: the same definitions as held-out confirmation, reported next to val.",
+  "Every frozen row is reported regardless of outcome; no retuning, re-selection or added rows after val.",
+  "Exploratory rows (X-grid, decomposition D) in separate tables, labelled post hoc, never in a verdict.",
+  "Primary protocol visdrone_ignore (toolkit port, cap 500 per image); plain as a secondary column."
+ ],
+ "weights": {
+  "1280": {
+   "path": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "selected_epoch_checkpoint": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/calib_epoch045.pt"
+  },
+  "2048": {
+   "path": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "selected_epoch_checkpoint": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/calib_epoch045.pt"
+  }
+ },
+ "gates": {
+  "G-E1": "runs/ext/yolo26m/gate_GE1.json",
+  "G-E3": "runs/ext/yolo26m/ualigned/gate_GE3.json"
+ },
+ "cache_prep": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)",
+ "mapping_check": "runs/ext/yolo26m/mapping/check.json",
+ "superseded_draft": "configs/ext/frozen_rows_ext26.draft.json at bb1614a (single-gain caches)",
+ "rows": [
+  {
+   "id": "E_yolo26m_full1280_o2m",
+   "group": "preregistered",
+   "kind": "single",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 38.46299446660477,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_1280_o2m.json (predictor, batch 16)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-1280",
+    "role": "descriptive (single pass o2m+NMS)",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo26m/conf_tuning_1280_o2m.json",
+    "addendum": "7c01b5d"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "conf": "calib (runs/ext/yolo26m/conf_tuning_1280_o2m.json, grid [0.001, 0.01, 0.05, 0.1], max toolkit-port AP)"
+   },
+   "val_exp_id": "E_yolo26m_full1280_o2m"
+  },
+  {
+   "id": "E_yolo26m_full1280_o2o",
+   "group": "preregistered",
+   "kind": "single",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 39.83070165518688,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_1280_o2o.json (predictor, batch 16)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-1280",
+    "role": "hypothesis row",
+    "imgsz": 1280,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo26m/conf_tuning_1280_o2o.json",
+    "addendum": "7c01b5d"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "conf": "calib (runs/ext/yolo26m/conf_tuning_1280_o2o.json, grid [0.001, 0.01, 0.05, 0.1], max toolkit-port AP)"
+   },
+   "val_exp_id": "E_yolo26m_full1280_o2o"
+  },
+  {
+   "id": "E_yolo26m_full2048_o2m",
+   "group": "preregistered",
+   "kind": "single",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 42.57211117834786,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_2048_o2m.json (predictor, batch 16)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "nms",
+    "branch": "o2m",
+    "row": "E-2048",
+    "role": "descriptive (single pass o2m+NMS)",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo26m/conf_tuning_2048_o2m.json",
+    "addendum": "7c01b5d"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "conf": "calib (runs/ext/yolo26m/conf_tuning_2048_o2m.json, grid [0.001, 0.01, 0.05, 0.1], max toolkit-port AP)"
+   },
+   "val_exp_id": "E_yolo26m_full2048_o2m"
+  },
+  {
+   "id": "E_yolo26m_full2048_o2o",
+   "group": "preregistered",
+   "kind": "single",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 43.70694312229492,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_2048_o2o.json (predictor, batch 16)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo26m/conf_tuning_2048_o2o.json",
+    "addendum": "7c01b5d"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "imgsz": "fixed by design (training size)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "conf": "calib (runs/ext/yolo26m/conf_tuning_2048_o2o.json, grid [0.001, 0.01, 0.05, 0.1], max toolkit-port AP)"
+   },
+   "val_exp_id": "E_yolo26m_full2048_o2o"
+  },
+  {
+   "id": "E_yolo26m_mz1280_F2_o2m",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 41.86775296062329,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2m/F2",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 24)"
+   },
+   "val_exp_id": "E_yolo26m_mz1280_F2_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz1280_F2_o2o",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 41.50737758155869,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2o/F2",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "E-MZ-DENSE-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 24)"
+   },
+   "val_exp_id": "E_yolo26m_mz1280_F2_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz1280_nms-ios_o2m",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 40.004886670097235,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2m/F0-NMS",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 12)"
+   },
+   "val_exp_id": "E_yolo26m_mz1280_nms-ios_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz1280_nms-ios_o2o",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 40.42006097637304,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2o/F0-NMS",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "row": "E-MZ-NMS-1280",
+    "stack": "native",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 12)"
+   },
+   "val_exp_id": "E_yolo26m_mz1280_nms-ios_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz2048_F2_o2m",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 44.277572930658366,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2m/F2",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 24)"
+   },
+   "val_exp_id": "E_yolo26m_mz2048_F2_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz2048_F2_o2o",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 44.07289403922751,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2o/F2",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "E-MZ-DENSE-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (F2 grid, 24 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 24)"
+   },
+   "val_exp_id": "E_yolo26m_mz2048_F2_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz2048_nms-ios_o2m",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 42.01544426777669,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2m/F0-NMS",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2m",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 12)"
+   },
+   "val_exp_id": "E_yolo26m_mz2048_nms-ios_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_mz2048_nms-ios_o2o",
+   "group": "preregistered",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 42.939115735762414,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2o/F0-NMS",
+   "inference": {
+    "overlap": 0.3,
+    "fusion": "F0-NMS",
+    "branch": "o2o",
+    "row": "E-MZ-NMS-2048",
+    "stack": "native2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    },
+    "tuned_on": "calib",
+    "addendum": "7c01b5d"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F0-NMS",
+    "params": {
+     "metric": "IOS",
+     "thr": 0.8,
+     "conf": 0.01
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels / overlap": "fixed by design: pass at the training size + z = 2 tiles (N = 1024), cache overlap 0.3 (= R)",
+    "branch": "fixed by design (two-branch head as YOLOv10m: both branches, o2o = hypothesis branch; addendum 7c01b5d)",
+    "params": "calib (NMS-IOS grid, 12 points, max toolkit-port AP; runs/ext/yolo26m/ualigned/tuning.json; budget 12)"
+   },
+   "val_exp_id": "E_yolo26m_mz2048_nms-ios_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "E_yolo26m_sahi_o2o",
+   "group": "preregistered",
+   "kind": "sahi",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 37.5761296142596,
+   "calib_AP_source": "runs/ext/yolo26m/sahi_tuning/sahi_tuning2_o2o.json (raw slice predictions merged offline)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.2,
+    "fusion": "nms-ios",
+    "branch": "o2o",
+    "row": "E-SAHI",
+    "slice": 640,
+    "full_image_pass": true,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "tuned_on": "calib",
+    "tuning_grid": "v2",
+    "tuning_file": "runs/ext/yolo26m/sahi_tuning/sahi_tuning2_o2o.json",
+    "addendum": "7c01b5d"
+   },
+   "sahi": {
+    "merge": "NMS",
+    "metric": "IOS",
+    "overlap": 0.2,
+    "match_thr": 0.8,
+    "conf": 0.01,
+    "AP": 37.5761296142596,
+    "AP50": 62.74462437268489,
+    "source": "toolkit_port"
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs (1280 weights)",
+    "branch": "fixed by design (o2o, as YOLOv10m)",
+    "slice / overlap / merge / match_thr / conf": "calib (SAHI tuning grid v2, runs/ext/yolo26m/sahi_tuning/sahi_tuning2_o2o.json)"
+   },
+   "val_exp_id": "E_yolo26m_sahi_o2o"
+  },
+  {
+   "id": "XG_yolo26m_1280_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 39.99003311546758,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/B calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor"
+    ],
+    "edges_under_cap": [
+     "cell_factor"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 49,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.0001,
+       "cell_factor": 13.0,
+       "bins_per_oct": 8
+      },
+      "AP": 39.99003311546758,
+      "edges": [
+       "cell_factor"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_1280_o2m_B",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_1280_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 43.108258037510886,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/C calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.0003125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "edges_under_cap": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 109,
+      "selected": {
+       "tau_splat": 0.0003125,
+       "tau_peak": 0.001,
+       "cell_factor": 13.0,
+       "bins_per_oct": 8
+      },
+      "AP": 43.108258037510886,
+      "edges": [
+       "cell_factor",
+       "bins_per_oct"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_1280_o2m_C",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_1280_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 39.83188929631773,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/B calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-B-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 7
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "edges_under_cap": [],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 49,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.0001,
+       "cell_factor": 11.0,
+       "bins_per_oct": 7
+      },
+      "AP": 39.83188929631773,
+      "edges": [],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_1280_o2o_B",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_1280_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 42.73238930979372,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/C calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-C-1280",
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 1e-05,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.005,
+     "tau_peak": 1e-05,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor"
+    ],
+    "edges_under_cap": [
+     "cell_factor"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 109,
+      "selected": {
+       "tau_splat": 0.005,
+       "tau_peak": 1e-05,
+       "cell_factor": 13.0,
+       "bins_per_oct": 7
+      },
+      "AP": 42.73238930979372,
+      "edges": [
+       "cell_factor"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_1280_o2o_C",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_2048_o2m_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 43.9117405536583,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/B calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 11.0,
+     "bins_per_oct": 8
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "edges_under_cap": [
+     "bins_per_oct"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 49,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.0001,
+       "cell_factor": 11.0,
+       "bins_per_oct": 8
+      },
+      "AP": 43.9117405536583,
+      "edges": [
+       "bins_per_oct"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_2048_o2m_B",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_2048_o2m_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 45.57891552445405,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/C calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 8
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "edges_under_cap": [
+     "cell_factor",
+     "bins_per_oct"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 109,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.001,
+       "cell_factor": 13.0,
+       "bins_per_oct": 8
+      },
+      "AP": 45.57891552445405,
+      "edges": [
+       "cell_factor",
+       "bins_per_oct"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_2048_o2m_C",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_2048_o2o_B",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 43.67391956024174,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/B calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-B-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.0001,
+     "cell_factor": 9.0,
+     "bins_per_oct": 7
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor"
+    ],
+    "edges_under_cap": [],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 49,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.0001,
+       "cell_factor": 9.0,
+       "bins_per_oct": 7
+      },
+      "AP": 43.67391956024174,
+      "edges": [],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_2048_o2o_B",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "XG_yolo26m_2048_o2o_C",
+   "group": "X-grid (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 45.33813562809734,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/C calib_selected",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "X-grid-C-2048",
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    },
+    "tuned_on": "calib (widened F2 grid, max AP, time <= 2x F2)"
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048",
+     "t2.0n1024"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "iou_cluster": 0.5,
+     "tau_splat": 0.00125,
+     "tau_peak": 0.001,
+     "cell_factor": 13.0,
+     "bins_per_oct": 7
+    }
+   },
+   "xgrid": {
+    "time_cap_hit": true,
+    "edges_unconstrained": [
+     "cell_factor"
+    ],
+    "edges_under_cap": [
+     "cell_factor"
+    ],
+    "rounds": [
+     {
+      "round": 1,
+      "n_variants": 109,
+      "selected": {
+       "tau_splat": 0.00125,
+       "tau_peak": 0.001,
+       "cell_factor": 13.0,
+       "bins_per_oct": 7
+      },
+      "AP": 45.33813562809734,
+      "edges": [
+       "cell_factor"
+      ],
+      "time_cap_hit": true
+     }
+    ]
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "row B: whole-image pass only; row C: as E-MZ-DENSE",
+    "params": "EXPLORATORY (refined grid; procedure frozen in configs/ext/xgrid_frozen.json, addendum 7c01b5d item 2): calib, max AP among variants with fusion time <= 2x F2"
+   },
+   "val_exp_id": "XG_yolo26m_2048_o2o_C",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "D_yolo26m_single1280_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 38.8655480633379,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/B calib_reference (same F2 parameters, whole-image pass)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-single-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo26m/ualigned/tuning.json 1280/o2m/F2); no new selection"
+   },
+   "val_exp_id": "D_yolo26m_single1280_F2_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "D_yolo26m_single1280_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3c3806defafbddd6e08016e6b31d12edbb6bded6dcae24b8769a0e3428544643",
+   "train_variant": "E-yolo26m-1280",
+   "training": {
+    "batch": 8,
+    "effective_batch": 64,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (39.83)"
+   },
+   "calib_AP": 38.72082901422073,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/B calib_reference (same F2 parameters, whole-image pass)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "D-single-1280",
+    "levels": [
+     "w1280"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "fusion": {
+    "imgsz": 1280,
+    "levels": [
+     "w1280"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo26m/ualigned/tuning.json 1280/o2o/F2); no new selection"
+   },
+   "val_exp_id": "D_yolo26m_single1280_F2_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "D_yolo26m_single2048_F2_o2m",
+   "group": "decomposition B (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 42.74620294237489,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/B calib_reference (same F2 parameters, whole-image pass)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2m",
+    "row": "D-single-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2m",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo26m/ualigned/tuning.json 2048/o2m/F2); no new selection"
+   },
+   "val_exp_id": "D_yolo26m_single2048_F2_o2m",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  },
+  {
+   "id": "D_yolo26m_single2048_F2_o2o",
+   "group": "decomposition B (exploratory, post hoc)",
+   "kind": "cache",
+   "model": "yolo26m",
+   "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+   "weights_sha256": "3b7071048a3ffe6238d4da1c04bea382a8c00f8e149de12521d4716798ed287b",
+   "train_variant": "E-yolo26m-2048",
+   "training": {
+    "batch": 3,
+    "effective_batch": 63,
+    "oom_fallback": false,
+    "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)"
+   },
+   "calib_AP": 42.62460805977697,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/B calib_reference (same F2 parameters, whole-image pass)",
+   "inference": {
+    "zoom_stack": [],
+    "overlap": 0.3,
+    "fusion": "F2",
+    "branch": "o2o",
+    "row": "D-single-2048",
+    "levels": [
+     "w2048"
+    ],
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "fusion": {
+    "imgsz": 2048,
+    "levels": [
+     "w2048"
+    ],
+    "overlap": 0.3,
+    "branch": "o2o",
+    "variant": "F2",
+    "params": {
+     "tau_splat": 0.005,
+     "tau_peak": 0.001,
+     "cell_factor": 5.0,
+     "bins_per_oct": 5
+    }
+   },
+   "provenance": {
+    "weights": "training recipe fixed by design (PREREGISTRATION_EXT 2, addendum 7c01b5d); epoch = max toolkit-port AP on calib (o2o) at the 36 scheduled epochs",
+    "levels": "whole-image pass of the C stack only (single pass + F2)",
+    "params": "EXPLORATORY row; F2 parameters = the calib-tuned parameters of the corresponding row C (runs/ext/yolo26m/ualigned/tuning.json 2048/o2o/F2); no new selection"
+   },
+   "val_exp_id": "D_yolo26m_single2048_F2_o2o",
+   "cache_prep": {
+    "prep": "ultralytics",
+    "cache_root": "cache_ualigned",
+    "note": "cache rows on caches with Ultralytics' input preparation (size rule, letterbox gain, per-axis back-mapping as scale_boxes; scahi.mapcheck.ultralytics_prep, cache root cache_ualigned/); back-mapping rule of DECISIONS 2026-11-02 10:15 / 10:29 applied before the freeze (DECISIONS 2026-11-14)"
+   }
+  }
+ ],
+ "approved_by": "authors 2026-11-14: freeze of 5db78fa approved, incl. the exact val replay before test-dev",
+ "draft_commit": "5db78fa2a228b6386d28dca9281b9f91a5f8b6fc"
+}

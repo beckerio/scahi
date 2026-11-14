@@ -182,3 +182,40 @@ Bootstrap über Bilder mit denselben Resamples für alle Modelle (pro Resample M
      SAHI-Raster v2) wie in der Erweiterung; Freeze mit Gewichts-Checksummen und Herkunft jeder Wahl; Replay-Gate; danach
      genau **eine** Auswertung auf val und genau **eine** auf test-dev, Berichtsregeln wie im Freeze der Erweiterung
      (val-Urteil maßgeblich, test-dev nicht bestätigend daneben). Alles in `docs/DECISIONS.md`.
+
+- **2026-11-14 – Ergänzung: YOLO26s als siebter Detektor der Erweiterung (Nutzerentscheid; eingetragen bevor irgendein
+  YOLO26s-Training oder -Ergebnis existiert).** Bis zu diesem Eintrag existiert für YOLO26s nur die heruntergeladene
+  COCO-Gewichtsdatei; kein Training, keine Auswertung.
+  1. **Modell:** YOLO26s, ultralytics 8.4.183 (gepinnt), COCO-Gewichte `yolo26s.pt` (Release v8.4.0, SHA-256
+     646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b, in `runs/ext/heads.json` nachgetragen). Kopf wie
+     YOLO26m: zwei Zweige (o2m / o2o), `reg_max = 1`; derselbe direkte Dekodierpfad wie für YOLO26m (Ergänzung 7c01b5d,
+     Punkt 1), für alle anderen Modelle unverändert.
+  2. **Einordnung:** genau wie YOLO26m (Ergänzung 7c01b5d, Punkt 2), d. h. nach den Regeln für Zwei-Zweig-Modelle wie
+     YOLOv10m: dieselben 25 Zeilen (E-1280 / E-2048 beide Zweige, E-SAHI auf den 1280-Gewichten o2o, E-MZ-NMS-*s* beide
+     Zweige, E-MZ-DENSE-*s* o2m und o2o, Refined Grid B / C, Ganzbild-Zeilen D) mit derselben Einstufung.
+  3. **Rezept unverändert** (Abschnitt 1, Ergänzungen 0f6fecbc und 7c01b5d Punkt 3): COCO-Init, 100 Epochen, Batch 8 (1280)
+     bzw. 3 (2048), Seed 0, AMP, Ultralytics-Standardaugmentierung und -Loss, `optimizer=auto`, `train_main`, gleicher Code.
+     Vor dem Start wird ein Diff aller Trainingsargumente gegen YOLO26m 1280 / 2048 in `docs/DECISIONS.md` eingetragen
+     (erwartet: nur Modell und Ausgabepfade verschieden). Modellauswahl wie YOLO26m: Toolkit-Port-AP auf calib, o2o, an
+     denselben 36 Epochen; Checkpoints jeder ausgewerteten Epoche werden aufbewahrt. OOM-Regel unverändert (einmalige
+     Reduktion 8 → 6 bzw. 3 → 2, Batch ≥ 2; Wiederaufnahme aus `last.pt` nach einem Abbruch wie bei YOLOv12m, als
+     Abweichung mit Epoche protokolliert).
+  4. **Rückrechnung der Boxen:** Die Cache-Zeilen verwenden von Beginn an die Ultralytics-Konventionen (Größenregel,
+     Letterbox-Faktor, Rückrechnung je Achse; `scahi.mapcheck.ultralytics_prep`, Cache-Wurzel `cache_ualigned/`), wie für
+     YOLO26m nach der Entscheidung vom 2026-11-14; calib-, val- und test-dev-Caches werden nur so gebaut.
+  5. **Fragen und Urteile:** E-H1, E-H2 (je s) und E-H3 unverändert, ε = 0,30, gepaarter Bootstrap über val-Bilder (1000,
+     Seed 0), **Urteil je Detektor**; E-H4 deskriptiv. YOLO26s wird wie YOLO26m getrennt berichtet und zählt in keinem
+     Familienkriterium („≥ 4 von 5“, gepoolter Effekt unverändert); Holm-Anhang für YOLO26s allein (unadjustiert).
+  6. **Gates:** G-E1 (eigene Dekodierung gegen Ultralytics, beide Zweige, |ΔAP| ≤ 0,01 auf calib), G-E3 je Größe, und –
+     da YOLO26s ein s-Modell ist – **G-E2**: E-1280 (o2o) innerhalb ±5 AP von YOLOv10s E-1280 (B-FULL 1280, val 33,66);
+     geprüft nach der einzigen val-Auswertung, sonst Prüfung und Bericht, ändert kein Urteil. Einzelpass-Gate auf calib
+     wie bei YOLO26m (bitgleich in zwei Wiederholungen und |Δ| zum Tuning-Wert ≤ 0,05 AP) und vor test-dev das exakte
+     val-Replay aller Zeilen.
+  7. **Nicht prüfbare Fälle:** wie Ergänzung 7c01b5d Punkt 6 (fehlende Zeile → betroffene Hypothese „nicht prüfbar“ =
+     „nicht erfüllt“).
+  8. **Deskriptiver Vergleich bei gleichem Rechenaufwand** (wie im Paper YOLOv10s 2048 gegen YOLOv10m 1280): Einzelpass
+     YOLO26s bei 2048 px gegen Einzelpass YOLO26m bei 1280 px, beide o2o (die Hypothesenzeilen E-2048 bzw. E-1280):
+     GFLOPs je Bild (exakt je Eingabeform, `scahi.flops`, über die val- bzw. test-dev-Bilder) und AP auf val und test-dev,
+     Δ mit gepaartem Bootstrap-KI (1000, Seed 0). Kein Urteil, keine Schwelle.
+  9. **Ablauf:** wie Ergänzung 7c01b5d Punkt 7; der Freeze-Vorschlag geht vor jeder Auswertung auf val oder test-dev an
+     die Autoren; erst nach ihrer Freigabe genau eine Auswertung auf val (mit exaktem Replay) und genau eine auf test-dev.

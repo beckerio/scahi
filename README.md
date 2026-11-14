@@ -133,6 +133,12 @@ See `REPRODUCE.md`: data conversion, training of the single-pass ladder, caches,
 fusion, evaluation. The frozen refined-grid parameters are in `configs/ext/xgrid_frozen.json`, all parameter values
 per detector in `docs/ALGORITHM.md`.
 
+## Tutorial: YOLO26m
+
+`tutorials/yolo26m_visdrone/` adds YOLO26m the same way as the paper's detectors (pre-registered addendum, calib-only
+tuning, freeze, one evaluation on val and test-dev) and shows how to use its frozen weights and parameters (Track A) and
+how to add a new detector the paper way, with the runtimes of each step (Track B).
+
 ## Citation
 
 [![Paper](https://img.shields.io/badge/Paper-arXiv%3A2611.12657-b31b1b.svg)](https://arxiv.org/abs/2611.12657)
