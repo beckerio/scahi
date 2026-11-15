@@ -2512,3 +2512,43 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
 - Note on history: the prepared public YOLO26s files (tutorial --model, frozen_results_yolo26s.json, weight / cached
   asset scripts and records, GitHub file list) went into commit 7ff55d6 together with the fig_ext_scaling label fix
   (they were staged); its message names only the figure. Not rewritten.
+
+## 2026-11-15 – GitHub version rebuilt incl. YOLO26s (local, no push)
+
+- make_github_release.py (run 16:55:41-16:55:48): 619 files, 15.4 MB; missing imports 0, forbidden hits 0, secrets 0,
+  internal URLs 0, binaries 0, SPDX 134 files ok; contains the YOLO26 material of the anonymous release and the public
+  extras (tutorial with --model yolo26s, frozen_results_yolo26s.json, frozen configs ext26 / ext26s). Clean room of the
+  GitHub version (run 16:55:49-16:56:45): passed. No machine names in the tree.
+- Local commits: exports/github/scahi e938b74, public_repos/scahi 7882c90; not pushed.
+- Release assets prepared (not uploaded): weights exports/github/weights/ (37 files incl. visdrone_ext_yolo26s_{1280,2048}
+  _s0.pt, 19.4 MB each, tensor-identical, replay on val exact: runs/release/replay_weight_assets_ext26s.json); cached
+  outputs exports/github/assets/yolo26s_visdrone_cached_{val,test-dev}.tar (718,510,080 / 1,415,464,960 bytes,
+  runs/release/tutorial_assets_yolo26s.json).
+- Cached-mode check of the public tutorial in an isolated copy (python -I, no GPU): YOLO26m val 25/25 exact; YOLO26m
+  test-dev and YOLO26s val / test-dev still running at the time of this entry (result to be added).
+
+## 2026-11-15 17:0x – supplementary.zip 4ee4cf95 superseded (authors)
+
+- The authors report a newer paper set (main paper b44330dc..., three corrections; supplement with updated captions).
+  The supplementary.zip of 16:53 (SHA-256 4ee4cf95..., PDF 1c5d29d1...) and the tag position 20daa78 are superseded and
+  not final. Next: the authors add supplement Tab. 19 and place a new complete paper set in paper/; then verification,
+  release, clean room, supplementary.zip, tag and GitHub version in one go.
+- Values sent for Tab. 19 (tiles + SCAHI, o2m, row C), verbatim from the freezes: pre-specified setting for YOLO26s and
+  YOLO26m at 1280 / 2048 px: f 5, 5 bins per octave, tau_splat 0.005, tau_peak 0.001; refined grid: YOLO26s 1280 f 13,
+  7 bins, tau_splat 0.00125, tau_peak 0.001; YOLO26s 2048 f 13, 8, 0.00125, 0.001; YOLO26m 1280 f 13, 8, 0.0003125,
+  0.001; YOLO26m 2048 f 13, 8, 0.00125, 0.001 (iou_cluster 0.5 in all).
+
+## 2026-11-15 17:14 – Final paper set (with Tab. 19); supplementary.zip; tag moved (authors)
+
+- paper/ (files of 16:11; folder refilled by the authors) verified 17:12:25: sha256sum -c SHA256SUMS.txt, all five OK.
+  supplementary.pdf 1a1702c433cd4841ecb7dc68d8f93aeb247cc75716be920a46c83954676b1cab, main paper (review)
+  7c5f3716117ce59cb936ee8a1258b8eb0ed7f9eefc76e72e65ca9b7cc0dee705, arXiv PDF b44b79cd... (the authors' message named
+  the main paper "b44330dc...", which matches no file of the set; the checksum file itself verifies).
+- Build on dcfc377 (actual run 17:12:37-17:14:05): regeneration 106/106 identical, 27/27 commands (incl. the five
+  YOLO26 supplement figures and reports/ext26/); release 594 files, forbidden hits 0, missing imports 0; clean room passed.
+- supplementary.zip (run 17:14:05-17:14:10): 597 files, 16,224,850 bytes (15.47 MiB), SHA-256
+  cfd8a343235971e61ce2ef6af1f58052497f07a7dba21e9cc34090f66d8467eb; scan incl. PDF metadata (Info, XMP, 429 streams,
+  text): forbidden hits 0, binaries other than the PDF 0, metadata issues 0, PDF identical to paper/supplementary.pdf.
+  This is the final package; 4ee4cf95 (16:53) is superseded.
+- Tag the planned submission tag (annotated) moved from 20daa784ca394eb1cb9ec9707734d02c22c0cc2a to
+  dcfc377fa375e07a40d59e3e1d822fe63b8abc46 (the producing commit).
