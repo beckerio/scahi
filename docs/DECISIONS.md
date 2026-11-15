@@ -2596,3 +2596,20 @@ All descriptive / post hoc.
   text): forbidden hits 0, binaries other than the PDF 0, metadata issues 0, PDF identical to paper/supplementary.pdf.
   Supersedes cfd8a343 (17:14).
 - Tag the planned submission tag (annotated) moved from dcfc377fa375e07a40d59e3e1d822fe63b8abc46 to 86f55c73249eb089006e19f1dc9bcc1391e497f2 (producing commit).
+- GitHub version (make_github_release.py 20:52:19-20:52:25: 622 files, 16.7 MB, missing imports 0, forbidden hits 0,
+  secrets 0, internal URLs 0, binaries 0, SPDX ok; clean room 20:52:25-20:53:13 passed; no machine names; incl. the
+  public YOLO26 material); local commits exports/github/scahi 4bbaf58, public_repos/scahi cc4e52f; not pushed.
+
+## 2026-11-15 22:47 – New final paper set (supplement consistency fixes); supplementary.zip rebuilt; tag moved (authors)
+
+- paper/ emptied and refilled by the authors; verified 22:45 (sha256sum -c SHA256SUMS.txt: all five OK). Only the
+  supplement changed (consistency fixes in Sec. 1, 2, 4 and 7): supplementary.pdf
+  46d03112afc758114deb2a245f3c250692c738d9785ae2f8131ddd44bf6c570b (was a91e79da); main paper (review) unchanged,
+  83870e33e113a1dcd337ea3c8223af6373896c467232a4b5466d84f19b1dbf6a (the submitted one). No code change.
+- Build on d3f75de5e29a71c4e40c33d642403ec64f174d11 (actual run 22:45:17-22:46:46): regeneration 109/109 identical, 27/27 commands; release 597 files,
+  forbidden hits 0, missing imports 0; clean room passed.
+- supplementary.zip (run 22:46:52-22:46:57): 600 files, 16,498,833 bytes (15.73 MiB), SHA-256
+  d208f336cf549ab0dcbcddb470e3690aab1e96c54532df13099e853343d3b518; scan incl. PDF metadata (Info, XMP, 432 streams,
+  text): forbidden hits 0, binaries other than the PDF 0, metadata issues 0, PDF identical to paper/supplementary.pdf.
+  Supersedes 97014e67 (20:50).
+- Tag the planned submission tag (annotated) moved from 86f55c73249eb089006e19f1dc9bcc1391e497f2 to d3f75de5e29a71c4e40c33d642403ec64f174d11 (producing commit).
