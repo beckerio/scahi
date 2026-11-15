@@ -690,43 +690,82 @@ def _training_runs(added: bool = False) -> list[dict]:
 
 
 def fig_ext_calib_curves() -> None:
-    """Calib AP over epochs for o2o and o2m+NMS of every B-FULL run (descriptive; recipe unchanged)."""
-    order = list(ALL_LABEL)
-    runs = sorted(_training_runs(added=True), key=lambda r: (order.index(r["model"]), r["imgsz"], r["seed"]))
-    n = len(runs)
-    cols = 4
-    rows = int(np.ceil(n / cols))
-    fig, axes = plt.subplots(rows, cols, figsize=(FULL_W, 1.55 * rows + 0.4), constrained_layout=True, sharex=True,
-                             squeeze=False)
-    for ax, r in zip(axes.flat, runs):
-        c = r["curve"]
-        ep = [x["epoch"] for x in c]
-        sel = c[0].get("selection_branch", "o2o")
-        sel_lbl = "o2o (NMS-free)" if sel == "o2o" else "single head + NMS"
-        ax.plot(ep, [x["AP"] for x in c], "-o", color=BLUE if sel == "o2o" else ORANGE, ms=2.4, lw=1.3, label=sel_lbl)
-        if "AP_o2m" in c[0]:
-            ax.plot(ep, [x["AP_o2m"] for x in c], "-s", color=ORANGE, ms=2.2, lw=1.1, label="o2m + NMS")
-        b = max(c, key=lambda x: x["AP"])
-        ax.axvline(b["epoch"], color=MUTED, lw=0.7, ls=(0, (2, 2)))
-        drop = c[-1]["AP"] - b["AP"]
-        state = "" if r["done"] else "  (running)"
-        ax.set_title(f"{ALL_LABEL[r['model']]} {r['imgsz']}" + (f" s{r['seed']}" if r["seed"] else "") + state, fontsize=7)
-        ax.text(0.98, 0.04, f"best ep {b['epoch']}: {b['AP']:.1f}" + (f"\nep {c[-1]['epoch']}: {drop:+.1f}" if r["done"] else ""),
-                transform=ax.transAxes, ha="right", va="bottom", fontsize=5.6, color=INK2)
+    """Calib AP over epochs for o2o and o2m+NMS of every B-FULL run (descriptive; recipe unchanged). Logical grid: one
+    row per family (YOLOv10, YOLOv11, YOLOv12, YOLO26), columns s 1280 / s 2048 / m 1280 / m 2048; a last row with the
+    extra YOLOv10s sizes (640 with its three seeds in one panel, 1536, 2560)."""
+    runs = _training_runs(added=True)
+    by = {(r["model"], r["imgsz"], r["seed"]): r for r in runs}
+    fams = (("yolov10", "YOLOv10"), ("yolo11", "YOLOv11"), ("yolo12", "YOLOv12"), ("yolo26", "YOLO26"))
+    cols = (("s", 1280), ("s", 2048), ("m", 1280), ("m", 2048))
+    pre = {"yolov10": "yolov10", "yolo11": "yolo11", "yolo12": "yolo12", "yolo26": "yolo26"}
+    grid = [[(f"{pre[f]}{sz_}", sz, 0) for sz_, sz in cols] for f, _ in fams]
+    extra = [("yolov10s", 640, None), ("yolov10s", 1536, 0), ("yolov10s", 2560, 0), None]
+    fig, axes = plt.subplots(len(grid) + 1, 4, figsize=(FULL_W, 1.5 * (len(grid) + 1) + 0.45), constrained_layout=True,
+                             sharex=True, squeeze=False)
+    seed_ls = {0: "-", 1: (0, (4, 1.5)), 2: (0, (1, 1.2))}
+
+    def draw(ax, rs, title):
+        bests = []
+        for r in rs:
+            c = r["curve"]
+            ep = [x["epoch"] for x in c]
+            sel = c[0].get("selection_branch", "o2o")
+            ls = seed_ls[r["seed"]]
+            one = len(rs) == 1
+            ax.plot(ep, [x["AP"] for x in c], marker="o" if one else None, ls=ls, color=BLUE if sel == "o2o" else ORANGE,
+                    ms=2.4, lw=1.3 if one else 1.0)
+            if "AP_o2m" in c[0]:
+                ax.plot(ep, [x["AP_o2m"] for x in c], marker="s" if one else None, ls=ls, color=ORANGE, ms=2.2,
+                        lw=1.1 if one else 0.9)
+            b = max(c, key=lambda x: x["AP"])
+            ax.axvline(b["epoch"], color=MUTED, lw=0.7, ls=(0, (2, 2)))
+            bests.append((r["seed"], b, c[-1]["AP"] - b["AP"]))
+        if len(bests) == 1:
+            _, b, drop = bests[0]
+            txt = f"best ep {b['epoch']}: {b['AP']:.1f}\nep 100: {drop:+.1f}"
+        else:
+            txt = "\n".join(f"seed {sd}: best ep {b['epoch']}: {b['AP']:.1f}" for sd, b, _ in bests)
+        ax.text(0.98, 0.04, txt, transform=ax.transAxes, ha="right", va="bottom", fontsize=5.4, color=INK2)
+        ax.set_title(title, fontsize=7)
         ax.tick_params(labelsize=6)
-    for ax in list(axes.flat)[n:]:
-        ax.set_visible(False)
+
+    for i, ((f, flbl), row) in enumerate(zip(fams, grid)):
+        for j, (m, sz, sd) in enumerate(row):
+            ax = axes[i, j]
+            r = by.get((m, sz, sd))
+            if r is None:
+                ax.set_title(f"{ALL_LABEL.get(m, m)} {sz}", fontsize=7)
+                ax.text(0.5, 0.5, "not trainable", transform=ax.transAxes, ha="center", va="center", fontsize=6.4,
+                        color=MUTED)
+                ax.set_yticks([])
+                ax.grid(False)
+                continue
+            draw(ax, [r], f"{ALL_LABEL[m]} {sz}")
+    for j, e in enumerate(extra):
+        ax = axes[-1, j]
+        if e is None:
+            ax.set_visible(False)
+            continue
+        m, sz, sd = e
+        rs = sorted([r for k, r in by.items() if k[0] == m and k[1] == sz and (sd is None or k[2] == sd)],
+                    key=lambda r: r["seed"])
+        draw(ax, rs, f"{ALL_LABEL[m]} {sz}" + (" (seeds 0 / 1 / 2)" if len(rs) > 1 else ""))
     for ax in axes[-1]:
         ax.set_xlabel("epoch", fontsize=6.5)
+    axes[-2, 3].tick_params(labelbottom=True)
     for ax in axes[:, 0]:
         ax.set_ylabel("calib AP [%]", fontsize=6.5)
     h = [plt.Line2D([], [], color=BLUE, marker="o", ms=3, lw=1.3), plt.Line2D([], [], color=ORANGE, marker="s", ms=3, lw=1.1),
-         plt.Line2D([], [], color=MUTED, lw=0.7, ls=(0, (2, 2)))]
+         plt.Line2D([], [], color=MUTED, lw=0.7, ls=(0, (2, 2))),
+         plt.Line2D([], [], color=INK2, lw=1.0, ls=seed_ls[1]), plt.Line2D([], [], color=INK2, lw=1.0, ls=seed_ls[2])]
     fig.legend(h, ["o2o (NMS-free head, YOLOv10 / YOLO26 selection)",
                    "o2m + NMS (YOLOv10 / YOLO26) / single head + NMS (YOLOv11/v12)",
-                   "selected epoch (best calib AP)"], loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=3, fontsize=6.2)
+                   "selected epoch (best calib AP)", "seed 1 (640 px)", "seed 2 (640 px)"],
+               loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=3, fontsize=6.2)
     fig.suptitle("Calib AP during training (toolkit port at the scheduled calib evaluations) - descriptive, recipe unchanged",
                  fontsize=7.6, x=0.01, ha="left")
+    order = list(ALL_LABEL)
+    runs = sorted(runs, key=lambda r: (order.index(r["model"]), r["imgsz"], r["seed"]))
     save(fig, "fig_ext_calib_curves", OUT_EXT)
     save_csv([{"model": r["model"], "imgsz": r["imgsz"], "seed": r["seed"], **x} for r in runs for x in r["curve"]],
              "fig_ext_calib_curves", OUT_EXT)
@@ -1068,7 +1107,8 @@ def fig_ext_recall() -> None:
 
 def fig_ext_xgrid_cost() -> None:
     """X-grid calib curve per case: calib AP vs. fusion time per image (ratio to the F2 reference timed in the same
-    process), every evaluated variant incl. those above the 2x limit (exploratory, post hoc)."""
+    process), every evaluated variant incl. those above the 2x limit (exploratory, post hoc). Two figures, each at most
+    as tall as wide (full text width with caption on a page): (a) the detectors of the original studies, (b) YOLO26s/m."""
     f = REPO / "runs/ext/grid_ext.json"
     if not f.exists():
         return
@@ -1078,15 +1118,23 @@ def fig_ext_xgrid_cost() -> None:
         if (REPO / f26).exists():
             res.update(jload(f26)["results"])
     order = {m: i for i, m in enumerate((*EXT_MODELS, "yolov10s", *ADD_LABEL))}  # YOLOv10s 2048 after the five
-    keys = sorted(res, key=lambda k: (order[k.split("/")[0]], int(k.split("/")[1]), k.split("/")[2], k.split("/")[3]))
+    keys_all = sorted(res, key=lambda k: (order[k.split("/")[0]], int(k.split("/")[1]), k.split("/")[2], k.split("/")[3]))
+    for part, keys, nc in (("a", [k for k in keys_all if k.split("/")[0] not in ADD_LABEL], 5),
+                           ("b", [k for k in keys_all if k.split("/")[0] in ADD_LABEL], 4)):
+        if keys:
+            _xgrid_figure(res, keys, nc, f"fig_ext_xgrid_cost_{part}",
+                          "original studies" if part == "a" else "YOLO26s and YOLO26m")
+
+
+def _xgrid_figure(res: dict, keys: list[str], nc: int, name: str, who: str) -> None:
     pk = lambda r: tuple(round(float(r[p]), 12) for p in ("tau_splat", "tau_peak", "cell_factor", "bins_per_oct"))  # noqa: E731
     cf_col = {7.0: ORD4[0], 9.0: ORD4[1], 11.0: ORD4[2], 13.0: ORD4[3]}
     thr = lambda r: ("ref" if (r["tau_splat"], r["tau_peak"]) == (0.005, 0.001) else  # noqa: E731
                      "low" if r["tau_splat"] < 0.005 and r["tau_peak"] < 0.001 else "mixed")
     mk = {"ref": "o", "mixed": "s", "low": "^"}
-    nc = 4
     nr = -(-len(keys) // nc)
-    fig, axes = plt.subplots(nr, nc, figsize=(FULL_W, 1.45 * nr), constrained_layout=True, squeeze=False)
+    fig, axes = plt.subplots(nr, nc, figsize=(FULL_W, min(FULL_W - 0.75, 1.2 * nr + 0.9)), constrained_layout=True,
+                             squeeze=False)
     rows = []
     for ax, k in zip(axes.flat, keys):
         o = res[k]
@@ -1105,15 +1153,17 @@ def fig_ext_xgrid_cost() -> None:
             ax.scatter(r["time_ratio_vs_ref"], r["AP"], zorder=4, **st)
         ax.axvline(2.0, color=INK2, lw=0.6, ls=(0, (3, 2)), zorder=2)
         m, sz, br, row = k.split("/")
-        ax.set_title(f"{ALL_LABEL[m]} {sz} {br} · {'whole image' if row == 'B' else '+ tiles'}", fontsize=6.2)
-        ax.tick_params(labelsize=5.6)
+        ax.set_title(f"{ALL_LABEL[m]} N = {sz} {br}\n{'whole image' if row == 'B' else '+ tiles'}", fontsize=6.2)
+        ax.tick_params(labelsize=5.8)
         ax.set_axisbelow(True)
     for ax in axes.flat[len(keys):]:
         ax.set_visible(False)
     for ax in axes[:, 0]:
         ax.set_ylabel("calib AP", fontsize=6.0)
-    for ax in axes[-1, :]:
-        ax.set_xlabel("fusion time / pre-specified setting", fontsize=6.0)
+    for j in range(nc):  # x label under the lowest visible panel of each column
+        col = [ax for ax in axes[:, j] if ax.get_visible()]
+        if col:
+            col[-1].set_xlabel("fusion time / pre-specified setting", fontsize=6.0)
     from matplotlib.lines import Line2D
     h = [Line2D([], [], ls="", marker="s", color=c, ms=3.5, label=f"cell factor {int(v)}") for v, c in cf_col.items()]
     h += [Line2D([], [], ls="", marker="D", color=MUTED, ms=3, label="SCAHI, pre-specified setting"),
@@ -1124,12 +1174,12 @@ def fig_ext_xgrid_cost() -> None:
           Line2D([], [], ls="", marker="*", mfc="none", mec=ORANGE, ms=6, label="best without limit"),
           Line2D([], [], color=INK2, lw=0.6, ls=(0, (3, 2)), label="2× time limit")]
     fig.legend(handles=h, fontsize=5.6, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=6)
-    title = ("SCAHI, refined grid on calib: AP vs. fusion time (exploratory, post hoc; selected on calib after val results "
-             "were known)")
+    title = (f"SCAHI, refined grid on calib, {who}: AP vs. fusion time (exploratory, post hoc; selected on calib "
+             "after val results were known)")
     fig.suptitle(title if _ext_complete() else f"INTERIM - {title}", fontsize=7.0,
                  color=INK if _ext_complete() else ORANGE)
-    save(fig, "fig_ext_xgrid_cost", OUT_EXT)
-    save_csv(rows, "fig_ext_xgrid_cost", OUT_EXT)
+    save(fig, name, OUT_EXT)
+    save_csv(rows, name, OUT_EXT)
 
 
 CROSS_ID = "X_v10s_train2560_infer3072_o2o"

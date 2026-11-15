@@ -3,6 +3,7 @@
 
     python scripts/tiles_payoff.py compute [--workers 8]   # per-image ΔAP + covariates -> reports/tiles_payoff/*.csv
     python scripts/tiles_payoff.py report                  # Spearman + bootstrap CI, figure, markdown
+    python scripts/tiles_payoff.py compute26 [--workers 4] # YOLO26s / YOLO26m rows appended (other rows unchanged)
 
 ΔAP per image = tiles + SCAHI (refined grid) 2048 - single pass 2048, same detector and head, from the stored
 detections of the frozen rows only. VisDrone test-dev: toolkit-port AP@[.5:.95] of the image (as fig_qualitative_v2);
@@ -39,9 +40,15 @@ NAME = {"yolov10s": "YOLOv10s", "yolov10m": "YOLOv10m", "yolo11s": "YOLOv11s", "
 VD_PAIRS = (("yolov10s", "o2o"), ("yolov10m", "o2m"), ("yolov10m", "o2o"), ("yolo11s", "o2m"), ("yolo11m", "o2m"),
             ("yolo12s", "o2m"))
 DOTA_MODELS = ("yolov10s", "yolov10m")
+# addendum detectors (YOLO26s / m; two-branch as YOLOv10m: both heads; refined grid row C of their freeze)
+ADD_PAIRS = (("yolo26s", "o2m"), ("yolo26s", "o2o"), ("yolo26m", "o2m"), ("yolo26m", "o2o"))
+NAME.update(yolo26s="YOLO26s", yolo26m="YOLO26m")
 
 
 def vd_runs(m: str, h: str) -> tuple[Path, Path]:
+    if m.startswith("yolo26"):
+        d = REPO / f"runs/ext/{m}/testdev"
+        return d / f"E_{m}_full2048_{h}", d / f"XG_{m}_2048_{h}_C"
     single = R2 if m == "yolov10s" else TD / f"E_{m}_full2048_{h}"
     xg = [p for p in TD.glob(f"XG_{m}_mz2048_*_{h}") if p.is_dir()]
     assert len(xg) == 1, (m, h, xg)
@@ -114,6 +121,29 @@ def compute_visdrone(workers: int) -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT / f"per_image_visdrone_{T.SPLIT}.csv", index=False)
     print("visdrone", df.groupby("detector").dAP.describe(), flush=True)
+
+
+def compute_visdrone_add(workers: int) -> None:
+    """YOLO26 rows with the same per-image AP and covariates; appended to the stored table (existing rows untouched)."""
+    from scahi import ext_testdev as T
+
+    f = OUT / f"per_image_visdrone_{T.SPLIT}.csv"
+    old = pd.read_csv(f, float_precision="round_trip")  # exact floats: the stored rows are written back byte for byte
+    old = old[~old.detector.isin([NAME[m] for m, _ in ADD_PAIRS])]
+    cov = vd_covariates()
+    n = len(cov)
+    runs = sorted({str(r) for m, h in ADD_PAIRS for r in vd_runs(m, h)})
+    with ProcessPoolExecutor(workers) as ex:
+        ap = {run: v for run, v in ex.map(_vd_ap, [(r, 0, n) for r in runs])}
+    recs = []
+    for m, h in ADD_PAIRS:
+        s, x = vd_runs(m, h)
+        recs.append(cov.assign(dataset="VisDrone test-dev", detector=NAME[m], head=h, single_run=str(s.relative_to(REPO)),
+                               scahi_run=str(x.relative_to(REPO)), AP_single=ap[str(s)], AP_scahi=ap[str(x)]))
+    new = pd.concat(recs, ignore_index=True)
+    new["dAP"] = new.AP_scahi - new.AP_single
+    pd.concat([old, new], ignore_index=True).to_csv(f, index=False)
+    print("visdrone (YOLO26)", new.groupby(["detector", "head"]).dAP.describe(), flush=True)
 
 
 def compute_dota() -> None:
@@ -192,7 +222,7 @@ def report() -> None:
 
     import figstyle as FS
 
-    vd = _valid(pd.read_csv(OUT / "per_image_visdrone_test-dev.csv"))
+    vd = _valid(pd.read_csv(OUT / "per_image_visdrone_test-dev.csv", float_precision="round_trip"))
     dt = _valid(pd.read_csv(OUT / "per_image_dota_val.csv"))
     vd["detector"], dt["detector"] = vd.detector.map(display), dt.detector.map(display)  # stored with the old names
     res = {"label": LABEL, "rule": "docs/DECISIONS.md 2026-10-31 ~14:50", "n_boot": N_BOOT, "seed": SEED, "rows": []}
@@ -231,19 +261,22 @@ def report() -> None:
                 mu = np.array([x["mean_dAP"] for x in b])
                 lo = np.array([x["ci95"][0] for x in b])
                 hi = np.array([x["ci95"][1] for x in b])
-                name = r["detector"] + (f" ({r['head']})" if ds.startswith("VisDrone") and r["detector"] == "YOLOv10m" else "")
+                name = r["detector"] + (f" ({r['head']})" if ds.startswith("VisDrone") and
+                                        r["detector"] in ("YOLOv10m", "YOLO26s", "YOLO26m") else "")
                 hl = ds.startswith("DOTA") or r["detector"] == "YOLOv10s"
-                c = col.get(r["detector"], FS.BLUE) if hl else FS.MUTED
+                y26 = r["detector"].startswith("YOLO26")  # addendum detectors: thin lines in colour slot 4
+                c = col.get(r["detector"], FS.BLUE) if hl else FS.MAGENTA if y26 else FS.MUTED
                 rho = r[f"spearman_{cv}"]
                 lab = f"{name}: ρ {rho['rho']:+.2f} [{rho['ci95'][0]:+.2f}, {rho['ci95'][1]:+.2f}]"
                 if hl:
                     ax.fill_between(xc, lo, hi, color=c, alpha=0.18, lw=0)
                     ax.plot(xc, mu, "-o", color=c, lw=FS.LINE_W, ms=FS.MARKER_SIZE, label=lab)
                 else:
-                    first = not any(l.get_label().startswith("5 other") for l in ax.get_lines())
-                    ax.plot(xc, mu, "-", color=c, lw=0.8, alpha=0.8,
-                            label="5 other detector rows (ρ in table)"
-                            if first else "_nolegend_")
+                    n_oth = sum(1 for q in rows if q["detector"] != "YOLOv10s" and not q["detector"].startswith("YOLO26"))
+                    n_26 = sum(1 for q in rows if q["detector"].startswith("YOLO26"))
+                    tag = f"YOLO26s / m, {n_26} rows (ρ in table)" if y26 else f"{n_oth} other detector rows (ρ in table)"
+                    first = not any(l.get_label() == tag for l in ax.get_lines())
+                    ax.plot(xc, mu, "-", color=c, lw=0.8, alpha=0.8, label=tag if first else "_nolegend_")
                 for x, m_, l_, h_, bb in zip(xc, mu, lo, hi, b):
                     rec.append({"dataset": ds, "covariate": cv, "detector": name, "bin": bb["bin"], "x": x, "mean_dAP": m_,
                                 "ci_lo": l_, "ci_hi": h_, "n_img": bb["n_img"]})
@@ -279,12 +312,14 @@ def report() -> None:
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("cmd", choices=("compute", "report"))
+    ap.add_argument("cmd", choices=("compute", "compute26", "report"))
     ap.add_argument("--workers", type=int, default=8)
     a = ap.parse_args()
     if a.cmd == "compute":
         compute_dota()
         compute_visdrone(a.workers)
+    elif a.cmd == "compute26":
+        compute_visdrone_add(a.workers)
     else:
         report()
 

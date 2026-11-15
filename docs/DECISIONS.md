@@ -2552,3 +2552,47 @@ Public copy; venue-specific details are redacted. Dates, decisions and reasons a
   This is the final package; 4ee4cf95 (16:53) is superseded.
 - Tag the planned submission tag (annotated) moved from 20daa784ca394eb1cb9ec9707734d02c22c0cc2a to
   dcfc377fa375e07a40d59e3e1d822fe63b8abc46 (the producing commit).
+- GitHub version rebuilt after the tag (make_github_release.py 17:15:57-17:16:04: 619 files, 15.4 MB, missing imports
+  0, forbidden hits 0, secrets 0, internal URLs 0, binaries 0, SPDX ok; clean room 17:16:04-17:16:55 passed; no machine
+  names); local commits exports/github/scahi 051a726, public_repos/scahi d7bacef; not pushed. Cached-mode check of the
+  public tutorial still running (YOLO26m val 25/25 exact; YOLO26m test-dev, YOLO26s val / test-dev in progress).
+
+## 2026-11-15 20:xx – Supplement overhaul: tiles payoff, refined-grid figure split, calib-curve grid, small objects (authors)
+
+All descriptive / post hoc.
+- Cached-mode check of the public tutorial finished (isolated copy, python -I, no GPU): YOLO26m val 25/25, test-dev 25/25,
+  YOLO26s val 25/25, test-dev 25/25, all exact.
+- Tiles payoff (scripts/tiles_payoff.py compute26, same functions as for the other detectors; rows appended to
+  reports/tiles_payoff/per_image_visdrone_test-dev.csv, the 9,660 existing rows byte-identical; reading now with
+  float_precision="round_trip" so that a rewrite keeps them byte for byte): per-image gain = tiles + SCAHI refined grid
+  (row C of the freeze) - single pass, 2048 px, VisDrone test-dev, same head (both heads, as YOLOv10m). Spearman rho
+  [95 % CI, 2000 image resamples, seed 0], share < 16 px / share crowded: YOLO26s o2o +0.021 [-0.029, +0.073] / +0.082
+  [+0.036, +0.127]; YOLO26s o2m -0.096 [-0.145, -0.045] / -0.058 [-0.104, -0.010]; YOLO26m o2o +0.072 [+0.024, +0.124] /
+  +0.051 [+0.002, +0.100]; YOLO26m o2m -0.090 [-0.138, -0.042] / -0.036 [-0.081, +0.016]. The o2o rows satisfy
+  "|rho| <= 0.09"; YOLO26s o2m (-0.096, rounded -0.10) does not. fig_ext_tiles_payoff: YOLO26 rows as thin lines in
+  colour slot 4 ("YOLO26s / m, 4 rows").
+- fig_ext_xgrid_cost split into fig_ext_xgrid_cost_a (26 cases of the original studies, 5 columns) and _b (16 YOLO26
+  cases, 4 columns), each at most as tall as wide incl. legend (PNG 1583 x 1460 and 1546 x 1361 px); two-line panel
+  titles with N; x label under the lowest panel of each column. Old fig_ext_xgrid_cost.* removed; regeneration OUTPUTS
+  updated.
+- fig_ext_calib_curves: logical grid, one row per family (YOLOv10, YOLOv11, YOLOv12, YOLO26) x (s 1280, s 2048, m 1280,
+  m 2048), YOLOv12m 2048 "not trainable", last row YOLOv10s 640 (three seeds in one panel, line styles), 1536, 2560;
+  plotted data unchanged (CSV byte-identical).
+- Small-object table values (stored pycocotools size bins of the test-dev rows, as for the four detectors in the table:
+  single pass o2o, tiles + NMS-IOS o2o, tiles + SCAHI o2m, refined grid o2m), AP < 8 / 8-16 px: YOLO26s 6.17 / 14.10,
+  6.29 / 14.55, 7.10 / 15.10, 7.54 / 15.45; YOLO26m 7.76 / 15.93, 8.26 / 16.18, 7.50 / 16.78, 7.76 / 17.21
+  (reports/ext26/small_objects.csv, in the regeneration).
+- supplementary.zip not rebuilt (authors: wait for the final supplement PDF).
+
+## 2026-11-15 20:50 – Final paper set; final supplementary.zip; tag moved (authors)
+
+- paper/ verified 20:48:32 (sha256sum -c SHA256SUMS.txt: all five OK); supplementary.pdf
+  a91e79da0a3d37609c83934f0d44ae5b05f923170372e84067519c6f149121b7 (contains the overhauled figures and values of
+  86f55c7), main paper (review) 83870e33e113a1dcd337ea3c8223af6373896c467232a4b5466d84f19b1dbf6a.
+- Build on 86f55c7 (actual run 20:48:52-20:50:22): regeneration 109/109 identical, 27/27 commands; release 597 files,
+  forbidden hits 0, missing imports 0; clean room passed.
+- supplementary.zip (run 20:50:23-20:50:28): 600 files, 16,498,039 bytes (15.73 MiB), SHA-256
+  97014e67f09654849694cdb63d4adf29331d84f3822c10b02f4d3e54e03d5e26; scan incl. PDF metadata (Info, XMP, 432 streams,
+  text): forbidden hits 0, binaries other than the PDF 0, metadata issues 0, PDF identical to paper/supplementary.pdf.
+  Supersedes cfd8a343 (17:14).
+- Tag the planned submission tag (annotated) moved from dcfc377fa375e07a40d59e3e1d822fe63b8abc46 to 86f55c73249eb089006e19f1dc9bcc1391e497f2 (producing commit).

@@ -10,5 +10,9 @@ Per image: ΔAP = tiles + SCAHI (refined grid) 2048 − single pass 2048 (same d
 | VisDrone test-dev | YOLOv11s | o2m | 1610 | +4.97 | -0.05 [-0.10, -0.00] | -0.06 [-0.11, -0.01] |
 | VisDrone test-dev | YOLOv11m | o2m | 1610 | +4.73 | -0.04 [-0.09, +0.01] | -0.03 [-0.08, +0.02] |
 | VisDrone test-dev | YOLOv12s | o2m | 1610 | +4.98 | -0.04 [-0.09, +0.01] | -0.01 [-0.06, +0.04] |
+| VisDrone test-dev | YOLO26s | o2m | 1610 | +4.95 | -0.10 [-0.15, -0.05] | -0.06 [-0.10, -0.01] |
+| VisDrone test-dev | YOLO26s | o2o | 1610 | +1.27 | +0.02 [-0.03, +0.07] | +0.08 [+0.04, +0.13] |
+| VisDrone test-dev | YOLO26m | o2m | 1610 | +4.40 | -0.09 [-0.14, -0.04] | -0.04 [-0.08, +0.02] |
+| VisDrone test-dev | YOLO26m | o2o | 1610 | +0.84 | +0.07 [+0.02, +0.12] | +0.05 [+0.00, +0.10] |
 | DOTA-val | YOLOv10s | o2o / o2m | 456 | +4.16 | +0.21 [+0.11, +0.30] | +0.03 [-0.07, +0.12] |
 | DOTA-val | YOLOv10m | o2o / o2m | 456 | +3.68 | +0.15 [+0.06, +0.24] | +0.01 [-0.09, +0.11] |

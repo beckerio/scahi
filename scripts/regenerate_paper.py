@@ -66,6 +66,7 @@ reports/ext26/gflops_single.csv
 reports/ext26/equal_compute.csv
 reports/ext26/tab_s_y26.csv
 reports/ext26/single_pass_gate.csv
+reports/ext26/small_objects.csv
 reports/backmap_check.json
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.csv
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.md
@@ -129,8 +130,10 @@ reports/figures/ext/fig_ext_scaling.data.json
 reports/figures/ext/fig_ext_tiles_payoff.csv
 reports/figures/ext/fig_ext_waterfall.csv
 reports/figures/ext/fig_ext_waterfall.data.json
-reports/figures/ext/fig_ext_xgrid_cost.csv
-reports/figures/ext/fig_ext_xgrid_cost.data.json
+reports/figures/ext/fig_ext_xgrid_cost_a.csv
+reports/figures/ext/fig_ext_xgrid_cost_a.data.json
+reports/figures/ext/fig_ext_xgrid_cost_b.csv
+reports/figures/ext/fig_ext_xgrid_cost_b.data.json
 reports/figures/paper/fig_band_edge.data.json
 reports/figures/paper/fig_border_fp.data.json
 reports/figures/paper/fig_degradation.data.json

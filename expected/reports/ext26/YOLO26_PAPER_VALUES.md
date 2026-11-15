@@ -47,6 +47,13 @@ AP@[.5:.95], VisDrone toolkit protocol (ignored regions, at most 500 detections 
 | Q2, 2048 px | +1.63 | 1.39 | 1.85 | +2.27 | met | +1.77 | 1.54 | 1.99 | +2.52 | met |
 | Q3 | +0.90 | 0.64 | 1.16 | +1.03 | met | +0.28 | 0.04 | 0.51 | +0.51 | not met |
 
+## Supplement small-object table (test-dev, passes at 2048 px; AP < 8 px / 8-16 px, pycocotools size bins)
+
+| detector | single pass | tiles, NMS | tiles, SCAHI | tiles, SCAHI refined grid |
+|---|---|---|---|---|
+| YOLO26s | 6.17 / 14.10 | 6.29 / 14.55 | 7.10 / 15.10 | 7.54 / 15.45 |
+| YOLO26m | 7.76 / 15.93 | 8.26 / 16.18 | 7.50 / 16.78 | 7.76 / 17.21 |
+
 ## YOLO26s single-pass gate (not met as specified; choice unchanged, batch-1 values = reference)
 
 | row | calib AP tuning (batch 16) | calib AP replay (batch 1) | difference |

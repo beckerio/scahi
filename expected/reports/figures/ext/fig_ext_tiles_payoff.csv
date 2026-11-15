@@ -29,6 +29,26 @@ VisDrone test-dev,share_lt16,YOLOv12s,"[0.1, 0.25)",0.1750,5.3662,4.6196,6.1279,
 VisDrone test-dev,share_lt16,YOLOv12s,"[0.25, 0.5)",0.3750,4.3900,3.8734,4.9106,343
 VisDrone test-dev,share_lt16,YOLOv12s,"[0.5, 0.75)",0.6250,4.5844,3.9481,5.2565,255
 VisDrone test-dev,share_lt16,YOLOv12s,"[0.75, 1]",0.8750,4.3105,3.3562,5.3928,113
+VisDrone test-dev,share_lt16,YOLO26s (o2m),"[0, 0.1)",0.0500,5.7353,5.1494,6.3441,623
+VisDrone test-dev,share_lt16,YOLO26s (o2m),"[0.1, 0.25)",0.1750,5.2911,4.6242,6.0181,276
+VisDrone test-dev,share_lt16,YOLO26s (o2m),"[0.25, 0.5)",0.3750,4.1232,3.5896,4.6629,343
+VisDrone test-dev,share_lt16,YOLO26s (o2m),"[0.5, 0.75)",0.6250,4.5093,3.8439,5.1799,255
+VisDrone test-dev,share_lt16,YOLO26s (o2m),"[0.75, 1]",0.8750,3.2448,2.5269,3.9820,113
+VisDrone test-dev,share_lt16,YOLO26s (o2o),"[0, 0.1)",0.0500,1.1310,0.7065,1.5927,623
+VisDrone test-dev,share_lt16,YOLO26s (o2o),"[0.1, 0.25)",0.1750,1.5501,1.0299,2.1039,276
+VisDrone test-dev,share_lt16,YOLO26s (o2o),"[0.25, 0.5)",0.3750,1.5004,1.1178,1.8718,343
+VisDrone test-dev,share_lt16,YOLO26s (o2o),"[0.5, 0.75)",0.6250,1.0587,0.6153,1.4740,255
+VisDrone test-dev,share_lt16,YOLO26s (o2o),"[0.75, 1]",0.8750,1.1213,0.5926,1.6593,113
+VisDrone test-dev,share_lt16,YOLO26m (o2m),"[0, 0.1)",0.0500,4.9510,4.4167,5.4929,623
+VisDrone test-dev,share_lt16,YOLO26m (o2m),"[0.1, 0.25)",0.1750,4.9080,4.2163,5.7013,276
+VisDrone test-dev,share_lt16,YOLO26m (o2m),"[0.25, 0.5)",0.3750,3.9253,3.4190,4.4633,343
+VisDrone test-dev,share_lt16,YOLO26m (o2m),"[0.5, 0.75)",0.6250,3.8430,3.2284,4.4462,255
+VisDrone test-dev,share_lt16,YOLO26m (o2m),"[0.75, 1]",0.8750,2.8271,1.9673,3.7185,113
+VisDrone test-dev,share_lt16,YOLO26m (o2o),"[0, 0.1)",0.0500,0.4984,0.1118,0.8828,623
+VisDrone test-dev,share_lt16,YOLO26m (o2o),"[0.1, 0.25)",0.1750,0.8858,0.4574,1.3450,276
+VisDrone test-dev,share_lt16,YOLO26m (o2o),"[0.25, 0.5)",0.3750,1.1185,0.8072,1.4436,343
+VisDrone test-dev,share_lt16,YOLO26m (o2o),"[0.5, 0.75)",0.6250,1.3311,0.9137,1.7516,255
+VisDrone test-dev,share_lt16,YOLO26m (o2o),"[0.75, 1]",0.8750,0.6660,0.1014,1.2169,113
 VisDrone test-dev,share_crowded,YOLOv10s,"[0, 0.1)",0.0500,1.3339,1.1056,1.5540,1459
 VisDrone test-dev,share_crowded,YOLOv10s,"[0.1, 0.25)",0.1750,1.4505,0.5619,2.3089,133
 VisDrone test-dev,share_crowded,YOLOv10s,"[0.25, 0.5)",0.3750,0.2429,-1.9745,2.4160,15
@@ -47,6 +67,18 @@ VisDrone test-dev,share_crowded,YOLOv11m,"[0.25, 0.5)",0.3750,2.6453,0.2718,5.71
 VisDrone test-dev,share_crowded,YOLOv12s,"[0, 0.1)",0.0500,5.0689,4.7577,5.3914,1459
 VisDrone test-dev,share_crowded,YOLOv12s,"[0.1, 0.25)",0.1750,4.3860,3.5146,5.2629,133
 VisDrone test-dev,share_crowded,YOLOv12s,"[0.25, 0.5)",0.3750,2.5577,0.6344,4.7691,15
+VisDrone test-dev,share_crowded,YOLO26s (o2m),"[0, 0.1)",0.0500,5.0599,4.7286,5.3755,1459
+VisDrone test-dev,share_crowded,YOLO26s (o2m),"[0.1, 0.25)",0.1750,4.0019,3.0924,4.9440,133
+VisDrone test-dev,share_crowded,YOLO26s (o2m),"[0.25, 0.5)",0.3750,4.3463,1.0204,8.5092,15
+VisDrone test-dev,share_crowded,YOLO26s (o2o),"[0, 0.1)",0.0500,1.2555,1.0047,1.4989,1459
+VisDrone test-dev,share_crowded,YOLO26s (o2o),"[0.1, 0.25)",0.1750,1.4568,0.7703,2.1609,133
+VisDrone test-dev,share_crowded,YOLO26s (o2o),"[0.25, 0.5)",0.3750,2.1926,0.4342,4.5342,15
+VisDrone test-dev,share_crowded,YOLO26m (o2m),"[0, 0.1)",0.0500,4.4603,4.1343,4.7635,1459
+VisDrone test-dev,share_crowded,YOLO26m (o2m),"[0.1, 0.25)",0.1750,4.1379,3.2163,5.1216,133
+VisDrone test-dev,share_crowded,YOLO26m (o2m),"[0.25, 0.5)",0.3750,2.2415,-0.2722,5.3663,15
+VisDrone test-dev,share_crowded,YOLO26m (o2o),"[0, 0.1)",0.0500,0.8582,0.6371,1.0566,1459
+VisDrone test-dev,share_crowded,YOLO26m (o2o),"[0.1, 0.25)",0.1750,1.0317,0.4048,1.6328,133
+VisDrone test-dev,share_crowded,YOLO26m (o2o),"[0.25, 0.5)",0.3750,-1.7599,-3.5610,-0.1668,15
 DOTA-val,share_lt16,YOLOv10s,"[0, 0.1)",0.0500,3.6677,2.4900,4.9188,401
 DOTA-val,share_lt16,YOLOv10s,"[0.1, 0.25)",0.1750,8.4544,4.1972,13.1426,32
 DOTA-val,share_lt16,YOLOv10s,"[0.25, 0.5)",0.3750,6.7473,2.2702,11.8708,12

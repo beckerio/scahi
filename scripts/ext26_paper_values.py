@@ -16,6 +16,9 @@ Outputs in reports/ext26/:
   gflops_single.csv       single-pass GFLOPs per image on val (Fig. 3)
   tab_s_y26.csv           supplement Tab. s-y26 (verdicts per detector)
   single_pass_gate.csv    YOLO26s single-pass rows: calib tuning value (batch 16), batch-1 replay, difference
+  small_objects.csv       supplement small-object table: AP of objects < 8 px and 8-16 px on test-dev, passes at 2048 px
+                          (stored pycocotools size bins, metrics.json AP_by_size; rows as for the four other detectors:
+                          single pass o2o, tiles + NMS-IOS o2o, tiles + SCAHI o2m, tiles + SCAHI refined grid o2m)
   YOLO26_PAPER_VALUES.md  all of the above as tables
 """
 
@@ -122,6 +125,23 @@ def main() -> None:
     L += ["## Supplement Tab. s-y26 (Delta AP with 95 % CI on val, Delta on test-dev; verdict on val, eps 0.30; "
           "Q3 also needs CI low > 0)", "", "| " + " | ".join(hdr) + " |", "|" + "---|" * len(hdr)]
     L += ["| " + " | ".join(r) + " |" for r in rows] + [""]
+
+    # supplement small-object table (test-dev, 2048 px)
+    so = [("single pass", "E_{m}_full2048_o2o"), ("tiles, NMS", "E_{m}_mz2048_nms-ios_o2o"),
+          ("tiles, SCAHI", "E_{m}_mz2048_F2_o2m"), ("tiles, SCAHI refined grid", "XG_{m}_2048_o2m_C")]
+    rows = []
+    for m in MODELS:
+        r = [LABEL[m]]
+        for _, rid in so:
+            b = _j(f"runs/ext/{m}/testdev/{rid.format(m=m)}/metrics.json")["metrics"]["AP_by_size"]
+            r += [_f(b["<8"]), _f(b["8-16"])]
+        rows.append(r)
+    hdr = ["detector"] + [f"{c} {b}" for c, _ in so for b in ("AP < 8 px", "AP 8-16 px")]
+    _csv("small_objects.csv", hdr, rows)
+    L += ["## Supplement small-object table (test-dev, passes at 2048 px; AP < 8 px / 8-16 px, pycocotools size bins)", "",
+          "| detector | " + " | ".join(c for c, _ in so) + " |", "|" + "---|" * (len(so) + 1)]
+    L += [f"| {r[0]} | " + " | ".join(f"{r[1 + 2 * i]} / {r[2 + 2 * i]}" for i in range(len(so))) + " |" for r in rows]
+    L += [""]
 
     # YOLO26s single-pass gate (documented deviation)
     fz = _j(MODELS["yolo26s"])
