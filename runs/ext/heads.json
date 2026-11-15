@@ -1,0 +1,171 @@
+{
+ "ultralytics": "8.4.183",
+ "models": {
+  "yolov10s": {
+   "sha256": "65fa8332c38a7189597a268897bce6c1026f9499711b9761fb0c2c639b91d4d6",
+   "head": "v10Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl",
+    "one2one_cv2",
+    "one2one_cv3"
+   ],
+   "branches": [
+    "o2o",
+    "o2m"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 8.13
+  },
+  "yolov10m": {
+   "sha256": "6dc78f7a88591cec1e8716b8f5c7e3aefa9206684f025d202be34439ccb329a0",
+   "head": "v10Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl",
+    "one2one_cv2",
+    "one2one_cv3"
+   ],
+   "branches": [
+    "o2o",
+    "o2m"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 16.58
+  },
+  "yolo11s": {
+   "sha256": "85a76fe86dd8afe384648546b56a7a78580c7cb7b404fc595f97969322d502d5",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl"
+   ],
+   "branches": [
+    "o2m (single dense head + NMS)"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 9.46
+  },
+  "yolo11m": {
+   "sha256": "d5ffc1a674953a08e11a8d21e022781b1b23a19b730afc309290bd9fb5305b95",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl"
+   ],
+   "branches": [
+    "o2m (single dense head + NMS)"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 20.11
+  },
+  "yolo12s": {
+   "sha256": "e915c2c4286e3f6f8610ef106fa3f94a7b8c19b30eccede5887e22c33ef75f58",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl"
+   ],
+   "branches": [
+    "o2m (single dense head + NMS)"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 9.29
+  },
+  "yolo12m": {
+   "sha256": "4c6d179786eddf6134ee469ae2f4ce04cbe4e9d1a47d6b669d9cd6b9c6c513d8",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl"
+   ],
+   "branches": [
+    "o2m (single dense head + NMS)"
+   ],
+   "reg_max": 16,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 20.2
+  },
+  "yolo26m": {
+   "sha256": "401cea9ab23ad19246ff7744859816bc599f350e93c9dd30367b6f0a0745d0b7",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl",
+    "one2one_cv2",
+    "one2one_cv3"
+   ],
+   "branches": [
+    "o2o",
+    "o2m"
+   ],
+   "reg_max": 1,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 21.9,
+   "added": "2026-11-13, addendum YOLO26m (docs/PREREGISTRATION_EXT.md)"
+  },
+  "yolo26s": {
+   "sha256": "646f8bc3fe0a656803d95c294f7852321748cb29d13466a1af8862e2db384a1b",
+   "head": "Detect",
+   "submodules": [
+    "cv2",
+    "cv3",
+    "dfl",
+    "one2one_cv2",
+    "one2one_cv3"
+   ],
+   "branches": [
+    "o2o",
+    "o2m"
+   ],
+   "reg_max": 1,
+   "strides": [
+    8.0,
+    16.0,
+    32.0
+   ],
+   "params_M": 10.0,
+   "added": "2026-11-14, addendum YOLO26s 7bc0ace (docs/PREREGISTRATION_EXT.md)"
+  }
+ }
+}

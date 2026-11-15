@@ -21,6 +21,8 @@ import numpy as np
 INK, INK2, MUTED, GRID, SURF = "#0b0b0b", "#52514e", "#8a8984", "#e3e2dc", "#ffffff"
 PANEL = "#f6f6f3"
 BLUE, ORANGE, AQUA = "#2a78d6", "#eb6834", "#1baf7a"  # categorical slots 1-3 (fixed order)
+MAGENTA = "#c03a8a"  # slot 4: YOLO26 (addendum detectors); validated all-pairs with slots 1-3 (dataviz validator, light:
+#                      worst pair stays aqua/orange, CVD 9.2 / normal 19.1 vs. orange; >= 3:1 on the surface)
 BLUE_L, BLUE_M, BLUE_D, ORANGE_L = "#cde2fb", "#86b6ef", "#184f95", "#fbe1d6"
 SEQ = ["#cde2fb", "#9ec5f4", "#6da7ec", "#3987e5", "#256abf", "#184f95", "#0d366b"]  # sequential blue ramp
 ORD4 = ["#86b6ef", "#3987e5", "#1c5cab", "#0d366b"]  # ordinal blue ramp (step 250 .. 700)

@@ -1,0 +1,20 @@
+{
+ "n_images": 594,
+ "n_shapes": 5,
+ "batches_of_16": 38,
+ "batches_with_mixed_shapes": 8,
+ "rows": {
+  "E_yolo26s_full1280_o2o": {
+   "tuning_batch16": 36.67503633772432,
+   "replay_batch1": 36.58129036473533,
+   "batch16_original_order": 36.67503633772432,
+   "batch16_uniform_shape_batches": 36.576699104701994
+  },
+  "E_yolo26s_full2048_o2o": {
+   "tuning_batch16": 41.23553552655055,
+   "replay_batch1": 41.15679241104898,
+   "batch16_original_order": 41.23553552655055,
+   "batch16_uniform_shape_batches": 41.15898722998605
+  }
+ }
+}

@@ -1,0 +1,191 @@
+{
+ "gate": "G-E1",
+ "model": "yolo26m",
+ "rows": [
+  {
+   "weights": "1280",
+   "input": "whole 1280",
+   "branch": "o2m",
+   "shape": [
+    736,
+    1280
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0
+  },
+  {
+   "weights": "1280",
+   "input": "whole 1280",
+   "branch": "o2o",
+   "shape": [
+    736,
+    1280
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0,
+   "class_agreement": 1.0
+  },
+  {
+   "weights": "1280",
+   "input": "tile 1024",
+   "branch": "o2m",
+   "shape": [
+    1024,
+    1024
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0
+  },
+  {
+   "weights": "1280",
+   "input": "tile 1024",
+   "branch": "o2o",
+   "shape": [
+    1024,
+    1024
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0,
+   "class_agreement": 1.0
+  },
+  {
+   "weights": "2048",
+   "input": "whole 2048",
+   "branch": "o2m",
+   "shape": [
+    1152,
+    2048
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0
+  },
+  {
+   "weights": "2048",
+   "input": "whole 2048",
+   "branch": "o2o",
+   "shape": [
+    1152,
+    2048
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0,
+   "class_agreement": 1.0
+  },
+  {
+   "weights": "2048",
+   "input": "tile 1024",
+   "branch": "o2m",
+   "shape": [
+    1024,
+    1024
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0
+  },
+  {
+   "weights": "2048",
+   "input": "tile 1024",
+   "branch": "o2o",
+   "shape": [
+    1024,
+    1024
+   ],
+   "max_abs_box_px": 0.0,
+   "max_diff_over_tol": 0.0,
+   "max_abs_prob": 0.0,
+   "class_agreement": 1.0
+  }
+ ],
+ "e2e": [
+  {
+   "weights": "1280",
+   "image_id": 1,
+   "n_pred": 166,
+   "matched_frac": 0.9939759036144579,
+   "max_dscore": 0.0014039874076843262
+  },
+  {
+   "weights": "1280",
+   "image_id": 2,
+   "n_pred": 280,
+   "matched_frac": 1.0,
+   "max_dscore": 0.0007797777652740479
+  },
+  {
+   "weights": "1280",
+   "image_id": 3,
+   "n_pred": 37,
+   "matched_frac": 0.972972972972973,
+   "max_dscore": 0.0002775266766548157
+  },
+  {
+   "weights": "2048",
+   "image_id": 1,
+   "n_pred": 168,
+   "matched_frac": 1.0,
+   "max_dscore": 0.0008510053157806396
+  },
+  {
+   "weights": "2048",
+   "image_id": 2,
+   "n_pred": 313,
+   "matched_frac": 0.9968051118210862,
+   "max_dscore": 0.0007786601781845093
+  },
+  {
+   "weights": "2048",
+   "image_id": 3,
+   "n_pred": 38,
+   "matched_frac": 1.0,
+   "max_dscore": 0.0004425942897796631
+  }
+ ],
+ "notes": "decode check with cudnn TF32 off (Ultralytics' DFL is a conv1d that cuDNN otherwise runs in TF32); tolerance per coordinate max(1e-4 px, 4 float32 ulp of the larger magnitude); the DFL expectation (softmax-weighted sum vs. Ultralytics' conv1d) differs by summation order (<= 5 ulp of the distance, x stride); the box step is bit-identical",
+ "ap_identity": [
+  {
+   "weights": "1280",
+   "branch": "o2o",
+   "AP_own": 39.69900567982161,
+   "AP_ultralytics": 39.69900567982161,
+   "identical_4dp": true,
+   "abs_delta_AP": 0.0
+  },
+  {
+   "weights": "1280",
+   "branch": "o2m",
+   "AP_own": 38.34280080621766,
+   "AP_ultralytics": 38.34280080621766,
+   "identical_4dp": true,
+   "abs_delta_AP": 0.0
+  },
+  {
+   "weights": "2048",
+   "branch": "o2o",
+   "AP_own": 43.68917157163567,
+   "AP_ultralytics": 43.68917157163567,
+   "identical_4dp": true,
+   "abs_delta_AP": 0.0
+  },
+  {
+   "weights": "2048",
+   "branch": "o2m",
+   "AP_own": 42.551725614895496,
+   "AP_ultralytics": 42.551725614895496,
+   "identical_4dp": true,
+   "abs_delta_AP": 0.0
+  }
+ ],
+ "passed_decode": true,
+ "passed_o2o": true,
+ "passed_ap": true,
+ "passed_e2e_reported_only": false,
+ "rule": "pass = max deviation <= 4 ulp (max(1e-4 px, 4 ulp), TF32 off) AND |calib toolkit AP own - Ultralytics| <= 0.01 AP (gate fix 2026-10-28, replaces 'identical to 4 decimals'); predictor comparison reported only (addendum 0f6fecbc)",
+ "passed": true
+}

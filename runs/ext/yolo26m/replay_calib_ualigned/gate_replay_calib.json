@@ -1,0 +1,272 @@
+{
+ "rows": {
+  "E_yolo26m_mz1280_F2_o2m": {
+   "id": "E_yolo26m_mz1280_F2_o2m",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 41.86775296062329,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2m/F2",
+   "replay_AP": 41.86775296062329,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz1280_F2_o2o": {
+   "id": "E_yolo26m_mz1280_F2_o2o",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 41.50737758155869,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2o/F2",
+   "replay_AP": 41.50737758155869,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz1280_nms-ios_o2m": {
+   "id": "E_yolo26m_mz1280_nms-ios_o2m",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 40.004886670097235,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2m/F0-NMS",
+   "replay_AP": 40.004886670097235,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz1280_nms-ios_o2o": {
+   "id": "E_yolo26m_mz1280_nms-ios_o2o",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 40.42006097637304,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 1280/o2o/F0-NMS",
+   "replay_AP": 40.42006097637304,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz2048_F2_o2m": {
+   "id": "E_yolo26m_mz2048_F2_o2m",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 44.277572930658366,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2m/F2",
+   "replay_AP": 44.277572930658366,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz2048_F2_o2o": {
+   "id": "E_yolo26m_mz2048_F2_o2o",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 44.07289403922751,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2o/F2",
+   "replay_AP": 44.07289403922751,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz2048_nms-ios_o2m": {
+   "id": "E_yolo26m_mz2048_nms-ios_o2m",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 42.01544426777669,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2m/F0-NMS",
+   "replay_AP": 42.01544426777669,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_mz2048_nms-ios_o2o": {
+   "id": "E_yolo26m_mz2048_nms-ios_o2o",
+   "kind": "cache",
+   "group": "preregistered",
+   "calib_AP": 42.939115735762414,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/tuning.json 2048/o2o/F0-NMS",
+   "replay_AP": 42.939115735762414,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_1280_o2m_B": {
+   "id": "XG_yolo26m_1280_o2m_B",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 39.99003311546758,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/B calib_selected",
+   "replay_AP": 39.99003311546758,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_1280_o2m_C": {
+   "id": "XG_yolo26m_1280_o2m_C",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 43.108258037510886,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/C calib_selected",
+   "replay_AP": 43.108258037510886,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_1280_o2o_B": {
+   "id": "XG_yolo26m_1280_o2o_B",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 39.83188929631773,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/B calib_selected",
+   "replay_AP": 39.83188929631773,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_1280_o2o_C": {
+   "id": "XG_yolo26m_1280_o2o_C",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 42.73238930979372,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/C calib_selected",
+   "replay_AP": 42.73238930979372,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_2048_o2m_B": {
+   "id": "XG_yolo26m_2048_o2m_B",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 43.9117405536583,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/B calib_selected",
+   "replay_AP": 43.9117405536583,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_2048_o2m_C": {
+   "id": "XG_yolo26m_2048_o2m_C",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 45.57891552445405,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/C calib_selected",
+   "replay_AP": 45.57891552445405,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_2048_o2o_B": {
+   "id": "XG_yolo26m_2048_o2o_B",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 43.67391956024174,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/B calib_selected",
+   "replay_AP": 43.67391956024174,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "XG_yolo26m_2048_o2o_C": {
+   "id": "XG_yolo26m_2048_o2o_C",
+   "kind": "cache",
+   "group": "X-grid (exploratory, post hoc)",
+   "calib_AP": 45.33813562809734,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/C calib_selected",
+   "replay_AP": 45.33813562809734,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "D_yolo26m_single1280_F2_o2m": {
+   "id": "D_yolo26m_single1280_F2_o2m",
+   "kind": "cache",
+   "group": "decomposition B (exploratory, post hoc)",
+   "calib_AP": 38.8655480633379,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2m/B calib_reference (same F2 parameters, whole-image pass)",
+   "replay_AP": 38.8655480633379,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "D_yolo26m_single1280_F2_o2o": {
+   "id": "D_yolo26m_single1280_F2_o2o",
+   "kind": "cache",
+   "group": "decomposition B (exploratory, post hoc)",
+   "calib_AP": 38.72082901422073,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/1280/o2o/B calib_reference (same F2 parameters, whole-image pass)",
+   "replay_AP": 38.72082901422073,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "D_yolo26m_single2048_F2_o2m": {
+   "id": "D_yolo26m_single2048_F2_o2m",
+   "kind": "cache",
+   "group": "decomposition B (exploratory, post hoc)",
+   "calib_AP": 42.74620294237489,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2m/B calib_reference (same F2 parameters, whole-image pass)",
+   "replay_AP": 42.74620294237489,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "D_yolo26m_single2048_F2_o2o": {
+   "id": "D_yolo26m_single2048_F2_o2o",
+   "kind": "cache",
+   "group": "decomposition B (exploratory, post hoc)",
+   "calib_AP": 42.62460805977697,
+   "calib_AP_source": "runs/ext/yolo26m/ualigned/xgrid_calib.json yolo26m/2048/o2o/B calib_reference (same F2 parameters, whole-image pass)",
+   "replay_AP": 42.62460805977697,
+   "abs_diff": 0.0,
+   "exact": true
+  },
+  "E_yolo26m_full1280_o2m": {
+   "id": "E_yolo26m_full1280_o2m",
+   "kind": "single",
+   "group": "preregistered",
+   "calib_AP": 38.46299446660477,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_1280_o2m.json (predictor, batch 16)",
+   "replay_AP_a": 38.436060307462554,
+   "diff_vs_tuning": -0.026934159142214753,
+   "replay_AP_b": 38.436060307462554,
+   "exact_a_vs_b": true,
+   "carried_over_from": "runs/ext/yolo26m/replay_calib/gate_replay_calib.json"
+  },
+  "E_yolo26m_full1280_o2o": {
+   "id": "E_yolo26m_full1280_o2o",
+   "kind": "single",
+   "group": "preregistered",
+   "calib_AP": 39.83070165518688,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_1280_o2o.json (predictor, batch 16)",
+   "replay_AP_a": 39.809833047727565,
+   "diff_vs_tuning": -0.020868607459313182,
+   "replay_AP_b": 39.809833047727565,
+   "exact_a_vs_b": true,
+   "carried_over_from": "runs/ext/yolo26m/replay_calib/gate_replay_calib.json"
+  },
+  "E_yolo26m_full2048_o2m": {
+   "id": "E_yolo26m_full2048_o2m",
+   "kind": "single",
+   "group": "preregistered",
+   "calib_AP": 42.57211117834786,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_2048_o2m.json (predictor, batch 16)",
+   "replay_AP_a": 42.55843775425067,
+   "diff_vs_tuning": -0.013673424097191855,
+   "replay_AP_b": 42.55843775425067,
+   "exact_a_vs_b": true,
+   "carried_over_from": "runs/ext/yolo26m/replay_calib/gate_replay_calib.json"
+  },
+  "E_yolo26m_full2048_o2o": {
+   "id": "E_yolo26m_full2048_o2o",
+   "kind": "single",
+   "group": "preregistered",
+   "calib_AP": 43.70694312229492,
+   "calib_AP_source": "runs/ext/yolo26m/conf_tuning_2048_o2o.json (predictor, batch 16)",
+   "replay_AP_a": 43.6934494721771,
+   "diff_vs_tuning": -0.013493650117823108,
+   "replay_AP_b": 43.6934494721771,
+   "exact_a_vs_b": true,
+   "carried_over_from": "runs/ext/yolo26m/replay_calib/gate_replay_calib.json"
+  },
+  "E_yolo26m_sahi_o2o": {
+   "id": "E_yolo26m_sahi_o2o",
+   "kind": "sahi",
+   "group": "preregistered",
+   "calib_AP": 37.5761296142596,
+   "calib_AP_source": "runs/ext/yolo26m/sahi_tuning/sahi_tuning2_o2o.json (raw slice predictions merged offline)",
+   "replay_AP_a": 37.5761296142596,
+   "diff_vs_tuning": 0.0,
+   "replay_AP_b": 37.5761296142596,
+   "exact_a_vs_b": true,
+   "carried_over_from": "runs/ext/yolo26m/replay_calib/gate_replay_calib.json"
+  }
+ },
+ "gate": "YOLO26m calib replay (val / test-dev code path on calib)",
+ "time": "2026-11-14T11:02",
+ "freeze": "DRAFT (not approved)",
+ "n_frozen_rows": 25,
+ "cache_rows": "20/20 exact vs. the selection value (0 without one)",
+ "predictor_rows": "5/5 identical in two independent replays",
+ "predictor_gate": "bit-identical in two independent replays AND |replay - tuning value| <= 0.05 AP (authors 2026-11-14)",
+ "predictor_rows_passed": "5/5 (max |diff vs. tuning| 0.0269)"
+}

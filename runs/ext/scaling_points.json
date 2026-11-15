@@ -89,6 +89,38 @@
    "gflops": 187.487059968
   },
   {
+   "model": "yolo26m",
+   "imgsz": 1280,
+   "calib_AP": 39.83070165518688,
+   "val_AP": 37.408135205283024,
+   "done": true,
+   "gflops": 157.421568
+  },
+  {
+   "model": "yolo26m",
+   "imgsz": 2048,
+   "calib_AP": 43.70694312229492,
+   "val_AP": 41.253495505816694,
+   "done": true,
+   "gflops": 399.13626009600006
+  },
+  {
+   "model": "yolo26s",
+   "imgsz": 1280,
+   "calib_AP": 36.67503633772432,
+   "val_AP": 33.62746021019797,
+   "done": true,
+   "gflops": 48.53501952
+  },
+  {
+   "model": "yolo26s",
+   "imgsz": 2048,
+   "calib_AP": 41.23553552655055,
+   "val_AP": 38.409006419410595,
+   "done": true,
+   "gflops": 126.44646912
+  },
+  {
    "model": "yolov10m",
    "imgsz": 1280,
    "calib_AP": 38.877817023873725,
@@ -127,6 +159,10 @@
   "runs/ext/train/yolo12m_1280_s0/ultralytics/train/weights/calib_curve.json",
   "runs/ext/train/yolo12s_1280_s0/ultralytics/train/weights/calib_curve.json",
   "runs/ext/train/yolo12s_2048_s0/ultralytics/train/weights/calib_curve.json",
+  "runs/ext/train/yolo26m_1280_s0/ultralytics/train/weights/calib_curve.json",
+  "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/calib_curve.json",
+  "runs/ext/train/yolo26s_1280_s0/ultralytics/train/weights/calib_curve.json",
+  "runs/ext/train/yolo26s_2048_s0/ultralytics/train/weights/calib_curve.json",
   "runs/ext/train/yolov10m_1280_s0/ultralytics/train/weights/calib_curve.json",
   "runs/ext/train/yolov10m_2048_s0/ultralytics/train/weights/calib_curve.json",
   "runs/ext/train/yolov10s_2560_s0/ultralytics/train/weights/calib_curve.json",
@@ -141,6 +177,10 @@
   "runs/ext/rows/E_yolo12m_full1280_o2m/metrics.json",
   "runs/ext/rows/E_yolo12s_full1280_o2m/metrics.json",
   "runs/ext/rows/E_yolo12s_full2048_o2m/metrics.json",
+  "runs/ext/yolo26m/val/E_yolo26m_full1280_o2o/metrics.json",
+  "runs/ext/yolo26m/val/E_yolo26m_full2048_o2o/metrics.json",
+  "runs/ext/yolo26s/val/E_yolo26s_full1280_o2o/metrics.json",
+  "runs/ext/yolo26s/val/E_yolo26s_full2048_o2o/metrics.json",
   "runs/ext/rows/E_yolov10m_full1280_o2o/metrics.json",
   "runs/ext/rows/E_yolov10m_full2048_o2o/metrics.json",
   "runs/ext/rows/E_yolov10s_full2560_o2o/metrics.json"

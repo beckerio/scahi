@@ -1,0 +1,2933 @@
+{
+  "grid": [
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 28.409729379617875,
+      "AP50": 52.34853610388411,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 32.07698922386776,
+      "AP50": 56.689224658024415,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 30.009042656620444,
+      "AP50": 55.23856718522535,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.854138501895555,
+      "AP50": 57.61906200302138,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 31.67099797089819,
+      "AP50": 57.87015467681723,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.39585033707844,
+      "AP50": 58.10467957845944,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 33.168851567174904,
+      "AP50": 59.38943264534091,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.722332437358446,
+      "AP50": 58.26474867078655,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.291172861692004,
+      "AP50": 59.37650731180939,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.03085954357557,
+      "AP50": 57.72566234838623,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.52349234487618,
+      "AP50": 57.42666968143219,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.888780633454026,
+      "AP50": 55.849365019312415,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 22.9702547333756,
+      "AP50": 44.68799640722865,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 28.433051841746206,
+      "AP50": 52.12680796725881,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 25.064826211175472,
+      "AP50": 48.32855781978478,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 30.272861223960042,
+      "AP50": 54.72957370099698,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 26.715488778937107,
+      "AP50": 50.92850450498088,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.507829503503224,
+      "AP50": 56.295197813960534,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 28.18515429624386,
+      "AP50": 53.23745080346759,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.413963692352276,
+      "AP50": 57.46775965242006,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 29.921260164406103,
+      "AP50": 55.73267346651688,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 33.148140384100415,
+      "AP50": 58.216030741086186,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 31.888331326948016,
+      "AP50": 57.97567744942112,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.818511090465286,
+      "AP50": 58.90244092111121,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 27.82935485819033,
+      "AP50": 50.86539896074587,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 31.81386066914034,
+      "AP50": 56.08919826088218,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 29.40493240205264,
+      "AP50": 53.76953527579824,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.63881371674605,
+      "AP50": 57.23994197759251,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 31.01068067510805,
+      "AP50": 56.394463518440055,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.238078257020355,
+      "AP50": 57.819977970035914,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 32.55244565357128,
+      "AP50": 58.381402057627746,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.565966821736154,
+      "AP50": 58.045932801876745,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 33.973864687301116,
+      "AP50": 59.32710048206194,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 33.95984388357971,
+      "AP50": 57.80786717701346,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.497795325402556,
+      "AP50": 57.7365054467177,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.92777826400876,
+      "AP50": 56.1326156743619,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 22.234653112478977,
+      "AP50": 42.48091956283586,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 27.864590405159873,
+      "AP50": 50.65401871486079,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 24.229626400828362,
+      "AP50": 46.09254553418021,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 29.778406543374267,
+      "AP50": 53.60422938246237,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 25.88989702952674,
+      "AP50": 48.72066818983004,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.163263741993255,
+      "AP50": 55.527996239672156,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 27.191402951781427,
+      "AP50": 51.13159427039144,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.09010844653032,
+      "AP50": 56.93898418948023,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 28.691785415174664,
+      "AP50": 53.74404382063458,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 32.820006979985216,
+      "AP50": 57.78498976457488,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 30.86317158233622,
+      "AP50": 56.75637152850241,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.615641543670385,
+      "AP50": 58.620144020677046,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 36.94568168875737,
+      "AP50": 61.82692168045619,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 36.03034348684133,
+      "AP50": 59.47137412062982,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 37.141361654387836,
+      "AP50": 62.259266411981926,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 36.19005036897936,
+      "AP50": 59.78875586012268,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 37.153679338590486,
+      "AP50": 62.20911690882509,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.15905646087872,
+      "AP50": 59.73310540173816,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.08621257241782,
+      "AP50": 61.57940026909332,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.082703474186694,
+      "AP50": 59.26598882078619,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 36.70657710830254,
+      "AP50": 60.17112420523028,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 35.759579361889145,
+      "AP50": 58.187309701049585,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 35.80429022799806,
+      "AP50": 57.6708855912834,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 34.9747117294073,
+      "AP50": 56.04080820575518,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 35.874822268126465,
+      "AP50": 59.78681281609787,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 35.006104850607734,
+      "AP50": 57.57647795889938,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 36.48666009344806,
+      "AP50": 60.89479462005302,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 35.5944100472592,
+      "AP50": 58.61979992611555,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 36.918134920532715,
+      "AP50": 61.71173175687452,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.01290607175574,
+      "AP50": 59.4014255213172,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.190181293660046,
+      "AP50": 62.26372220375074,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.27547647462076,
+      "AP50": 59.90832430362578,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 37.37222295592184,
+      "AP50": 62.614083015844216,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 36.428214430800374,
+      "AP50": 60.20044025692858,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 37.48590694124704,
+      "AP50": 62.713080142371275,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 36.50812917371397,
+      "AP50": 60.31652332364722,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.001,
+      "AP": 34.306065157049474,
+      "AP50": 59.235236568439966,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 34.593944447338764,
+      "AP50": 59.51842821561697,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.05,
+      "AP": 34.45524363241481,
+      "AP50": 58.98216457749375,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 34.28685930304895,
+      "AP50": 58.27806228552876,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.001,
+      "AP": 34.9916814689881,
+      "AP50": 59.64271628732241,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 35.174798945497024,
+      "AP50": 59.74088877720655,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.05,
+      "AP": 34.96527329761312,
+      "AP50": 59.110656109035006,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 34.78490453104555,
+      "AP50": 58.35001888756551,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.001,
+      "AP": 35.330551892603545,
+      "AP50": 59.46717036417208,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 35.410458415056745,
+      "AP50": 59.44733557701183,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.05,
+      "AP": 35.151704824410416,
+      "AP50": 58.81711569284737,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 34.96616209779049,
+      "AP50": 58.07963786281189,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.001,
+      "AP": 35.145330981863154,
+      "AP50": 58.606338018694494,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 35.18014639091717,
+      "AP50": 58.51003677136394,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.05,
+      "AP": 35.00518944335223,
+      "AP50": 58.09030426193018,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 34.75983710194846,
+      "AP50": 57.3397350820531,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.001,
+      "AP": 34.67521214076571,
+      "AP50": 57.340767128200554,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.729479923753345,
+      "AP50": 57.23475941552661,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.05,
+      "AP": 34.61991173066999,
+      "AP50": 56.94995240686262,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.36818542650934,
+      "AP50": 56.225880135954384,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.001,
+      "AP": 33.618143792745556,
+      "AP50": 55.199124338725326,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 33.67739930698531,
+      "AP50": 55.065389549902285,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.05,
+      "AP": 33.618647810535336,
+      "AP50": 54.722466366941156,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.1,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.32863228940287,
+      "AP50": 53.9474080806054,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 28.430620257140085,
+      "AP50": 52.44543085319369,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 32.121885872864226,
+      "AP50": 56.80257830738275,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 30.001663161688377,
+      "AP50": 55.31047662395212,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.86980616906279,
+      "AP50": 57.67567699419201,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 31.67197657756145,
+      "AP50": 57.94133927362668,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.43102171640344,
+      "AP50": 58.195024479152885,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 33.230087855249,
+      "AP50": 59.48681646894395,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.842905972632614,
+      "AP50": 58.41781624554159,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.349540975131035,
+      "AP50": 59.50872515518676,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.10061126541277,
+      "AP50": 57.83987012544683,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.54371291950198,
+      "AP50": 57.48416601499936,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.93786960476203,
+      "AP50": 55.92990047610025,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 23.0114785140534,
+      "AP50": 44.775382619828925,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 28.528264697207206,
+      "AP50": 52.2015426581864,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 25.087626718886664,
+      "AP50": 48.338101984126695,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 30.32916475990181,
+      "AP50": 54.74882753848977,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 26.73204393633271,
+      "AP50": 51.051145743532096,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.544197744531782,
+      "AP50": 56.342869519507566,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 28.265349155980065,
+      "AP50": 53.415924534411914,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.453287343658765,
+      "AP50": 57.584971368851534,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 30.00769485490789,
+      "AP50": 55.87552035065287,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 33.18021624743819,
+      "AP50": 58.30439212810024,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 31.965012733440513,
+      "AP50": 58.135902556119014,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.8693036918303,
+      "AP50": 58.979392844007435,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 27.84806315548673,
+      "AP50": 50.996183374002484,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 31.840770175415386,
+      "AP50": 56.208047576511625,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 29.435785377076336,
+      "AP50": 53.93122122208428,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.69247566774775,
+      "AP50": 57.376492459257726,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 31.01053292218258,
+      "AP50": 56.512439968640045,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.26011732154878,
+      "AP50": 57.89454226259143,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 32.59755262047283,
+      "AP50": 58.53806531526871,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.684013955755624,
+      "AP50": 58.19915676620118,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.01605626114435,
+      "AP50": 59.38970018400387,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.02204160471309,
+      "AP50": 57.909357015772706,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.52591320021086,
+      "AP50": 57.779154823836265,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.96312424919604,
+      "AP50": 56.193041673733134,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 22.279060668497,
+      "AP50": 42.525957816403775,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 27.941754809871547,
+      "AP50": 50.714470056304314,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 24.271605521837962,
+      "AP50": 46.1048134643108,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 29.825702183862344,
+      "AP50": 53.6069839450731,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 25.866685588194272,
+      "AP50": 48.74376036162119,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.168383020604775,
+      "AP50": 55.58466132296209,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 27.224971781524463,
+      "AP50": 51.299980502953666,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.12670353089796,
+      "AP50": 57.05922658623031,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 28.7267111811933,
+      "AP50": 53.848259327506845,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 32.84693238405311,
+      "AP50": 57.88178622967372,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 30.89049656527093,
+      "AP50": 56.799063838364816,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.65144615539263,
+      "AP50": 58.686077869019556,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 37.050491087894784,
+      "AP50": 61.866746992886995,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 36.15797940118375,
+      "AP50": 59.56678968654831,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 37.209073324989674,
+      "AP50": 62.231050805406866,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 36.28125637158942,
+      "AP50": 59.8218408090946,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 37.22830600370113,
+      "AP50": 62.227799945324215,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.2551844420914,
+      "AP50": 59.79351063330067,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.18351347133613,
+      "AP50": 61.68415929828508,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.196542661916155,
+      "AP50": 59.40803262103241,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 36.779948220938536,
+      "AP50": 60.27025042988547,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 35.84167039691288,
+      "AP50": 58.30436292636883,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 35.83869156721699,
+      "AP50": 57.71058796013259,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 35.02068749727334,
+      "AP50": 56.10290054428316,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 35.94761458101549,
+      "AP50": 59.76736454771173,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 35.10163779051416,
+      "AP50": 57.6125162453544,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 36.553697546248756,
+      "AP50": 60.875011417421966,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 35.689185224503134,
+      "AP50": 58.66770188426702,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 37.00006740352042,
+      "AP50": 61.70006270123631,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.12220754351156,
+      "AP50": 59.45257397293003,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.275746169299396,
+      "AP50": 62.25992203487637,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.384091851994214,
+      "AP50": 59.963118527895446,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 37.44374103976144,
+      "AP50": 62.61049723545388,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 36.526754378838,
+      "AP50": 60.26074898479649,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 37.5761296142596,
+      "AP50": 62.74462437268489,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 36.62491430694131,
+      "AP50": 60.40695109358646,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.001,
+      "AP": 34.28464862067155,
+      "AP50": 59.2458418364197,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 34.61770486800616,
+      "AP50": 59.61352347550244,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.05,
+      "AP": 34.50288672335632,
+      "AP50": 59.08381136367909,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 34.33301124226216,
+      "AP50": 58.35877056121605,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.001,
+      "AP": 35.00343185908675,
+      "AP50": 59.657791623695324,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 35.25740786318635,
+      "AP50": 59.865293297308035,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.05,
+      "AP": 35.07195263393029,
+      "AP50": 59.2516342028798,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 34.89158964847497,
+      "AP50": 58.477755872978605,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.001,
+      "AP": 35.376397041228316,
+      "AP50": 59.52621229834289,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 35.48915061135437,
+      "AP50": 59.54943434383312,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.05,
+      "AP": 35.23477681147573,
+      "AP50": 58.89954977109929,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 35.05999487233571,
+      "AP50": 58.177360650654286,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.001,
+      "AP": 35.31455979425064,
+      "AP50": 58.82236085933713,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 35.349981515824986,
+      "AP50": 58.7256830766584,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.05,
+      "AP": 35.1841718278546,
+      "AP50": 58.301824823979196,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 34.95773547642509,
+      "AP50": 57.55778805450502,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.001,
+      "AP": 34.80007191595096,
+      "AP50": 57.48307508163419,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.86184771548736,
+      "AP50": 57.38064754726666,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.05,
+      "AP": 34.74435431052839,
+      "AP50": 57.08964571117644,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.50794876917703,
+      "AP50": 56.4037690032795,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.001,
+      "AP": 33.66819081440208,
+      "AP50": 55.21871882765282,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 33.69968611556663,
+      "AP50": 55.0367905089709,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.05,
+      "AP": 33.633944933987486,
+      "AP50": 54.693993858631245,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.38182357272756,
+      "AP50": 54.003798104183744,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 28.34205127722501,
+      "AP50": 52.21056114376192,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 32.0423193277899,
+      "AP50": 56.6658412898623,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 29.99318369737914,
+      "AP50": 55.18696705571765,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.83986429074195,
+      "AP50": 57.60281608059692,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 31.647688614616996,
+      "AP50": 57.92040798779222,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.400416144414194,
+      "AP50": 58.10302759218271,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 33.16525435166548,
+      "AP50": 59.30443977057993,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.77393880444103,
+      "AP50": 58.31861387061077,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.26759096246321,
+      "AP50": 59.34220880034671,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.03517406670785,
+      "AP50": 57.72423241141411,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.47601013758636,
+      "AP50": 57.34248073664782,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.87057837001858,
+      "AP50": 55.82408027946401,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 22.77877045790097,
+      "AP50": 44.38022147580405,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 28.412269629426895,
+      "AP50": 52.07002128899744,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 24.884409377243234,
+      "AP50": 48.02904780167468,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 30.233499353794336,
+      "AP50": 54.697038088586574,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 26.530648561782492,
+      "AP50": 50.720245568582776,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.52322533167583,
+      "AP50": 56.309851154280416,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 28.052694871471672,
+      "AP50": 53.13082282388182,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.38163609669363,
+      "AP50": 57.45908670699276,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 29.871858681974196,
+      "AP50": 55.702472584716205,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 33.14334592927647,
+      "AP50": 58.24649634874584,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 31.886909976100107,
+      "AP50": 58.076688073778755,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "GREEDYNMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.85968963491784,
+      "AP50": 58.95338542655594,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 27.789263320005848,
+      "AP50": 50.799441693280905,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 31.77133199028813,
+      "AP50": 56.063821290115705,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 29.421227874414758,
+      "AP50": 53.79894117159482,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 32.65267219488024,
+      "AP50": 57.26101341546812,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 30.96586858094454,
+      "AP50": 56.425143851303616,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 33.202128218467266,
+      "AP50": 57.78970927710732,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 32.5286211334265,
+      "AP50": 58.38173673824202,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 33.61432665348139,
+      "AP50": 58.09553437137111,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 33.95679783900177,
+      "AP50": 59.29194465307961,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 33.957988299013294,
+      "AP50": 57.83444154621553,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.45304794334691,
+      "AP50": 57.64378039901313,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.90106344025059,
+      "AP50": 56.11290657244297,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 22.00121288453918,
+      "AP50": 42.07860287836286,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 27.83253985112703,
+      "AP50": 50.641142964304116,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 24.03669511939925,
+      "AP50": 45.75891654281465,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 29.703819129505714,
+      "AP50": 53.53634397692657,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 25.682474012687244,
+      "AP50": 48.447729147911176,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 31.15656576536442,
+      "AP50": 55.52757343429442,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 27.01518171391334,
+      "AP50": 50.97025663003161,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 32.04106724104002,
+      "AP50": 56.91287419872984,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 28.59625253325108,
+      "AP50": 53.67962075507587,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 32.813144803224716,
+      "AP50": 57.79205501871526,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 30.791341636725164,
+      "AP50": 56.771045008865435,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMM",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.614572138017714,
+      "AP50": 58.64449659365407,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 36.90983281457855,
+      "AP50": 61.75246444540162,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 36.03111331106914,
+      "AP50": 59.461719967777,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 37.133125515610715,
+      "AP50": 62.20570837615616,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 36.22364484415842,
+      "AP50": 59.82113049740784,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 37.17935900684824,
+      "AP50": 62.23523724669266,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.22229504406704,
+      "AP50": 59.81777684748731,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.078556677815655,
+      "AP50": 61.58029028966446,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.10462261322063,
+      "AP50": 59.32739356548112,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 36.683969397717874,
+      "AP50": 60.15999263910855,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 35.76035362362565,
+      "AP50": 58.21631056775666,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 35.763929154556074,
+      "AP50": 57.60611556446742,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 34.95530981391774,
+      "AP50": 56.02382922230983,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 35.873827812581325,
+      "AP50": 59.74883978208362,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 35.03697899169373,
+      "AP50": 57.59701835427221,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 36.48026200921999,
+      "AP50": 60.87466712171186,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 35.625438938569864,
+      "AP50": 58.66809714206544,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 36.9006442422453,
+      "AP50": 61.65969046388992,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 36.033277002027305,
+      "AP50": 59.41368761471249,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 37.18497380492151,
+      "AP50": 62.219586498159984,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 36.30625498637368,
+      "AP50": 59.93062774457135,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 37.37168053158234,
+      "AP50": 62.59495654881402,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 36.47367053301979,
+      "AP50": 60.26332872210266,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 37.500524446923244,
+      "AP50": 62.715051975731775,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 36.563294112294386,
+      "AP50": 60.39620813116334,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.001,
+      "AP": 34.21578635460511,
+      "AP50": 59.15644969496883,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.01,
+      "AP": 34.51112033305364,
+      "AP50": 59.45329694392876,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.05,
+      "AP": 34.46609885160631,
+      "AP50": 59.037654982762334,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.3,
+      "conf": 0.1,
+      "AP": 34.26783896719102,
+      "AP50": 58.2939206467746,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.001,
+      "AP": 34.978283009510704,
+      "AP50": 59.61669148309185,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.01,
+      "AP": 35.16681052500829,
+      "AP50": 59.727397279641465,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.05,
+      "AP": 35.05234759995003,
+      "AP50": 59.208472576345464,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.4,
+      "conf": 0.1,
+      "AP": 34.85101608722966,
+      "AP50": 58.440782662829996,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.001,
+      "AP": 35.305341546058216,
+      "AP50": 59.345890842260886,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 35.41455550955722,
+      "AP50": 59.36844807987575,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.05,
+      "AP": 35.224130308295905,
+      "AP50": 58.83594610436982,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.5,
+      "conf": 0.1,
+      "AP": 35.019291696680035,
+      "AP50": 58.093352224099036,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.001,
+      "AP": 35.22651635428925,
+      "AP50": 58.594800156797056,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.01,
+      "AP": 35.27360445297812,
+      "AP50": 58.51989139503848,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.05,
+      "AP": 35.14982478887287,
+      "AP50": 58.17302239343344,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.6,
+      "conf": 0.1,
+      "AP": 34.908395328114985,
+      "AP50": 57.417505384361306,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.001,
+      "AP": 34.74929699839447,
+      "AP50": 57.29904118461741,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.01,
+      "AP": 34.81033778677363,
+      "AP50": 57.241622653664265,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.05,
+      "AP": 34.700922344213446,
+      "AP50": 56.97686707332975,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.7,
+      "conf": 0.1,
+      "AP": 34.443156603691115,
+      "AP50": 56.26307252045055,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.001,
+      "AP": 33.57316776774026,
+      "AP50": 55.030833856852325,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 33.64527323932598,
+      "AP50": 54.92645072949405,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.05,
+      "AP": 33.63619397519548,
+      "AP50": 54.68567023672341,
+      "source": "toolkit_port"
+    },
+    {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.3,
+      "match_thr": 0.8,
+      "conf": 0.1,
+      "AP": 33.35065442822603,
+      "AP50": 53.926280327996096,
+      "source": "toolkit_port"
+    }
+  ],
+  "best": {
+    "GREEDYNMM": {
+      "merge": "GREEDYNMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.54371291950198,
+      "AP50": 57.48416601499936,
+      "source": "toolkit_port"
+    },
+    "NMM": {
+      "merge": "NMM",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 34.52591320021086,
+      "AP50": 57.779154823836265,
+      "source": "toolkit_port"
+    },
+    "NMS": {
+      "merge": "NMS",
+      "metric": "IOS",
+      "overlap": 0.2,
+      "match_thr": 0.8,
+      "conf": 0.01,
+      "AP": 37.5761296142596,
+      "AP50": 62.74462437268489,
+      "source": "toolkit_port"
+    },
+    "WBF": {
+      "merge": "WBF",
+      "metric": "IOU",
+      "overlap": 0.2,
+      "match_thr": 0.5,
+      "conf": 0.01,
+      "AP": 35.48915061135437,
+      "AP50": 59.54943434383312,
+      "source": "toolkit_port"
+    }
+  },
+  "budget_per_merge": {
+    "GREEDYNMM": 72,
+    "NMM": 72,
+    "NMS": 72,
+    "WBF": 72
+  },
+  "branch": "o2o"
+}

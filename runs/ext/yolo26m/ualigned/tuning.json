@@ -1,0 +1,1358 @@
+{
+ "1280/o2m/F0-NMS": {
+  "grid": [
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.01,
+    "AP": 38.2803366683262,
+    "AP50": 61.953096976089725,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.1,
+    "AP": 37.817488840141216,
+    "AP50": 60.62157247969736,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.01,
+    "AP": 38.96468284622126,
+    "AP50": 63.136876315375886,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.1,
+    "AP": 38.50152293393502,
+    "AP50": 61.80448975600575,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.01,
+    "AP": 39.402371882441386,
+    "AP50": 63.99853724064669,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.1,
+    "AP": 38.915960338770034,
+    "AP50": 62.59949089504093,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.01,
+    "AP": 39.705545301726985,
+    "AP50": 64.56155624138607,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.1,
+    "AP": 39.222279990026294,
+    "AP50": 63.16642465407316,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.01,
+    "AP": 39.872347350841075,
+    "AP50": 64.86126962695454,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.1,
+    "AP": 39.369322299331046,
+    "AP50": 63.4261866645813,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.01,
+    "AP": 40.004886670097235,
+    "AP50": 65.0559421322226,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.1,
+    "AP": 39.4739733275114,
+    "AP50": 63.607866896205635,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "metric": "IOS",
+   "thr": 0.8,
+   "conf": 0.01,
+   "AP": 40.004886670097235,
+   "AP50": 65.0559421322226,
+   "source": "toolkit_port"
+  },
+  "budget": 12
+ },
+ "1280/o2m/F2": {
+  "grid": [
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.99058361748611,
+    "AP50": 60.98132230347547,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 38.40463502222671,
+    "AP50": 61.71870124995884,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.87821183773198,
+    "AP50": 62.49507230354181,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 41.35833080200653,
+    "AP50": 66.58740319200604,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.57702684492707,
+    "AP50": 67.01350766260654,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.86775296062329,
+    "AP50": 67.36173820823372,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.96169172592329,
+    "AP50": 60.893048477664365,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 38.377128431494064,
+    "AP50": 61.62495232277123,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.849343304230416,
+    "AP50": 62.39165705374995,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 41.33491622024394,
+    "AP50": 66.49864259974525,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.558167657549184,
+    "AP50": 66.93414095902259,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.838908410933655,
+    "AP50": 67.26144226335153,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.95092754010078,
+    "AP50": 60.85761429855187,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 38.362000560871344,
+    "AP50": 61.58468802491474,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.82695827316452,
+    "AP50": 62.34175714531039,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 41.32363902115184,
+    "AP50": 66.47179602938404,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.53016792029071,
+    "AP50": 66.87569038219702,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.816840957724224,
+    "AP50": 67.23066629108578,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.93661064249243,
+    "AP50": 60.812657148037324,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 38.34745413408516,
+    "AP50": 61.53817169164243,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.810364144382284,
+    "AP50": 62.286456357280315,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 41.30447426238528,
+    "AP50": 66.40871970288659,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.509570341626144,
+    "AP50": 66.802358931587,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.7969852526455,
+    "AP50": 67.16154507595658,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "AP": 41.86775296062329,
+   "AP50": 67.36173820823372,
+   "source": "toolkit_port"
+  },
+  "budget": 24
+ },
+ "1280/o2o/F0-NMS": {
+  "grid": [
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.01,
+    "AP": 38.68789753837077,
+    "AP50": 63.28504237464852,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.1,
+    "AP": 37.773127365208325,
+    "AP50": 61.0480514635047,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.01,
+    "AP": 39.345509415412586,
+    "AP50": 64.51498296514357,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.1,
+    "AP": 38.42104538593158,
+    "AP50": 62.2449657443895,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.01,
+    "AP": 39.813633003394216,
+    "AP50": 65.38295714563907,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.1,
+    "AP": 38.862605954729695,
+    "AP50": 63.041911336028356,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.01,
+    "AP": 40.12721781168879,
+    "AP50": 65.9493132075407,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.1,
+    "AP": 39.15907061035109,
+    "AP50": 63.56207822893655,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.01,
+    "AP": 40.29216882289783,
+    "AP50": 66.24804239022257,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.1,
+    "AP": 39.311778318253765,
+    "AP50": 63.840980171432534,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.01,
+    "AP": 40.42006097637304,
+    "AP50": 66.38946888438211,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.1,
+    "AP": 39.401596930759986,
+    "AP50": 63.960228159275935,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "metric": "IOS",
+   "thr": 0.8,
+   "conf": 0.01,
+   "AP": 40.42006097637304,
+   "AP50": 66.38946888438211,
+   "source": "toolkit_port"
+  },
+  "budget": 12
+ },
+ "1280/o2o/F2": {
+  "grid": [
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.57043720518022,
+    "AP50": 60.91051063309671,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 38.03613887496071,
+    "AP50": 61.64485086443161,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.57529057781092,
+    "AP50": 62.51285071454911,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 40.96089515305314,
+    "AP50": 66.72748142982901,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.21799067070372,
+    "AP50": 67.14896226701318,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.50737758155869,
+    "AP50": 67.51791399567263,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.47229968961861,
+    "AP50": 60.62031175630364,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 37.91957573322229,
+    "AP50": 61.31755656159542,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.45557795327674,
+    "AP50": 62.16844934486064,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 40.841288163897005,
+    "AP50": 66.37572980071579,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.089210477368454,
+    "AP50": 66.77526805927914,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.35353683403652,
+    "AP50": 67.09848796046863,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.51717612047512,
+    "AP50": 60.72951479896562,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 37.966461157945105,
+    "AP50": 61.42661787567733,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.50186161708265,
+    "AP50": 62.289333788428294,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 40.91460602979013,
+    "AP50": 66.5364318949765,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.15919744327618,
+    "AP50": 66.98113924946387,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.42734009610654,
+    "AP50": 67.30163107145047,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 37.455964075323216,
+    "AP50": 60.54330424481734,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 37.900457327923,
+    "AP50": 61.225918937151604,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 38.42233320613262,
+    "AP50": 62.06423940641262,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 40.8303658226656,
+    "AP50": 66.29560958132745,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 41.0581843173318,
+    "AP50": 66.66545549984815,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 41.31530592598213,
+    "AP50": 66.9962072176209,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "AP": 41.50737758155869,
+   "AP50": 67.51791399567263,
+   "source": "toolkit_port"
+  },
+  "budget": 24
+ },
+ "2048/o2m/F0-NMS": {
+  "grid": [
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.01,
+    "AP": 40.10439763546345,
+    "AP50": 64.41625534738765,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.1,
+    "AP": 39.591620195279276,
+    "AP50": 62.96192992017559,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.01,
+    "AP": 40.845285336124405,
+    "AP50": 65.69816520902474,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.1,
+    "AP": 40.33636678799797,
+    "AP50": 64.24529793340997,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.01,
+    "AP": 41.325800502379,
+    "AP50": 66.58785898670378,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.1,
+    "AP": 40.8023250294933,
+    "AP50": 65.07864777605454,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.01,
+    "AP": 41.696248766307626,
+    "AP50": 67.26019722294762,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.1,
+    "AP": 41.169059847490566,
+    "AP50": 65.7291346833654,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.01,
+    "AP": 41.905965342877806,
+    "AP50": 67.63911200388425,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.1,
+    "AP": 41.363114476656555,
+    "AP50": 66.09895606764238,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.01,
+    "AP": 42.01544426777669,
+    "AP50": 67.78113814472641,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.1,
+    "AP": 41.436711627977616,
+    "AP50": 66.21094806134832,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "metric": "IOS",
+   "thr": 0.8,
+   "conf": 0.01,
+   "AP": 42.01544426777669,
+   "AP50": 67.78113814472641,
+   "source": "toolkit_port"
+  },
+  "budget": 12
+ },
+ "2048/o2m/F2": {
+  "grid": [
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 40.03169040484171,
+    "AP50": 63.168940266660414,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.34919189293981,
+    "AP50": 63.69557501718764,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.98539248084343,
+    "AP50": 64.59819165788313,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.80865094368936,
+    "AP50": 69.44879087155388,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.97785154420353,
+    "AP50": 69.67882132299025,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.277572930658366,
+    "AP50": 70.23132740812403,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 40.01462112127935,
+    "AP50": 63.10899449952317,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.32907014598032,
+    "AP50": 63.62365693079774,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.96234927047926,
+    "AP50": 64.51506707963283,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.78536477082509,
+    "AP50": 69.36881014564477,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.95124929798706,
+    "AP50": 69.58824373274055,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.24743268126171,
+    "AP50": 70.13072662600446,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.99897983898777,
+    "AP50": 63.05168733754345,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.31806300785365,
+    "AP50": 63.58013121584711,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.94805081117576,
+    "AP50": 64.46903767302149,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.77657737554045,
+    "AP50": 69.32454578882864,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.950094410699066,
+    "AP50": 69.5706385863594,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.22819292356106,
+    "AP50": 70.0694674126057,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.978061236288134,
+    "AP50": 62.98886027290892,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.294410202938174,
+    "AP50": 63.504865319522665,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.93213059570854,
+    "AP50": 64.40987845571654,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.752835941444786,
+    "AP50": 69.24942240972972,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.93073362267765,
+    "AP50": 69.50150428031358,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.20495934166801,
+    "AP50": 69.99118670381877,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "AP": 44.277572930658366,
+   "AP50": 70.23132740812403,
+   "source": "toolkit_port"
+  },
+  "budget": 24
+ },
+ "2048/o2o/F0-NMS": {
+  "grid": [
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.01,
+    "AP": 40.929989667651284,
+    "AP50": 66.09975006146209,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.3,
+    "conf": 0.1,
+    "AP": 39.831862358549344,
+    "AP50": 63.48052905227793,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.01,
+    "AP": 41.7646895608352,
+    "AP50": 67.50614821374316,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.4,
+    "conf": 0.1,
+    "AP": 40.62758310002897,
+    "AP50": 64.79593340769735,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.01,
+    "AP": 42.267377781507705,
+    "AP50": 68.44339974024851,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.5,
+    "conf": 0.1,
+    "AP": 41.11727152414059,
+    "AP50": 65.70731130189743,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.01,
+    "AP": 42.625375730080066,
+    "AP50": 69.13625448179452,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.6,
+    "conf": 0.1,
+    "AP": 41.454686890895545,
+    "AP50": 66.33948477806165,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.01,
+    "AP": 42.8254567552544,
+    "AP50": 69.48781497186059,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.7,
+    "conf": 0.1,
+    "AP": 41.64652272854453,
+    "AP50": 66.67353811431438,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.01,
+    "AP": 42.939115735762414,
+    "AP50": 69.66825318239,
+    "source": "toolkit_port"
+   },
+   {
+    "metric": "IOS",
+    "thr": 0.8,
+    "conf": 0.1,
+    "AP": 41.72894294125773,
+    "AP50": 66.8124910296494,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "metric": "IOS",
+   "thr": 0.8,
+   "conf": 0.01,
+   "AP": 42.939115735762414,
+   "AP50": 69.66825318239,
+   "source": "toolkit_port"
+  },
+  "budget": 12
+ },
+ "2048/o2o/F2": {
+  "grid": [
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.76762595563339,
+    "AP50": 63.39311809940939,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.10168760279783,
+    "AP50": 63.949099412107486,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.8345029010171,
+    "AP50": 65.11237693386686,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.52681331755955,
+    "AP50": 69.77760406570948,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.70802627229575,
+    "AP50": 70.0026689545165,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.07289403922751,
+    "AP50": 70.54226587010264,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.69072671469904,
+    "AP50": 63.17067334531887,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.01204194547332,
+    "AP50": 63.703213583429424,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.72637706881901,
+    "AP50": 64.79990216922904,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.42387735517225,
+    "AP50": 69.46270485124498,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.599445076738384,
+    "AP50": 69.67119761604846,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.005,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 43.93452508064694,
+    "AP50": 70.14594699659912,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.73525533935428,
+    "AP50": 63.262818909979174,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 40.06381634918143,
+    "AP50": 63.8515436048507,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.78296314451794,
+    "AP50": 64.93597942534036,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.46211905578951,
+    "AP50": 69.61395898157322,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.64549575224448,
+    "AP50": 69.84034455122999,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.001,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 44.00589540636535,
+    "AP50": 70.3506265415104,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 3,
+    "AP": 39.67384407450513,
+    "AP50": 63.07995894172612,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 4,
+    "AP": 39.99568764056215,
+    "AP50": 63.65103692092431,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 3.0,
+    "bins_per_oct": 5,
+    "AP": 40.698577744929466,
+    "AP50": 64.68422341787276,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 3,
+    "AP": 43.39079542976373,
+    "AP50": 69.38950675836041,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 4,
+    "AP": 43.568040678276276,
+    "AP50": 69.60328868063893,
+    "source": "toolkit_port"
+   },
+   {
+    "tau_splat": 0.02,
+    "tau_peak": 0.01,
+    "cell_factor": 5.0,
+    "bins_per_oct": 5,
+    "AP": 43.90415829422733,
+    "AP50": 70.05373308494173,
+    "source": "toolkit_port"
+   }
+  ],
+  "best": {
+   "tau_splat": 0.005,
+   "tau_peak": 0.001,
+   "cell_factor": 5.0,
+   "bins_per_oct": 5,
+   "AP": 44.07289403922751,
+   "AP50": 70.54226587010264,
+   "source": "toolkit_port"
+  },
+  "budget": 24
+ }
+}

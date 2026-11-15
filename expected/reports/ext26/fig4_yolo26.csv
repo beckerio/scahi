@@ -1,0 +1,9 @@
+detector,configuration,AP test-dev,AP val,frozen row
+YOLO26s,single pass 2048 (o2o),33.15,38.41,E_yolo26s_full2048_o2o
+YOLO26s,"SCAHI on the single pass alone, row D (o2m, pre-specified)",32.83,37.64,D_yolo26s_single2048_F2_o2m
+YOLO26s,"2048 px + tiles, SCAHI pre-specified (o2m)",34.18,39.31,E_yolo26s_mz2048_F2_o2m
+YOLO26s,"2048 px + tiles, refined grid, row C (o2m)",34.93,40.65,XG_yolo26s_2048_o2m_C
+YOLO26m,single pass 2048 (o2o),35.30,41.25,E_yolo26m_full2048_o2o
+YOLO26m,"SCAHI on the single pass alone, row D (o2m, pre-specified)",34.73,40.16,D_yolo26m_single2048_F2_o2m
+YOLO26m,"2048 px + tiles, SCAHI pre-specified (o2m)",35.82,41.53,E_yolo26m_mz2048_F2_o2m
+YOLO26m,"2048 px + tiles, refined grid, row C (o2m)",36.59,42.89,XG_yolo26m_2048_o2m_C

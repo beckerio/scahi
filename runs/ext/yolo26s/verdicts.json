@@ -1,0 +1,300 @@
+{
+ "model": "yolo26s",
+ "eps": 0.3,
+ "rule": "addendum 7bc0ace item 5 (val decides; test-dev next to it)",
+ "time": "2026-11-15T15:25",
+ "splits": {
+  "val": {
+   "split": "val",
+   "rows": {
+    "E_yolo26s_full2048_o2o": 38.409006419410595,
+    "E_yolo26s_mz1280_F2_o2m": 36.14723620121693,
+    "E_yolo26s_mz1280_F2_o2o": 35.895775721400604,
+    "E_yolo26s_mz1280_nms-ios_o2m": 34.58152902112336,
+    "E_yolo26s_mz1280_nms-ios_o2o": 34.96763945899426,
+    "E_yolo26s_mz2048_F2_o2m": 39.309465379024935,
+    "E_yolo26s_mz2048_F2_o2o": 39.099847684332296,
+    "E_yolo26s_mz2048_nms-ios_o2m": 37.67923355455735
+   },
+   "hypotheses": {
+    "E-H1": {
+     "a": 38.409006419410595,
+     "b": 34.96763945899426,
+     "delta": 3.4413669604163317,
+     "ci95": [
+      3.0323049228578953,
+      3.8535051048336704
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_full2048_o2o",
+     "row_b": "E_yolo26s_mz1280_nms-ios_o2o",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H2 s=1280": {
+     "a": 36.14723620121693,
+     "b": 34.58152902112336,
+     "delta": 1.5657071800935682,
+     "ci95": [
+      1.3381588498529902,
+      1.833993232071552
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz1280_F2_o2m",
+     "row_b": "E_yolo26s_mz1280_nms-ios_o2m",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H2 s=2048": {
+     "a": 39.309465379024935,
+     "b": 37.67923355455735,
+     "delta": 1.630231824467586,
+     "ci95": [
+      1.3917151248493043,
+      1.854670967636893
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_mz2048_nms-ios_o2m",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H3": {
+     "a": 39.309465379024935,
+     "b": 38.409006419410595,
+     "delta": 0.9004589596143404,
+     "ci95": [
+      0.641150755475571,
+      1.1599733001851986
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_full2048_o2o",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H4": {
+     "a": 39.309465379024935,
+     "b": 39.099847684332296,
+     "delta": 0.20961769469263913,
+     "ci95": [
+      0.05988662540109875,
+      0.34533930298907595
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_mz2048_F2_o2o"
+    },
+    "E-H4 s=1280 (descriptive)": {
+     "a": 36.14723620121693,
+     "b": 35.895775721400604,
+     "delta": 0.25146047981632336,
+     "ci95": [
+      0.09424390808877466,
+      0.3979212156556885
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz1280_F2_o2m",
+     "row_b": "E_yolo26s_mz1280_F2_o2o"
+    }
+   }
+  },
+  "test-dev": {
+   "split": "test-dev",
+   "rows": {
+    "E_yolo26s_full2048_o2o": 33.14846047565342,
+    "E_yolo26s_mz1280_F2_o2m": 32.458207648825784,
+    "E_yolo26s_mz1280_F2_o2o": 31.964731151996784,
+    "E_yolo26s_mz1280_nms-ios_o2m": 30.09380272521654,
+    "E_yolo26s_mz1280_nms-ios_o2o": 30.611209659167432,
+    "E_yolo26s_mz2048_F2_o2m": 34.17510367597784,
+    "E_yolo26s_mz2048_F2_o2o": 33.91384159128021,
+    "E_yolo26s_mz2048_nms-ios_o2m": 31.90995518937529
+   },
+   "hypotheses": {
+    "E-H1": {
+     "a": 33.14846047565342,
+     "b": 30.611209659167432,
+     "delta": 2.53725081648599,
+     "ci95": [
+      2.2266791282358125,
+      2.8484621569766855
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_full2048_o2o",
+     "row_b": "E_yolo26s_mz1280_nms-ios_o2o",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H2 s=1280": {
+     "a": 32.458207648825784,
+     "b": 30.09380272521654,
+     "delta": 2.364404923609243,
+     "ci95": [
+      2.2023488095159944,
+      2.5401004849489532
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz1280_F2_o2m",
+     "row_b": "E_yolo26s_mz1280_nms-ios_o2m",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H2 s=2048": {
+     "a": 34.17510367597784,
+     "b": 31.90995518937529,
+     "delta": 2.2651484866025484,
+     "ci95": [
+      2.09600486715118,
+      2.431728736432473
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_mz2048_nms-ios_o2m",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H3": {
+     "a": 34.17510367597784,
+     "b": 33.14846047565342,
+     "delta": 1.0266432003244148,
+     "ci95": [
+      0.8394557135509958,
+      1.1977358293929894
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_full2048_o2o",
+     "status": "erf\u00fcllt",
+     "p_one_sided": 0.000999000999000999,
+     "holm_one_model": {
+      "p": 0.000999000999000999,
+      "p_holm": 0.000999000999000999,
+      "reject": true
+     }
+    },
+    "E-H4": {
+     "a": 34.17510367597784,
+     "b": 33.91384159128021,
+     "delta": 0.261262084697627,
+     "ci95": [
+      0.1667976942169954,
+      0.34836549246959386
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz2048_F2_o2m",
+     "row_b": "E_yolo26s_mz2048_F2_o2o"
+    },
+    "E-H4 s=1280 (descriptive)": {
+     "a": 32.458207648825784,
+     "b": 31.964731151996784,
+     "delta": 0.4934764968290004,
+     "ci95": [
+      0.4015963743996037,
+      0.5820513321248219
+     ],
+     "n_boot": 1000,
+     "seed": 0,
+     "row_a": "E_yolo26s_mz1280_F2_o2m",
+     "row_b": "E_yolo26s_mz1280_F2_o2o"
+    }
+   }
+  }
+ },
+ "G-E2": {
+  "row": "E_yolo26s_full1280_o2o",
+  "val_AP": 33.62746021019797,
+  "reference": 33.66,
+  "delta": -0.03253978980202987,
+  "rule": "within +-5 AP of YOLOv10s E-1280 (B-FULL 1280, val 33.66); reported, changes no verdict",
+  "passed": true
+ },
+ "equal_compute": {
+  "row_a": "E_yolo26s_full2048_o2o",
+  "row_b": "E_yolo26m_full1280_o2o",
+  "rule": "descriptive, no verdict, no threshold (addendum 7bc0ace item 8)",
+  "gflops_method": "exact per input shape (scahi.flops: Ultralytics get_flops on the fused model at the letterboxed shape of each image), mean over the images of the split",
+  "splits": {
+   "val": {
+    "a": 38.409006419410595,
+    "b": 37.408135205283024,
+    "delta": 1.0008712141275709,
+    "ci95": [
+     0.5953743616426157,
+     1.3740974420164733
+    ],
+    "n_boot": 1000,
+    "seed": 0,
+    "excludes_zero": true,
+    "gflops_per_img": {
+     "E_yolo26s_full2048_o2o": 126.44646912,
+     "E_yolo26m_full1280_o2o": 157.421568
+    },
+    "gflops_ratio_a_over_b": 0.8032347201623604
+   },
+   "test-dev": {
+    "a": 33.14846047565342,
+    "b": 32.54171071449306,
+    "delta": 0.6067497611603656,
+    "ci95": [
+     0.33708418450502065,
+     0.892700222410534
+    ],
+    "n_boot": 1000,
+    "seed": 0,
+    "excludes_zero": true,
+    "gflops_per_img": {
+     "E_yolo26s_full2048_o2o": 136.7579608362932,
+     "E_yolo26m_full1280_o2o": 165.66318302608698
+    },
+    "gflops_ratio_a_over_b": 0.8255181286403143
+   }
+  }
+ }
+}

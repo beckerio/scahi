@@ -1,0 +1,166 @@
+{
+ "model": "yolo26s",
+ "source": "configs/ext/frozen_rows_ext26s.json; single evaluation runs/ext/yolo26s/{val,testdev}",
+ "metric": "AP@[.5:.95], VisDrone toolkit protocol (ignored regions, at most 500 detections per image)",
+ "weights": {
+  "1280": {
+   "frozen_sha256": "441e19fd5eb9382b867aef47f955c55f8ccad1e2004b1d45fff76e92e7b2f7cb",
+   "asset": "visdrone_ext_yolo26s_1280_s0.pt",
+   "asset_sha256": [
+    "863a201d37ac14d6e2490006d63a5accb41e7a29de39472a7f9a2a466bdd454f"
+   ]
+  },
+  "2048": {
+   "frozen_sha256": "2d5ffb0e513b41b8d078b5ff959944c2fe2759930cb33c8a8ce0f19de06e14ff",
+   "asset": "visdrone_ext_yolo26s_2048_s0.pt",
+   "asset_sha256": [
+    "2a5b9d46efcb1ae76363a379581fa43749e08ae89691e2a7a3a5434082b70f05"
+   ]
+  }
+ },
+ "rows": {
+  "E_yolo26s_full1280_o2m": {
+   "calib": 35.62824857969844,
+   "calib_batch1": 35.54645290544918,
+   "val": 32.61539198199195,
+   "test-dev": 28.73363469475446
+  },
+  "E_yolo26s_full1280_o2o": {
+   "calib": 36.67503633772432,
+   "calib_batch1": 36.58129036473533,
+   "val": 33.62746021019797,
+   "test-dev": 29.93730947535283
+  },
+  "E_yolo26s_full2048_o2m": {
+   "calib": 40.230382959733106,
+   "calib_batch1": 40.1502339743768,
+   "val": 37.4116341706394,
+   "test-dev": 31.834214111846503
+  },
+  "E_yolo26s_full2048_o2o": {
+   "calib": 41.23553552655055,
+   "calib_batch1": 41.15679241104898,
+   "val": 38.409006419410595,
+   "test-dev": 33.14846047565342
+  },
+  "E_yolo26s_mz1280_F2_o2m": {
+   "calib": 39.667402271056424,
+   "val": 36.14723620121693,
+   "test-dev": 32.458207648825784
+  },
+  "E_yolo26s_mz1280_F2_o2o": {
+   "calib": 39.29814659932939,
+   "val": 35.895775721400604,
+   "test-dev": 31.964731151996784
+  },
+  "E_yolo26s_mz1280_nms-ios_o2m": {
+   "calib": 37.506320028275404,
+   "val": 34.58152902112336,
+   "test-dev": 30.09380272521654
+  },
+  "E_yolo26s_mz1280_nms-ios_o2o": {
+   "calib": 37.73408670001429,
+   "val": 34.96763945899426,
+   "test-dev": 30.611209659167432
+  },
+  "E_yolo26s_mz2048_F2_o2m": {
+   "calib": 42.2341995073861,
+   "val": 39.309465379024935,
+   "test-dev": 34.17510367597784
+  },
+  "E_yolo26s_mz2048_F2_o2o": {
+   "calib": 41.99493505489542,
+   "val": 39.099847684332296,
+   "test-dev": 33.91384159128021
+  },
+  "E_yolo26s_mz2048_nms-ios_o2m": {
+   "calib": 40.192621532193186,
+   "val": 37.67923355455735,
+   "test-dev": 31.90995518937529
+  },
+  "E_yolo26s_mz2048_nms-ios_o2o": {
+   "calib": 40.86928350031347,
+   "val": 38.48073759911172,
+   "test-dev": 32.59337686714312
+  },
+  "E_yolo26s_sahi_o2o": {
+   "calib": 34.582276149646894,
+   "val": 31.02058328325956,
+   "test-dev": 28.507857574140296
+  },
+  "XG_yolo26s_1280_o2m_B": {
+   "calib": 36.95858670973627,
+   "val": 34.03025908714395,
+   "test-dev": 30.344104387795895
+  },
+  "XG_yolo26s_1280_o2m_C": {
+   "calib": 40.89421801201108,
+   "val": 37.516663941183644,
+   "test-dev": 33.12416955549472
+  },
+  "XG_yolo26s_1280_o2o_B": {
+   "calib": 36.618503182232466,
+   "val": 33.740727087278195,
+   "test-dev": 30.06068715296575
+  },
+  "XG_yolo26s_1280_o2o_C": {
+   "calib": 40.50762477390006,
+   "val": 37.08066470743144,
+   "test-dev": 32.65160823919247
+  },
+  "XG_yolo26s_2048_o2m_B": {
+   "calib": 41.57847237860004,
+   "val": 38.870399576419274,
+   "test-dev": 33.57621366817453
+  },
+  "XG_yolo26s_2048_o2m_C": {
+   "calib": 43.49225618644713,
+   "val": 40.654289866812945,
+   "test-dev": 34.9302428939893
+  },
+  "XG_yolo26s_2048_o2o_B": {
+   "calib": 41.353790447657396,
+   "val": 38.629203229194175,
+   "test-dev": 33.3511386412272
+  },
+  "XG_yolo26s_2048_o2o_C": {
+   "calib": 43.26877567600623,
+   "val": 40.45224162026476,
+   "test-dev": 34.68922471406163
+  },
+  "D_yolo26s_single1280_F2_o2m": {
+   "calib": 35.90884743943339,
+   "val": 32.72093501549765,
+   "test-dev": 29.683024263335092
+  },
+  "D_yolo26s_single1280_F2_o2o": {
+   "calib": 35.69248878592695,
+   "val": 32.63187850482013,
+   "test-dev": 29.423253141255802
+  },
+  "D_yolo26s_single2048_F2_o2m": {
+   "calib": 40.40914344898371,
+   "val": 37.63678435439901,
+   "test-dev": 32.82638351105241
+  },
+  "D_yolo26s_single2048_F2_o2o": {
+   "calib": 40.12472773216119,
+   "val": 37.33212660476662,
+   "test-dev": 32.52549180967499
+  }
+ },
+ "cached_assets": {
+  "val": {
+   "asset": "yolo26s_visdrone_cached_val.tar",
+   "sha256": "6571ae47fd7433f69dd8c7938cdd2938100591e12f8743730ae6d740ca53bef7",
+   "bytes": 718510080,
+   "members": 2197
+  },
+  "test-dev": {
+   "asset": "yolo26s_visdrone_cached_test-dev.tar",
+   "sha256": "71e92c08e1df0e8dc541599006a61067c522515c8f3d70e7aa85210b46029cfd",
+   "bytes": 1415464960,
+   "members": 6445
+  }
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "1280": {
+  "gate": "G-E3 (G5b)",
+  "model": "yolo26m",
+  "weights": "1280",
+  "level": "w1280",
+  "AP_dense_F2": 37.71053179032186,
+  "AP_o2m_nms": 38.43477754476365,
+  "diff": -0.7242457544417888,
+  "max_drop": 1.5,
+  "passed": true
+ },
+ "2048": {
+  "gate": "G-E3 (G5b)",
+  "model": "yolo26m",
+  "weights": "2048",
+  "level": "w2048",
+  "AP_dense_F2": 41.432581202174184,
+  "AP_o2m_nms": 42.562434684010235,
+  "diff": -1.1298534818360508,
+  "max_drop": 1.5,
+  "passed": true
+ }
+}

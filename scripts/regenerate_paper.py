@@ -53,11 +53,19 @@ COMMANDS = [
     ["scripts/latency_multizoom_host_b.py", "report"],  # latency of the multi-zoom arm (supplement)
     ["scripts/scahi_algorithm_doc.py"],
     ["scripts/backmap_report.py", "report"],  # box back-mapping check of all frozen rows (supplement Sec. 1)
+    ["scripts/ext26_paper_values.py"],  # YOLO26s / YOLO26m: Tab. 1 rows, Fig. 3 GFLOPs, Fig. 4, equal compute, Tab. s-y26
 ]
 OUTPUTS = """
 docs/SCAHI_ALGORITHM.md
 reports/ABLATION.md
 reports/BACKMAP_CHECK.md
+reports/ext26/YOLO26_PAPER_VALUES.md
+reports/ext26/tab1_yolo26.csv
+reports/ext26/fig4_yolo26.csv
+reports/ext26/gflops_single.csv
+reports/ext26/equal_compute.csv
+reports/ext26/tab_s_y26.csv
+reports/ext26/single_pass_gate.csv
 reports/backmap_check.json
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.csv
 reports/ANALYSIS_WEIGHTED_BOX_FUSION.md

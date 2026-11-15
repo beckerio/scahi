@@ -1,0 +1,15 @@
+{
+  "init": "coco:yolo26m.pt",
+  "epochs": 100,
+  "imgsz": 2048,
+  "batch": 3,
+  "seed": 0,
+  "oom_fallback": false,
+  "nbs": 64,
+  "accumulate": 21,
+  "effective_batch": 63,
+  "selection": "toolkit_port AP on calib (o2o), best epoch 45 (43.71)",
+  "weights": "runs/ext/train/yolo26m_2048_s0/ultralytics/train/weights/best_calib.pt",
+  "preregistration": "e5eca5bd",
+  "addendum": "7c01b5d"
+}

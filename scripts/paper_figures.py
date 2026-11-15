@@ -28,7 +28,8 @@ OUT = REPO / "reports/figures/paper"
 
 sys.path.insert(0, str(REPO / "scripts"))
 import figstyle as FS  # noqa: E402  (central style: colours, fonts, sizes, dpi)
-from figstyle import (AQUA, BLUE, BLUE_D, COL_W, FULL_W, GRID, INK, INK2, MUTED, ORANGE, ORD4, SEQ, SURF)  # noqa: E402,F401
+from figstyle import (AQUA, BLUE, BLUE_D, COL_W, FULL_W, GRID, INK, INK2, MAGENTA, MUTED, ORANGE, ORD4, SEQ,  # noqa: E402,F401
+                      SURF)
 
 _SOURCES: list[str] = []  # input files of the figure being built (written next to it)
 _EXTRA: dict = {}  # non-plotted context of the figure being built (e.g. image path and crop)
@@ -645,14 +646,27 @@ OUT_EXT = REPO / "reports/figures/ext"
 FAMILY_COL = {"yolov10": BLUE, "yolo11": ORANGE, "yolo12": AQUA}  # categorical slots in fixed order
 MODEL_LABEL = {"yolov10s": "YOLOv10s", "yolov10m": "YOLOv10m", "yolo11s": "YOLOv11s", "yolo11m": "YOLOv11m",
                "yolo12s": "YOLOv12s", "yolo12m": "YOLOv12m"}
+# Detectors added by addenda 7c01b5d / 7bc0ace (reported separately, in no family criterion); colour slot 4
+ADD_LABEL = {"yolo26s": "YOLO26s", "yolo26m": "YOLO26m"}
+ADD_COL = {"yolo26": MAGENTA}
+ALL_LABEL = {**MODEL_LABEL, **ADD_LABEL}
+ALL_COL = {**FAMILY_COL, **ADD_COL}
+FIG26 = "runs/ext/yolo26_figdata.json"  # decomposition / recall inputs of the YOLO26 rows (scripts/ext26_figure_data.py)
+
+
+def _v26(m: str) -> dict:
+    """Verdict file of an addendum detector (runs/ext/<model>/verdicts.json) or {}."""
+    f = f"runs/ext/{m}/verdicts.json"
+    return jload(f) if (REPO / f).exists() else {}
 
 
 def _family(model: str) -> str:
     return "yolov10" if model.startswith("yolov10") else model[:6]
 
 
-def _training_runs() -> list[dict]:
-    """B-FULL training runs on visdrone10 (finished study: YOLOv10s; extension: runs/ext/train), with their calib curves."""
+def _training_runs(added: bool = False) -> list[dict]:
+    """B-FULL training runs on visdrone10 (finished study: YOLOv10s; extension: runs/ext/train), with their calib curves;
+    ``added``: also the addendum detectors (YOLO26s / YOLO26m)."""
     runs = []
     for d in sorted((REPO / "runs/p2").glob("20261022_v10s_BFULL*_train_s*")):
         tag = d.name.split("_")[2]
@@ -661,7 +675,7 @@ def _training_runs() -> list[dict]:
         runs.append({"model": "yolov10s", "imgsz": int(tag[5:]), "seed": int(d.name[-1]), "dir": d})
     for d in sorted((REPO / "runs/ext/train").glob("*_s*")):
         m, sz, s = d.name.rsplit("_", 2)
-        if m not in MODEL_LABEL:  # the paper's detectors only (YOLO26m is a separate, later extension)
+        if m not in MODEL_LABEL and not (added and m in ADD_LABEL):  # paper's detectors (+ addenda on request)
             continue
         runs.append({"model": m, "imgsz": int(sz), "seed": int(s[1:]), "dir": d})
     out = []
@@ -677,8 +691,8 @@ def _training_runs() -> list[dict]:
 
 def fig_ext_calib_curves() -> None:
     """Calib AP over epochs for o2o and o2m+NMS of every B-FULL run (descriptive; recipe unchanged)."""
-    order = list(MODEL_LABEL)
-    runs = sorted(_training_runs(), key=lambda r: (order.index(r["model"]), r["imgsz"], r["seed"]))
+    order = list(ALL_LABEL)
+    runs = sorted(_training_runs(added=True), key=lambda r: (order.index(r["model"]), r["imgsz"], r["seed"]))
     n = len(runs)
     cols = 4
     rows = int(np.ceil(n / cols))
@@ -696,7 +710,7 @@ def fig_ext_calib_curves() -> None:
         ax.axvline(b["epoch"], color=MUTED, lw=0.7, ls=(0, (2, 2)))
         drop = c[-1]["AP"] - b["AP"]
         state = "" if r["done"] else "  (running)"
-        ax.set_title(f"{MODEL_LABEL[r['model']]} {r['imgsz']}" + (f" s{r['seed']}" if r["seed"] else "") + state, fontsize=7)
+        ax.set_title(f"{ALL_LABEL[r['model']]} {r['imgsz']}" + (f" s{r['seed']}" if r["seed"] else "") + state, fontsize=7)
         ax.text(0.98, 0.04, f"best ep {b['epoch']}: {b['AP']:.1f}" + (f"\nep {c[-1]['epoch']}: {drop:+.1f}" if r["done"] else ""),
                 transform=ax.transAxes, ha="right", va="bottom", fontsize=5.6, color=INK2)
         ax.tick_params(labelsize=6)
@@ -708,13 +722,23 @@ def fig_ext_calib_curves() -> None:
         ax.set_ylabel("calib AP [%]", fontsize=6.5)
     h = [plt.Line2D([], [], color=BLUE, marker="o", ms=3, lw=1.3), plt.Line2D([], [], color=ORANGE, marker="s", ms=3, lw=1.1),
          plt.Line2D([], [], color=MUTED, lw=0.7, ls=(0, (2, 2)))]
-    fig.legend(h, ["o2o (NMS-free head, YOLOv10 selection)", "o2m + NMS (YOLOv10) / single head + NMS (YOLOv11/v12)",
+    fig.legend(h, ["o2o (NMS-free head, YOLOv10 / YOLO26 selection)",
+                   "o2m + NMS (YOLOv10 / YOLO26) / single head + NMS (YOLOv11/v12)",
                    "selected epoch (best calib AP)"], loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=3, fontsize=6.2)
     fig.suptitle("Calib AP during training (toolkit port at the scheduled calib evaluations) - descriptive, recipe unchanged",
                  fontsize=7.6, x=0.01, ha="left")
     save(fig, "fig_ext_calib_curves", OUT_EXT)
     save_csv([{"model": r["model"], "imgsz": r["imgsz"], "seed": r["seed"], **x} for r in runs for x in r["curve"]],
              "fig_ext_calib_curves", OUT_EXT)
+
+
+# Size-label offsets (points, ha) where labels of neighbouring points would collide (column width); default (4, -3, left)
+SCALING_LABEL_OFF = {("yolo26s", 1280): (-4, 3, "right"), ("yolov10s", 2048): (0, 7, "center"),
+                     ("yolo26s", 2048): (-6, 0, "right"), ("yolo11s", 2048): (-6, -2, "right"),
+                     ("yolov10m", 1280): (0, 7, "center"), ("yolo11m", 1280): (-6, -2, "right"),
+                     ("yolo26m", 1280): (4, -7, "left"),
+                     ("yolov10s", 2560): (0, 7, "center"),
+                     ("yolov10m", 2048): (-5, 3, "right"), ("yolo26m", 2048): (5, 2, "left")}
 
 
 def fig_ext_scaling() -> None:
@@ -724,7 +748,7 @@ def fig_ext_scaling() -> None:
 
     # The points need the weights (GFLOPs via the weights hash) and the val image sizes. Where they are missing (release
     # without weights/data) the stored points are re-plotted; never drop rows silently (release check 2026-11-01).
-    runs = [r for r in _training_runs() if not r["seed"]]
+    runs = [r for r in _training_runs(added=True) if not r["seed"]]
     stored = REPO / "runs/ext/scaling_points.json"
     if not all(r["weights"].exists() for r in runs) or not (REPO / "data/canonical/visdrone10/coco/val.json").exists():
         if not stored.exists():
@@ -739,7 +763,9 @@ def fig_ext_scaling() -> None:
         pts = []
     for r in runs:
         val_ap = None
-        if r["model"] == "yolov10s":
+        if r["model"] in ADD_LABEL:  # single held-out evaluation of the addendum freeze, hypothesis branch o2o
+            mf = REPO / f"runs/ext/{r['model']}/val/E_{r['model']}_full{r['imgsz']}_o2o/metrics.json"
+        elif r["model"] == "yolov10s":
             mf = REPO / f"runs/p2/20261022_v10s_BFULL{r['imgsz']}_full{r['imgsz']}_none_s0/metrics.json"
             if r["imgsz"] in (2560, 3072):
                 mf = REPO / f"runs/ext/rows/E_yolov10s_full{r['imgsz']}_o2o/metrics.json"
@@ -755,17 +781,20 @@ def fig_ext_scaling() -> None:
     preview = not all(p["val_AP"] is not None for p in pts if p["done"])
     key = "calib_AP" if preview else "val_AP"
     fig, ax = plt.subplots(figsize=(COL_W * 1.25, 2.6), constrained_layout=True)
-    for m in MODEL_LABEL:
+    for m in [*MODEL_LABEL, *ADD_LABEL]:
         p = sorted([q for q in pts if q["model"] == m and q[key] is not None], key=lambda q: q["imgsz"])
         if not p:
             continue
-        col = FAMILY_COL[_family(m)]
+        col = {**FAMILY_COL, **ADD_COL}[_family(m)]
         mk = "o" if m.endswith("s") else "s"
         ax.plot([q["gflops"] for q in p], [q[key] for q in p], "-", color=col, lw=1.1, zorder=2)
         for q in p:  # model = colour (family) + marker (s / m) in the legend; the point carries its input size
-            ax.scatter(q["gflops"], q[key], marker=mk, s=22, color=col if q["done"] else SURF, edgecolor=col, lw=1.0, zorder=3)
-            ax.annotate(str(q["imgsz"]), (q["gflops"], q[key]), xytext=(4, -3), textcoords="offset points", fontsize=5.6,
-                        color=INK2)
+            add = m in ADD_LABEL  # YOLO26s nearly coincides with YOLOv10s: surface ring around the addendum markers
+            ax.scatter(q["gflops"], q[key], marker=mk, s=22, color=col if q["done"] else SURF,
+                       edgecolor=SURF if add else col, lw=0.6 if add else 1.0, zorder=4 if add else 3)
+            dx, dy, ha = SCALING_LABEL_OFF.get((m, q["imgsz"]), (4, -3, "left"))
+            ax.annotate(str(q["imgsz"]), (q["gflops"], q[key]), xytext=(dx, dy), textcoords="offset points",
+                        fontsize=5.6, color=INK2, ha=ha, va="center" if ha == "center" else "baseline")
     ax.set_xscale("log")
     from matplotlib.ticker import FixedFormatter, FixedLocator, NullLocator
 
@@ -777,10 +806,15 @@ def fig_ext_scaling() -> None:
     ax.set_ylabel(("calib" if preview else "val") + " AP [%]")
     ax.set_title("PREVIEW (calib AP, selection split) - model vs. resolution scaling" if preview else
                  "Model vs. resolution scaling (val, single pass)", fontsize=7.4, color=ORANGE if preview else INK)
-    h = [plt.Line2D([], [], color=FAMILY_COL[f], marker="o", lw=1.1, ms=4) for f in FAMILY_COL] + \
-        [plt.Line2D([], [], color=INK2, marker=mk, lw=0, ms=4) for mk in ("o", "s")] + \
-        [plt.Line2D([], [], color=INK2, marker="o", lw=0, ms=4, markerfacecolor=SURF)]
-    ax.legend(h, ["YOLOv10", "YOLOv11", "YOLOv12", "s model", "m model", "training running"], fontsize=5.6, loc="lower right", ncol=2)
+    fams = [f for f in {**FAMILY_COL, **ADD_COL} if any(_family(q["model"]) == f for q in pts)]
+    h = [plt.Line2D([], [], color={**FAMILY_COL, **ADD_COL}[f], marker="o", lw=1.1, ms=4) for f in fams] + \
+        [plt.Line2D([], [], color=INK2, marker=mk, lw=0, ms=4) for mk in ("o", "s")]
+    fam_lbl = {"yolov10": "YOLOv10", "yolo11": "YOLOv11", "yolo12": "YOLOv12", "yolo26": "YOLO26"}
+    lbl = [fam_lbl[f] for f in fams] + ["s model", "m model"]
+    if not all(q["done"] for q in pts):  # hollow marker only while a training run is in progress
+        h.append(plt.Line2D([], [], color=INK2, marker="o", lw=0, ms=4, markerfacecolor=SURF))
+        lbl.append("training running")
+    ax.legend(h, lbl, fontsize=5.6, loc="lower right", ncol=2)
     if not _ext_complete():
         ax.text(0.01, 0.98, "INTERIM", transform=ax.transAxes, va="top", fontsize=6.4, color=ORANGE, weight="semibold")
     _EXTRA.update(points=pts, preview=preview)
@@ -809,7 +843,7 @@ EXT_HYPS = (("E-H1", "Q1: single pass 2048 −\n1280 + tiles, box fusion"),
             ("E-H2 s=1280", "Q2: SCAHI − box fusion,\nsame passes, N = 1280"),
             ("E-H2 s=2048", "Q2: SCAHI − box fusion,\nsame passes, N = 2048"),
             ("E-H3", "Q3: SCAHI (tiles) −\nsingle pass, N = 2048"),
-            ("E-H4", "YOLOv10 head\n(o2m vs. o2o), YOLOv10m"))
+            ("E-H4", "o2m vs. o2o head\n(YOLOv10m, YOLO26)"))
 EXT_MODELS = ("yolov10m", "yolo11s", "yolo12s", "yolo11m", "yolo12m")
 
 
@@ -828,8 +862,16 @@ def fig_ext_forest() -> None:
         e4["test-dev"] = jload("runs/ext/e4/e4_testdev.json")
     eps = e4["val"]["epsilon"]["eps"]
     off = {"val": 0.17, "test-dev": -0.17} if len(e4) == 2 else {"val": 0.0}
-    fig, axes = plt.subplots(1, len(EXT_HYPS), figsize=(FULL_W, 2.5), sharey=True, constrained_layout=True)
-    y = np.arange(len(EXT_MODELS))[::-1]
+    v26 = {m: _v26(m) for m in ADD_LABEL}
+    add = [m for m in ADD_LABEL if v26[m]]
+    models = [*EXT_MODELS, *add]
+    # the five detectors, their pooled row, a gap, then the addendum detectors (reported separately, not pooled)
+    ypos = {m: len(add) + 1 + len(EXT_MODELS) - i for i, m in enumerate(EXT_MODELS)}
+    ypos.update({m: len(add) - 1 - i for i, m in enumerate(add)})
+    y_pool = len(add) + 1
+    fig, axes = plt.subplots(1, len(EXT_HYPS), figsize=(FULL_W, 2.5 + 0.28 * len(add)), sharey=True,
+                             constrained_layout=True)
+    y = [ypos[m] for m in models]
     rows = []
     for ax, (h, lbl) in zip(axes, EXT_HYPS):
         ax.axvline(0, color=MUTED, lw=0.7, zorder=1)
@@ -839,8 +881,9 @@ def fig_ext_forest() -> None:
             if sp not in e4:
                 continue
             o = e4[sp]["hypotheses"].get(h, {})
-            for yi, m in zip(y, EXT_MODELS):
-                r = o.get("per_model", {}).get(m)
+            for yi, m in zip(y, models):
+                r = (v26[m]["splits"].get(sp, {}).get("hypotheses", {}).get(h) if m in ADD_LABEL else
+                     o.get("per_model", {}).get(m))
                 if r is None or "missing" in r:
                     if h == "E-H4" and not m.startswith("yolov10"):
                         continue
@@ -855,7 +898,7 @@ def fig_ext_forest() -> None:
                                 transform=ax.get_yaxis_transform())
                     rows.append({"split": sp, "hypothesis": h, "model": m, "status": f"{r['status']} ({r['untestable']})"})
                     continue
-                col, yy = FAMILY_COL[_family(m)], yi + off[sp]
+                col, yy = ALL_COL[_family(m)], yi + off[sp]
                 ax.plot(r["ci95"], [yy, yy], color=col, lw=1.3, solid_capstyle="round", zorder=3,
                         alpha=1.0 if sp == "val" else 0.75)
                 ax.scatter([r["delta"]], [yy], s=16, marker=mk, zorder=4, lw=0.8,
@@ -864,16 +907,18 @@ def fig_ext_forest() -> None:
                              "ci_hi": r["ci95"][1], "eps": None if h == "E-H4" else eps, "status": r.get("status", "")})
             p = o.get("pooled")
             if p and p["delta"] is not None:
-                yy = -1 + off[sp]
+                yy = y_pool + off[sp]
                 ax.plot(p["ci95"], [yy, yy], color=INK2, lw=1.1, zorder=3)
                 ax.scatter([p["delta"]], [yy], marker="D", s=14, zorder=4, lw=0.8,
                            **(dict(color=INK2) if sp == "val" else dict(facecolor=SURF, edgecolor=INK2)))
                 rows.append({"split": sp, "hypothesis": h, "model": f"pooled ({p['n_models']} models, descriptive)",
                              "delta": p["delta"], "ci_lo": p["ci95"][0], "ci_hi": p["ci95"][1], "eps": eps})
+        if add:
+            ax.axhline(len(add), color=GRID, lw=0.8, zorder=0)
         ax.set_title(lbl, fontsize=6.2)
         ax.grid(axis="y", visible=False)
         ax.tick_params(labelsize=6)
-    axes[0].set_yticks([*y, -1], [MODEL_LABEL[m] for m in EXT_MODELS] + ["pooled (descr.)"])
+    axes[0].set_yticks([*y, y_pool], [ALL_LABEL[m] for m in models] + ["pooled, 5 detectors (descr.)"])
     from matplotlib.lines import Line2D
     hd = [Line2D([], [], ls="-", marker="o", color=INK2, mec=SURF, ms=4, lw=1.2, label="val (verdicts as computed)")]
     if "test-dev" in e4:
@@ -899,12 +944,15 @@ def fig_ext_waterfall() -> None:
     if not (REPO / f).exists():
         return
     cs = jload(f)["contrasts"]
+    if (REPO / FIG26).exists():  # addendum detectors (same contrasts, scripts/ext26_figure_data.py)
+        cs = cs + jload(FIG26)["contrasts"]
     get = lambda fam, m, sz, br, con: next((c for c in cs if (c["family"], c["model"], c["s"], c["branch"],  # noqa: E731
                                                                 c["contrast"]) == (fam, m, sz, br, con)
                                             and c.get("role", "main") == "main"), None)
-    items = [(m, sz) for m in EXT_MODELS for sz in (1280, 2048) if get("decomposition", m, sz, "o2m", "B − A")]
+    items = [(m, sz) for m in (*EXT_MODELS, *ADD_LABEL) for sz in (1280, 2048)
+             if get("decomposition", m, sz, "o2m", "B − A")]
     sizes = sorted({sz for _, sz in items})
-    models = [m for m in EXT_MODELS if any(mm == m for mm, _ in items)]
+    models = [m for m in (*EXT_MODELS, *ADD_LABEL) if any(mm == m for mm, _ in items)]
     panels = [(sz, sp) for sz in sizes for sp, _, _ in SPLITS]
     fig, axes = plt.subplots(len(panels), len(models), figsize=(FULL_W, 1.45 * len(panels) + 0.3), squeeze=False,
                              constrained_layout=True)
@@ -948,7 +996,7 @@ def fig_ext_waterfall() -> None:
             ax.set_ylim(lo, max(vals) + 1.4)
             ax.grid(axis="x", visible=False)
             ax.tick_params(labelsize=5.6)
-            ax.set_title(f"{MODEL_LABEL[m]} N = {sz} · {sp}", fontsize=6.2,
+            ax.set_title(f"{ALL_LABEL[m]}" + (" " if len(models) <= 5 else "\n") + f"N = {sz} · {sp}", fontsize=6.2,
                          color=INK if sp == "val" else BLUE_D)
             if j == 0:
                 ax.set_ylabel(f"{sp} AP [%]", fontsize=6.0)
@@ -960,8 +1008,8 @@ def fig_ext_waterfall() -> None:
           "(o2m head), val and test-dev; exploratory, post hoc")
     fig.suptitle(st if _ext_complete() else "INTERIM - " + st, fontsize=7.0, x=0.01, ha="left",
                  color=INK if _ext_complete() else ORANGE)
-    fig.text(0.0, -0.01, "Error bars: paired-bootstrap 95 % CI of each step. YOLOv10m: the single pass uses the o2o "
-             "head. YOLOv12m: N = 1280 only.", fontsize=5.4, color=MUTED)
+    fig.text(0.0, -0.01, "Error bars: paired-bootstrap 95 % CI of each step. YOLOv10m and YOLO26: the single pass uses "
+             "the o2o head. YOLOv12m: N = 1280 only.", fontsize=5.4, color=MUTED)
     save(fig, "fig_ext_waterfall", OUT_EXT)
     save_csv(rows, "fig_ext_waterfall", OUT_EXT)
 
@@ -974,6 +1022,7 @@ def fig_ext_recall() -> None:
     if not sizes:
         return
     xg = jload("runs/ext/grid_ext.json")["results"] if (REPO / "runs/ext/grid_ext.json").exists() else {}
+    r26 = jload(FIG26)["recall50_all"] if (REPO / FIG26).exists() else {}
     rows = []
     fig, axes = plt.subplots(len(sizes), 2, figsize=(FULL_W, 2.0 * len(sizes)), sharey=False, constrained_layout=True,
                              squeeze=False)
@@ -983,12 +1032,15 @@ def fig_ext_recall() -> None:
     for (sz, f), ax_row in zip(sizes, axes):
         om = jload(f)["results"]
         tags = [(m, f"{m}|B:o2m") for m in EXT_MODELS if f"{m}|B:o2m" in om]
+        tags += [(m, None) for m in ADD_LABEL if m in r26.get(str(sz), {})]
         for ax, grp, lbl in ((ax_row[0], "crowd", "crowded GT (same-class neighbour, IoU > 0.3)"),
                              (ax_row[1], "iso", "isolated GT")):
             for k, (key, name, col) in enumerate(series):
                 xs, ys = [], []
                 for i, (m, tag) in enumerate(tags):
-                    if key == "XG":
+                    if tag is None:  # addendum detector: recall of A, B, C and the refined grid from FIG26
+                        v = r26[str(sz)][m][grp].get(key)
+                    elif key == "XG":
                         r = xg.get(f"{m}/{sz}/o2m/C")
                         v = r["val_selected"][f"R50_{grp}"] if r else None
                     else:
@@ -1001,7 +1053,7 @@ def fig_ext_recall() -> None:
                 if ys:
                     ax.bar(xs, ys, width=w * 0.92, color=col, label=name)
             ax.set_axisbelow(True)
-            ax.set_xticks(range(len(tags)), [MODEL_LABEL[m] for m, _ in tags], fontsize=6.2)
+            ax.set_xticks(range(len(tags)), [ALL_LABEL[m] for m, _ in tags], fontsize=6.2 if len(tags) <= 5 else 5.4)
             ax.set_ylim(50 if grp == "crowd" else 75, 100)
             ax.grid(axis="x", visible=False)
             _interim_title(ax, f"N = {sz}: {lbl}")
@@ -1020,8 +1072,12 @@ def fig_ext_xgrid_cost() -> None:
     f = REPO / "runs/ext/grid_ext.json"
     if not f.exists():
         return
-    res = jload("runs/ext/grid_ext.json")["results"]
-    order = {m: i for i, m in enumerate((*EXT_MODELS, "yolov10s"))}  # YOLOv10s 2048 (R2 / X2 weights) last
+    res = dict(jload("runs/ext/grid_ext.json")["results"])
+    for m in ADD_LABEL:  # addendum detectors: the same frozen procedure on calib (Ultralytics-aligned caches)
+        f26 = f"runs/ext/{m}/ualigned/xgrid_calib.json"
+        if (REPO / f26).exists():
+            res.update(jload(f26)["results"])
+    order = {m: i for i, m in enumerate((*EXT_MODELS, "yolov10s", *ADD_LABEL))}  # YOLOv10s 2048 after the five
     keys = sorted(res, key=lambda k: (order[k.split("/")[0]], int(k.split("/")[1]), k.split("/")[2], k.split("/")[3]))
     pk = lambda r: tuple(round(float(r[p]), 12) for p in ("tau_splat", "tau_peak", "cell_factor", "bins_per_oct"))  # noqa: E731
     cf_col = {7.0: ORD4[0], 9.0: ORD4[1], 11.0: ORD4[2], 13.0: ORD4[3]}
@@ -1049,7 +1105,7 @@ def fig_ext_xgrid_cost() -> None:
             ax.scatter(r["time_ratio_vs_ref"], r["AP"], zorder=4, **st)
         ax.axvline(2.0, color=INK2, lw=0.6, ls=(0, (3, 2)), zorder=2)
         m, sz, br, row = k.split("/")
-        ax.set_title(f"{MODEL_LABEL[m]} {sz} {br} · {'whole image' if row == 'B' else '+ tiles'}", fontsize=6.2)
+        ax.set_title(f"{ALL_LABEL[m]} {sz} {br} · {'whole image' if row == 'B' else '+ tiles'}", fontsize=6.2)
         ax.tick_params(labelsize=5.6)
         ax.set_axisbelow(True)
     for ax in axes.flat[len(keys):]:

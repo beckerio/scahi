@@ -1,0 +1,185 @@
+{
+ "gate": "YOLO26m val replay (fresh processes, same code path), exact equality for every frozen row",
+ "freeze": "085c6de6b80e4447a67c4749f8ccc57f89766c6c",
+ "time": "2026-11-14T13:18",
+ "rows": [
+  {
+   "id": "E_yolo26m_full1280_o2m",
+   "kind": "single",
+   "val_AP": 35.98904461076943,
+   "replay_AP": 35.98904461076943,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_full1280_o2o",
+   "kind": "single",
+   "val_AP": 37.408135205283024,
+   "replay_AP": 37.408135205283024,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_full2048_o2m",
+   "kind": "single",
+   "val_AP": 40.04587618528355,
+   "replay_AP": 40.04587618528355,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_full2048_o2o",
+   "kind": "single",
+   "val_AP": 41.253495505816694,
+   "replay_AP": 41.253495505816694,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz1280_F2_o2m",
+   "kind": "cache",
+   "val_AP": 39.03105286337288,
+   "replay_AP": 39.03105286337288,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz1280_F2_o2o",
+   "kind": "cache",
+   "val_AP": 38.86156471529564,
+   "replay_AP": 38.86156471529564,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz1280_nms-ios_o2m",
+   "kind": "cache",
+   "val_AP": 37.09359913221071,
+   "replay_AP": 37.09359913221071,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz1280_nms-ios_o2o",
+   "kind": "cache",
+   "val_AP": 37.893822421199204,
+   "replay_AP": 37.893822421199204,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz2048_F2_o2m",
+   "kind": "cache",
+   "val_AP": 41.53311649802146,
+   "replay_AP": 41.53311649802146,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz2048_F2_o2o",
+   "kind": "cache",
+   "val_AP": 41.41854405972854,
+   "replay_AP": 41.41854405972854,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz2048_nms-ios_o2m",
+   "kind": "cache",
+   "val_AP": 39.767068859661066,
+   "replay_AP": 39.767068859661066,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_mz2048_nms-ios_o2o",
+   "kind": "cache",
+   "val_AP": 40.70040382781595,
+   "replay_AP": 40.70040382781595,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "E_yolo26m_sahi_o2o",
+   "kind": "sahi",
+   "val_AP": 34.558458729008386,
+   "replay_AP": 34.558458729008386,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_1280_o2m_B",
+   "kind": "cache",
+   "val_AP": 37.47260556655603,
+   "replay_AP": 37.47260556655603,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_1280_o2m_C",
+   "kind": "cache",
+   "val_AP": 40.369615495626896,
+   "replay_AP": 40.369615495626896,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_1280_o2o_B",
+   "kind": "cache",
+   "val_AP": 37.514430682873545,
+   "replay_AP": 37.514430682873545,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_1280_o2o_C",
+   "kind": "cache",
+   "val_AP": 40.1866529279029,
+   "replay_AP": 40.1866529279029,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_2048_o2m_B",
+   "kind": "cache",
+   "val_AP": 41.437353570427874,
+   "replay_AP": 41.437353570427874,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_2048_o2m_C",
+   "kind": "cache",
+   "val_AP": 42.89005707101543,
+   "replay_AP": 42.89005707101543,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_2048_o2o_B",
+   "kind": "cache",
+   "val_AP": 41.297264750732985,
+   "replay_AP": 41.297264750732985,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "XG_yolo26m_2048_o2o_C",
+   "kind": "cache",
+   "val_AP": 42.79230731930039,
+   "replay_AP": 42.79230731930039,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "D_yolo26m_single1280_F2_o2m",
+   "kind": "cache",
+   "val_AP": 36.11544948498712,
+   "replay_AP": 36.11544948498712,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "D_yolo26m_single1280_F2_o2o",
+   "kind": "cache",
+   "val_AP": 36.22019491130915,
+   "replay_AP": 36.22019491130915,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "D_yolo26m_single2048_F2_o2m",
+   "kind": "cache",
+   "val_AP": 40.16133557270844,
+   "replay_AP": 40.16133557270844,
+   "abs_diff": 0.0
+  },
+  {
+   "id": "D_yolo26m_single2048_F2_o2o",
+   "kind": "cache",
+   "val_AP": 39.99099753182059,
+   "replay_AP": 39.99099753182059,
+   "abs_diff": 0.0
+  }
+ ],
+ "n_exact": 25,
+ "n_rows": 25,
+ "passed": true
+}

@@ -1,0 +1,5 @@
+row,calib AP tuning (batch 16),calib AP replay (batch 1),difference
+E_yolo26s_full1280_o2m,35.6282,35.5465,-0.0818
+E_yolo26s_full1280_o2o,36.6750,36.5813,-0.0937
+E_yolo26s_full2048_o2m,40.2304,40.1502,-0.0801
+E_yolo26s_full2048_o2o,41.2355,41.1568,-0.0787

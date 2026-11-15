@@ -1,0 +1,172 @@
+{
+  "schema_version": 1,
+  "exp_id": "E_yolo26s_full2048_o2o",
+  "phase": 9,
+  "split": "test-dev",
+  "eval_protocol": "visdrone_ignore",
+  "class_setting": "visdrone10",
+  "model": "yolo26s",
+  "weights": "runs/ext/train/yolo26s_2048_s0/ultralytics/train/weights/best_calib.pt",
+  "train_variant": "E-yolo26s-2048",
+  "inference": {
+    "zoom_stack": [],
+    "overlap": null,
+    "fusion": "none",
+    "branch": "o2o",
+    "row": "E-2048",
+    "role": "hypothesis row",
+    "imgsz": 2048,
+    "conf": 0.001,
+    "conf_tuned_on": "calib",
+    "tuning_file": "runs/ext/yolo26s/conf_tuning_2048_o2o.json",
+    "addendum": "7bc0ace",
+    "frozen_row": "E_yolo26s_full2048_o2o",
+    "frozen_group": "preregistered",
+    "freeze_commit": "5c25e255f28988591e3917b1a0b950957bc4c8c8",
+    "val_exp_id": "E_yolo26s_full2048_o2o"
+  },
+  "training": {
+    "init": "",
+    "epochs": null,
+    "images_per_epoch": null,
+    "images_seen": null,
+    "imgsz": null,
+    "batch": null,
+    "seed": null,
+    "selection": ""
+  },
+  "metrics": {
+    "AP": 33.14846047565342,
+    "AP50": 55.51574480185744,
+    "AP75": 34.04092647342838,
+    "AR1": 2.0958439395580912,
+    "AR10": 12.936400604331252,
+    "AR100": 42.6172317310746,
+    "AR500": 51.540412323216664,
+    "AP_per_class": {
+      "pedestrian": 22.89253568264969,
+      "people": 14.548726103352692,
+      "bicycle": 12.851542724895129,
+      "car": 54.472337315328296,
+      "van": 34.76255752234064,
+      "truck": 36.354080447246396,
+      "tricycle": 20.82718259748448,
+      "awning-tricycle": 17.477018840446856,
+      "bus": 47.97452985289935,
+      "motor": 23.159936380553827
+    },
+    "AP_by_size": {
+      "<8": 6.1684489599181855,
+      "8-16": 14.102009711379132,
+      "16-32": 24.329215678817626,
+      "32-64": 38.66570041818194,
+      "64-128": 44.90410955356115,
+      ">128": 59.57233738180504,
+      "<16": 12.127766464600391
+    },
+    "AR_by_size": {
+      "<8": 18.40267478455783,
+      "8-16": 34.840865087597344,
+      "16-32": 48.53774049607477,
+      "32-64": 59.53652166522754,
+      "64-128": 64.94948470681213,
+      ">128": 81.74778872921557,
+      "<16": 31.214825624284448
+    },
+    "AP_per_class_source": "toolkit_port (unweighted per-class AP; headline = image-count-weighted mean)",
+    "coco": {
+      "AP": 28.76619686493195,
+      "AP50": 48.31771428915029,
+      "AP75": 29.281688404683802,
+      "AR1": 10.70753265436944,
+      "AR10": 34.636538992910545,
+      "AR100": 48.44445912584085,
+      "AR500": 49.221374318330305,
+      "AP_per_class": {
+        "pedestrian": 23.262842111760566,
+        "people": 14.95637872356808,
+        "bicycle": 13.166468053549977,
+        "car": 54.485290899209524,
+        "van": 34.897546004778846,
+        "truck": 36.495583966207235,
+        "tricycle": 21.04701003210341,
+        "awning-tricycle": 17.762250560132856,
+        "bus": 47.99771416951484,
+        "motor": 23.59088412849415
+      }
+    },
+    "AP50_by_size": {
+      "<8": 19.95122144423043,
+      "8-16": 32.78651714097634,
+      "16-32": 46.633709571171664,
+      "32-64": 61.1486353141178,
+      "64-128": 64.64224760269433,
+      ">128": 75.13239306946255,
+      "<16": 28.794699053737638
+    },
+    "size_metrics_source": "pycocotools",
+    "sources": {
+      "AP": "toolkit_port",
+      "AP50": "toolkit_port",
+      "AP75": "toolkit_port",
+      "AR1": "toolkit_port",
+      "AR10": "toolkit_port",
+      "AR100": "toolkit_port",
+      "AR500": "toolkit_port",
+      "AP_per_class": "toolkit_port",
+      "coco": "pycocotools",
+      "AP_by_size": "pycocotools",
+      "AP50_by_size": "pycocotools",
+      "AR_by_size": "pycocotools",
+      "diagnostics": "scahi.eval.diagnostics"
+    }
+  },
+  "diagnostics": {
+    "dup_rate": 0.02322044707536834,
+    "frag_rate": 0.00627933216686017,
+    "fp_by_border_dist": {},
+    "conf": 0.25,
+    "n_det": 61153,
+    "n_tp": 44535
+  },
+  "efficiency": {
+    "passes_per_img": null,
+    "gflops_per_img": null,
+    "latency_ms_mean": null,
+    "latency_ms_p95": null,
+    "peak_mem_mb": null
+  },
+  "machine": {
+    "name": "host-b",
+    "hostname": "host-x",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "driver": "580.178.04",
+    "cuda_driver": "13.0",
+    "cuda_runtime": "13.0",
+    "gpu_power_limit_w": 575.0,
+    "gpu_power_default_limit_w": 575.0,
+    "gpu_power_capped": false
+  },
+  "notes": "extension study E, frozen row; latency not measured here",
+  "eval_info": {
+    "headline": "toolkit_port",
+    "toolkit_images_per_class": {
+      "pedestrian": 1197,
+      "people": 797,
+      "bicycle": 377,
+      "car": 1530,
+      "van": 1167,
+      "truck": 750,
+      "tricycle": 245,
+      "awning-tricycle": 232,
+      "bus": 838,
+      "motor": 794
+    },
+    "n_images": 1610,
+    "n_gt": 74707,
+    "n_det_in": 557056,
+    "n_det_capped": 0,
+    "max_dets_per_image": 500,
+    "n_det_dropped": 32554
+  }
+}

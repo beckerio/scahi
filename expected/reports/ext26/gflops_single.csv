@@ -1,0 +1,5 @@
+detector,input size [px],GFLOPs per image (val),AP val (o2o)
+YOLO26s,1280,48.54,33.63
+YOLO26s,2048,126.45,38.41
+YOLO26m,1280,157.42,37.41
+YOLO26m,2048,399.14,41.25
